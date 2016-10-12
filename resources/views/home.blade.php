@@ -10,6 +10,8 @@
 
             <div class="panel-body">
                 You are logged in!
+
+                Grupa 1!
             </div>
         </div>
     </div>
