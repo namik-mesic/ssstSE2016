@@ -30,6 +30,7 @@
                 center: new google.maps.LatLng(43.860702, 18.429932),
                 zoom: 13,
                 mapTypeId: 'roadmap'
+                searc
             });
             var infoWindow = new google.maps.InfoWindow;
             // Change this depending on the name of your PHP file
