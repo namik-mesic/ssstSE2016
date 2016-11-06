@@ -4,38 +4,52 @@
 @section('head')
     <script src="http://maps.google.com/maps/api/js?sensor=false"
             type="text/javascript"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-jpP1e6mNwMTQj_6tcR1Okyg4gSczd6w&libraries=places"></script>
     <script type="text/javascript">
         //<![CDATA[
 
-        function load() {
-            var map = new google.maps.Map(document.getElementById("map"), {
-                center: new google.maps.LatLng(43.860702, 18.429932),
-                zoom: 16,
-                mapTypeId: 'roadmap',
+        var map;
+        var infowindow;
 
+        function initMap() {
+            var pyrmont = {lat: 43.860702, lng: 18.429932};
+
+
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: pyrmont,
+                zoom: 16
             });
-            var infoWindow = new google.maps.InfoWindow;
-            // Change this depending on the name of your PHP file
-            downloadUrl("phpsqlajax_genxml.php", function(data) {
-                var xml = data.responseXML;
-                var markers = xml.documentElement.getElementsByTagName("marker");
-                for (var i = 0; i < markers.length; i++) {
-                    var name = markers[i].getAttribute("name");
-                    var address = markers[i].getAttribute("address");
-                    var type = markers[i].getAttribute("type");
-                    var point = new google.maps.LatLng(
-                            parseFloat(markers[i].getAttribute("lat")),
-                            parseFloat(markers[i].getAttribute("lng")));
-                    var html = "<b>" + name + "</b> <br/>" + address;
-                    var icon = customIcons[type] || {};
-                    var marker = new google.maps.Marker({
-                        map: map,
-                        position: point,
-                        icon: icon.icon,
-                        shadow: icon.shadow
-                    });
-                    bindInfoWindow(marker, map, infoWindow, html);
+
+            infowindow = new google.maps.InfoWindow();
+            var service = new google.maps.places.PlacesService(map);
+            service.nearbySearch({
+                location: pyrmont,
+                radius: 500,
+                type: ['lodging']
+            }, callback);
+
+            service = new google.maps.places.PlacesService(map);
+            service.nearbySearch(request, callback);
+        }
+
+        function callback(results, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                for (var i = 0; i < results.length; i++) {
+                    createMarker(results[i]);
                 }
+            }
+        }
+
+        function createMarker(place) {
+            var placeLoc = place.geometry.location;
+            var marker = new google.maps.Marker({
+                map: map,
+                position: place.geometry.location
+            });
+
+            google.maps.event.addListener(marker, 'mouseover', function() {
+                infowindow.setContent(place.name);
+                infowindow.open(map, this);
             });
         }
 
@@ -46,3 +60,4 @@
 
 
 @endsection
+
