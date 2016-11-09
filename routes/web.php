@@ -18,3 +18,33 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/map', function (){
+
+    return view('map.default-map');
+
+});
+
+Route::get('/map_food', function (){
+
+    return view('map.food-map');
+
+});
+
+Route::get('/map_drink', function (){
+
+    return view('map.club-map');
+
+});
+
+Route::get('/map_entertainment', function (){
+
+    return view('map.entertainment-map');
+
+});
+
+Route::get('/map_hotel', function (){
+
+    return view('map.hotel-map');
+
+});

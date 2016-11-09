@@ -25,37 +25,7 @@
                 shadow: 'http://labs.google.com/ridefinder/images/mm_20_shadow.png'
             }
         };
-        function load() {
-            var map = new google.maps.Map(document.getElementById("map"), {
-                center: new google.maps.LatLng(43.860702, 18.429932),
-                zoom: 13,
-                mapTypeId: 'roadmap'
-                searc
-            });
-            var infoWindow = new google.maps.InfoWindow;
-            // Change this depending on the name of your PHP file
-            downloadUrl("phpsqlajax_genxml.php", function(data) {
-                var xml = data.responseXML;
-                var markers = xml.documentElement.getElementsByTagName("marker");
-                for (var i = 0; i < markers.length; i++) {
-                    var name = markers[i].getAttribute("name");
-                    var address = markers[i].getAttribute("address");
-                    var type = markers[i].getAttribute("type");
-                    var point = new google.maps.LatLng(
-                        parseFloat(markers[i].getAttribute("lat")),
-                        parseFloat(markers[i].getAttribute("lng")));
-                    var html = "<b>" + name + "</b> <br/>" + address;
-                    var icon = customIcons[type] || {};
-                    var marker = new google.maps.Marker({
-                        map: map,
-                        position: point,
-                        icon: icon.icon,
-                        shadow: icon.shadow
-                    });
-                    bindInfoWindow(marker, map, infoWindow, html);
-                }
-            });
-        }
+
         function bindInfoWindow(marker, map, infoWindow, html) {
             google.maps.event.addListener(marker, 'click', function() {
                 infoWindow.setContent(html);
@@ -64,8 +34,8 @@
         }
         function downloadUrl(url, callback) {
             var request = window.ActiveXObject ?
-                new ActiveXObject('Microsoft.XMLHTTP') :
-                new XMLHttpRequest;
+                    new ActiveXObject('Microsoft.XMLHTTP') :
+                    new XMLHttpRequest;
             request.onreadystatechange = function() {
                 if (request.readyState == 4) {
                     request.onreadystatechange = doNothing;
@@ -77,11 +47,19 @@
         }
         function doNothing() {}
         //]]>
+
     </script>
 
-
+@yield('head')
 </head>
-<body onload="load()">
+<body onload = "initMap()">
+@yield('body')
+
+<script>
+
+
+
+</script>
 
 <header class="navbar">
     <div class="container-fluid">
@@ -97,9 +75,11 @@
             </div>
         </div>
 
-        <span id="map" style="width: 650px; height: 500px;" class = "col-xs-1 col-md-12 col-lg-12 col-md-offset-2">
+        <div id="map" style="width: 650px; height: 500px;" class = "col-xs-1 col-md-12 col-lg-12 col-md-offset-2">
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-jpP1e6mNwMTQj_6tcR1Okyg4gSczd6w&libraries=places&callback=initMap" async defer></script>
 
-    </span>
+            @yield("mapbody")
+        </div>
 
 
         <div class="col-sm-6 col-xs-12 col-lg-12 col-md-12">
@@ -108,10 +88,10 @@
 
                 <div class="panel-body text-primary col-lg-12 col-md-12">
 
-                    <a onclick= "changeTitleToFood();" class="btn btn-success col-md-3 col-lg-3">Food</a>
-                    <a onclick = "changeTitleToClubs();" class="btn btn-info col-md-3 col-lg-3">Drink</a>
-                    <a onclick = "changeTitleToHotels();" class="btn btn-primary col-md-3 col-lg-3">Hotel</a>
-                    <a onclick = "changeTitleToRecreation();" class="btn btn-success col-md-3 col-lg-3">Recreation</a>
+                    <a href="http://localhost:8000/map_food" onclick= "changeTitleToFood();" class="btn btn-success col-md-3 col-lg-3">Food</a>
+                    <a href="http://localhost:8000/map_drink" onclick = "changeTitleToClubs();" class="btn btn-info col-md-3 col-lg-3">Drink</a>
+                    <a href="http://localhost:8000/map_hotel" onclick = "changeTitleToHotels();" class="btn btn-primary col-md-3 col-lg-3">Hotel</a>
+                    <a href="http://localhost:8000/map_entertainment" onclick = "changeTitleToRecreation();" class="btn btn-success col-md-3 col-lg-3">Recreation</a>
 
                 </div>
             </div>
