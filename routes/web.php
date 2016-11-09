@@ -11,10 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+   // return view('welcome.blade.php');
+//});
+
+Route::get('/', 'CurrencyController@index');
+
+Route::post('/', 'CurrencyController@process');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
