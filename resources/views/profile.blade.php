@@ -33,7 +33,7 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                            LtotheP
+                            {{Auth::user() -> username}}
                         </td>
                     </tr>
 
@@ -61,7 +61,7 @@
                     <tr>
                         <td>
                             <strong>
-                                created
+                                Created
                             </strong>
                         </td>
                         <td class="text-primary">
