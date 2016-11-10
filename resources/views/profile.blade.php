@@ -22,17 +22,7 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                            Lorem
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <strong>
-                                Lastname
-                            </strong>
-                        </td>
-                        <td class="text-primary">
-                            Ipsum
+                            {{ Auth::user()->name }}
                         </td>
                     </tr>
 
@@ -65,7 +55,7 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                            noreply@email.com
+                            {{Auth::user()->email }}
                         </td>
                     </tr>
                     <tr>
@@ -75,7 +65,7 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                            1.1.0.
+                            {{Auth::user() -> created_at}}
                         </td>
                     </tr>
                     <tr>
@@ -85,7 +75,7 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                            1.1.0. 22:00:00
+                            {{Auth::user() -> updated_at}}
                         </td>
                     </tr>
                     </tbody>
