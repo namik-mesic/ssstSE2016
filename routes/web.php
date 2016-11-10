@@ -28,6 +28,10 @@ Route::post('/destroy', 'testControl@destroy');
 Route::get('/confirm', 'confirmControl@confirmationForm');
 
 
+Route::get('profile', function () {
+    return view('profile');
+});
+
 // Route::get('/success',function (){
 
 //    return View::make('success');
