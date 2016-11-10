@@ -1,0 +1,22 @@
+.profile-color-block {
+    height: 150px;
+}
+
+
+.center{
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.clear {
+    clear: both;
+}
+
+.main {
+    float: left;
+}
+
+.sidebar {
+    float: right;
+}

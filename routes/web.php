@@ -16,5 +16,24 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+use Illuminate\Support\Facades\Input;
+use App\User;
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/destroy', 'testControl@destroy');
+
+Route::post('/destroy', 'testControl@destroy');
+
+Route::get('/confirm', 'confirmControl@confirmationForm');
+
+Auth::routes();
+Route::get('profile', 'ProfileController@index');
+
+// Route::get('/success',function (){
+
+//    return View::make('success');
+// });
+
+// Route::post('/take', 'testControl@take');
+

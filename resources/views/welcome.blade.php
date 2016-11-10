@@ -75,15 +75,14 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    SSST Software Engineering, group 3
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <h3>Edim Bogdanic</h3>
+                    <h3>Nedzad Hafizovic</h3>
+                    <h3>Dalila Isanovic</h3>
+                    <h3>Nejra Grabovica</h3>
                 </div>
             </div>
         </div>
