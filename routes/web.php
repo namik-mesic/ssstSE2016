@@ -27,10 +27,8 @@ Route::post('/destroy', 'testControl@destroy');
 
 Route::get('/confirm', 'confirmControl@confirmationForm');
 
-
-Route::get('profile', function () {
-    return view('profile');
-});
+Auth::routes();
+Route::get('profile', 'ProfileController@index');
 
 // Route::get('/success',function (){
 
