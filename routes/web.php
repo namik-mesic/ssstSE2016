@@ -19,6 +19,8 @@ Auth::routes();
 use Illuminate\Support\Facades\Input;
 use App\User;
 
+
+
 Route::get('/home', 'HomeController@index');
 
 Route::get('/destroy', 'testControl@destroy');
@@ -30,12 +32,16 @@ Route::get('/confirm', 'confirmControl@confirmationForm');
 Auth::routes();
 Route::get('profile', 'ProfileController@index');
 
+Route::get('/users', function (){
 
+    $query = Request::get('q');
 
-// Route::get('/success',function (){
+    $users = $query
+    ? User::where('name', 'LIKE', "%$query%") -> get()
+    : User::all();
 
-//    return View::make('success');
-// });
+    return View::make('users') -> withUsers($users);
 
-// Route::post('/take', 'testControl@take');
+});
+
 

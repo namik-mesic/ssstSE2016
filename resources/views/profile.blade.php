@@ -9,6 +9,12 @@
     </div>
 
     <div class="profile-color-block" style="background-color: {{ Auth::user()->color ?: '#dd0000' }}">
+        <br>
+        {{Form::open(['method' => 'GET'])}}
+
+        &nbsp;&nbsp; {{Form::input('search','q', null, ['placeholder' => 'Search by name...'] )}}
+
+        {{Form::close()}}
     </div>
     <div class="col-md-6 center">
         <div class="row">
