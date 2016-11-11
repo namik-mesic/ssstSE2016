@@ -30,6 +30,8 @@ Route::get('/confirm', 'confirmControl@confirmationForm');
 Auth::routes();
 Route::get('profile', 'ProfileController@index');
 
+
+
 // Route::get('/success',function (){
 
 //    return View::make('success');
