@@ -10,7 +10,7 @@
 
     <div class="profile-color-block" style="background-color: {{ Auth::user()->color ?: '#dd0000' }}">
         <br>
-        {{Form::open(['method' => 'GET'])}}
+        {{Form::open(['url'=> 'users', 'method' => 'GET'])}}
 
         &nbsp;&nbsp; {{Form::input('search','q', null, ['placeholder' => 'Search by name...'] )}}
 

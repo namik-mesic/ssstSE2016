@@ -35,10 +35,7 @@ Route::get('profile', 'ProfileController@index');
 Route::get('/users', function (){
 
     $query = Request::get('q');
-
-    $users = $query
-    ? User::where('name', 'LIKE', "%$query%") -> get()
-    : User::all();
+    $users = User::where('name', 'LIKE', "%$query%") -> get();
 
     return View::make('users') -> withUsers($users);
 

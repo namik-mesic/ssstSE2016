@@ -5,14 +5,14 @@
     @if(empty($users))
 
         No users in the database!
-    @endif
     @else
 
         @foreach($users as $user)
 
-             <h3>{{$user -> name}} </h3>
+             <h3> &nbsp {{$user -> name}} </h3>
 
 
          @endforeach
+    @endif
 
 @stop
