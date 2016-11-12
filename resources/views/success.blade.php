@@ -2,10 +2,11 @@
 
 @section('content')
 
-    <center><div class="alert-success">
-        <h3> Accout successfully deleted!</h3>
+    <center>
+        <div class="alert-success">
+            <h3> Accout successfully deleted!</h3>
             <br>
-    </div>
+        </div>
     </center>
     <input type="button" name="goback" id="Go back to home page">
 

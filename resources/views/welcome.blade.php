@@ -4,7 +4,6 @@
 <style>
 
 
-
     .full-height {
         height: 100vh;
     }
@@ -39,18 +38,19 @@
 </style>
 
 @section('content')
-        <div class="flex-center position-ref full-height">
-            <div class="content">
-                <div class="title m-b-md">
-                    SSST Software Engineering, group 3
-                </div>
+    <div class="flex-center position-ref full-height">
+        <div class="content">
+            <div class="title m-b-md" style="font-family: 'Raleway', sans-serif;
+                font-weight: 100;">
+                SSST Software Engineering, group 3
+            </div>
 
-                <div class="links">
-                    <h3>Edim Bogdanic</h3>
-                    <h3>Nedzad Hafizovic</h3>
-                    <h3>Dalila Isanovic</h3>
-                    <h3>Nejra Grabovica</h3>
-                </div>
+            <div class="links">
+                <h3>Edim Bogdanic</h3>
+                <h3>Nedzad Hafizovic</h3>
+                <h3>Dalila Isanovic</h3>
+                <h3>Nejra Grabovica</h3>
             </div>
         </div>
- @endsection
+    </div>
+@endsection
