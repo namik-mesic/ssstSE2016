@@ -60,7 +60,12 @@
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/profile') }}">Profile</a></li>
+                                <li>
+                                    <a href="{{ url('/profile') }}">Profile</a>
+                                </li>
+                                <li>
+                                    <a href="/confirm"> Delete Account</a>
+                                </li>
 
                                 <li>
                                     <a href="{{ url('/logout') }}"
@@ -74,9 +79,7 @@
                                         {{ csrf_field() }}
                                     </form>
                                 </li>
-                                <li>
-                                    <a href="/confirm"> Delete Account</a>
-                                </li>
+
 
                             </ul>
                         </li>
