@@ -37,9 +37,7 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}"> SSST
-                    {{ config('app.name', 'SSST') }}
-                </a>
+                <a class="navbar-brand" href="{{ url('/') }}"> SSST </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
