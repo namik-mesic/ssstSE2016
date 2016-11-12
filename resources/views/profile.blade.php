@@ -42,6 +42,16 @@
                             {{Auth::user()-> username}}
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                            <strong>
+                                Date of Birth
+                            </strong>
+                        </td>
+                        <td class="text-primary">
+                            {{Auth::user()->dob }}
+                        </td>
+                    </tr>
 
 
                     <tr>
