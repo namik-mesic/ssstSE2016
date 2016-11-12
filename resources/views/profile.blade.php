@@ -39,7 +39,7 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                            {{Auth::user() -> username}}
+                            {{Auth::user()-> username}}
                         </td>
                     </tr>
 
