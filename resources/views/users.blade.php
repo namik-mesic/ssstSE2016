@@ -2,9 +2,11 @@
 
 @section('content')
 
-    @if(empty($users))
+    @if(count($users) == 0)
 
-        No users in the database!
+        <div class="col-md-6 alert-danger table-bordered center">
+            <h3> Nothing matches! </h3>
+        </div>
     @else
 
         @foreach($users as $user)
