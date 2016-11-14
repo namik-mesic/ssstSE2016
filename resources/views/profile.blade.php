@@ -71,7 +71,7 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                            {{Auth::user()->email }}
+                            <a href="mailto: {{Auth::user() -> email}} ">{{Auth::user()->email }}</a>
                         </td>
                     </tr>
                     <tr>
