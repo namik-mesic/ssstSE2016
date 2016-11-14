@@ -76,7 +76,10 @@
         </div>
 
         <div id="map" style="width: 650px; height: 500px;" class = "col-xs-1 col-md-12 col-lg-12 col-md-offset-2">
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-jpP1e6mNwMTQj_6tcR1Okyg4gSczd6w&libraries=places&callback=initMap" async defer></script>
+
+            <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-jpP1e6mNwMTQj_6tcR1Okyg4gSczd6w&libraries=places&callback=initMap">
+            </script>
 
             @yield("mapbody")
         </div>
