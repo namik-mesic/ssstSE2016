@@ -45,7 +45,8 @@
             var placeLoc = place.geometry.location;
             var marker = new google.maps.Marker({
                 map: map,
-                position: place.geometry.location
+                position: place.geometry.location,
+                icon: place.icon
             });
 
             google.maps.event.addListener(marker, 'mouseover', function() {

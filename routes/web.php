@@ -48,3 +48,8 @@ Route::get('/map_hotel', function (){
     return view('map.hotel-map');
 
 });
+
+Route::get('/map_test', function (){
+
+    return view('map.test-map');
+});
