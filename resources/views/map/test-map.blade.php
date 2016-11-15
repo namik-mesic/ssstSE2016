@@ -35,7 +35,7 @@
 
             var service = new google.maps.places.PlacesService(map);
             service.nearbySearch({
-                location: map.getCenter(),
+                location: infoWindow.getPosition(),
                 radius: 10000,
                 type: ['cafe']
 
