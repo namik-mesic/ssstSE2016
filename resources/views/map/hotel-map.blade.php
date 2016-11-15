@@ -45,12 +45,20 @@
             var marker = new google.maps.Marker({
                 map: map,
                 position: place.geometry.location,
-                icon: place.icon
+                icon : place.icon
             });
 
             google.maps.event.addListener(marker, 'mouseover', function() {
                 infowindow.setContent(place.name);
                 infowindow.open(map, this);
+            });
+            google.maps.event.addListener(marker, 'click', function() {
+
+                alert("Place Name: " + place.name +
+                        "\nPlace ID: " + place.place_id+
+                        "\nLocation: " + place.geometry.location);
+
+
             });
         }
 

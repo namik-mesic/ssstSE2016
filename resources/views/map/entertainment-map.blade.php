@@ -27,7 +27,8 @@
                 radius: 1000,
                 type: ['museum'],
                 type: ['park'],
-                type: ['movie_theater']
+                type: ['movie_theater'],
+                type: ['art_gallery']
             }, callback);
 
             service = new google.maps.places.PlacesService(map);
@@ -54,6 +55,16 @@
                 infowindow.setContent(place.name);
                 infowindow.open(map, this);
             });
+
+            google.maps.event.addListener(marker, 'click', function() {
+
+                alert("Place Name: " + place.name +
+                        "\nPlace ID: " + place.place_id+
+                        "\nLocation: " + place.geometry.location);
+
+
+            });
+
         }
 
 

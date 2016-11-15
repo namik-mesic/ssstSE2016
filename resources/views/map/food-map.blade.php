@@ -5,6 +5,7 @@
     <script src="http://maps.google.com/maps/api/js?sensor=false"
             type="text/javascript"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-jpP1e6mNwMTQj_6tcR1Okyg4gSczd6w&libraries=places"></script>
+
     <script type="text/javascript">
         //<![CDATA[
 
@@ -46,20 +47,27 @@
 
         function createMarker(place) {
             var placeLoc = place.geometry.location;
+
             var marker = new google.maps.Marker({
                 map: map,
                 position: place.geometry.location,
-                icon: place.icon,
-                address: place.formatted_address
+                icon: place.icon
+
 
             });
 
             google.maps.event.addListener(marker, 'mouseover', function() {
+                var pic = place.photos[0].getUrl({'maxWidth': 35, 'maxHeight': 35});
+
                 infowindow.setContent(place.name);
                 infowindow.open(map, this);
             });
             google.maps.event.addListener(marker, 'click', function() {
-                alert("Place Name:" + place.name + "\nPlace ID:" + place.place_id);
+
+                 alert("Place Name: " + place.name +
+                        "\nPlace ID: " + place.place_id+
+                        "\nLocation: " + place.geometry.location);
+
 
             });
 
