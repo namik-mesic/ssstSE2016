@@ -12,6 +12,8 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- Scripts -->
     <script>
@@ -72,6 +74,8 @@
                                     </li>
                                 </ul>
                             </li>
+                            <li><a href="{{ url('/update-profile') }}">Update profile</a></li>
+                            <li><a href="{{ url('/add-picture') }}">Add profile picture</a></li>
                         @endif
                     </ul>
                 </div>
@@ -83,5 +87,6 @@
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
