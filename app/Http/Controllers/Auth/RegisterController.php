@@ -52,6 +52,7 @@ class RegisterController extends Controller
             'email' => 'required|email|max:255|unique:users',
             'username' => 'required|max:20|unique:users',
             'dob' => 'required',
+            'color' => 'required',
             'password' => 'required|min:6|confirmed',
 
         ]);
@@ -70,6 +71,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'username' => $data['username'],
             'dob' => $data['dob'],
+            'color' => $data['color'],
             'password' => bcrypt($data['password']),
         ]);
     }

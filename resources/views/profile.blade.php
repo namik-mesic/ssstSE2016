@@ -8,7 +8,7 @@
         <div class="clear"></div>
     </div>
 
-    <div class="profile-color-block" style="background-color: {{ Auth::user()->color ?: '#dd0000' }}">
+    <div class="profile-color-block" style="background-color: {{ Auth::user()->color }}">
         <br>
         {{Form::open(['url'=> 'users', 'method' => 'GET', 'class' => 'col-md-5'])}}
 
