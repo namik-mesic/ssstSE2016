@@ -13,7 +13,11 @@
 
 //Route::get('/', function () {
    // return view('welcome.blade.php');
+
 //});
+
+
+Route::get('/chart', 'ChartController@index');
 
 Route::get('/', 'CurrencyController@index');
 

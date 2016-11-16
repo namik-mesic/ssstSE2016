@@ -40,6 +40,16 @@
 
     @if(isset($calculatedAmount))
 
+
+        <h2> The calculated amount is </h2>
+        <style>
+            h2{
+                position: absolute;
+                left:850px;
+                top:220px;
+            }
+        </style>
+
         @include('currency.amount')
 
     @endif

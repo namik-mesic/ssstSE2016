@@ -28,5 +28,7 @@ class ConversionRequest extends FormRequest
             'from' => 'required',
             'to' => 'required',
         ];
+
+
     }
 }
