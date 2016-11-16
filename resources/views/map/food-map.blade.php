@@ -58,6 +58,7 @@
             function getImage(src) {
                 var tag = "<img src = src>";
                 return tag;
+
             }
 
             google.maps.event.addListener(marker, 'mouseover', function() {
