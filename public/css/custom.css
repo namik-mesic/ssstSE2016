@@ -20,3 +20,8 @@
 .sidebar {
     float: right;
 }
+
+.search{
+    float: left;
+    padding-top: 10px;
+}

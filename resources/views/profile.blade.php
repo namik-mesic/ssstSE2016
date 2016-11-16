@@ -9,12 +9,6 @@
     </div>
 
     <div class="profile-color-block" style="background-color: {{ Auth::user()->color }}">
-        <br>
-        {{Form::open(['url'=> 'users', 'method' => 'GET', 'class' => 'col-md-5'])}}
-
-        &nbsp;&nbsp; {{Form::input('search','q', null, ['placeholder' => 'Search by name...'] )}}
-
-        {{Form::close()}}
     </div>
     <div class="col-md-6 center">
         <div class="row">
