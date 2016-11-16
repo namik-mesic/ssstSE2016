@@ -13,16 +13,15 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Currency converter</a>
+            <a class="navbar-brand">Currency converter</a>
         </div>
         <ul class="nav navbar-nav">
+
             <li class="active"><a href="#">Home</a></li>
             <li class="active"><a href="#">Chart</a></li>
-
-
-        </ul>
-    </div>
+            </div>
 </nav>
+<img class="money" width=200 height="200" src= "{{ asset('money.png') }}"></li>
 
 
 <div style='margin-left:auto;margin-right:auto;width:290px;'>
@@ -37,17 +36,22 @@
 </body>
 <style>
 
+    .money{
+        position: absolute;
+        top:200px;
+        left:950px;
+    }
     .forma {
         color: #00001a;
         width: 500px;
         position: absolute;
-        left: 100px;
+        left: 150px;
         top: 150px;
 
     }
 
     body {
-        font-family: Andalus;
+        font-family: "Century Gothic";
         font-size: 18px;
 
 

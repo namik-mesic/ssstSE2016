@@ -32,10 +32,11 @@
             </select>
         </div> <br>
 
-        <button type="submit" class="btn btn-info btn-block">
+         <button type="submit" class="btn btn-info btn-block">
             Convert
         </button>
     </form>
+
 
     @if(isset($calculatedAmount))
 
