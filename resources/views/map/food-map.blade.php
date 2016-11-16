@@ -53,20 +53,24 @@
                 position: place.geometry.location,
                 icon: place.icon
 
-
             });
 
-            google.maps.event.addListener(marker, 'mouseover', function() {
-                var pic = place.photos[0].getUrl({'maxWidth': 35, 'maxHeight': 35});
+            function getImage(src) {
+                var tag = "<img src = src>";
+                return tag;
+            }
 
-                infowindow.setContent(place.name);
+            google.maps.event.addListener(marker, 'mouseover', function() {
+                var pic = place.photos[0].getUrl({'maxWidth': 200, 'maxHeight': 200});
+                infowindow.setContent(place.name + getImage(pic));
                 infowindow.open(map, this);
             });
             google.maps.event.addListener(marker, 'click', function() {
 
                  alert("Place Name: " + place.name +
                         "\nPlace ID: " + place.place_id+
-                        "\nLocation: " + place.geometry.location);
+                        "\nLocation: " + marker.position +
+                        "\nPic: " + tag );
 
 
             });
