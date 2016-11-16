@@ -18,7 +18,7 @@
 class confirmControl extends Controller
 {
     /**
-     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function confirmationForm(){
 
