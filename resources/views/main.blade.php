@@ -19,6 +19,7 @@
 
             <li class="active"><a href="#">Home</a></li>
             <li class="active"><a href="#">Chart</a></li>
+            <li class="active"><a href="#">Historical rates</a></li>
             </div>
 </nav>
 <img class="money" width=200 height="200" src= "{{ asset('money.png') }}"></li>
@@ -53,11 +54,11 @@
     body {
         font-family: "Century Gothic";
         font-size: 18px;
+background-color: #ebebe0;
 
-
-        background: #304352; /* fallback for old browsers */
-        background: -webkit-linear-gradient(to left, #304352 , #d7d2cc); /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to left, #304352 , #d7d2cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        /* background: #304352; /* fallback for old browsers */
+        /*background: -webkit-linear-gradient(to left, #304352 , #d7d2cc); /* Chrome 10-25, Safari 5.1-6 */
+       /* background: linear-gradient(to left, #304352 , #d7d2cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     }
 
@@ -75,6 +76,16 @@
         position: absolute;
         left: 70px;
     }
+    .btn{
+        background-color: black;
+
+    }
+    .btn:hover{
+        color: black;
+        background-color: inherit;
+        border-color: black;
+    }
+
 </style>
 <footer class="navbar navbar-inverse navbar-fixed-bottom">
     <div class="container-fluid">
