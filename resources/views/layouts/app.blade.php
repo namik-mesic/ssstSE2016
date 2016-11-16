@@ -38,12 +38,24 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}"> SSST </a>
+
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
+                    @if (!Auth::guest())
 
+                        <li class="search"
+                        {{ Form::open(['url'=> 'users', 'method' => 'GET', 'class' => 'col-md-5']) }}
+
+                        {{ Form::input('search','q', null, ['placeholder' => 'Search by name...']) }}
+
+                        {{ Form::close() }}
+
+                        </li>
+
+                    @endif
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -53,13 +65,6 @@
                         <li><a href="{{ url('/login') }}">Login</a></li>
                         <li><a href="{{ url('/register') }}">Register</a></li>
                     @else
-                        <li class="search"
-                            {{Form::open(['url'=> 'users', 'method' => 'GET', 'class' => 'col-md-5'])}}
-
-                            &nbsp;&nbsp; {{Form::input('search','q', null, ['placeholder' => 'Search by name...'] )}}
-
-                        {{Form::close()}}
-                        </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-expanded="false">
