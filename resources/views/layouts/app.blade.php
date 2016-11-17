@@ -79,8 +79,8 @@
                                 </li>
                                 <li>
                                     <a href="/confirm"> Delete Account</a>
-                                    <form doesnt respond laravel
-                                    /li>
+                                </li>
+
 
                                 <li>
                                     <a href="{{ url('/logout') }}"
@@ -94,7 +94,6 @@
                                         {{ csrf_field() }}
                                     </form>
                                 </li>
-
 
                             </ul>
                         </li>
