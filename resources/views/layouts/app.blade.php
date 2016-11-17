@@ -43,9 +43,10 @@
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    @if (!Auth::guest())
+                @if (!Auth::guest())
+                    <ul class="nav navbar-nav">
 
+{{Form:open(['url'=> 'users', 'method' => 'GET', 'class' => 'col-md-5'])}}
                         <li class="search"
                         {{ Form::open(['url'=> 'users', 'method' => 'GET', 'class' => 'col-md-5']) }}
 
@@ -55,10 +56,11 @@
 
                         </li>
 
-                    @endif
-                </ul>
+                    </ul>
+            @endif
 
-                <!-- Right Side Of Navbar -->
+
+            <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
@@ -78,7 +80,7 @@
                                 </li>
                                 <li>
                                     <a href="/confirm"> Delete Account</a>
-                                </li>
+                                <form doesnt respond laravel/li>
 
                                 <li>
                                     <a href="{{ url('/logout') }}"
