@@ -38,28 +38,34 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}"> SSST </a>
+
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
+                @if (!Auth::guest())
+                    <ul class="nav navbar-nav">
 
-                </ul>
+                        <li class="search">
+                            {{ Form::open(['url'=> 'users', 'method' => 'GET', 'class' => 'col-md-5']) }}
 
-                <!-- Right Side Of Navbar -->
+                            {{ Form::input('search','q', null, ['placeholder' => 'Search by name...']) }}
+
+                            {{ Form::close() }}
+
+                        </li>
+
+                    </ul>
+            @endif
+
+
+            <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>
                         <li><a href="{{ url('/register') }}">Register</a></li>
                     @else
-                        <li class="search"
-                            {{Form::open(['url'=> 'users', 'method' => 'GET', 'class' => 'col-md-5'])}}
-
-                            &nbsp;&nbsp; {{Form::input('search','q', null, ['placeholder' => 'Search by name...'] )}}
-
-                        {{Form::close()}}
-                        </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-expanded="false">
@@ -73,7 +79,8 @@
                                 </li>
                                 <li>
                                     <a href="/confirm"> Delete Account</a>
-                                </li>
+                                    <form doesnt respond laravel
+                                    /li>
 
                                 <li>
                                     <a href="{{ url('/logout') }}"

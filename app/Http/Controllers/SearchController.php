@@ -12,7 +12,8 @@ use App\User;
  */
 class SearchController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $users = User::all();
         return view('/users', compact('users'));
     }
