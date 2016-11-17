@@ -68,7 +68,7 @@
                 return tag;
 
             }
-
+            
             google.maps.event.addListener(marker, 'mouseover', function() {
                 infowindow.setContent(place.name);
                 infowindow.open(map, this);

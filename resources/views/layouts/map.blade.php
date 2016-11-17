@@ -512,10 +512,10 @@
 
     <div class="grid_3">
         <div class="fmcircle_out">
-            <a href="http://localhost:8000/map_hotel">
+            <a href="http://localhost:8000/map_entertainment">
                 <div class="fmcircle_border">
                     <div class="fmcircle_in fmcircle_red">
-                        <span>Parks</span><img src="bench.png" alt="" />
+                        <span>Rec</span><img src="bench.png" alt="" />
                     </div>
                 </div>
             </a>
@@ -524,7 +524,7 @@
 
     <div class="grid_3">
         <div class="fmcircle_out">
-            <a href="http://localhost:8000/map_entertainment">
+            <a href="http://localhost:8000/map_hotel">
                 <div class="fmcircle_border">
                     <div class="fmcircle_in fmcircle_orange">
                         <span>Hotels</span><img src="hotel.png" alt="" />
