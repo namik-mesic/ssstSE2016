@@ -51,7 +51,7 @@ class RegisterController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'username' => 'required|max:20|unique:users',
-            'dob' => 'required',
+            'dob' => 'required|before:1998',
             'color' => 'required',
             'password' => 'required|min:6|confirmed',
 
