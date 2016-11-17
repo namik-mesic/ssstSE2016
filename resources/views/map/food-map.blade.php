@@ -61,6 +61,18 @@
 
             }
 
+            function displayInfo() {
+                var pic = place.photos[0].getUrl({'maxWidth': 200, 'maxHeight': 200});
+                var tag;
+                tag = document.getElementById("tab1default").innerHTML =
+                        "Place Name: " + place.name +
+                        "\nPlace ID: " + place.place_id+
+                        "\nLocation: " + place.geometry.location +
+                        "<br>" + getImage(pic);
+                return tag;
+
+            }
+
             google.maps.event.addListener(marker, 'mouseover', function() {
                 var pic = place.photos[0].getUrl({'maxWidth': 200, 'maxHeight': 200});
                 infowindow.setContent(place.name + getImage(pic));
@@ -68,11 +80,7 @@
             });
             google.maps.event.addListener(marker, 'click', function() {
 
-                 alert("Place Name: " + place.name +
-                        "\nPlace ID: " + place.place_id+
-                        "\nLocation: " + marker.position +
-                        "\nPic: " + tag );
-
+                displayInfo();
 
             });
 
