@@ -46,13 +46,12 @@
                 @if (!Auth::guest())
                     <ul class="nav navbar-nav">
 
-{{Form:open(['url'=> 'users', 'method' => 'GET', 'class' => 'col-md-5'])}}
-                        <li class="search"
-                        {{ Form::open(['url'=> 'users', 'method' => 'GET', 'class' => 'col-md-5']) }}
+                        <li class="search">
+                            {{ Form::open(['url'=> 'users', 'method' => 'GET', 'class' => 'col-md-5']) }}
 
-                        {{ Form::input('search','q', null, ['placeholder' => 'Search by name...']) }}
+                            {{ Form::input('search','q', null, ['placeholder' => 'Search by name...']) }}
 
-                        {{ Form::close() }}
+                            {{ Form::close() }}
 
                         </li>
 
@@ -80,7 +79,8 @@
                                 </li>
                                 <li>
                                     <a href="/confirm"> Delete Account</a>
-                                <form doesnt respond laravel/li>
+                                    <form doesnt respond laravel
+                                    /li>
 
                                 <li>
                                     <a href="{{ url('/logout') }}"
