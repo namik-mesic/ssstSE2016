@@ -4,54 +4,30 @@
     <form action="{{ action('CurrencyController@process') }}" class="forma" name="converter_form" method="POST">
         {!! csrf_field() !!}
 
-        <div class="form-group">
-            <label for="amount">
-                Amount
-            </label>
 
-            <input type="number" placeholder="Enter value..." name="amount" class="form-control">
-        </div>
 
         <div class="form-group">
             <label for="from">
-                From
+                Select one currency:
             </label>
 
             <select name="from" id="from" class="form-control">
                 @include('currency.currency_options')
             </select>
         </div>
-
+        <br>
         <div class="form-group">
             <label for="to">
-                To
+                Select another currency:
             </label>
 
             <select name="to" id="to" class="form-control">
                 @include('currency.currency_options')
             </select>
         </div> <br>
+        <br>
         <h5 style="color: red"> * Please select distinct currencies</h5>
-         <button type="submit" class="btn btn-info btn-block">
-            Convert
+        <button type="submit" class="btn btn-info btn-block">
+            Show graph
         </button>
     </form>
-
-
-    @if(isset($calculatedAmount))
-
-
-        <h2> The calculated amount is </h2>
-        <style>
-            h2{
-                position: absolute;
-                left:850px;
-                top:220px;
-            }
-        </style>
-
-        @include('currency.amount')
-
-    @endif
-
-@endsection
