@@ -11,13 +11,13 @@ class AddTokenAndVerifiedToUsersTable extends Migration
      *
      * @return void
      */
-  //  public function up()
-  //  {
-   //     Schema::table('users', function (Blueprint $table) {
-    //        $table->boolean('verified');
-     //       $table->string('token');
-     //   });
-   // }
+    public function up()
+    {
+        Schema::table('users', function (Blueprint $table) {
+            $table->boolean('verified');
+            $table->string('token');
+        });
+    }
 
     /**
      * Reverse the migrations.
