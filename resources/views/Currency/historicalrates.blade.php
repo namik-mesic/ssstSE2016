@@ -25,7 +25,7 @@
 
         </div>
         <br>
-        <h5 style="color: red"> * Please select distinct currencies</h5>
+        <br>
         <button type="submit" class="btn btn-info btn-block">
             Show
         </button>

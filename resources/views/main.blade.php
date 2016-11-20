@@ -20,7 +20,7 @@
             <li class="active"><a href="{{ action('CurrencyController@index') }}">Home</a></li>
             <li class="active"><a href="{{ action('ChartController@index') }}">Chart</a></li>
             <li class="active"><a href="{{ action('HistoricalRatesController@index') }}">Historical rates</a></li>
-            <li class="active"><a href="#">Our offices</a></li>
+            <li class="active"><a href="{{ action('OfficesController@index') }}">Our offices</a></li>
             </div>
     <img class="money" width=30 height="30" src= "{{ asset('money.png') }}"></li>
 </nav>
