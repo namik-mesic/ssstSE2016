@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -20,8 +24,20 @@
             <li class="active"><a href="{{ action('CurrencyController@index') }}">Home</a></li>
             <li class="active"><a href="{{ action('ChartController@index') }}">Chart</a></li>
             <li class="active"><a href="{{ action('HistoricalRatesController@index') }}">Historical rates</a></li>
-            <li class="active"><a href="{{ action('OfficesController@index') }}">Our offices</a></li>
+            <li class="active"><a data-toggle="dropdown" href="{{ action('OfficesController@index') }}">Our offices
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Office 1</a></li>
+                <li><a href="#">Office 2</a></li>
+                <li><a href="#">Office 3</a></li>
+                </a>
+            </li>
+            </ul>
             </div>
+
+
+
+
     <img class="money" width=30 height="30" src= "{{ asset('money.png') }}"></li>
 </nav>
 
