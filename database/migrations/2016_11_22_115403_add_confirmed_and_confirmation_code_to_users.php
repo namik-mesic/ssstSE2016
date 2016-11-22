@@ -4,16 +4,16 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddTokenAndVerifiedToUsersTable extends Migration
+class AddConfirmedAndConfirmationCodeToUsers extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up(){
-
-            //
+    public function up()
+    {
+        //
     }
 
     /**
@@ -23,6 +23,6 @@ class AddTokenAndVerifiedToUsersTable extends Migration
      */
     public function down()
     {
-           //
+        //
     }
 }

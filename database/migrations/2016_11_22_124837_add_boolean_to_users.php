@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserActivationsTable extends Migration
+class AddBooleanToUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,7 @@ class CreateUserActivationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_activations', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
-            $table->boolean('activated')->default(false);
-        });
+        //
     }
 
     /**
@@ -27,6 +23,6 @@ class CreateUserActivationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_activations');
+        //
     }
 }

@@ -41,5 +41,6 @@ Route::get('/users', function (){
 
 });
 
+Route::get('user/activation/{token}', 'AuthController@activateUser')->name('user.activate');
 
 
