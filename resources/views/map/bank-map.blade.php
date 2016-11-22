@@ -49,7 +49,8 @@
             var placeLoc = place.geometry.location;
             var marker = new google.maps.Marker({
                 map: map,
-                position: place.geometry.location
+                position: place.geometry.location,
+                icon: place.icon
             });
 
             <!-- Add a mouse-over listener to the marker to show the content -->
