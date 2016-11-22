@@ -24,12 +24,12 @@
             <li class="active"><a href="{{ action('CurrencyController@index') }}">Home</a></li>
             <li class="active"><a href="{{ action('ChartController@index') }}">Chart</a></li>
             <li class="active"><a href="{{ action('HistoricalRatesController@index') }}">Historical rates</a></li>
-            <li class="active"><a data-toggle="dropdown" href="{{ action('OfficesController@index') }}">Our offices
+            <li class="active"><a data-toggle="dropdown" href="#">Our offices
             <span class="caret"></span></button>
             <ul class="dropdown-menu">
-                <li><a href="#">Office 1</a></li>
-                <li><a href="#">Office 2</a></li>
-                <li><a href="#">Office 3</a></li>
+                <li><a href="{{ action('OfficesController@index') }}">Office 1</a></li>
+                <li><a href="{{ action('OfficesController1@index') }}">Office 2</a></li>
+                <li><a href="{{ action('OfficesController2@index') }}">Office 3</a></li>
                 </a>
             </li>
             </ul>

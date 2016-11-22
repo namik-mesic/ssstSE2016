@@ -23,6 +23,10 @@ Route::get('/historicalrates', 'HistoricalRatesController@index');
 
 Route::get('/offices', 'OfficesController@index');
 
+Route::get('/offices1', 'OfficesController1@index');
+
+Route::get('/offices2', 'OfficesController2@index');
+
 Route::get('/', 'CurrencyController@index');
 
 Route::post('/', 'CurrencyController@process');
