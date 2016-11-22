@@ -36,8 +36,10 @@
 </div>
 
 
+
 </body>
 <style>
+
 
     .money{
         position: absolute;
