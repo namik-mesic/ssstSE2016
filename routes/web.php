@@ -49,6 +49,30 @@ Route::get('/map_hotel', function (){
 
 });
 
+Route::get('/map_bank', function (){
+
+    return view('map.bank-map');
+
+});
+
+Route::get('/map_worship', function (){
+
+    return view('map.worship-map');
+
+});
+
+Route::get('/map_parking', function (){
+
+    return view('map.parking-map');
+
+});
+
+Route::get('/map_shopping', function (){
+
+    return view('map.shopping-map');
+
+});
+
 Route::get('/map_test', function (){
 
     return view('map.test-map');

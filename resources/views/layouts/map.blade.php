@@ -410,7 +410,7 @@
             background:  #3498DB;
         }
 
-        .fmcircle_red {
+        .fmcircle_green {
             background: #82BF56;
         }
 
@@ -418,8 +418,24 @@
             background:  #F2CF66;
         }
 
-        .fmcircle_green {
+        .fmcircle_red {
             background:  #E74C3C;
+        }
+
+        .fmcircle_gold {
+            background:  #C5B358;
+        }
+
+        .fmcircle_indigo {
+            background:  #4B0082;
+        }
+
+        .fmcircle_pink {
+            background:  #FF69B4;
+        }
+
+        .fmcircle_burgundy {
+            background:  #800020;
         }
 
 
@@ -528,6 +544,55 @@
                 <div class="fmcircle_border">
                     <div class="fmcircle_in fmcircle_orange">
                         <span>Hotels</span><img src="hotel.png" alt="" />
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+        <div class="gridcontainer clearfix">
+    <div class="grid_3">
+        <div class="fmcircle_out">
+            <a href="http://localhost:8000/map_bank">
+                <div class="fmcircle_border">
+                    <div class="fmcircle_in fmcircle_gold">
+                        <span>BANK</span><img src="hotel.png" alt="" />
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="grid_3">
+        <div class="fmcircle_out">
+            <a href="http://localhost:8000/map_worship">
+                <div class="fmcircle_border">
+                    <div class="fmcircle_in fmcircle_indigo">
+                        <span>WORSHIP</span><img src="hotel.png" alt="" />
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="grid_3">
+        <div class="fmcircle_out">
+            <a href="http://localhost:8000/map_parking">
+                <div class="fmcircle_border">
+                    <div class="fmcircle_in fmcircle_pink">
+                        <span>PARKING</span><img src="hotel.png" alt="" />
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="grid_3">
+        <div class="fmcircle_out">
+            <a href="http://localhost:8000/map_shopping">
+                <div class="fmcircle_border">
+                    <div class="fmcircle_in fmcircle_burgundy">
+                        <span>SHOPPING</span><img src="hotel.png" alt="" />
                     </div>
                 </div>
             </a>

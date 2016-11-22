@@ -11,10 +11,9 @@
         var map;
         var infowindow;
 
-        <!-- Creates a map where Sebilj and shows the nearest places for lodging-->
+        <!-- Creates a map where Sebilj and shows the nearest places to shop -->
         function initMap() {
             var pyrmont = {lat: 43.860702, lng: 18.429932};
-
 
             map = new google.maps.Map(document.getElementById('map'), {
                 center: pyrmont,
@@ -28,7 +27,19 @@
             service.nearbySearch({
                 location: pyrmont,
                 radius: 500,
-                type: ['lodging']
+                type: ['book_store'],
+                type: ['clothing_store'],
+                type: ['convenience_store'],
+                type: ['department_store'],
+                type: ['electronics_store'],
+                type: ['furniture_store'],
+                type: ['grocery_or_supermarket'],
+                type: ['hardware_store'],
+                type: ['home_goods_store'],
+                type: ['jewelry_store'],
+                type: ['liquor_store'],
+                type: ['pet_store'],
+                type: ['shoe_store']
             }, callback);
 
             service = new google.maps.places.PlacesService(map);
@@ -50,7 +61,8 @@
             var marker = new google.maps.Marker({
                 map: map,
                 position: place.geometry.location,
-                icon : place.icon
+                icon: place.icon
+
             });
 
             <!-- Get the image -->
