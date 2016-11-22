@@ -11,10 +11,9 @@
         var map;
         var infowindow;
 
-        <!-- Creates a map where Sebilj and shows the nearest places for lodging-->
+        <!-- Creates a map where Sebilj and shows the nearest places of worship -->
         function initMap() {
             var pyrmont = {lat: 43.860702, lng: 18.429932};
-
 
             map = new google.maps.Map(document.getElementById('map'), {
                 center: pyrmont,
@@ -28,7 +27,11 @@
             service.nearbySearch({
                 location: pyrmont,
                 radius: 500,
-                type: ['lodging']
+                type: ['church'],
+                type: ['hindu_temple'],
+                type: ['mosque'],
+                type: ['place_of_worship'],
+                type: ['synagogue']
             }, callback);
 
             service = new google.maps.places.PlacesService(map);
@@ -50,7 +53,8 @@
             var marker = new google.maps.Marker({
                 map: map,
                 position: place.geometry.location,
-                icon : place.icon
+                icon: place.icon
+
             });
 
             <!-- Get the image -->
