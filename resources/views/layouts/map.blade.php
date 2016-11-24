@@ -507,7 +507,7 @@
             <a href="http://localhost:8000/map_food">
                 <div class="fmcircle_border">
                     <div class="fmcircle_in fmcircle_blue">
-                        <span>Food</span><img src="cutlery.png" alt="" />
+                        <span>Food</span><img src= "{{URL::asset('graphics/icons/map/food.png')}}" alt="" />
                     </div>
                 </div>
             </a>
@@ -519,7 +519,7 @@
             <a href="http://localhost:8000/map_drink">
                 <div class="fmcircle_border">
                     <div class="fmcircle_in fmcircle_green">
-                        <span>Drinks</span><img src="coffee-cup.png" alt="" />
+                        <span>Drinks</span><img src= "{{URL::asset('graphics/icons/map/coffee.png')}}" alt="" />
                     </div>
                 </div>
             </a>
@@ -531,7 +531,7 @@
             <a href="http://localhost:8000/map_entertainment">
                 <div class="fmcircle_border">
                     <div class="fmcircle_in fmcircle_red">
-                        <span>Rec</span><img src="{{URL::asset('graphics/icons/map/park.png')}}" alt="" />
+                        <span>Rec</span><img src= "{{URL::asset('graphics/icons/map/park.png')}}" alt="" />
                     </div>
                 </div>
             </a>
@@ -543,7 +543,7 @@
             <a href="http://localhost:8000/map_hotel">
                 <div class="fmcircle_border">
                     <div class="fmcircle_in fmcircle_orange">
-                        <span>Hotels</span><img src="hotel.png" alt="" />
+                        <span>Hotels</span><img src= "{{URL::asset('graphics/icons/map/hotel.png')}}" alt="" />
                     </div>
                 </div>
             </a>
@@ -556,7 +556,7 @@
             <a href="http://localhost:8000/map_bank">
                 <div class="fmcircle_border">
                     <div class="fmcircle_in fmcircle_gold">
-                        <span>BANK</span><img src="hotel.png" alt="" />
+                        <span>BANK</span><img src= "{{URL::asset('graphics/icons/map/bank.png')}}" alt="" />
                     </div>
                 </div>
             </a>
@@ -568,7 +568,7 @@
             <a href="http://localhost:8000/map_worship">
                 <div class="fmcircle_border">
                     <div class="fmcircle_in fmcircle_indigo">
-                        <span>WORSHIP</span><img src="hotel.png" alt="" />
+                        <span>WORSHIP</span><img src= "{{URL::asset('graphics/icons/map/worship.png')}}" alt="" />
                     </div>
                 </div>
             </a>
@@ -580,7 +580,7 @@
             <a href="http://localhost:8000/map_parking">
                 <div class="fmcircle_border">
                     <div class="fmcircle_in fmcircle_pink">
-                        <span>PARKING</span><img src="hotel.png" alt="" />
+                        <span>PARKING</span><img src= "{{URL::asset('graphics/icons/map/parking.png')}}" alt="" />
                     </div>
                 </div>
             </a>
@@ -592,7 +592,7 @@
             <a href="http://localhost:8000/map_shopping">
                 <div class="fmcircle_border">
                     <div class="fmcircle_in fmcircle_burgundy">
-                        <span>SHOPPING</span><img src="hotel.png" alt="" />
+                        <span>SHOPPING</span><img src= "{{URL::asset('graphics/icons/map/shopping.png')}}" alt="" />
                     </div>
                 </div>
             </a>
