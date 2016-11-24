@@ -12,6 +12,22 @@
         var map;
         var infowindow;
 
+
+        function getUserLocation() {
+            var location = {lat: 43.860702, lng: 18.429932};
+
+            location =  navigator.geolocation.getCurrentPosition(function (position) {
+
+                location.lat = position.coords.latitude;
+                location.lng = position.coords.longitude;
+
+            });
+
+            return location;
+
+        }
+
+
         <!-- Creates a map where Sebilj and shows the nearest places to get food -->
         function initMap() {
             var pyrmont = {lat: 43.860702, lng: 18.429932};
