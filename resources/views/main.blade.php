@@ -28,8 +28,8 @@
             <span class="caret"></span></button>
             <ul class="dropdown-menu">
                 <li><a href="{{ action('OfficesController@index') }}">Office 1</a></li>
-                <li><a href="{{ action('OfficesController1@index') }}">Office 2</a></li>
-                <li><a href="{{ action('OfficesController2@index') }}">Office 3</a></li>
+                <li><a href="{{ action('OfficesController@index1') }}">Office 2</a></li>
+                <li><a href="{{ action('OfficesController@index2') }}">Office 3</a></li>
                 </a>
             </li>
             </ul>

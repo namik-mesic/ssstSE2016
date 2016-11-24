@@ -23,9 +23,9 @@ Route::get('/historicalrates', 'HistoricalRatesController@index');
 
 Route::get('/offices', 'OfficesController@index');
 
-Route::get('/offices1', 'OfficesController1@index');
+Route::get('/offices1', 'OfficesController@index1');
 
-Route::get('/offices2', 'OfficesController2@index');
+Route::get('/offices2', 'OfficesController@index2');
 
 Route::get('/', 'CurrencyController@index');
 

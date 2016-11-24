@@ -8,4 +8,13 @@ class OfficesController extends Controller
     {
         return view('currency.offices');
     }
+    public function index1()
+    {
+        return view('currency.offices1');
+    }
+
+    public function index2()
+    {
+        return view('currency.offices2');
+    }
 }
