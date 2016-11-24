@@ -531,7 +531,7 @@
             <a href="http://localhost:8000/map_entertainment">
                 <div class="fmcircle_border">
                     <div class="fmcircle_in fmcircle_red">
-                        <span>Rec</span><img src="bench.png" alt="" />
+                        <span>Rec</span><img src="{{URL::asset('graphics/icons/map/park.png')}}" alt="" />
                     </div>
                 </div>
             </a>
