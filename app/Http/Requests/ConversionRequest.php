@@ -25,7 +25,7 @@ class ConversionRequest extends FormRequest
     {
         return [
             'amount' => 'required|numeric',
-            'from' => 'required',
+            'from' => 'required|different:to',
             'to' => 'required',
         ];
 

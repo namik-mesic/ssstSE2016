@@ -1,9 +1,9 @@
-<html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
     <title>Currency converter</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1″ />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -13,7 +13,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-
+<div>
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -34,11 +34,12 @@
             </li>
             </ul>
             </div>
+    </div>
 
 
 
 
-    <img class="money" width=30 height="30" src= "{{ asset('money.png') }}"></li>
+    <img class="money" src= "{{ asset('money.png') }}"></li>
 </nav>
 
 
@@ -47,20 +48,38 @@
 
     @include('layouts.display')
 
+    @if (count($errors) > 0)
+        <div class="alert" id="divtoBlink">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     @yield('content')
 
 </div>
 
 
-
 </body>
 <style>
+    .alert{
+        position:absolute;
+        background-color: red;
+        color:white;
+        left:800px;
+        top:200px;
+    }
 
 
     .money{
         position: absolute;
         top:10px;
         left:700px;
+        width:30px;
+        height:30px;
     }
     .forma {
         color: #00001a;
