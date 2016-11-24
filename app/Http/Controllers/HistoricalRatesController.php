@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\HistoricalRequest;
 use App\Services\FixerService;
 use Illuminate\Http\Request;
 
@@ -12,10 +13,19 @@ class HistoricalRatesController extends Controller
         return view('currency.historicalrates');
     }
 
-    public function process(Request $request, FixerService $service)
+    /**
+     * @param Request $request
+     * @param FixerService $service
+     */
+    public function process(HistoricalRequest $request, FixerService $service)
     {
-        $responseObject = $service->getHistory('2010-01-01', 'USD');
+        $historicalrate = $service->getHistory(
+        $request->get('date'),
+        $request->get('curr'));
 
-        dump($responseObject);
+
+        return view('currency.historicalrates', compact(
+            'historicalrate'
+        ));
     }
 }

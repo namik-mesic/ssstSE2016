@@ -46,17 +46,6 @@
 
 <div style='margin-left:auto;margin-right:auto;width:290px;'>
 
-    @include('layouts.display')
-
-    @if (count($errors) > 0)
-        <div class="alert" id="divtoBlink">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
 
     @yield('content')
 

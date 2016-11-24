@@ -29,7 +29,7 @@ class FixerService
      * @param $currency
      * @return Object
      */
-    public function getHistory($date, $currency)
+    public function getHistory($date, $curr)
     {
         $response = $this->client->get('http://api.fixer.io/2000-01-03');
 
