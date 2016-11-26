@@ -2,8 +2,7 @@
 @extends('layouts.map')
 <!-- The head that connects the map with the layout -->
 @section('head')
-    <script src="http://maps.google.com/maps/api/js?sensor=false"
-            type="text/javascript"></script>
+
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-jpP1e6mNwMTQj_6tcR1Okyg4gSczd6w&libraries=places"></script>
 
     <script type="text/javascript">
@@ -52,7 +51,8 @@
             }, callback);
 
             service = new google.maps.places.PlacesService(map);
-            service.nearbySearch(request, callback);
+            // this line returns undefined vvvv
+            //service.nearbySearch(request, callback);
         }
 
         <!-- Calls the Google API for each marker needed -->
@@ -112,8 +112,7 @@
         }
 
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-jpP1e6mNwMTQj_6tcR1Okyg4gSczd6w&callback=initMap"
-            async defer></script>
+
 
 
 @endsection
