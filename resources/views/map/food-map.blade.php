@@ -51,8 +51,8 @@
                 type: ['bakery']
             }, callback);
 
-            service = new google.maps.places.PlacesService(map);
             // this line returns undefined vvvv
+            //service = new google.maps.places.PlacesService(map);
             //service.nearbySearch(request, callback);
         }
 
