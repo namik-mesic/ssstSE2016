@@ -22,10 +22,12 @@
     <meta charset="utf-8">
 
     <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<!--
+   these css imports are not found in our project. are they even needed?
     <link rel="stylesheet" href="css/core.css">
     <link href="css/blog-post.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
+-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- JavaScript -->
