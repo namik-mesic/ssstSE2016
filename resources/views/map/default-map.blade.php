@@ -15,7 +15,9 @@
 
             map = new google.maps.Map(document.getElementById('map'), {
                 center: pyrmont,
-                zoom: 15
+                mapTypeControl: false,
+                streetViewControl: false,
+                zoom: 16
             });
 
             infowindow = new google.maps.InfoWindow();
