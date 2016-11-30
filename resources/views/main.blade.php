@@ -22,7 +22,7 @@
         <ul class="nav navbar-nav">
 
             <li class="active"><a href="{{ action('CurrencyController@index') }}">Home</a></li>
-            <li class="active"><a href="{{ action('ChartController@index') }}">Chart</a></li>
+            <li class="active"><a href="{{ action('ChartController@index') }}">Charts</a></li>
             <li class="active"><a href="{{ action('HistoricalRatesController@index') }}">Historical rates</a></li>
             <li class="active"><a data-toggle="dropdown" href="#">Our offices
             <span class="caret"></span></button>
@@ -113,11 +113,11 @@ background-color: #ebebe0;
         background-color: inherit;
         border-color: black;
     }
-
+11
 </style>
 <footer class="navbar navbar-inverse navbar-fixed-bottom">
     <div class="container-fluid">
-        <span>2016</span>
+        <span>Currency converter 2016</span>
     </div>
 </footer>
 </html>

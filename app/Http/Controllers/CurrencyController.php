@@ -27,6 +27,7 @@ class CurrencyController
      */
     public function process(ConversionRequest $request, ConverterService $converterService)
     {
+
         $calculatedAmount = $converterService->calculate(
             $request->get('amount'),
             $request->get('from'),

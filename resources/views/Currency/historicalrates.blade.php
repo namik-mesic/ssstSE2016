@@ -1,7 +1,7 @@
 @extends('main')
 @section('content')
 
-    <form action="{{ action('CurrencyController@process') }}" class="forma" name="converter_form" method="POST">
+    <form action="{{ action('HistoricalRatesController@process') }}" class="forma" name="converter_form" method="POST">
         {!! csrf_field() !!}
 
 
@@ -32,7 +32,9 @@
         </button>
     </form>
 
-    @if(isset($calculatedAmount))
+
+    @if(isset($historicalrate))
+
         @include('currency.hrate')
 
     @endif

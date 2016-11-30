@@ -31,8 +31,7 @@ class FixerService
      */
     public function getHistory($date, $curr)
     {
-        $response = $this->client->get('http://api.fixer.io/2000-01-03');
-
+        $response = $this->client->get("http://api.fixer.io/{$date}?base={$curr}");
         return json_decode($response->getBody()->getContents());
     }
 }

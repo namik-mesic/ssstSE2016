@@ -21,6 +21,8 @@ Route::get('/chart', 'ChartController@index');
 
 Route::get('/historicalrates', 'HistoricalRatesController@index');
 
+Route::post('/historicalrates', 'HistoricalRatesController@process');
+
 Route::get('/offices', 'OfficesController@index');
 
 Route::get('/offices1', 'OfficesController@index1');
