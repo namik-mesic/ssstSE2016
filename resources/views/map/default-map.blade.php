@@ -12,12 +12,23 @@
 
         var coordinates = {lat: 43.860702, lng: 18.429932};
 
+
         function getUserLocation() {
-            coordinates.lat = position.coords.longitude;
-            coordinates.lng = position.coords.latitude;
-            return coordinates;
+            var pos = coordinates;
+
+            if(navigator.geolocation){
+
+                coordinates.lat = position.coords.longitude;
+                coordinates.lng = position.coords.latitude;
+                return coordinates;
+
+            }
+            else{
+                return pos;
+
+            }
         }
-        
+
         function getUserLocation(infoWindow) {
             // Try HTML5 geolocation.
             if (navigator.geolocation) {
@@ -61,17 +72,17 @@
             // {map:map} will display the "you are here" bubble
             infowindow = new google.maps.InfoWindow(/*{map: map}*/);
 
-            //getUserLocation(infowindow);
+            getUserLocation(infowindow);
 
 
-
+            /*
             var service = new google.maps.places.PlacesService(map);
             service.nearbySearch({
                 location: map.center,
                 radius: 100,
                 type: []
-            });
-
+            }, callback);
+            */
         }
 
 
