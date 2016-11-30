@@ -8,28 +8,9 @@
     -->
 
     <script type="text/javascript">
-        //<![CDATA[
-
-        var coordinates = {lat: 43.860702, lng: 18.429932};
 
 
-        function getUserLocation() {
-            var pos = coordinates;
-
-            if(navigator.geolocation){
-
-                coordinates.lat = position.coords.longitude;
-                coordinates.lng = position.coords.latitude;
-                return coordinates;
-
-            }
-            else{
-                return pos;
-
-            }
-        }
-
-        function getUserLocation(infoWindow) {
+        function initMap() {
             // Try HTML5 geolocation.
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(position) {
@@ -38,16 +19,26 @@
                         lng: position.coords.longitude
                     };
 
-                    infoWindow.setPosition(pos);
-                    //
-                    infoWindow.setContent('You are here.');
-                    map.setCenter(pos);
+
+                    map = new google.maps.Map(document.getElementById('map'), {
+                        center: pos,
+                        mapTypeControl: false,
+                        streetViewControl: false,
+                        zoom: 16
+                    });
+
+                    // {map:map} will display the "you are here" bubble
+                    infoWindow = new google.maps.InfoWindow({map: map});
+                    infoWindow.setContent("You are here");
                 }, function() {
                     handleLocationError(true, infoWindow, map.getCenter());
                 });
             } else {
                 // Browser doesn't support Geolocation
-                handleLocationError(false, infoWindow, map.getCenter());
+                // set location to default (sebilj)
+                var coordinates = {lat: 43.860702, lng: 18.429932};
+                handleLocationError(false, infoWindow, coordinates);
+
             }
 
         }
@@ -58,36 +49,6 @@
                     'Error: The Geolocation service failed.' :
                     'Error: Your browser doesn\'t support geolocation.');
         }
-
-
-        function initMap() {
-            var coordinatesObject = getUserLocation();
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: coordinatesObject,
-                mapTypeControl: false,
-                streetViewControl: false,
-                zoom: 16
-            });
-
-            // {map:map} will display the "you are here" bubble
-            infowindow = new google.maps.InfoWindow(/*{map: map}*/);
-
-            getUserLocation(infowindow);
-
-
-            /*
-            var service = new google.maps.places.PlacesService(map);
-            service.nearbySearch({
-                location: map.center,
-                radius: 100,
-                type: []
-            }, callback);
-            */
-        }
-
-
-
-
 
 
     </script>
