@@ -10,8 +10,16 @@
     <script type="text/javascript">
         //<![CDATA[
 
-        function getUserLocation(infoWindow) {
+        var coordinates = {lat: 43.860702, lng: 18.429932};
 
+        function getUserLocation() {
+            coordinates.lat = position.coords.longitude;
+            coordinates.lng = position.coords.latitude;
+            return coordinates;
+        }
+        
+        function getUserLocation(infoWindow) {
+            // Try HTML5 geolocation.
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(position) {
                     var pos = {
@@ -40,10 +48,11 @@
                     'Error: Your browser doesn\'t support geolocation.');
         }
 
-        function initMap() {
 
+        function initMap() {
+            var coordinatesObject = getUserLocation();
             map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: 43.860702, lng: 18.429932},
+                center: coordinatesObject,
                 mapTypeControl: false,
                 streetViewControl: false,
                 zoom: 16
@@ -52,16 +61,16 @@
             // {map:map} will display the "you are here" bubble
             infowindow = new google.maps.InfoWindow(/*{map: map}*/);
 
-            getUserLocation(infowindow);
+            //getUserLocation(infowindow);
 
-            // Try HTML5 geolocation.
+
 
             var service = new google.maps.places.PlacesService(map);
             service.nearbySearch({
                 location: map.center,
                 radius: 100,
                 type: []
-            }, callback);
+            });
 
         }
 
