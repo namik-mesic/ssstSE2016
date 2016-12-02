@@ -12,7 +12,7 @@
             </label>
 
             <select name="curr" id="from" class="form-control">
-                @include('currency.currency_options')
+                @include('currency.currency_options_hr')
             </select>
 
         </div>

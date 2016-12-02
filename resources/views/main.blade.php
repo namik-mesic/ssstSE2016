@@ -183,7 +183,6 @@
             <a class="navbar-brand">Currency converter</a>
         </div>
         <ul class="nav navbar-nav">
-
             <li class="active"><a href="{{ action('CurrencyController@index') }}">Home</a></li>
             <li class="active"><a href="{{ action('ChartController@index') }}">Charts</a></li>
             <li class="active"><a href="{{ action('HistoricalRatesController@index') }}">Historical rates</a></li>
@@ -197,13 +196,10 @@
             </li>
             </ul>
             </div>
-    </div>
 
-
-
-
-    <img class="money" src= "{{ asset('money.png') }}"></li>
+ <img class="money" src= "{{ asset('money.png') }}"></li>
 </nav>
+</div>
 
 
 
@@ -219,8 +215,10 @@
     </div>
 </footer>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 @yield('scripts')
 </body>
 </html>
