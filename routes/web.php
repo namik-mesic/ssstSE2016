@@ -29,9 +29,14 @@ Route::get('/offices1', 'OfficesController@index1');
 
 Route::get('/offices2', 'OfficesController@index2');
 
-Route::get('/', 'CurrencyController@index');
+Route::get('/', 'StartController@index');
 
-Route::post('/', 'CurrencyController@process');
+Route::post('/', 'StartController@process');
+
+Route::get('/main', 'CurrencyController@index');
+
+Route::post('/main', 'CurrencyController@process');
+
 
 Auth::routes();
 

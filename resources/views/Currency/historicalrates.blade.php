@@ -11,9 +11,11 @@
                 Select currency:
             </label>
 
+            <div class="form-group">
             <select name="curr" id="from" class="form-control">
                 @include('currency.currency_options_hr')
             </select>
+                </div>
 
         </div>
         <br>
@@ -38,5 +40,6 @@
         @include('currency.hrate')
 
     @endif
+
 
 
