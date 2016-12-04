@@ -122,14 +122,7 @@
         }
 
 
-        .money{
-            position: absolute;
-            top:10px;
-            left:700px;
-            width:30px;
-            height:30px;
-        }
-        .forma {
+           .forma {
             color: #00001a;
             width: 500px;
             position: absolute;
@@ -194,11 +187,11 @@
                 <li><a href="{{ action('OfficesController@index2') }}">Office 3</a></li>
                 </a>
             </li>
-            </ul>
+             </ul>
+        <li class="active"><a href="{{ action('ContactController@index') }}">Contact us</a></li>
             </div>
 
- <img class="money" src= "{{ asset('money.png') }}"></li>
-</nav>
+ </nav>
 </div>
 
 

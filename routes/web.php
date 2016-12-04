@@ -37,6 +37,7 @@ Route::get('/main', 'CurrencyController@index');
 
 Route::post('/main', 'CurrencyController@process');
 
+Route::get('/contact', 'ContactController@index');
 
 Auth::routes();
 
