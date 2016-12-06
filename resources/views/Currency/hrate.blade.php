@@ -2,7 +2,7 @@
 <div class="lead">
     <strong>
 
-        {{ $historicalrate }}
+        {{ dump(historicalrate) }}
 
     </strong>
 </div>

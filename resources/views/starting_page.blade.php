@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-
+    <div class="col-xs-12"><hr></div>
     <title>Currency converter</title>
 
     <meta charset="utf-8">
@@ -28,6 +28,7 @@
     <p>
         The World's Trusted Currency Authority! </p>
     <h3><a href="{{ action('CurrencyController@index') }}" style="text-decoration: none; color: lightgrey; padding: 10px; background-color:#080808; border-radius: 5px;">Proceed to our website!</a> </h3></button>
+
 </div>
 
 
@@ -59,8 +60,17 @@
 
     </div>
 
-    ​
+    ​</div>
 
+<style>
+    body{
+        background-color: #ebebe0;
+
+    }
+    .col-xs-12{
+        background-color:black;
+    }
+</style>
 </body>
 
 </html>
