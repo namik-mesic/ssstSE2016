@@ -31,8 +31,7 @@
                     });
 
                     // {map:map} will display the "you are here" bubble
-                    infoWindow = new google.maps.InfoWindow({map: map});
-                    infoWindow.setContent("You are here");
+                    infoWindow = new google.maps.InfoWindow({content:"You are here",map:map, position: pos});
 
 
                     infowindow = new google.maps.InfoWindow();
