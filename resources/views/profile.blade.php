@@ -1,4 +1,3 @@
-@extends('layouts.app')
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"
       xmlns="http://www.w3.org/1999/html">
 
@@ -10,6 +9,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.3/js/bootstrap-colorpicker.min.js"></script>
 
+@extends('layouts.app')
 
 @section('content')
 
@@ -18,8 +18,10 @@
         <div class="sidebar"></div>
         <div class="clear"></div>
     </div>
-
     <div class="profile-color-block" style="background-color: {{ $user->color }}">
+      <!-- Checks if the currently logged in user is on his / hers profile page-->
+        @if(Auth::user() -> name == $user)
+
         <input class="clrpick" type="button" id="color"/>
 
         <script>
@@ -32,7 +34,9 @@
 
 
         </script>
+@endif
     </div>
+
     <div class="col-md-6 center">
         <div class="row">
             <div class="table-responsive">
