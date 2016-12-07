@@ -27,7 +27,7 @@
                         center: pos,
                         mapTypeControl: false,
                         streetViewControl: false,
-                        zoom: 16
+                        zoom: 15
                     });
 
                     // {map:map} will display the "you are here" bubble
@@ -37,7 +37,7 @@
                     var service = new google.maps.places.PlacesService(map);
                     service.nearbySearch({
                         location: pos,
-                        radius: 500,
+                        radius: 1000,
                         type: ['restaurant'],
                         type: ['food'],
                         type: ['meal_takeaway'],
