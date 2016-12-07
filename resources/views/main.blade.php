@@ -191,6 +191,7 @@
                 </a>
             </li>
              </ul>
+        <li class="active"><a href="{{ action('LiveRatesController@index') }}">Live rates</a></li>
         <li class="active"><a href="{{ action('ContactController@index') }}">Contact us</a></li>
             </div>
 
