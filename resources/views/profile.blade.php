@@ -3,9 +3,13 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 
+<!--
+--CSS that is causing a problem with the dropdown menu
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+-->
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.3/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.3/css/bootstrap-colorpicker.min.css"
+      rel="stylesheet">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.3/js/bootstrap-colorpicker.min.js"></script>
 
@@ -19,22 +23,21 @@
         <div class="clear"></div>
     </div>
     <div class="profile-color-block" style="background-color: {{ $user->color }}">
-      <!-- Checks if the currently logged in user is on his / hers profile page-->
-        @if(Auth::user() -> name == $user)
-
+        <!-- Checks if the currently logged in user is on his / hers profile page-->
+        @if(Auth::user() -> username == $user['username'])
         <input class="clrpick" type="button" id="color"/>
 
         <script>
 
-            $('#color').colorpicker({}).on('changeColor', function(event) {
+            $('#color').colorpicker({}).on('changeColor', function (event) {
 
-                $('.profile-color-block').css('background',event.color.toHex());
+                $('.profile-color-block').css('background', event.color.toHex());
 
             });
 
 
         </script>
-@endif
+            @endif
     </div>
 
     <div class="col-md-6 center">
