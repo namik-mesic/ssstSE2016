@@ -24,9 +24,14 @@
 
         <script>
 
-            $('#color').colorpicker({});
+            $('#color').colorpicker({}).on('changeColor', function(event) {
 
-        </script></input>
+                $('.profile-color-block').css('background',event.color.toHex());
+
+            });
+
+
+        </script>
     </div>
     <div class="col-md-6 center">
         <div class="row">
