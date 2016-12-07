@@ -32,6 +32,10 @@ Route::get('/confirm', 'confirmControl@confirmationForm');
 Auth::routes();
 Route::get('profile', 'ProfileController@index');
 
+Route::get("settings", "SettingsController@getSettings");
+
+Route::post("settings", "SettingsController@postSettings");
+
 Route::get('/users', function (){
 
     $query = Request::get('q');
