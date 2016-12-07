@@ -82,7 +82,7 @@
 <header class="clearfix background-lightgrey">
     <div class="wrapper">
         <div id="banner">
-            <div id="logo"><a href=""><img src= "{{URL::asset('graphics/icons/map/pin.png')}}" alt="logo" /></a></div>
+            <div id="logo"><a href="http://localhost:8000/map"><img src= "{{URL::asset('graphics/icons/map/pin.png')}}" alt="logo" /></a></div>
         </div>
 
         <!-- main navigation -->

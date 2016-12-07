@@ -16,7 +16,11 @@
                 navigator.geolocation.getCurrentPosition(function(position) {
                     var pos = {
                         lat: position.coords.latitude,
-                        lng: position.coords.longitude
+                        lng: position.coords.longitude,
+                        maximumAge:600000,
+                        timeout:5000,
+                        enableHighAccuracy: true
+
                     };
 
 
@@ -28,7 +32,7 @@
                     });
 
                     // {map:map} will display the "you are here" bubble
-                    infoWindow = new google.maps.InfoWindow({map: map});
+                    infoWindow = new google.maps.InfoWindow({map:map});
                     infoWindow.setContent("You are here");
                 }, function() {
                     handleLocationError(true, infoWindow, map.getCenter());
