@@ -7,6 +7,9 @@
     <meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1″ />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <style>
+        .margin-top{
+            margin-top:30px;
+        }
         body {
             text-rendering: optimizeLegibility;
             color: #444;
@@ -196,7 +199,7 @@
 
 
 
-<div style='margin-left:auto;margin-right:auto;width:290px;'>
+<div style='margin-left:auto;margin-right:auto;'>
 
 
     @yield('content')
