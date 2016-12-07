@@ -19,7 +19,7 @@
         <div class="clear"></div>
     </div>
 
-    <div class="profile-color-block" style="background-color: {{ Auth::user()->color }}">
+    <div class="profile-color-block" style="background-color: {{ $user->color }}">
         <input class="clrpick" type="button" id="color"/>
 
         <script>
@@ -40,7 +40,7 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                            {{ Auth::user()->name }}
+                            {{ $user->name }}
                         </td>
                     </tr>
 
@@ -51,7 +51,7 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                            {{Auth::user()-> username}}
+                            {{$user-> username}}
                         </td>
                     </tr>
                     <tr>
@@ -61,7 +61,7 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                            {{Auth::user()->dob }}
+                            {{$user->dob }}
                         </td>
                     </tr>
 
@@ -83,7 +83,7 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                            <a href="mailto: {{Auth::user() -> email}} ">{{Auth::user()->email }}</a>
+                            <a href="mailto: {{$user -> email}} ">{{$user->email }}</a>
                         </td>
                     </tr>
                     <tr>
@@ -93,7 +93,7 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                            {{Auth::user() -> created_at}}
+                            {{$user -> created_at}}
                         </td>
                     </tr>
                     <tr>
@@ -103,7 +103,7 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                            {{Auth::user() -> updated_at}}
+                            {{$user -> updated_at}}
                         </td>
                     </tr>
                     </tbody>

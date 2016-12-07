@@ -17,4 +17,11 @@ class SearchController extends Controller
         $users = User::all();
         return view('/users', compact('users'));
     }
+
+    public function show($id){
+
+        $user = User::find($id);
+
+        return view('profile', compact('user'));
+    }
 }
