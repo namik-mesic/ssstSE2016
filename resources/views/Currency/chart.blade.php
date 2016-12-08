@@ -3,29 +3,20 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <form action="{{ action('CurrencyController@process') }}" class="forma" name="converter_form" method="POST">
+    <form action="{{ action('CurrencyController@process') }}" class="forma" name="converter_form" method="POST" id="fr">
         {!! csrf_field() !!}
 
-            <div class="container">
-            <div class="row">
-                <div class="col-sm-4">
+    <div class="cl">
 
-
-            Base currency: <span id="base_cur">EUR</span>
 
             <h4>Chose Currency:</h4>
+        <select id="baseSelect" class="custom-select sources"></select> <br>
+        Base currency: <span id="base_cur">EUR</span>
 
-                <div class="col-sm-4">
-                    <div class="form-group">
 
-            <select id="baseSelect" class="custom-select sources"></select>
-                        </div>
 
-            </div>
-            </div>
         </div>
 
-            </div>
 </form>
 
         <div class="table-responsive">
@@ -41,16 +32,33 @@
             </tbody>
         </table>
             </div>
-        <div class="col-sm-4">
-        <div class="right">
-            <h3 class="title"> Currency Exchange Rate Chart: <span></span></h3>
+
+
             <span class="loading">Loading .... </span>
             <div id="chart"></div>
-        </div>
-            </div>
 
 
 
+<style>
+    .cl{
+        position:absolute;
+        left:-50px;
+        top:-50px;
+    }
+    .table-responsive{
+        position: absolute;
+        left:100px;
+        top:220px;
+        width: 500px;
+        height: 400px;
+    }
+    #chart{
+        position: absolute;
+        top:200px;
+        left:700px;
+           }
+
+</style>
 
 @endsection
 

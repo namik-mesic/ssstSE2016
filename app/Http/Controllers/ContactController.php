@@ -8,4 +8,5 @@ class ContactController extends Controller
     {
         return view('currency.contact');
     }
-}
+
+   }

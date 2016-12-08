@@ -25,7 +25,7 @@ class HistoricalRequest extends FormRequest
     {
         return [
             'curr' => 'required',
-            'date' => 'required|date',
+            'date' => 'required|date|after:02/02/1998',
 
         ];
 

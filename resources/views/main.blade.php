@@ -7,6 +7,11 @@
     <meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1″ />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <style>
+
+
+        .margin-top{
+            margin-top:100px;
+        }
         body {
             text-rendering: optimizeLegibility;
             color: #444;
@@ -179,6 +184,7 @@
             <li class="active"><a href="{{ action('CurrencyController@index') }}">Home</a></li>
             <li class="active"><a href="{{ action('ChartController@index') }}">Charts</a></li>
             <li class="active"><a href="{{ action('HistoricalRatesController@index') }}">Historical rates</a></li>
+            <li class="active"><a href="{{ action('LiveRatesController@index') }}">Live rates</a></li>
             <li class="active"><a data-toggle="dropdown" href="#">Our offices
             <span class="caret"></span></button>
             <ul class="dropdown-menu">
@@ -188,6 +194,7 @@
                 </a>
             </li>
              </ul>
+
         <li class="active"><a href="{{ action('ContactController@index') }}">Contact us</a></li>
             </div>
 
@@ -196,7 +203,7 @@
 
 
 
-<div style='margin-left:auto;margin-right:auto;width:290px;'>
+<div style='margin-left:auto;margin-right:auto;'>
 
 
     @yield('content')

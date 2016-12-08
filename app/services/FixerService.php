@@ -34,4 +34,5 @@ class FixerService
         $response = $this->client->get("http://api.fixer.io/{$date}?base={$curr}");
         return json_decode($response->getBody()->getContents());
     }
-}
+
+   }

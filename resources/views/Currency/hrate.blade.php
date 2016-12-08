@@ -2,7 +2,13 @@
 <div class="lead">
     <strong>
 
-        {{ $historicalrate }}
+        <ul>
+            @foreach((array) $historicalrate->rates as $rate => $value)
+                <li>
+                    {{ $rate }}: {{ $value }}
+                </li>
+            @endforeach
+        </ul>
 
     </strong>
 </div>

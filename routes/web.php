@@ -39,6 +39,10 @@ Route::post('/main', 'CurrencyController@process');
 
 Route::get('/contact', 'ContactController@index');
 
+Route::post('/contact', 'ContactController@store');
+
+Route::get('/liverates', 'LiveRatesController@index');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
