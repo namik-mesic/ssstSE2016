@@ -1,67 +1,34 @@
 @extends('main')
 @section('content')
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <div class="col-lg-8 col-lg-push-2 margin-top">
+        <h4>Select a currency:</h4>
+        <select style="color: black; width: 160px; border-color: black" id="baseSelect" class="custom-select sources"></select> <br>
+        <h4> Base currency: <span id="base_cur">EUR</span></h4>
+    </div>
 
-    <form action="{{ action('CurrencyController@process') }}" class="forma" name="converter_form" method="POST" id="fr">
-        {!! csrf_field() !!}
-
-    <div class="cl">
-
-
-            <h4>Chose Currency:</h4>
-        <select id="baseSelect" class="custom-select sources"></select> <br>
-        Base currency: <span id="base_cur">EUR</span>
-
-
-
-        </div>
-
-</form>
-
+    <div class="col-lg-8 col-lg-push-2 margin-top">
         <div class="table-responsive">
-        <table id="mytable" class="table">
-            <thead>
-            <tr>
-                <td> Currency</td>
-                <td> Rate</td>
-            </tr>
-            </thead>
-            <tbody>
-            <tr></tr>
-            </tbody>
-        </table>
-            </div>
+            <table id="mytable" class="table">
+                <thead>
+                <tr>
+                    <td> Currency</td>
+                    <td> Rate</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 
-            <span class="loading">Loading .... </span>
-            <div id="chart"></div>
-
-
-
-<style>
-    .cl{
-        position:absolute;
-        left:-50px;
-        top:-50px;
-    }
-    .table-responsive{
-        position: absolute;
-        left:100px;
-        top:220px;
-        width: 500px;
-        height: 400px;
-    }
-    #chart{
-        position: absolute;
-        top:200px;
-        left:700px;
-           }
-
-</style>
-
+    <div class="col-lg-8 col-lg-push-4 hljeb">
+        <span class="loading">Loading .... </span>
+        <div id="chart"></div>
+    </div>
 @endsection
-
 @section('scripts')
 
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
