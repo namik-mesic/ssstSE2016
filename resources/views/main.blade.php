@@ -12,7 +12,7 @@
 </head>
 <style>
 
-    .hljeb{
+    .klasa {
         float:left;
         padding:8px;
         max-width: 200px;
@@ -114,14 +114,16 @@
                         </li>
                     </ul>
             <li class="active"><a href="{{ action('ContactController@index') }}">Contact us</a></li>
+            <li class="active"><img class="money" width=50 height="50" src= "{{ asset('coin.gif') }}"></li>
+            <li class="active"><img class="money" width=50 height="50" src= "{{ asset('coin.gif') }}"></li>
     </div>
 </div>
 
 @yield('content')
 
-<footer class="navbar navbar-inverse navbar-fixed-bottom">
+<footer style="background-color: #00001a;" class="navbar navbar-inverse navbar-fixed-bottom">
     <div class="container-fluid">
-        <span>Currency converter 2016</span>
+        <span style="color: white;">Currency converter 2016</span>
     </div>
 </footer>
 

@@ -24,7 +24,7 @@
     </div>
 
 
-    <div class="col-lg-8 col-lg-push-4 hljeb">
+    <div class="col-lg-8 col-lg-push-4 klasa">
         <span class="loading">Loading .... </span>
         <div id="chart"></div>
     </div>

@@ -40,20 +40,20 @@
         <div class="col-sm-4">
 
 
-            <img src= "{{ asset('amina.jpg') }}" class="img-circle" width="270" height="236">
+            <img src= "{{ asset('amina.jpg') }}" class="img-circle" width="200" height="200">
 
         </div>
 
         <div class="col-sm-4">
 
 
-            <img src= "{{ asset('edis.jpg') }}" class="img-circle" width="230" height="220">
+            <img src= "{{ asset('edis.jpg') }}" class="img-circle" width="200" height="200">
 
         </div>
 
         <div class="col-sm-4">
 
-            <img src= "{{ asset('ajla.jpg') }}"  class="img-circle" width="270" height="236">
+            <img src= "{{ asset('ajla.jpg') }}"  class="img-circle" width="200" height="200">
 
         </div>
 
@@ -64,7 +64,7 @@
 
 <style>
     body{
-        background-color: #ebebe0;
+        background-color: #00001a;
 
     }
     .col-xs-12{
