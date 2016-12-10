@@ -235,12 +235,12 @@
 
             </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="panel with-nav-tabs panel-default">
                         <div class="panel-heading">
                             <ul class="nav nav-tabs">
                                 <li class="active"><a href="#tab1default" data-toggle="tab">Info</a></li>
-
+                                <!--
                                 <li class="dropdown">
                                     <a href="#" data-toggle="dropdown">Drop Me <span class="caret"></span></a>
                                     <ul class="dropdown-menu" role="menu">
@@ -248,11 +248,13 @@
                                         <li><a href="#tab5default" data-toggle="tab">Saved locations</a></li>
                                     </ul>
                                 </li>
+                                -->
                             </ul>
                         </div>
                         <div class="panel-body">
                             <div class="tab-content">
-                                <div class="tab-pane fade in active" id="tab1default">This is some information</div>
+                                <div class="tab-pane fade in active" id="tab1default" style = "font-size: large">
+                                    Click on a pin! Information about that place will be displayed here.</div>
                                 <div class="tab-pane fade" id="tab2default"></div>
                                 <div class="tab-pane fade" id="tab3default"></div>
                                 <div class="tab-pane fade" id="tab4default">Most visited locations</div>

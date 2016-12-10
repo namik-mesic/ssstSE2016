@@ -36,7 +36,7 @@
                     var service = new google.maps.places.PlacesService(map);
                     service.nearbySearch({
                         location: pos,
-                        radius: 1000,
+                        radius: 2000,
                         type: ['restaurant'],
                         type: ['food'],
                         type: ['meal_takeaway'],
@@ -82,12 +82,19 @@
 
         <!-- Creates each marker -->
         function createMarker(place) {
+            var image = {
+                url: place.icon,
+                //size: new google.maps.Size(40,64),
+                origin: new google.maps.Point(0, 0),
+                anchor: new google.maps.Point(0, 32)
+            };
+
             var placeLoc = place.geometry.location;
 
             var marker = new google.maps.Marker({
                 map: map,
-                position: place.geometry.location,
-                icon: place.icon
+                position: place.geometry.location
+
 
             });
 
@@ -111,12 +118,7 @@
 
             }
 
-            <!-- Adds a mouseover listener where it shows the content for each marker  -->
-            google.maps.event.addListener(marker, 'mouseover', function() {
-                var pic = place.photos[0].getUrl({'maxWidth': 200, 'maxHeight': 200});
-                infowindow.setContent(place.name + getImage(pic));
-                infowindow.open(map, this);
-            });
+
 
             <!-- Adds a click listener to do the displayInfo() function -->
             google.maps.event.addListener(marker, 'click', function() {
