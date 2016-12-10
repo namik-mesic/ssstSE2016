@@ -25,7 +25,7 @@
 
 
     <div class="col-lg-8 col-lg-push-4 klasa">
-        <span class="loading">Loading .... </span>
+        <span class="loading" style="color: #00001a">Loading .... </span>
         <div id="chart"></div>
     </div>
 @endsection

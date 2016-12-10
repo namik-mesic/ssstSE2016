@@ -10,91 +10,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
-<style>
-
-    .klasa {
-        float:left;
-        padding:8px;
-        max-width: 200px;
-        left: -400px;
-        top:100px;
-
-    }
-    .margin-t{
-        top:-30px;
-    }
-    .alert{
-        color: #00001a;
-    }
-    .form-group{
-        color: #00001a;
-    }
-    .margin-top{
-        top:50px;
-    }
-    .margin-topp{
-        top:100px;
-    }
-    .container{
-        background-color: #00001a;
-        width: 100%;
-        font-size: 20px;
-
-    }
-    body{
-        background-color: silver;
-        color:white;
-        font-family: "Century Gothic";
-        font-size: 20px;
-    }
-    .forma{
-        width: 300px;
-
-    }
-    .button{
-        background-color:black;
-
-    }
-    .button:hover{
-        color:black;
-        background-color: white;
-        border-color: black;
-    }
-    .form-control{
-        border-color: black;
-
-    }
-    h4{
-        color: black;
-    }
-    #mytable {
-        border-radius: 10px;
-        text-align: center;
-        background: #474747;
-        color: #fff;
-        box-shadow: 10px 10px 5px #888888;
-        font-size: 14px;
-
-    }
-    #mytable thead > tr > td {
-        color: #fa8072;
-
-    }
-
-    #mytable tr:hover {
-        cursor: pointer;
-        opacity: 0.5;
-    }
-    .table-responsive{
-        width: 200px;
-        height: 400px;
-    }
-    .loading{
-        display:none;
-
-    }
-
-</style>
 
 <body>
 <div class="container">
@@ -131,3 +46,88 @@
 
 </body>
 </html>
+<style>
+.klasa {
+float:left;
+padding:8px;
+max-width: 200px;
+left: -400px;
+top:100px;
+
+}
+.margin-t{
+top:-30px;
+}
+.alert{
+color: #00001a;
+}
+.form-group{
+color: #00001a;
+}
+.margin-top{
+top:50px;
+}
+.margin-topp{
+top:100px;
+}
+.container{
+background-color: #00001a;
+width: 100%;
+font-size: 20px;
+
+}
+body{
+background-color: silver;
+color:white;
+font-family: "Century Gothic";
+font-size: 20px;
+}
+.forma{
+width: 300px;
+
+}
+.button{
+background-color:black;
+
+}
+.button:hover{
+color:black;
+background-color: white;
+border-color: black;
+}
+.form-control{
+border-color: black;
+
+}
+h4{
+color: black;
+}
+#mytable {
+border-radius: 10px;
+text-align: center;
+background: #474747;
+color: #fff;
+box-shadow: 10px 10px 5px #888888;
+font-size: 14px;
+
+}
+#mytable thead > tr > td {
+color: #fa8072;
+
+}
+
+#mytable tr:hover {
+cursor: pointer;
+opacity: 0.5;
+}
+.table-responsive{
+width: 200px;
+height: 400px;
+}
+.loading{
+display:none;
+
+}
+
+</style>
+
