@@ -36,7 +36,7 @@
                     var service = new google.maps.places.PlacesService(map);
                     service.nearbySearch({
                         location: pos,
-                        radius: 2000,
+                        radius: 10000,
                         type: ['restaurant'],
                         type: ['food'],
                         type: ['meal_takeaway'],
@@ -88,45 +88,51 @@
                 origin: new google.maps.Point(0, 0),
                 anchor: new google.maps.Point(0, 32)
             };
+            if(place.name) {
+                var placeLoc = place.geometry.location;
 
-            var placeLoc = place.geometry.location;
+                var marker = new google.maps.Marker({
+                    map: map,
+                    icon: place.icon,
+                    position: place.geometry.location
 
-            var marker = new google.maps.Marker({
-                map: map,
-                position: place.geometry.location
+
+                });
 
 
-            });
+                <!-- Get the image -->
+                function getImage(src) {
+                    var tag = "<img src = src>";
+                    return tag;
 
-            <!-- Get the image -->
-            function getImage(src) {
-                var tag = "<img src = src>";
-                return tag;
+                }
 
+                <!-- Display the information for each marker -->
+                function displayInfo() {
+                    var pic = place.photos[0].getUrl({'maxWidth': 200, 'maxHeight': 200});
+                    var tag;
+
+                        tag = document.getElementById("tab1default").innerHTML =
+                                "Place Name: " + place.name + "<br>" +
+                                "Place ID: " + place.place_id + "<br>" +
+                                "\nLocation: " + place.geometry.location +
+                                "<br>" + getImage(pic);
+
+                        // scroll down to info panel  upon clicking on a place icon
+                        //temporary solution for scrolling. need to implement smooth scrolling
+                        window.scrollTo(0,document.body.scrollHeight);
+                        return tag;
+
+
+                }
+
+                <!-- Adds a click listener to do the displayInfo() function -->
+                google.maps.event.addListener(marker, 'click', function () {
+
+                    displayInfo();
+
+                });
             }
-
-            <!-- Display the information for each marker -->
-            function displayInfo() {
-                var pic = place.photos[0].getUrl({'maxWidth': 200, 'maxHeight': 200});
-                var tag;
-                tag = document.getElementById("tab1default").innerHTML =
-                        "Place Name: " + place.name +
-                        "\nPlace ID: " + place.place_id+
-                        "\nLocation: " + place.geometry.location +
-                        "<br>" + getImage(pic);
-                return tag;
-
-            }
-
-
-
-            <!-- Adds a click listener to do the displayInfo() function -->
-            google.maps.event.addListener(marker, 'click', function() {
-
-                displayInfo();
-
-            });
-
         }
 
     </script>
