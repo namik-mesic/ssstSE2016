@@ -1,6 +1,6 @@
 
 @extends('layouts.map')
-<!-- The head that connects the map with the layout -->
+
 @section('head')
 
     <!--
@@ -10,19 +10,30 @@
         //<![CDATA[
 
         var map;
-        var infowindow;
 
-        <!-- Creates a map where Sebilj and shows the nearest places to get entertainment -->
+
+        <!-- Creates a map where it gets your GeoLocation and shows the nearest places to get entertainment -->
         function initMap() {
-            var pyrmont = {lat: 43.860702, lng: 18.429932};
+
+
+            <!-- If clause to get location from function getCurrentPosition -->
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
 
 
             map = new google.maps.Map(document.getElementById('map'), {
-                center: pyrmont,
+                center: pos,
                 mapTypeControl: false,
                 streetViewControl: false,
-                zoom: 16
+                zoom: 15
             });
+
+                    // {map:map} will display the "you are here" bubble
+                    infoWindow = new google.maps.InfoWindow({content:"You are here",map:map, position: pos});
 
             infowindow = new google.maps.InfoWindow();
             var service = new google.maps.places.PlacesService(map);
@@ -38,6 +49,27 @@
 
             //service = new google.maps.places.PlacesService(map);
             //service.nearbySearch(request, callback);
+                }, function() {
+                    handleLocationError(true, infoWindow, map.getCenter());
+                });
+            }
+
+            else {
+                // If browser doesn't support Geolocation,
+                // set location to default (sebilj)
+                var coordinates = {lat: 43.860702, lng: 18.429932};
+                handleLocationError(false, infoWindow, coordinates);
+
+            }
+
+        }
+
+        <!-- Handles GeoLocation errors that can happen -->
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+            infoWindow.setPosition(pos);
+            infoWindow.setContent(browserHasGeolocation ?
+                    'Error: The Geolocation service failed.' :
+                    'Error: Your browser doesn\'t support geolocation.');
         }
 
         <!-- Calls the Google API for each marker needed -->
@@ -48,6 +80,8 @@
                 }
             }
         }
+
+
 
         <!-- Creates each marker -->
         function createMarker(place) {
