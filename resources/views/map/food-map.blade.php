@@ -1,6 +1,6 @@
 
 @extends('layouts.map')
-<!-- The head that connects the map with the layout -->
+
 @section('head')
 
     <!--
@@ -12,9 +12,10 @@
         var map;
         var infowindow;
 
-        <!-- Creates a map where Sebilj and shows the nearest places to get food -->
+        <!-- Creates a map where it gets your GeoLocation and shows the nearest places to get food -->
         function initMap() {
 
+            <!-- "If clause" to find your location-->
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(position) {
                     var pos = {
@@ -22,7 +23,7 @@
                         lng: position.coords.longitude
                     };
 
-
+                    <!-- Creates the map -->
                     map = new google.maps.Map(document.getElementById('map'), {
                         center: pos,
                         mapTypeControl: false,
@@ -66,6 +67,7 @@
 
         }
 
+        <!-- Function that handles Geolocation Errors -->
         function handleLocationError(browserHasGeolocation, infoWindow, pos) {
             infoWindow.setPosition(pos);
             infoWindow.setContent(browserHasGeolocation ?

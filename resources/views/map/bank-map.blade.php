@@ -1,6 +1,6 @@
 
 @extends('layouts.map')
-<!-- This head connects the map with the layout-->
+
 @section('head')
 
     <!--
@@ -10,20 +10,29 @@
         //<![CDATA[
 
         var map;
-        var infowindow;
 
-        <!-- Makes a map where Sebilj is the center and finds the closest banks and atms from there -->
+
+        <!-- Creates a map where it gets your Geolocation and finds the closest banks and atms from there -->
         function initMap() {
-            var pyrmont = {lat: 43.860702, lng: 18.429932};
+
+            <!-- "If clause" to find your location-->
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
 
             map = new google.maps.Map(document.getElementById('map'), {
-                center: pyrmont,
+                center: pos,
                 mapTypeControl: false,
                 streetViewControl: false,
-                zoom: 16
+                zoom: 15
             });
 
-            infowindow = new google.maps.InfoWindow();
+                    // {map:map} will display the "you are here" bubble
+                    infoWindow = new google.maps.InfoWindow({content:"You are here",map:map, position: pos});
+
             var service = new google.maps.places.PlacesService(map);
             service.nearbySearch({
                 location: pyrmont,
@@ -34,7 +43,29 @@
 
             //service = new google.maps.places.PlacesService(map);
             //service.nearbySearch(request, callback);
+
+            }, function() {
+                handleLocationError(true, infoWindow, map.getCenter());
+            });
         }
+
+        else {
+            // If browser doesn't support Geolocation,
+            // set location to default (sebilj)
+            var coordinates = {lat: 43.860702, lng: 18.429932};
+            handleLocationError(false, infoWindow, coordinates);
+
+            }
+        }
+
+        <!-- Function that handles if the Geolocation is on or if the browser can support it -->
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+            infoWindow.setPosition(pos);
+            infoWindow.setContent(browserHasGeolocation ?
+                    'Error: The Geolocation service failed.' :
+                    'Error: Your browser doesn\'t support geolocation.');
+        }
+
 
         <!-- Calls the Google API for each marker -->
         function callback(results, status) {
@@ -48,23 +79,48 @@
         <!-- Creates each marker -->
         function createMarker(place) {
             var placeLoc = place.geometry.location;
+
             var marker = new google.maps.Marker({
                 map: map,
                 position: place.geometry.location,
                 icon: place.icon
-            });
-
-            <!-- Add a mouse-over listener to the marker to show the content -->
-            google.maps.event.addListener(marker, 'mouseover', function() {
-                infowindow.setContent(place.name);
-                infowindow.open(map, this);
-            });
-
-            google.maps.event.addListener(marker, 'click', function() {
-
-                displayInfo();
 
             });
+
+        <!-- Get the image -->
+        function getImage(src) {
+            var tag = "<img src = src>";
+            return tag;
+
+        }
+
+        <!-- Display the information for each marker -->
+        function displayInfo() {
+            var pic = place.photos[0].getUrl({'maxWidth': 200, 'maxHeight': 200});
+            var tag;
+            tag = document.getElementById("tab1default").innerHTML =
+                    "Place Name: " + place.name +
+                    "\nPlace ID: " + place.place_id+
+                    "\nLocation: " + place.geometry.location +
+                    "<br>" + getImage(pic);
+            return tag;
+
+        }
+
+        <!-- Adds a mouseover listener where it shows the content for each marker  -->
+        google.maps.event.addListener(marker, 'mouseover', function() {
+            var pic = place.photos[0].getUrl({'maxWidth': 200, 'maxHeight': 200});
+            infowindow.setContent(place.name + getImage(pic));
+            infowindow.open(map, this);
+        });
+
+        <!-- Adds a click listener to do the displayInfo() function -->
+        google.maps.event.addListener(marker, 'click', function() {
+
+            displayInfo();
+
+        });
+
         }
 
 

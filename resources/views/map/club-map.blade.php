@@ -1,6 +1,6 @@
 
 @extends('layouts.map')
-<!-- The head that connects the map with the layout -->
+
 @section('head')
     <!--
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-jpP1e6mNwMTQj_6tcR1Okyg4gSczd6w&libraries=places"></script>
@@ -12,9 +12,10 @@
         var map;
 
 
-        <!-- Creates a map where Sebilj and shows the nearest places to club -->
+        <!-- Creates a map where it uses your Geolocation and shows the nearest places to club -->
         function initMap() {
 
+            <!-- If clause to get location from function getCurrentPosition -->
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(position) {
                     var pos = {
@@ -63,6 +64,7 @@
 
         }
 
+        <!-- Handles GeoLocation errors that can happen -->
         function handleLocationError(browserHasGeolocation, infoWindow, pos) {
             infoWindow.setPosition(pos);
             infoWindow.setContent(browserHasGeolocation ?
@@ -119,7 +121,6 @@
             google.maps.event.addListener(marker, 'click', function() {
 
                 displayInfo();
-
 
             });
         }
