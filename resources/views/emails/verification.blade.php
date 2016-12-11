@@ -7,7 +7,7 @@
     Thanks for signing up!
 </h1>
 <p>
-    <a href='{{url("register/confirm/{$user -> token}")}}'> Confirm </a> your email address!
+    <a href='{{url("register/confirm/{$user -> email_token}")}}'> Confirm </a> your email address!
 </p>
 </body>
 </html>

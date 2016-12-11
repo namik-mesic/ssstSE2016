@@ -45,8 +45,9 @@ Route::get('/users', function (){
 
 });
 
+Route::get('register/verify/{token}', 'Auth\RegisterController@verify');
 Route::get('/users/{id}', 'SearchController@show');
 
-// Route::get('user/activation/{token}', 'AuthController@activateUser')->name('user.activate');
+
 
 
