@@ -111,16 +111,29 @@
 
                 }
 
-                <!-- Display the information for each marker -->
+            //this function will return all the parameters
+            //available for a place(testing purposes)
+            function getPlaceInfo(place) {
+                var element;
+                var res;
+                for(element in place){
+                    res += place[element] + "<br>";
+                }
+                return res;
+            }
+
+
+            <!-- Display the information for each marker -->
                 function displayInfo() {
                     var pic = place.photos[0].getUrl({'maxWidth': 200, 'maxHeight': 200});
+                    var element;
                     var tag;
 
                         tag = document.getElementById("tab1default").innerHTML =
                                 "Place Name: " + place.name + "<br>" +
                                 "Place ID: " + place.place_id + "<br>" +
-                                "\nLocation: " + place.geometry.location +
-                                "<br>" + getImage(pic);
+                                "Location: " + place.geometry.location + "<br>" +
+                                "Address: " + place.vicinity;
 
                         // scroll down to info panel  upon clicking on a place icon
                         //temporary solution for scrolling. need to implement smooth scrolling
