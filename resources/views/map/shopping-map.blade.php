@@ -73,7 +73,7 @@
 
 
     </script>
-   <script type="text/javascript" src ="{{URL::asset('js/mapFunctions.js')}}"></script>
+    <script type="text/javascript" src ="{{URL::asset('js/mapFunctions.js')}}"></script>
 
 
 @endsection
