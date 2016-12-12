@@ -58,73 +58,8 @@
             }
         }
 
-        <!-- Function that handles if the Geolocation is on or if the browser can support it -->
-        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-            infoWindow.setPosition(pos);
-            infoWindow.setContent(browserHasGeolocation ?
-                    'Error: The Geolocation service failed.' :
-                    'Error: Your browser doesn\'t support geolocation.');
-        }
-
-
-        <!-- Calls the Google API for each marker -->
-        function callback(results, status) {
-            if (status === google.maps.places.PlacesServiceStatus.OK) {
-                for (var i = 0; i < results.length; i++) {
-                    createMarker(results[i]);
-                }
-            }
-        }
-
-        <!-- Creates each marker -->
-        function createMarker(place) {
-            var placeLoc = place.geometry.location;
-
-            var marker = new google.maps.Marker({
-                map: map,
-                position: place.geometry.location,
-                icon: place.icon
-
-            });
-
-        <!-- Get the image -->
-        function getImage(src) {
-            var tag = "<img src = src>";
-            return tag;
-
-        }
-
-        <!-- Display the information for each marker -->
-        function displayInfo() {
-            var pic = place.photos[0].getUrl({'maxWidth': 200, 'maxHeight': 200});
-            var tag;
-            tag = document.getElementById("tab1default").innerHTML =
-                    "Place Name: " + place.name +
-                    "\nPlace ID: " + place.place_id+
-                    "\nLocation: " + place.geometry.location +
-                    "<br>" + getImage(pic);
-            return tag;
-
-        }
-
-        <!-- Adds a mouseover listener where it shows the content for each marker  -->
-        google.maps.event.addListener(marker, 'mouseover', function() {
-            var pic = place.photos[0].getUrl({'maxWidth': 200, 'maxHeight': 200});
-            infowindow.setContent(place.name + getImage(pic));
-            infowindow.open(map, this);
-        });
-
-        <!-- Adds a click listener to do the displayInfo() function -->
-        google.maps.event.addListener(marker, 'click', function() {
-
-            displayInfo();
-
-        });
-
-        }
-
-
     </script>
+    <script type="text/javascript" src ="{{URL::asset('js/mapFunctions.js')}}"></script>
 
 
 
