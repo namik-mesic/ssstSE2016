@@ -1,27 +1,14 @@
 <?php
-
-
-
 namespace App\Mail;
 
-
-
 use App\User;
-
 use Illuminate\Bus\Queueable;
-
 use Illuminate\Mail\Mailable;
-
 use Illuminate\Queue\SerializesModels;
-
 use Illuminate\Contracts\Queue\ShouldQueue;
-
-
-
 class EmailVerification extends Mailable
 {
     use Queueable, SerializesModels;
-
     public $user;
     /**
      * Create a new message instance.
@@ -41,5 +28,4 @@ class EmailVerification extends Mailable
     {
         return $this->view('emails.verification');
     }
-
 }

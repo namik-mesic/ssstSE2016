@@ -10,6 +10,8 @@ use Illuminate\Http\Request;
 use App\Mail\EmailVerification;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Auth\Events\Registered;
 
 class RegisterController extends Controller
 {
@@ -88,84 +90,22 @@ class RegisterController extends Controller
 
      */
 
-
-
     public function register(Request $request)
-
     {
+        $this->validator($request->all())->validate();
 
-        // Laravel validation
+        event(new Registered($user = $this->create($request->all())));
 
-        $validator = $this->validator($request->all());
+        Mail::to($user -> email) -> send(new EmailVerification($user));
 
-
-
-        if ($validator->fails())
-
-        {
-
-            $this->throwValidationException($request, $validator);
-
-        }
-
-
-
-        // Using database transactions is useful here because stuff happening is actually a transaction
-
-        // I don't know what I said in the last line! Weird!
-
-        DB::beginTransaction();
-
-        try
-
-        {
-
-            $user = $this->create($request->all());
-
-
-
-            // After creating the user send an email with the random token generated in the create method above
-
-            $email = new EmailVerification(new User(['email_token' => $user->email_token]));
-
-
-
-            Mail::to($user->email)->send($email);
-
-
-
-            DB::commit();
-
-            return back();
-
-        }
-
-        catch(Exception $e)
-
-        {
-
-            DB::rollback();
-
-            return back();
-
-        }
-
-
-
+        return redirect('login') -> with('status', 'Please confirm your email address');
     }
+
     public function verify($token)
-
     {
-
-        // The activated method has been added to the user model and chained here
-
+        // The verified method has been added to the user model and chained here
         // for better readability
-
         User::where('email_token',$token)->firstOrFail()->activated();
-
-
-
-        return redirect('emails.verification');
-
+        return redirect('login');
     }
 }

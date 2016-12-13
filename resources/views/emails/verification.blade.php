@@ -1,13 +1,14 @@
 <html>
 <head>
-    <title>Confirm</title>
+    <title> Verification </title>
 </head>
 <body>
-<h1>
-    Thanks for signing up!
-</h1>
-<p>
-    <a href='{{url("register/confirm/{$user -> email_token}")}}'> Confirm </a> your email address!
-</p>
+<h1> Thank you for signing up!</h1>
+
+<p> Dear user, please click to <a href='{{url("/register/verify/{$user -> email_token}")}}'> this link </a> in order to
+    confirm your email address!</p>
+
+
 </body>
+
 </html>
