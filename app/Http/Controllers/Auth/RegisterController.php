@@ -106,6 +106,6 @@ class RegisterController extends Controller
         // The verified method has been added to the user model and chained here
         // for better readability
         User::where('email_token',$token)->firstOrFail()->activated();
-        return redirect('login');
+        return redirect('login') -> with('status2', 'Thank you for activation, you can log in now');
     }
 }
