@@ -12,10 +12,22 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 
 }
 
+// for test
+var customPlaces = [
+
+    {name: "Sebilj", type: "", vicinity: "Stari Grad", geometry: {location: {lat: 43.860702, lng: 18.429932}} },
+    {name: "SSST", type: "", vicinity: "Hrasnicka cesta 3a", geometry: {location:{lat: 43.82382 , lng: 18.308177}}}
+
+];
 
 <!-- Calls the Google API for each marker needed -->
 function callback(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
+
+        for(var i = 0; i < customPlaces.length; i++){
+            createMarker(customPlaces[i]);
+        }
+
         for (var i = 0; i < results.length; i++) {
 
             createMarker(results[i]);

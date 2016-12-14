@@ -38,7 +38,7 @@
                     infowindow = new google.maps.InfoWindow();
                     var service = new google.maps.places.PlacesService(map);
                     service.nearbySearch({
-                        location: pyrmont,
+                        location: pos,
                         radius: 1000,
                         type: ['night_club'],
                         type: ['cafe'],

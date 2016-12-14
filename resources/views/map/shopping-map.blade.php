@@ -36,7 +36,7 @@
                     infowindow = new google.maps.InfoWindow();
             var service = new google.maps.places.PlacesService(map);
             service.nearbySearch({
-                location: pyrmont,
+                location:pos,
                 radius: 500,
                 type: ['book_store'],
                 type: ['clothing_store'],

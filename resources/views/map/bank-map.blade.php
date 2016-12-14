@@ -35,7 +35,7 @@
 
             var service = new google.maps.places.PlacesService(map);
             service.nearbySearch({
-                location: pyrmont,
+                location: pos,
                 radius: 500,
                 type: ['atm'],
                 type: ['bank']
