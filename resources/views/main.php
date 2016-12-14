@@ -103,9 +103,9 @@
                 <div class="col-md-8 col-md-offset-2">
                     <h2 class="section-heading">See why over 60.000 SME's use our services.</h2>
                     <p></p>
-                    <div class="badges">
-                        <a class="badge-link" href="#"><img src="/1newage/img/google-play-badge.svg" alt=""></a>
-                        <a class="badge-link" href="#"><img src="/1newage/img/app-store-badge.svg" alt=""></a>
+                   
+                        <a href="#"><img src="/1newage/img/mailbird.svg" alt=""></a>
+                        
                     </div>
                 </div>
             </div>
