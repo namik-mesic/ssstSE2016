@@ -9,6 +9,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
+        .lead{
+            color: #00001a;
+        }
 
         #baseSelect{
             color: black;
@@ -97,6 +100,9 @@
         .table-hover{
             color: #333;
 
+        }
+        h2{
+            color: #00001a;
         }
     </style>
 
