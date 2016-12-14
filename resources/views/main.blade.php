@@ -32,8 +32,7 @@
                         </li>
                     </ul>
             <li class="active"><a href="{{ action('ContactController@index') }}">Contact us</a></li>
-            <li class="active"><img class="money" width=50 height="50" src= "{{ asset('coin.gif') }}"></li>
-            <li class="active"><img class="money" width=50 height="50" src= "{{ asset('coin.gif') }}"></li>
+            
     </div>
 </div>
 

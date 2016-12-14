@@ -45,6 +45,7 @@
         @if(isset($calculatedAmount))
 
             <h2> The calculated amount is </h2>
+            <img class="money" width=50 height="50" src= "{{ asset('coin.gif') }}">
 
             @include('currency.amount')
 
