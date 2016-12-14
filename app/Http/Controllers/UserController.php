@@ -45,9 +45,41 @@ class UserController extends Controller
       $user=Auth::user();
       return view('addPicture',compact('user'));
     }
-    public function addPicture()
+    public function addPicture(Request $request)
     {
-      $user=Auth::user();
-      return view('addPicture',compact('user'));
+
+      $validator = Validator::make($request->all(), [
+                 'picture' => 'mimes:jpeg,bmp,png,jpg|image|required',
+             ]);
+
+             if ($validator->fails()) {
+                 return redirect('update-profile')
+                             ->withErrors($validator)
+                             ->withInput();
+           }else{
+             $currentUser=Auth::user();
+             $user=User::find($currentUser->id);
+             $file = $request->file('picture');
+             $folderName=$user->email;
+             $pathWithSpaces='..\public\images\users\ '.$folderName;
+             $path = str_replace(' ', '', $pathWithSpaces);
+             if(!File::exists($path)){
+               File::makeDirectory($path);
+               $file->move($path,$file->getClientOriginalName());
+               $path.='\ '.$file->getClientOriginalName();
+               $path = str_replace(' ', '', $path);
+               $user->imgPath=$path;
+               $user->save();
+               return redirect('/profil');
+             }else{
+               $file->move($path,$file->getClientOriginalName());
+               $path.='\ '.$file->getClientOriginalName();
+               $path = str_replace(' ', '', $path);
+               $user->imgPath=$path;
+               $user->save();
+               return redirect('/profil');
+             }
+
+           }
     }
 }
