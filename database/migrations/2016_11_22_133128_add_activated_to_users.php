@@ -14,7 +14,7 @@ class AddActivatedToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->boolean('activated');
+            $table->boolean('activated')->default(false);
         });
     }
 
