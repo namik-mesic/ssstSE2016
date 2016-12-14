@@ -13,6 +13,9 @@
 
 <body>
 <div class="container">
+    <div class="navbar-header">
+                 <a style="color: silver; font-size: 30px;" class="navbar-brand">Currency converter</a>
+                </div>
     <div class="page-header">
         <ul class="nav navbar-nav">
             <li class="active"><a href="{{ action('CurrencyController@index') }}">Home</a></li>
