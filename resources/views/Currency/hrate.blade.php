@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-md-6">
 
-        <table class="table table-striped table-hover" style="color: #333">
+        <table class="table table-striped table-hover">
             <thead>
             <tr>
                 <th>

@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-lg-4">
                 <h4>Select a currency:</h4>
-                <select style="color: black; width: 160px; border-color: black" id="baseSelect"
+                <select id="baseSelect"
                         class="custom-select sources"></select> <br>
                 <h4> Base currency: <span id="base_cur">EUR</span></h4>
 
@@ -26,7 +26,7 @@
             </div>
 
             <div class="col-lg-6">
-                <span class="loading" style="color: #00001a">Loading .... </span>
+                <span class="loading">Loading .... </span>
                 <div id="chart"></div>
             </div>
         </div>

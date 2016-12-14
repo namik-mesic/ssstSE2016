@@ -10,6 +10,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
 
+        #baseSelect{
+            color: black;
+            width: 160px;
+            border-color: black
+        }
         .alert {
             color: #00001a;
         }
@@ -21,6 +26,7 @@
         .pozadina {
             background-color: #00001a;
             font-size: 20px;
+            margin-bottom: 30px;
         }
 
         body {
@@ -77,19 +83,31 @@
 
         .loading {
             display: none;
+            color: #00001a;
 
         }
+        .navbar-brand {
+            color:silver;
+            font-size:30px;
+        }
+        .navbar-fixed-bottom{
+            background-color: #00001a;
+        }
 
+        .table-hover{
+            color: #333;
+
+        }
     </style>
 
 </head>
 
 <body>
-<div class="pozadina" style="margin-bottom: 30px">
+<div class="pozadina">
     <div class="container">
 
         <div class="navbar-header">
-            <a style="color: silver; font-size: 30px;" class="navbar-brand">Currency converter</a>
+            <a class="navbar-brand">Currency converter</a>
         </div>
         <div class="page-header">
             <ul class="nav navbar-nav">
@@ -115,8 +133,8 @@
 
 @yield('content')
 
-<footer style="background-color: #00001a;" class="navbar navbar-inverse navbar-fixed-bottom">
-    <span style="color: white;">Currency converter 2016</span>
+<footer class="navbar navbar-inverse navbar-fixed-bottom">
+    <span>Currency converter 2016</span>
 </footer>
 
 @yield('scripts')

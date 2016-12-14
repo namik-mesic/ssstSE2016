@@ -62,15 +62,7 @@
 
     ​</div>
 
-<style>
-    body{
-        background-color: #00001a;
 
-    }
-    .col-xs-12{
-        background-color:black;
-    }
-</style>
 </body>
 
 </html>
