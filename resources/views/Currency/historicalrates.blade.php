@@ -1,5 +1,14 @@
 @extends('main')
 @section('content')
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script>
+        $(function() {
+            $( "#datepicker" ).datepicker();
+        });
+    </script>
     <div class="col-lg-8 col-lg-push-2 margin-top">
         <form action="{{ action('HistoricalRatesController@process') }}" class="forma" name="converter_form" method="POST">
             {!! csrf_field() !!}
@@ -15,7 +24,7 @@
 
             <div class="form-group">
                 <label for="from">Date:</label>
-                <input type="date" class="form-control" name="date" placeholder="mm/dd/yyyy">
+                <input id="datepicker" type="date" class="form-control" name="date" placeholder="Enter date...">
             </div>
 
             <button type="submit" class="btn btn-info btn-block button">
