@@ -128,7 +128,6 @@
                         <li><a href="{{ action('OfficesController@index1') }}">Office 2</a></li>
                         <li><a href="{{ action('OfficesController@index2') }}">Office 3</a></li>
 
-                        </li>
                     </ul>
                 <li class="active"><a href="{{ action('ContactController@index') }}">Contact us</a></li>
             </ul>

@@ -32,4 +32,18 @@
 
         </div>
     @endif
+
+    @if (count($errors) > 0)
+        <div class="row">
+            <div class="col-md-8 col-md-push-2 margin-top alert" id="divtoBlink">
+                <div class="alert" id="divtoBlink">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+        </div>
+    @endif
 @endsection
