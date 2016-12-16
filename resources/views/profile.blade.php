@@ -25,19 +25,40 @@
     <div class="profile-color-block" style="background-color: {{ $user->color }}">
         <!-- Checks if the currently logged in user is on his / hers profile page-->
         @if(Auth::user() -> username == $user['username'])
-        <input class="clrpick" type="button" id="color"/>
+            <form action="{{ url('/profile') }}" method="POST">
 
-        <script>
+                {{ csrf_field() }}
 
-            $('#color').colorpicker({}).on('changeColor', function (event) {
+                <label class="clrpick">
+                    <input class="color" type="button" id="color"/>
 
-                $('.profile-color-block').css('background', event.color.toHex());
+                    <script>
 
-            });
+                        $('#color').colorpicker({}).on('hidePicker', function (event) {
+
+                            $('.profile-color-block').css('background', event.color.toHex());
+                            /**
+                             * Server generated POST request called AJAX
+                             * that sends the token and the color as a POST
+                             * request -Edim
+                             */
+                            $.ajax({
+                                type: "POST",
+                                url: 'profile',
+                                data: {
+                                    color: event.color.toHex(),
+                                    _token: '{{ csrf_token() }}'
+                                }
+                            });
+
+                        });
 
 
-        </script>
-            @endif
+                    </script>
+                </label>
+                <button type="submit">Submit</button>
+            </form>
+        @endif
     </div>
 
     <div class="col-md-6 center">
