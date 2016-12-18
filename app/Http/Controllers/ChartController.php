@@ -9,3 +9,5 @@ class ChartController extends Controller
         return view('currency.chart');
     }
 }
+/** This controller was written by Ajla */
+

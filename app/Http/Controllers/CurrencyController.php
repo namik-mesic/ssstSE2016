@@ -40,3 +40,4 @@ class CurrencyController
         ));
     }
 }
+/** This controller was written by Ajla */

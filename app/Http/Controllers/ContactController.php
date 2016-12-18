@@ -10,3 +10,4 @@ class ContactController extends Controller
     }
 
    }
+/** This controller was written by Ajla */

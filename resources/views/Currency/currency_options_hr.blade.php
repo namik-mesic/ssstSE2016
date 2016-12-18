@@ -28,3 +28,6 @@
 <option  value="TRY">Turkish Lira (TRY)</option>
 <option  value="USD">US Dollar ($)</option>
 <option  value="ZAR">South African Rand (ZAR)</option>
+
+<!--This document was written by Ajla-->
+​

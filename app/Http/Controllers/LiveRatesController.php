@@ -20,3 +20,4 @@ class LiveRatesController extends Controller
         ));
     }
 }
+/** This controller was written by Ajla */

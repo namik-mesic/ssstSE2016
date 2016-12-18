@@ -18,3 +18,4 @@ class OfficesController extends Controller
         return view('currency.offices2');
     }
 }
+/** This controller was written by Edis */

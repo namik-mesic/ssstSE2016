@@ -29,3 +29,4 @@ class HistoricalRatesController extends Controller
         ));
     }
 }
+/** This controller was written by Ajla */

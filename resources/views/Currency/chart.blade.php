@@ -37,5 +37,6 @@
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript" src="{{ asset('js/chartscript.js') }}"></script>
 
-
+    <!--This document was written by Amina-->
+    ​
 @append

@@ -165,3 +165,6 @@
 <option  value="ZMK">Zambian Kwacha (1968–2012) (ZMK)</option>
 <option  value="ZMW">Zambian Kwacha (ZMW)</option>
 <option  value="ZWL">Zimbabwean Dollar (2009) (ZWL)</option>
+
+<!--This document was written by Ajla-->
+​

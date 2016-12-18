@@ -36,3 +36,4 @@ class LiveRateService
     }
 
    }
+/** This controller was written by Ajla and Amina */
