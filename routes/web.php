@@ -19,6 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+Route::resource('place', 'PlaceController');
+
 Route::get('/map', function (){
 
     return view('map.default-map');
