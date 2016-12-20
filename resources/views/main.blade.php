@@ -145,7 +145,8 @@
     use Carbon\Carbon;
         $current = Carbon::now();
         $current = new Carbon();
-        echo $current->toDayDateTimeString();
+
+        echo $current->addHour()->toDayDateTimeString();
 
     ?>
 
