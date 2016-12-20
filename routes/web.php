@@ -46,4 +46,3 @@ Route::get('/liverates', 'LiveRatesController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-

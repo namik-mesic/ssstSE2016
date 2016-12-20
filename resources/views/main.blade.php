@@ -138,12 +138,25 @@
 
 @yield('content')
 
-<footer class="navbar navbar-inverse navbar-fixed-bottom">
+<footer class="navbar navbar-inverse navbar-fixed-bottom" >
     <span>Currency converter 2016</span>
+
+    <?php
+    use Carbon\Carbon;
+        $current = Carbon::now();
+        $current = new Carbon();
+        echo $current->toDayDateTimeString();
+
+
+    ?>
+
+
 </footer>
+
 
 @yield('scripts')
 
 </body>
 </html>
 
+<!-- This was written by Edis Sijaric --> 
