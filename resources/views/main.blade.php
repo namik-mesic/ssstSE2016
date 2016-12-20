@@ -104,6 +104,11 @@
         h2{
             color: #00001a;
         }
+        .timed{
+            margin-right: 950px;
+            margin-left: 30px;
+
+        }
     </style>
 
 </head>
@@ -139,7 +144,7 @@
 @yield('content')
 
 <footer class="navbar navbar-inverse navbar-fixed-bottom" >
-    <span style="margin-right: 950px; margin-left: 30px;">Currency converter 2016</span>
+    <span class="timed">Currency converter 2016</span>
 
     <?php
     use Carbon\Carbon;
@@ -159,4 +164,4 @@
 </body>
 </html>
 
-<!-- This was written by Edis Sijaric -->
+<!-- This was written by Edis and Ajla -->
