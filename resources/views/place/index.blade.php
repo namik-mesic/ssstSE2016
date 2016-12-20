@@ -6,7 +6,7 @@
 @section('content')
 
     <div class="container">
-        <a href="{{ action('PlaceController@create') }}" class="btn btn-primary`" style="margin-bottom: 10px">
+        <a href="{{ action('PlaceController@create') }}" class="btn btn-primary" style="margin-bottom: 10px">
             Create Place
         </a>
 

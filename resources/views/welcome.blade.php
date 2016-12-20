@@ -86,7 +86,7 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://sgithub.com/laravel/laravel">GitHub</a>
                     <a href="http://localhost:8000/map">Embedded Map</a>
-
+                    <a href="http://localhost:8000/place">Create Places</a>
 
                 </div>
             </div>
