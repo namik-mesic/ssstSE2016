@@ -27,7 +27,7 @@ class PlaceController extends Controller
      */
     public function index()
     {
-        $places = Place::all();
+        $place = Place::all();
 
         return view('place.index', compact(
             'places'
@@ -50,6 +50,9 @@ class PlaceController extends Controller
     {
         $data = $request->all();
         $data['user_id'] = Auth::user()->id;
+
+        if ($data['assignee_id'] == '')
+            $data['assignee_id'] = null;
 
         Place::create($data);
 
