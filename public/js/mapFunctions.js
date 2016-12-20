@@ -37,22 +37,22 @@ function callback(results, status) {
 
 <!-- Creates each marker -->
 function createMarker(place) {
-    /*
+
      // this var allows you to make custom marker graphics
      // it still needs to be adjusted to work with infowindow properly
      var image = {
-     url: place.icon,
+     url: "{{URL::asset('graphics/icons/map/map-pin.png')}}",
      size: new google.maps.Size(71, 71),
      origin: new google.maps.Point(0, 0),
      anchor: new google.maps.Point(17, 34),
      scaledSize: new google.maps.Size(25, 25)
      };
-     */
+
     var placeLoc = place.geometry.location;
 
     var marker = new google.maps.Marker({
         map: map,
-        icon: place.icon,
+        icon: image,
         position: place.geometry.location
 
 
