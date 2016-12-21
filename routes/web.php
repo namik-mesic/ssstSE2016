@@ -38,6 +38,10 @@ Route::get('/confirm', 'confirmControl@confirmationForm');
 Auth::routes();
 Route::get('profile', 'ProfileController@index');
 
+Route::get("settings", "SettingsController@getSettings");
+
+Route::post("settings", "SettingsController@postSettings");
+
 Route::get('/users', function (){
 
     $query = Request::get('q');
@@ -46,6 +50,13 @@ Route::get('/users', function (){
     return View::make('users') -> withUsers($users);
 
 });
+
+Route::get('register/verify/{token}', 'Auth\RegisterController@verify');
+Route::get('/users/{id}', 'SearchController@show');
+
+
+
+
 
 
 >>>>>>> 3b70ec9b41879162059ccdba27c3f9dd38499255

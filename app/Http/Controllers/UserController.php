@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+<<<<<<< HEAD
 use App\Http\Requests;
 use App\User;
 use Auth;
@@ -81,5 +82,11 @@ class UserController extends Controller
              }
 
            }
+=======
+class UserController extends Controller
+{
+    public function(){
+
+>>>>>>> 4807ac76bb95504e921a4ad7af220c813f15c178
     }
 }

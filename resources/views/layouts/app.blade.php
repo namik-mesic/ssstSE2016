@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Laravel') }} SSST</title>
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
@@ -43,15 +43,28 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}"> SSST </a>
+
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
+                @if (!Auth::guest())
+                    <ul class="nav navbar-nav">
 
-                </ul>
+                        <li class="search">
+                            {{ Form::open(['url'=> 'users', 'method' => 'GET', 'class' => 'col-md-5']) }}
 
-                <!-- Right Side Of Navbar -->
+                            {{ Form::input('search','q', null, ['placeholder' => 'Search by name...']) }}
+
+                            {{ Form::close() }}
+
+                        </li>
+
+                    </ul>
+            @endif
+
+
+            <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
@@ -64,6 +77,7 @@
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
+
                             <ul class="dropdown-menu" role="menu">
                                 <li>
                                     <a href="{{ url('/profile') }}">Profile</a>
@@ -71,6 +85,7 @@
                                 <li>
                                     <a href="/confirm"> Delete Account</a>
                                 </li>
+
 
                                 <li>
                                     <a href="{{ url('/logout') }}"
@@ -100,7 +115,6 @@
                                         {{ csrf_field() }}
                                     </form>
                                 </li>
-
 
                             </ul>
                         </li>

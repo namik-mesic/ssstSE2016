@@ -11,7 +11,7 @@
 
         @foreach($users as $user)
             <div class="col-md-6 alert-info table-bordered center">
-                <h3><a href="#"> {{$user -> name}} </a></h3>
+                <h3><a href="/users/{{$user->id}}"> {{$user -> name}} </a></h3>
             </div>
 
 

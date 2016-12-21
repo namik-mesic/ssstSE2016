@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddUsernameValueOnTableUsers extends Migration
+class AddBooleanToUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,7 @@ class AddUsernameValueOnTableUsers extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('username');
-        });
+        //
     }
 
     /**
@@ -25,8 +23,6 @@ class AddUsernameValueOnTableUsers extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('username');
-        });
+        //
     }
 }

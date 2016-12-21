@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddUsernameValueOnTableUsers extends Migration
+class AddEmailToken extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AddUsernameValueOnTableUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('username');
+            $table->string('email_token')->nullable();
         });
     }
 
@@ -26,7 +26,7 @@ class AddUsernameValueOnTableUsers extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('username');
+            $table->dropColumn('email_token');
         });
     }
 }

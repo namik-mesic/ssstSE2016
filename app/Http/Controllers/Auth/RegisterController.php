@@ -2,10 +2,16 @@
 
 namespace App\Http\Controllers\Auth;
 
+use DB;
+use Mail;
 use App\User;
 use Validator;
+use Illuminate\Http\Request;
+use App\Mail\EmailVerification;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Auth\Events\Registered;
 
 class RegisterController extends Controller
 {
@@ -51,7 +57,8 @@ class RegisterController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'username' => 'required|max:20|unique:users',
-            'dob' => 'required',
+            'dob' => 'required|before:today',
+            'color' => 'required',
             'password' => 'required|min:6|confirmed',
 
         ]);
@@ -70,7 +77,35 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'username' => $data['username'],
             'dob' => $data['dob'],
+            'color' => $data['color'],
             'password' => bcrypt($data['password']),
+            'email_token' => str_random(10),
         ]);
+    }
+    /**
+
+     *  Over-ridden the register method from the "RegistersUsers" trait
+
+     *  Remember to take care while upgrading laravel
+
+     */
+
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
+
+        event(new Registered($user = $this->create($request->all())));
+
+        Mail::to($user -> email) -> send(new EmailVerification($user));
+
+        return redirect('login') -> with('status', 'Please confirm your email address');
+    }
+
+    public function verify($token)
+    {
+        // The verified method has been added to the user model and chained here
+        // for better readability
+        User::where('email_token',$token)->firstOrFail()->activated();
+        return redirect('login');
     }
 }

@@ -1,3 +1,18 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"
+      xmlns="http://www.w3.org/1999/html">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+
+<!--
+--CSS that is causing a problem with the dropdown menu
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+-->
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.3/css/bootstrap-colorpicker.min.css"
+      rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.3/js/bootstrap-colorpicker.min.js"></script>
+
 @extends('layouts.app')
 
 @section('content')
@@ -7,15 +22,24 @@
         <div class="sidebar"></div>
         <div class="clear"></div>
     </div>
+    <div class="profile-color-block" style="background-color: {{ $user->color }}">
+        <!-- Checks if the currently logged in user is on his / hers profile page-->
+        @if(Auth::user() -> username == $user['username'])
+        <input class="clrpick" type="button" id="color"/>
 
-    <div class="profile-color-block" style="background-color: {{ Auth::user()->color ?: '#dd0000' }}">
-        <br>
-        {{Form::open(['url'=> 'users', 'method' => 'GET', 'class' => 'col-md-5'])}}
+        <script>
 
-        &nbsp;&nbsp; {{Form::input('search','q', null, ['placeholder' => 'Search by name...'] )}}
+            $('#color').colorpicker({}).on('changeColor', function (event) {
 
-        {{Form::close()}}
+                $('.profile-color-block').css('background', event.color.toHex());
+
+            });
+
+
+        </script>
+            @endif
     </div>
+
     <div class="col-md-6 center">
         <div class="row">
             <div class="table-responsive">
@@ -28,7 +52,7 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                            {{ Auth::user()->name }}
+                            {{ $user->name }}
                         </td>
                     </tr>
 
@@ -39,7 +63,7 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                            {{Auth::user()-> username}}
+                            {{$user-> username}}
                         </td>
                     </tr>
                     <tr>
@@ -49,7 +73,7 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                            {{Auth::user()->dob }}
+                            {{$user->dob }}
                         </td>
                     </tr>
 
@@ -71,7 +95,7 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                            <a href="mailto: {{Auth::user() -> email}} ">{{Auth::user()->email }}</a>
+                            <a href="mailto: {{$user -> email}} ">{{$user->email }}</a>
                         </td>
                     </tr>
                     <tr>
@@ -81,7 +105,7 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                            {{Auth::user() -> created_at}}
+                            {{$user -> created_at}}
                         </td>
                     </tr>
                     <tr>
@@ -91,7 +115,7 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                            {{Auth::user() -> updated_at}}
+                            {{$user -> updated_at}}
                         </td>
                     </tr>
                     </tbody>
