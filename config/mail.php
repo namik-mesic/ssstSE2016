@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => env('MAIL_HOST', 'mailgun.org'),
 
     /*
     |--------------------------------------------------------------------------
@@ -42,7 +42,7 @@ return [
     |
     */
 
-    'port' => env('MAIL_PORT', 587),
+    'port' => env('MAIL_PORT', 2525),
 
     /*
     |--------------------------------------------------------------------------
@@ -55,10 +55,7 @@ return [
     |
     */
 
-    'from' => [
-        'address' => 'nedzad.hafizovic@hotmail.com',
-        'name' => 'SSST grupa 3',
-    ],
+    'from' => ['address' => 'from@exampe.com', 'name' => 'Example'],
 
     /*
     |--------------------------------------------------------------------------
@@ -84,7 +81,7 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME'),
+    'username' => env('MAIL_USERNAME', '3f25c952a96736'),
 
     /*
     |--------------------------------------------------------------------------
@@ -97,7 +94,7 @@ return [
     |
     */
 
-    'password' => env('MAIL_PASSWORD'),
+    'password' => env('MAIL_PASSWORD','c84b83dc216dab'),
 
     /*
     |--------------------------------------------------------------------------

@@ -20,7 +20,6 @@ use Illuminate\Support\Facades\Input;
 use App\User;
 
 
-
 Route::get('/home', 'HomeController@index');
 <<<<<<< HEAD
 Route::get('/update-profile', 'UserController@profileView');
@@ -38,20 +37,28 @@ Route::get('/confirm', 'confirmControl@confirmationForm');
 Auth::routes();
 Route::get('profile', 'ProfileController@index');
 
+/*
+ * Route that calls the color controler to save the
+ * forwarded color from the ajax post request to
+ * be saved in the dabtase -Edim
+ */
+Route::post('profile', 'ColorController@update');
+
 Route::get("settings", "SettingsController@getSettings");
 
 Route::post("settings", "SettingsController@postSettings");
 
-Route::get('/users', function (){
+Route::get('/users', function () {
 
     $query = Request::get('q');
-    $users = User::where('name', 'LIKE', "%$query%") -> get();
+    $users = User::where('name', 'LIKE', "%$query%")->get();
 
-    return View::make('users') -> withUsers($users);
+    return View::make('users')->withUsers($users);
 
 });
 
 Route::get('register/verify/{token}', 'Auth\RegisterController@verify');
+
 Route::get('/users/{id}', 'SearchController@show');
 
 
@@ -59,4 +66,9 @@ Route::get('/users/{id}', 'SearchController@show');
 
 
 
+<<<<<<< HEAD
 >>>>>>> 3b70ec9b41879162059ccdba27c3f9dd38499255
+=======
+
+
+>>>>>>> 88831ea580f6c826112ade09c260d5e398a38465
