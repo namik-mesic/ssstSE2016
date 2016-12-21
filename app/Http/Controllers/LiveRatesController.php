@@ -6,12 +6,7 @@ use App\Services\LiveRateService;
 
 class LiveRatesController extends Controller
 {
-    public function index()
-    {
-        return view('currency.liverates');
-    }
-
-    public function process(LiveRateService $service)
+    public function index(LiveRateService $service)
     {
         $lrate = $service->getLive();
 

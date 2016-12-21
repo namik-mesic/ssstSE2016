@@ -31,8 +31,18 @@ class LiveRateService
      */
     public function getLive()
     {
-        $response = $this->client->get("http://webrates.truefx.com/rates/connect.html?f=html");
-        return json_decode($response->getBody()->getContents());
+        $response = $this->client->get("http://webrates.truefx.com/rates/connect.html?f=csv");
+        $content = $response->getBody()->getContents();
+
+        $currencies = explode("\n", $content);
+
+        unset($currencies[count($currencies) - 1]);
+        unset($currencies[count($currencies) - 1]);
+
+        foreach ($currencies as $key => $currency)
+            $currencies[$key] = explode(',', $currency);
+
+        return $currencies;
     }
 
    }
