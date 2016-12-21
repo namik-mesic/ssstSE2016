@@ -32,6 +32,12 @@
                 <label class="clrpick">
                     <input class="color" type="button" id="color"/>
 
+                    <!--
+                    <button class="color" type="button" id="color">
+                        <span class="glyphicon glyphicon-adjust"></span>
+                    </button>
+                       -->
+
                     <script>
 
                         $('#color').colorpicker({}).on('hidePicker', function (event) {
@@ -56,7 +62,6 @@
 
                     </script>
                 </label>
-                <button type="submit">Submit</button>
             </form>
         @endif
     </div>
