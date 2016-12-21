@@ -24,7 +24,7 @@ class ConversionRequest extends FormRequest
     public function rules()
     {
         return [
-            'amount' => 'required|numeric',
+            'amount' => 'required|numeric|min:1',
             'from' => 'required|different:to',
             'to' => 'required',
         ];
