@@ -13,7 +13,7 @@ class CreatePlacesTable extends Migration
      */
     public function up()
     {
-        Schema::create('notes', function (Blueprint $table) {
+        Schema::create('places', function (Blueprint $table) {
 
             $table->increments('id');
             $table->softDeletes();

@@ -16,7 +16,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 var customPlaces = [
 
     {name: "Sebilj", type: "", vicinity: "Stari Grad", geometry: {location: {lat: 43.860702, lng: 18.429932}} },
-    {name: "SSST", type: "", vicinity: "Hrasnicka cesta 3a", geometry: {location:{lat: 43.82382 , lng: 18.308177}}}
+    {name: "SSST", type: "", vicinity: "Hrasnicka cesta 3a", geometry: {location:{lat: 43.8228 , lng:  18.30886}}}
 
 ];
 
@@ -52,7 +52,7 @@ function createMarker(place) {
 
     var marker = new google.maps.Marker({
         map: map,
-        icon: image,
+        icon:"http://maps.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png",
         position: place.geometry.location
 
 
@@ -86,7 +86,7 @@ function createMarker(place) {
 
         tag = document.getElementById("tab1default").innerHTML =
             "Place Name: " + place.name + "<br>" +
-            "Place ID: " + place.place_id + "<br>" +
+
             "Location: " + place.geometry.location + "<br>" +
             "Address: " + place.vicinity;
 
@@ -104,6 +104,10 @@ function createMarker(place) {
         infowindow.open(map, this);
     });
 
+    google.maps.event.addListener(marker, 'mouseout', function() {
+        infowindow.setContent(place.name);
+        infowindow.close(map, this);
+    });
     <!-- Adds a click listener to do the displayInfo() function -->
     google.maps.event.addListener(marker, 'click', function () {
 
