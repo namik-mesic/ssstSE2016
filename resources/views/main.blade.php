@@ -105,7 +105,7 @@
             color: #00001a;
         }
         .timed{
-            margin-right: 950px;
+            margin-right: 900px;
             margin-left: 30px;
 
         }

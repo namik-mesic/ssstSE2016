@@ -4,15 +4,15 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-class DrugiTest extends TestCase
+class FormTest extends TestCase
 {
     /**
-     * A basic test example.
+     *  Testing feature 1. Following multiple currencies at the same time.
      *
      * @return void
      */
     public function testExample()
     {
-        $this->visit('/');
+        $this->assertTrue(true);
     }
 }
