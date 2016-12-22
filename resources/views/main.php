@@ -79,19 +79,13 @@
                     </div>
                 </div>
                 <div class="col-sm-5">
-                    <div class="device-container">
-                        <div class="device-mockup iphone6_plus portrait white">
-                            <div class="device">
-                                <div class="screen">
-                                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                                    <img src="/1newage/img/demo-screen-1.jpg" class="img-responsive" alt="">
-                                </div>
+                    
+                                    <img src="/1newage/img/9.svg" class="img-responsive" alt="">
+                                
                                 <div class="button">
                                     <!-- You can hook the "home button" to some JavaScript events or just remove it -->
                                 </div>
-                            </div>
-                        </div>
-                    </div>
+                           
                 </div>
             </div>
         </div>
@@ -130,7 +124,7 @@
                             <div class="device">
                                 <div class="screen">
                                     <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                                    <img src="/1newage/img/demo-screen-1.jpg" class="img-responsive" alt=""> </div>
+                                    <img src="/1newage/img/demo.jpg" class="img-responsive" alt=""> </div>
                                 <div class="button">
                                     <!-- You can hook the "home button" to some JavaScript events or just remove it -->
                                 </div>
@@ -144,14 +138,14 @@
                             <div class="col-md-6">
                                 <div class="feature-item">
                                     <i class="icon-screen-smartphone text-primary"></i>
-                                    <h3>Completely responsive campaign creator</h3>
+                                    <h3>Responsive campaign creator</h3>
                                     <p class="text-muted">Create your email campaigns, anywhere on anything</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="feature-item">
                                     <i class="icon-camera text-primary"></i>
-                                    <h3>HTML Support</h3>
+                                    <h3>Media Support</h3>
                                     <p class="text-muted">Dive into the nitty-gritty and make your emails stand out</p>
                                 </div>
                             </div>
@@ -203,7 +197,41 @@
             </ul>
         </div>
     </section>
-
+<style type="text/css">.contact-form {
+    margin-top:70px;
+}</style>
+<div class="container">
+<div class="row">
+<div class="col-sm-4">
+<h3>Drop us a line.</h3>
+<hr>
+<address>
+<strong>Email:</strong> <a href="mailto:#"> info@mailbird.com</a><br><br>
+<strong>Phone:</strong> +387 33 221 039
+</address>
+</div>
+    
+<div class="col-sm-8 contact-form">
+<form id="contact" method="post" class="form" role="form">
+<div class="row">
+<div class="col-xs-6 col-md-6 form-group">
+<input class="form-control" id="name" name="name" placeholder="Name" type="text" required autofocus />
+</div>
+<div class="col-xs-6 col-md-6 form-group">
+<input class="form-control" id="email" name="email" placeholder="Email" type="email" required />
+</div>
+</div>
+<textarea class="form-control" id="message" name="message" placeholder="Message" rows="5"></textarea>
+<br />
+<div class="row">
+<div class="col-xs-12 col-md-12 form-group">
+<button class="btn btn-primary pull-right" type="submit">Submit</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
     <footer>
         <div class="container">
             <p>&copy; 2016 MailBird &copy All Rights Reserved.</p>

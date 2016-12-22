@@ -22,3 +22,11 @@ Route::get('/home', 'HomeController@index');
 Route::get('admin', function () {
     return view('admin2');
 });
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/register', function () {
+    return view('register');
+});
