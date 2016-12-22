@@ -112,6 +112,10 @@
             margin-left: 30px;
 
         }
+        .marquee{
+            width:300px;
+            color:silver;
+        }
     </style>
 
 </head>
@@ -122,6 +126,10 @@
 
         <div class="navbar-header">
             <a class="navbar-brand">Currency converter</a>
+            <div class="col-md-push-4">
+                <MARQUEE class="marquee">The world's trusted currency authority!</MARQUEE>
+
+            </div>
         </div>
         <div class="page-header">
             <ul class="nav navbar-nav">

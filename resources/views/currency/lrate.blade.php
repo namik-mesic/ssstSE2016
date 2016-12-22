@@ -1,10 +1,9 @@
 <div class="row lrate">
 
-
     <div class="col-md-10">
 
         @foreach($lrate as $rates)
-<table class="table table-striped table-hover">
+<table class="table">
 
               <tr>  {{ $rates['0'] }} </tr>
                <tr> {{ $rates['1'] }}</tr>

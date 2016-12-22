@@ -7,10 +7,10 @@
     <script>
         $(function() {
             $("#datepicker").datepicker({ dateFormat: "yy-mm-dd" }).val()
-        
+
         });
     </script>
-    <div class="col-lg-8 col-lg-push-2 margin-top">
+    <div class="col-lg-8 col-lg-push-2">
         <form action="{{ action('HistoricalRatesController@process') }}" class="forma" name="converter_form" method="POST">
             {!! csrf_field() !!}
 
