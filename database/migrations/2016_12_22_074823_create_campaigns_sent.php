@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCampaignsTable extends Migration
+class CreateCampaignsSent extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateCampaignsTable extends Migration
      */
     public function up()
     {
-        Schema::create('campaigns', function (Blueprint $table) {
+        Schema::create('campaigns_sent', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps('name');
-            $table->timestamps('type');
-            $table->timestamps('content');
-            $table->timestamps('data_created');
+            $table->timestamps('date_sent');
             $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('mailling_list_id')->references('id')->on('mailling_list');
+            $table->foreign('campaigns_sent_id')->references('id')->on('campaigns_sent');
+
         });
     }
 
@@ -30,6 +30,6 @@ class CreateCampaignsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('campaigns');
+        //
     }
 }
