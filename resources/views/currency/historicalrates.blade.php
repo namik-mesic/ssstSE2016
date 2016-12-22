@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="/resources/demos/style.css">
     <script>
         $(function() {
-            $( "#datepicker" ).datepicker();
+            $("#datepicker").datepicker({ dateFormat: "yy-mm-dd" }).val()
+        
         });
     </script>
     <div class="col-lg-8 col-lg-push-2 margin-top">
@@ -17,7 +18,7 @@
 
             <div class="form-group">
                 <label for="from">Select currency:</label>
-                <select name="curr" id="from" class="form-control" >
+                <select name="curr" id="from" class="form-control">
                     @include('currency.currency_options_hr')
                 </select>
             </div>
