@@ -2,26 +2,29 @@
 
 namespace App\Http\Controllers\Api;
 
+
+use App\Http\Controllers\Controller;
 use App\Place;
-use Auth;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
-use Illuminate\View\View;
+
+
 
 /**
  * Class PlaceController
- * @package App\Http\Controllers
+ * @package App\Http\Controllers\Api
  */
-class PlaceData extends Controller
+class PlaceDataController extends Controller
 {
    /**
     * returns places array
     * from DB
 
     */
-    public function index(){
+    public function index()
+    {
 
-        //return places
+        $places = Place::all();
+
+        return $places;
 
     }
 
