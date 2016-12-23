@@ -12,7 +12,7 @@ use Illuminate\View\View;
  * Class PlaceController
  * @package App\Http\Controllers
  */
-class Place extends Controller
+class PlaceData extends Controller
 {
    /**
     * returns places array
