@@ -19,6 +19,8 @@ Auth::routes();
 
 Route::resource('place', 'PlaceController');
 
+Route::get('api/place','Api\PlaceDataController');
+
 Route::get('/home', 'HomeController@index');
 
 Route::get('/map', function (){
