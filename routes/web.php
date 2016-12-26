@@ -30,3 +30,9 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('register');
 });
+
+Route::post('register_action', function()
+{
+    $obj = new RegisterController() ;
+    return $obj->store();
+});
