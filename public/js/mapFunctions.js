@@ -57,18 +57,20 @@ function callback(results, status) {
         var customPlaces = [];
 
         // this is supposed to get json data from function
+        // and create the marker in a callback
         $.getJSON("/api/place", function(json){
             customPlaces = json;
-            console.log(customPlaces);
+
+            for(var i = 0; i < customPlaces.length; i++){
+                //need to fix database attributes to accommodate geometry.location and
+                // geometry.viewport
+                //customPlaces[i].geometry.location = customPlaces[i].coordinates;
+                createMarker(customPlaces[i]);
+            };
 
         });
 
-
-        for(var i = 0; i < customPlaces.length; i++){
-
-            createMarker(customPlaces[i]);
-        }
-
+        
         for (var i = 0; i < results.length; i++) {
 
             createMarker(results[i]);
