@@ -28,7 +28,8 @@
     <!-- end CSS-->
 
     <!-- JS-->
-    <script src="js/libs/modernizr-2.6.2.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <!--<script src="js/libs/modernizr-2.6.2.min.js"></script>-->
     <script type="text/javascript"></script>
     <script type="text/javascript">
         //<![CDATA[
@@ -82,7 +83,7 @@
 <header class="clearfix background-lightgrey">
     <div class="wrapper">
         <div id="banner">
-            <div id="logo"><a href="http://localhost:8000/map"><img src= "<?php echo e(URL::asset('graphics/icons/map/pin.png')); ?>" alt="logo" /></a></div>
+            <div id="logo"><a href="/map"><img src= "<?php echo e(URL::asset('graphics/icons/map/pin.png')); ?>" alt="logo" /></a></div>
         </div>
 
         <!-- main navigation -->
@@ -125,7 +126,7 @@
         <div class="gridcontainer clearfix">
             <div class="grid_3">
                 <div class="fmcircle_out">
-                    <a href="http://localhost:8000/map_food">
+                    <a href="/map_food">
                         <div class="fmcircle_border">
                             <div class="fmcircle_in fmcircle_blue">
                                 <span>Food</span><img src= "<?php echo e(URL::asset('graphics/icons/map/food.png')); ?>" alt="" />
@@ -137,7 +138,7 @@
 
             <div class="grid_3">
                 <div class="fmcircle_out">
-                    <a href="http://localhost:8000/map_drink">
+                    <a href="/map_drink">
                         <div class="fmcircle_border">
                             <div class="fmcircle_in fmcircle_green">
                                 <span>Drinks</span><img src= "<?php echo e(URL::asset('graphics/icons/map/coffee.png')); ?>" alt="" />
@@ -149,7 +150,7 @@
 
             <div class="grid_3">
                 <div class="fmcircle_out">
-                    <a href="http://localhost:8000/map_entertainment">
+                    <a href="/map_entertainment">
                         <div class="fmcircle_border">
                             <div class="fmcircle_in fmcircle_red">
                                 <span>Rec</span><img src= "<?php echo e(URL::asset('graphics/icons/map/park.png')); ?>" alt="" />
@@ -161,7 +162,7 @@
 
             <div class="grid_3">
                 <div class="fmcircle_out">
-                    <a href="http://localhost:8000/map_hotel">
+                    <a href="/map_hotel">
                         <div class="fmcircle_border">
                             <div class="fmcircle_in fmcircle_orange">
                                 <span>Hotels</span><img src= "<?php echo e(URL::asset('graphics/icons/map/hotel.png')); ?>" alt="" />
@@ -173,7 +174,7 @@
 
             <div class="grid_3">
                 <div class="fmcircle_out">
-                    <a href="http://localhost:8000/map_bank">
+                    <a href="/map_bank">
                         <div class="fmcircle_border">
                             <div class="fmcircle_in fmcircle_gold">
                                 <span>Bank</span><img src= "<?php echo e(URL::asset('graphics/icons/map/bank.png')); ?>" alt="" />
@@ -185,7 +186,7 @@
 
             <div class="grid_3">
                 <div class="fmcircle_out">
-                    <a href="http://localhost:8000/map_worship">
+                    <a href="/map_worship">
                         <div class="fmcircle_border">
                             <div class="fmcircle_in fmcircle_indigo">
                                 <span>Worship</span><img src= "<?php echo e(URL::asset('graphics/icons/map/worship.png')); ?>" alt="" />
@@ -197,7 +198,7 @@
 
             <div class="grid_3">
                 <div class="fmcircle_out">
-                    <a href="http://localhost:8000/map_parking">
+                    <a href="/map_parking">
                         <div class="fmcircle_border">
                             <div class="fmcircle_in fmcircle_pink">
                                 <span>Parking</span><img src= "<?php echo e(URL::asset('graphics/icons/map/parking.png')); ?>" alt="" />
@@ -208,7 +209,7 @@
             </div>
             <div class="grid_3">
                 <div class="fmcircle_out">
-                    <a href="http://localhost:8000/map_shopping">
+                    <a href="/map_shopping">
                         <div class="fmcircle_border">
                             <div class="fmcircle_in fmcircle_burgundy">
                                 <span>Shopping</span><img src= "<?php echo e(URL::asset('graphics/icons/map/shopping.png')); ?>" alt="" />
@@ -288,7 +289,8 @@
 <!-- jQuery -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.0.min.js">\x3C/script>')</script>
-<script defer src="js/flexslider/jquery.flexslider-min.js"></script>
+<!--altered this to get jquery from the source online-->
+<script defer src="http://code.jquery.com/jquery.flexslider-min.js"></script>
 
 <!-- fire ups  -->
 <script src="js/main.js"></script>

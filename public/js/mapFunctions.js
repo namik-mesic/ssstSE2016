@@ -12,34 +12,56 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 
 }
 
-// for test
+/*
+function getJSONData() {
+
+     var xhttp = new XMLHttpRequest();
+     var apiPlaces;
+
+     //Http request to get content of api/places page
+     xhttp.onreadystatechange = function() {
+     if (this.readyState == 4 && this.status == 200) {
+     // get content of /api/place (json data) as string
+        console.log(JSON.parse(this.responseText),function (key,val) {
+            apiPlaces.push(key + ":"+ val);
+        });
+        return apiPlaces;
+     }
+     };
+     xhttp.open("GET",'/api/place',true);
+     xhttp.send();
 
 
+};
+*/
 
+/*
+//jQuery variant of the function above^^
 
+function getHTMLData(url) {
+
+    var result = "";
+    $.get(url,function (data) {
+        result = data;
+        return result;
+    });
+
+}
+*/
 
 <!-- Calls the Google API for each marker needed -->
 function callback(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
 
 
-        var xhttp = new XMLHttpRequest();
-        var apiPlaces;
-        //Http request to get content of api/places page
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                // get content of /api/places (json data) as string
-                apiPlaces = this.responseText;
-            }
-        };
-        xhttp.open("POST","/api/places",true);
-        xhttp/send();
+        var customPlaces = [];
 
+        // this is supposed to get json data from function
+        $.getJSON("/api/place", function(json){
+            customPlaces = json;
+            console.log(customPlaces);
 
-
-
-        // convert string to JSON data
-        var customPlaces = JSON.parse(apiPlaces);
+        });
 
 
         for(var i = 0; i < customPlaces.length; i++){
@@ -99,7 +121,7 @@ function createMarker(place) {
 
     <!-- Display the information for each marker -->
     function displayInfo() {
-        var pic = place.photos[0].getUrl({'maxWidth': 200, 'maxHeight': 200});
+        //var pic = place.photos[0].getUrl({'maxWidth': 200, 'maxHeight': 200});
         var element;
         var tag;
 

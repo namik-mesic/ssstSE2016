@@ -28,7 +28,8 @@
     <!-- end CSS-->
 
     <!-- JS-->
-    <script src="js/libs/modernizr-2.6.2.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>
+    <!--<script src="js/libs/modernizr-2.6.2.min.js"></script>-->
     <script type="text/javascript"></script>
     <script type="text/javascript">
         //<![CDATA[
@@ -288,7 +289,8 @@
 <!-- jQuery -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.0.min.js">\x3C/script>')</script>
-<script defer src="js/flexslider/jquery.flexslider-min.js"></script>
+<!--altered this to get jquery from the source online-->
+<script defer src="http://code.jquery.com/jquery.flexslider-min.js"></script>
 
 <!-- fire ups  -->
 <script src="js/main.js"></script>

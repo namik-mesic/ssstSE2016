@@ -3,30 +3,37 @@
     <div class="container">
         <div class="well">
 
-            <form action="<?php echo e(action('placeController@store')); ?>" method="POST">
+            <form action="<?php echo e(action('PlaceController@store')); ?>" method="POST">
                 <?php echo csrf_field(); ?>
 
 
                 <div class="form-group">
-                    <label for="assignee_id">
-                        Assignee
+                    <label for="name">
+                        Place Name
                     </label>
-                    <input type="text" id="assignee_id" name="assignee_id" placeholder="ID" class="form-control">
+                    <input type="text" id="name" name="name" placeholder="Place Name" class="form-control">
                 </div>
 
                 <div class="form-group">
-                    <label for="content">
-                        Content
+                    <label for="vicinity">
+                        Place Address
                     </label>
-                    <textarea name="content" placeholder="Content" id="content" cols="30" rows="10" class="form-control"></textarea>
+                    <input type = "text" name="vicinity" placeholder="Address" id="vicinity" class="form-control">
                 </div>
 
                 <div class="form-group">
-                    <label for="color">
-                        Color
+                    <label for="coordinates">
+                        Place Coordinates
                     </label>
-
-                    <input type="text" id="color" name="color" class="form-control">
+                    <!-- Might change to number input -->
+                    <input type="text" id="coordinates" placeholder="{lat: , lng: }" name="coordinates" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="coordinates">
+                        Place Type
+                    </label>
+                    <!-- Will change to limited selection of choices -->
+                    <input type="text" id="type" placeholder="Type" name="type" class="form-control">
                 </div>
 
                 <button role="button" class="btn btn-primary">
@@ -39,4 +46,4 @@
     </div>
 
 <?php $__env->appendSection(); ?>
-<?php echo $__env->make('layouts.admintool', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
