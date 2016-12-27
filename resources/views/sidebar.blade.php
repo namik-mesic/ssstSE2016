@@ -31,7 +31,7 @@
           </a>
           <ul class="treeview-menu">
          
-             <li class="active"><a href="index.html"><i class="fa fa-rss"></i> Campaigns </a></li>
+             <li class="active"><a href="/camp"><i class="fa fa-rss"></i> Campaigns </a></li>
             <li><a href="/editor"><i class="fa fa-pencil-square-o"></i> Email Editor</a></li>
           </ul>
         </li>
