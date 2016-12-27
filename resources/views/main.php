@@ -52,13 +52,19 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#download">Home</a>
+                        <a class="page-scroll" href="/#download">Home</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#features">Features</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                      <li>
+                        <a href="/login">login</a>
+                    </li>
+                    <li>
+                        <a href="/register">register</a>
                     </li>
                 </ul>
             </div>
@@ -175,7 +181,7 @@
         <div class="cta-content">
             <div class="container">
                 <h2>Stop waiting.<br>Reach out to the customer.</h2>
-                <a href="#contact" class="btn btn-outline btn-xl page-scroll">Register here</a>
+                <a href="/register" class="btn btn-outline btn-xl ">Register here</a>
             </div>
         </div>
         <div class="overlay"></div>
@@ -237,10 +243,10 @@
             <p>&copy; 2016 MailBird &copy All Rights Reserved.</p>
             <ul class="list-inline">
                 <li>
-                    <a href="#">Privacy</a>
+                    <a href="/terms">Privacy</a>
                 </li>
                 <li>
-                    <a href="#">Terms</a>
+                    <a href="/terms">Terms</a>
                 </li>
                 <li>
                     <a href="#">FAQ</a>

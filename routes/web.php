@@ -30,3 +30,15 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('register');
 });
+
+Route::get('/terms', function () {
+    return view('ToS');
+});
+
+Route::get('/editor', function () {
+    return view('emailcreator');
+});
+
+Route::get('/camp', function () {
+    return view('campaigns');
+});

@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<!--
-This is a starter template page. Use this page to start your new project from
-scratch. This page gets rid of all links and provides the needed markup only.
--->
+
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>MailBird | Dashboard</title>
+        <title>MailBird | Email creator</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- Bootstrap 3.3.2 -->
         <link href="{{ asset ('/bower_components/AdminLTE/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
@@ -21,6 +17,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
               apply the skin class to the body tag so the changes take effect.
         -->
         <link href="{{ asset('/bower_components/AdminLTE/dist/css/skins/skin-blue.min.css')}}" rel="stylesheet" type="text/css" />
+
+        <script src="{{ asset ("/bower_components/AdminLTE/plugins/ckeditor/ckeditor.js") }}" type="text/javascript"></script>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,7 +41,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                {{ $page_title or "Dashboard" }}
+                {{ $page_title or "Email Editor" }}
                 <small>{{ $page_description or null }}</small>
             </h1>
             <!-- You can dynamically generate breadcrumbs here -->
@@ -54,12 +52,38 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </section>
 
         <!-- Main content -->
-        
+        <section class="content">
+        <div class="col-md-6"><form role="form">
+                <!-- text input -->
+                <div class="form-group">
+                  <label>Email name</label>
+                  <input type="text" class="form-control" placeholder="Email name">
+                </div>
 
+                  <div class="form-group">
+                  <label>Subject</label>
+                  <input type="text" class="form-control" placeholder="Subject">
+                </div> </form>     
 
+                </div>
+                <div class="col-md-12">
+                <form>                                    
+                <!-- THIS RIGHT HERE IS THE EDITOR -->
+              <textarea name="editor1" id="editor1" rows="10" cols="80">
+                Click to start editing.
+            </textarea>
+            <script>
+                // Replace the <textarea id="editor1"> with a CKEditor
+                // instance, using default configuration.
+                CKEDITOR.replace( 'editor1' );
+            </script>
+        </form>
+        <div class="col-md-3">
+   <button type="button" class="btn btn-block btn-info btn-lg"><i class="fa fa-save"></i> SAVE</button>
+        </div>
+</div>
+        <!DOCTYPE html>
 
-
-        @include('dashboard')
             <!-- Your Page Content Here -->
             @yield('content')
         </section><!-- /.content -->
