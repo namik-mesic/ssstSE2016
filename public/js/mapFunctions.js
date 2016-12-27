@@ -14,7 +14,11 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 
 // for test
 
-var customPlaces =  $("#links").load("/api/places");
+// get content of /api/places (json data) as string
+var apiPlaces =  $("#links").load("/api/places");
+
+// convert string to JSON data
+var customPlaces = JSON.parse(apiPlaces);
 
 
 <!-- Calls the Google API for each marker needed -->
