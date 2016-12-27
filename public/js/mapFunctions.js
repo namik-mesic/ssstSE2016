@@ -14,16 +14,33 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 
 // for test
 
-// get content of /api/places (json data) as string
-var apiPlaces =  $("#links").load("/api/places");
 
-// convert string to JSON data
-var customPlaces = JSON.parse(apiPlaces);
+
 
 
 <!-- Calls the Google API for each marker needed -->
 function callback(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
+
+
+        var xhttp = new XMLHttpRequest();
+        var apiPlaces;
+        //Http request to get content of api/places page
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                // get content of /api/places (json data) as string
+                apiPlaces = this.responseText;
+            }
+        };
+        xhttp.open("POST","/api/places",true);
+        xhttp/send();
+
+
+
+
+        // convert string to JSON data
+        var customPlaces = JSON.parse(apiPlaces);
+
 
         for(var i = 0; i < customPlaces.length; i++){
 
