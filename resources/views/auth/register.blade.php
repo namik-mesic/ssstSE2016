@@ -7,6 +7,22 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
+                    @if ($errors->any())
+
+                        <ul style="color:red;">
+
+                            {{ implode('', $errors->all('<li>:message</li>')) }}
+
+                        </ul>
+
+                    @endif
+
+                    @if (Session::has('message'))
+
+                        <p>{{ Session::get('message') }}</p>
+
+                    @endif
+
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
                         {{ csrf_field() }}
 

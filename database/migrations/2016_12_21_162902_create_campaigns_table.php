@@ -18,7 +18,7 @@ class CreateCampaignsTable extends Migration
             $table->timestamps('name');
             $table->timestamps('type');
             $table->timestamps('content');
-            $table->timestamps('data_created');
+            // $table->timestamps('data_created');
             $table->foreign('user_id')->references('id')->on('users');
         });
     }

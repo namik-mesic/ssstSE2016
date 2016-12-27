@@ -42,3 +42,10 @@ Route::get('/editor', function () {
 Route::get('/camp', function () {
     return view('campaigns');
 });
+
+Route::post('register_action', function()
+{
+    $obj = new RegisterController() ;
+    return $obj->store();
+});
+
