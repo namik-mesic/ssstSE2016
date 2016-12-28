@@ -7,22 +7,28 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Campaign Name</th>
-                  <th>Status</th>
-                  <th>Mailing list</th>
-                  <th>Date created</th>
-                  <th>Emails sent</th>
+                  <th>Email</th>
+                  <th>Name</th>
+                  <th>Surname</th>
+                  <th>Date Added</th>
                   <th>Edit/Delete</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                  <td>Young Expats</td>
-                  <td>Active
+                  <td>John.doe@gmail.com</td>
+                  <td>John
                   </td>
-                  <td>MailingList1</td>
-                  <td> 18.12.2016</td>
-                  <td>32</td>
+                  <td>Doe</td>
+                  <td>27.03.1992</td>
+                  <td><a href="#"><i class="fa fa-pencil"></i> </a><a href="#"> <i class="fa fa-trash"></i></a></td>
+                </tr>
+                <tr>
+                  <td>Dummy</td>
+                  <td>Dummy</td>
+                  <td>Dummy</td>
+                  <td>Dummy</td>
+              
                   <td><a href="#"><i class="fa fa-pencil"></i> </a><a href="#"> <i class="fa fa-trash"></i></a></td>
                 </tr>
                 <tr>
@@ -31,47 +37,43 @@
                   </td>
                   <td>Dummy</td>
                   <td>Dummy</td>
-                  <td>Dummy</td>
-                  <td><a href="#"><i class="fa fa-pencil"></i> </a><a href="#"> <i class="fa fa-trash"></i></a></td>
-                </tr>
-                <tr>
-                  <td>Dummy</td>
-                  <td>Dummy
-                  </td>
-                  <td>Dummy</td>
-                  <td>Dummy</td>
-                  <td>Dummy</td>
+                 
                   <td><a href="#"><i class="fa fa-pencil"></i> </a><a href="#"> <i class="fa fa-trash"></i></a></td>
                 </tr>
  
                 </tbody>
                 <tfoot>
-                <tr>
-                  <th>Mailing List</th>
-                  <th>Status</th>
-                  <th>Users</th>
-                  <th>Date created</th>
-                  <th>Emails sent</th>
-                   <th>Edit/Delete</th>
+                   <tr>
+                  <th>Email</th>
+                  <th>Name</th>
+                  <th>Surname</th>
+                  <th>Date Added</th>
+                  <th>Edit/Delete</th>
                 </tr>
                 </tfoot>
               </table>
             </div>
             <!-- /.box-body -->
           </div>
-          <!-- /.box -->
-<div class="md-col-4">
+
+          <div class="md-col-4">
           <div class="box">
             
             <a href="#" class="btn btn-app"> <i class="fa fa-plus"></i></a>
 <div class="md-col-6"><form>
-  <label> Campaign name </label>
-  <input type="text" name="CampaignName" placeholder="Enter here..." class="form-control">
-<div class="mc-col-6">
+  <label> Add new user </label>
 
-                </div>
+<label>Email</label>
+  <input type="email" name="Email" placeholder="Enter here..." class="form-control">
+<label>Name</label>
+  <input type="text" name="Name" placeholder="Enter here..." class="form-control">
+  <label>Surname</label>
+  <input type="text" name="Surname" placeholder="Enter here..." class="form-control">
+</div>
+
+
                 <a href="#" class="btn btn-info">Add</a>
 </form></div>
           </div>
-          </div>
+          <!-- /.box -->
      

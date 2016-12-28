@@ -32,6 +32,8 @@
           <ul class="treeview-menu">
          
              <li class="active"><a href="/camp"><i class="fa fa-rss"></i> Campaigns </a></li>
+              <li><a href="/mlists"><i class="fa fa-users"></i> Mailing List</a></li>
+               <li><a href="/emails"><i class="fa fa-envelope"></i><span>Mails</span></a></li>
             <li><a href="/editor"><i class="fa fa-pencil-square-o"></i> Email Editor</a></li>
           </ul>
         </li>

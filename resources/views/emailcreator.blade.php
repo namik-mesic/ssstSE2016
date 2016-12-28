@@ -64,7 +64,16 @@
                   <div class="form-group">
                   <label>Subject</label>
                   <input type="text" class="form-control" placeholder="Subject">
-                </div> </form>     
+                </div> 
+                <div class="col-md-6">
+                <div class="form-group">
+                <select class="form-control">
+                <option> Kampanja 1</option>
+                <option> Kampanja 2</option>
+                </select>
+                </div>
+                </div>
+                </form>     
 
                 </div>
                 <div class="col-md-12">
