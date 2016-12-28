@@ -145,7 +145,7 @@ function createMarker(place) {
         tag = document.getElementById("tab1default").innerHTML =
             "Place Name: " + place.name + "<br>" +
 
-            "Location: " + place.geometry.location + "<br>" +
+            "Location: " + place.geometry.location.lat + "," + place.geometry.location.lng + "<br>" +
             "Address: " + place.vicinity;
 
         // scroll down to info panel  upon clicking on a place icon
