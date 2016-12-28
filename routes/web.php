@@ -55,6 +55,15 @@ Route::get('/help', function () {
     return view('help');
 });
 
+Route::get('/mlists', function () {
+    return view('mailing');
+});
+
+Route::get('/emails', function () {
+    return view('emailview');
+});
+
+
 Route::post('register_action', function()
 {
     $obj = new RegisterController() ;

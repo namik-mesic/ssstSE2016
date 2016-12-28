@@ -46,7 +46,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                {{ $page_title or "Dashboard" }}
+                {{ $page_title or "Mails" }}
                 <small>{{ $page_description or null }}</small>
             </h1>
             <!-- You can dynamically generate breadcrumbs here -->
@@ -62,7 +62,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
 
-        @include('dashboard')
+        @include('emails')
         <!-- Your Page Content Here -->
         @yield('content')
         </section><!-- /.content -->
