@@ -17,8 +17,9 @@ class CreateAdmin extends Migration
             $table->increments('id');
             $table->string('lame');
             $table->string('fame');
-            $table->string('mail');
+            $table->string('email')->unique();
             $table->string('password');
+
         });
     }
 
