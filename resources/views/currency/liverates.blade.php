@@ -2,12 +2,10 @@
 @section('content')
 
 
-        <div class="col-lg-8 col-lg-push-2">
+    <div class="col-lg-8 col-lg-push-2">
+        <!--This document was written by Ajla-->
+        @include('currency.lrate')
 
-            @include('currency.lrate')
-
-        </div>
+    </div>
 
 @endsection
-<!--This document was written by Ajla-->
-​

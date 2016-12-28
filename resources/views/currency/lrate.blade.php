@@ -1,24 +1,32 @@
 <div class="row lrate">
 
-    <div class="col-md-10">
+    <!--This document was written by Ajla-->
+    <div class="col-md-12">
 
-        @foreach($lrate as $rates)
-<table class="table">
+        <table class="table">
+            @foreach($lrate as $rates)
+                <tr>
+                    <td>
+                        {{ $rates['0'] }}
+                    </td>
+                    <td>
+                        {{ $rates['1'] }}</td>
+                    <td> {{ $rates['2'] }} </td>
+                    <td> {{ $rates['3'] }} </td>
+                    <td> {{ $rates['4'] }}
+                    <td>
+                    <td> {{ $rates['5'] }} </td>
+                    <td> {{ $rates['6'] }} </td>
+                    <td>  {{ $rates['7'] }} </td>
+                    <td>  {{ $rates['8'] }} </td>
+                </tr>
 
-              <tr>  {{ $rates['0'] }} </tr>
-               <tr> {{ $rates['1'] }}</tr>
-               <tr> {{ $rates['2'] }} </tr>
-                <tr> {{ $rates['3'] }} </tr>
-                <tr> {{ $rates['4'] }} <tr>
-              <tr> {{ $rates['5'] }} </tr>
-               <tr> {{ $rates['6'] }} </tr>
-              <tr>  {{ $rates['7'] }} </tr>
-              <tr>  {{ $rates['8'] }} </tr>
-
-</table>
-                    @endforeach
-        </div>
 
 
-<!--This document was written by Ajla-->
-​</div>
+            @endforeach
+        </table>
+    </div>
+
+
+    ​
+</div>

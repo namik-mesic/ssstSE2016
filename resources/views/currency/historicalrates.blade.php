@@ -1,19 +1,20 @@
 @extends('main')
 @section('content')
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+    {{-- This document was written by Ajla --}}​
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-    <link rel="stylesheet" href="/resources/demos/style.css">
     <script>
-        $(function() {
-            $("#datepicker").datepicker({ dateFormat: "yy-mm-dd" }).val()
+        $(function () {
+
+            $("#datepicker").datepicker({dateFormat: "yy-mm-dd"}).val()
 
         });
     </script>
     <div class="col-lg-8 col-lg-push-2">
-        <form action="{{ action('HistoricalRatesController@process') }}" class="forma" name="converter_form" method="POST">
+        <form action="{{ action('HistoricalRatesController@process') }}" class="forma" name="converter_form"
+              method="POST">
             {!! csrf_field() !!}
-
 
 
             <div class="form-group">
@@ -38,7 +39,7 @@
 
         <div class="col-lg-8 col-lg-push-2">
 
-                @include('currency.hrate')
+            @include('currency.hrate')
 
         </div>
     @endif
@@ -57,5 +58,3 @@
         </div>
     @endif
 @endsection
-<!--This document was written by Ajla-->
-​

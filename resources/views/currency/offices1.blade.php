@@ -1,6 +1,7 @@
 @extends('main')
 @section('content')
 
+    {{-- This document was written by Edis --}}​
 
     <div class="row">
         <div class="span">
@@ -10,6 +11,3 @@
     </div>
 
 @endsection
-
-<!--This document was written by Edis-->
-​
