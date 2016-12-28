@@ -76,9 +76,9 @@ function callback(results, status) {
                 // geometry.viewport
                 //customPlaces[i].geometry.location = customPlaces[i].coordinates;
 
-                customPlaces[i].geometry = {
-                        "location" : {"lat" :customPlaces[i].lat, "lng" : customPlaces[i].lng},
-                        "viewport" : ""};
+                customPlaces[i].geometry = {"location":"","viewport":""};
+                customPlaces[i].geometry.location = {"lat" : customPlaces[i].lat, "lng" : customPlaces[i].lng};
+
                 console.log(customPlaces[i]);
                 createMarker(customPlaces[i]);
             };
