@@ -15,10 +15,11 @@ class CreateCampaignsTable extends Migration
     {
         Schema::create('campaigns', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps('name');
-            $table->timestamps('type');
-            $table->timestamps('content');
-            // $table->timestamps('data_created');
+            $table->string('name');
+            $table->string('type');
+            $table->string('content');
+            $table->string('data_created');
+            $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
         });
     }
