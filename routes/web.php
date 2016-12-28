@@ -43,6 +43,18 @@ Route::get('/camp', function () {
     return view('campaigns');
 });
 
+Route::get('/profile', function () {
+    return view('profilepage');
+});
+
+Route::get('/settings', function () {
+    return view('settings');
+});
+
+Route::get('/help', function () {
+    return view('help');
+});
+
 Route::post('register_action', function()
 {
     $obj = new RegisterController() ;
