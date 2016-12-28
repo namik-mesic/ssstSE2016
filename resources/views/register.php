@@ -17,6 +17,8 @@
   <!-- iCheck -->
   <link rel="stylesheet" href="/bower_components/AdminLTE/plugins/iCheck/square/blue.css">
 
+  <link rel="shortcut icon" href="{{{ asset('/bower_components/AdminLTE/dist/img/favicon.ico') }}}">
+
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
