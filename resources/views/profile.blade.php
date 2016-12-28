@@ -61,8 +61,12 @@
         @endif
     </div>
 
+    <img src="{{$user->imgPath}}" alt="" style="height: 150px; width: 150px; float: left; border-radius: 50%; margin-left: 1cm; margin-top: 0.5cm">
+
     <div class="col-md-6 center">
+
         <div class="row">
+
             <div class="table-responsive">
                 <table class="table table-condensed table-responsive table-user-information">
                     <tbody>

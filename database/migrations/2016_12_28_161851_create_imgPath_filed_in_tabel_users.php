@@ -14,7 +14,7 @@ class CreateImgPathFiledInTabelUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('imgPath')->nullable();
+            $table->string('imgPath') -> default('default.jpg');
         });
     }
 
