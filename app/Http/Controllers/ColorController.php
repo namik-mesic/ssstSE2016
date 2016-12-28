@@ -17,7 +17,8 @@ class ColorController extends Controller
 
     public function update(Request $requ)
     {
-        $color = $requ->get('color');
-        var_dump($color);
+        $user = \Auth::user();
+        $user->color = $requ->get('color');
+        $user->save();
     }
 }
