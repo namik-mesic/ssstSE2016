@@ -12,6 +12,7 @@
         .table{
             color:#00001a;
         }
+
         .lrate{
             color:#00001a;
         }
@@ -100,6 +101,7 @@
             font-size:30px;
         }
         .navbar-fixed-bottom{
+            height: 50px;
             background-color: #00001a;
         }
 
@@ -118,6 +120,9 @@
         .marquee{
             width:300px;
             color:silver;
+        }
+        .pomocni-div{
+            height: 100px;
         }
     </style>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -159,6 +164,8 @@
 
 @yield('content')
 
+<div class="clearfix"></div>
+<div class="pomocni-div" style="display: block !important;"></div>
 <footer class="navbar navbar-inverse navbar-fixed-bottom" >
     <span class="timed">Currency converter 2016</span>
 
