@@ -21,7 +21,6 @@ Route::get('api/place', 'Api\PlaceDataController@index');
 
 Route::resource('place', 'PlaceController');
 
-
 Route::get('/home', 'HomeController@index');
 
 Route::get('/map', function (){

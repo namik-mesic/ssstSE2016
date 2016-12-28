@@ -20,7 +20,8 @@ class CreatePlacesTable extends Migration
 
             $table->string('name');
             $table->string('vicinity')->nullable();
-            $table->string('coordinates');
+            $table->double('lat');
+            $table->double('lng');
             $table->string('type')->nullable();
             $table->string('updated_at');
             $table->string('created_at');

@@ -23,7 +23,10 @@
                     Place Address
                 </th>
                 <th>
-                    Place Coordinates
+                    Place Latitude
+                </th>
+                <th>
+                    Place Longitude
                 </th>
                 <th>
                     Place Type
@@ -47,7 +50,10 @@
                         {{ $place->vicinity ? $place->vicinity : 'Not set'}}
                     </td>
                     <td>
-                        {{$place->coordinates}}
+                        {{$place->lat}}
+                    </td>
+                    <td>
+                        {{$place->lng}}
                     </td>
                     <td>
                         {{ $place->type ? $place->type : 'Not set'}}

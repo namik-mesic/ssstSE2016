@@ -49,6 +49,16 @@ function getHTMLData(url) {
 }
 */
 
+function getLatFromObject(obj) {
+    var coordinates = obj.coordinates;
+    lat = "";
+    for(var i = 0; i <coordinates.length;i++){
+        if(coordinates[i] == ",");
+            lat += coordinates[i]
+    }
+
+}
+
 <!-- Calls the Google API for each marker needed -->
 function callback(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
@@ -65,12 +75,17 @@ function callback(results, status) {
                 //need to fix database attributes to accommodate geometry.location and
                 // geometry.viewport
                 //customPlaces[i].geometry.location = customPlaces[i].coordinates;
+
+                customPlaces[i].geometry = {
+                        "location" : {"lat" :customPlaces[i].lat, "lng" : customPlaces[i].lng},
+                        "viewport" : ""};
+                console.log(customPlaces[i]);
                 createMarker(customPlaces[i]);
             };
 
         });
 
-        
+
         for (var i = 0; i < results.length; i++) {
 
             createMarker(results[i]);

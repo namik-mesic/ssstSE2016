@@ -8,23 +8,6 @@
 
 
         function initMap() {
-
-            var xhttp = new XMLHttpRequest();
-            var apiPlaces;
-            //Http request to get content of api/places page
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    // get content of /api/places (json data) as string
-                    apiPlaces = this.responseText;
-                }
-            };
-            xhttp.open("POST","<?php echo e(URL::asset('/api/places')); ?>",true);
-            xhttp.send();
-
-            // convert string to JSON data
-            var customPlaces = JSON.parse(apiPlaces);
-            alert(customPlaces);
-
             // Try HTML5 geolocation.
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(position) {

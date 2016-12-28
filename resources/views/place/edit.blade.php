@@ -24,10 +24,17 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="name">
-                        Place Coordinates
+                    <label for="lat">
+                        Place Latitude
                     </label>
-                    <input type = "text" name="coordinates" id="coordinates" class="form-control">{{ $place->coordinates }}>
+                    <input type="number" step = "0.0000001" id="lat" placeholder="latitude" name="lat" class="form-control">{{ $place->lat }}>
+                </div>
+
+                <div class="form-group">
+                    <label for="longitude">
+                        Place Longitude
+                    </label>
+                    <input type="number" step = "0.0000001" id="lng" placeholder="longitude" name="lng" class="form-control">{{ $place->lng }}>
                 </div>
 
                 <div class="form-group">

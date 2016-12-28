@@ -23,14 +23,21 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="coordinates">
-                        Place Coordinates
+                    <label for="lat">
+                        Place Latitude
                     </label>
                     <!-- Might change to number input -->
-                    <input type="text" id="coordinates" placeholder="{lat: , lng: }" name="coordinates" class="form-control">
+                    <input type="number" step = "0.0000001" id="lat" placeholder="latitude" name="lat" class="form-control">
                 </div>
                 <div class="form-group">
-                    <label for="coordinates">
+                    <label for="lng">
+                        Place Longitude
+                    </label>
+                    <!-- Might change to number input -->
+                    <input type="number" step = "0.0000001" id="lng" placeholder="longitude" name="lng" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="type">
                         Place Type
                     </label>
                     <!-- Will change to limited selection of choices -->

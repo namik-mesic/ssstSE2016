@@ -17,16 +17,10 @@ class Place extends Model
     protected $fillable = [
         'name',
         'vicinity',
-        'coordinates',
+        'lat',
+        'lng',
         'type'
     ];
 
-    /**
-     * @return BelongsTo
-     */
-
-    /**
-     * @return BelongsTo
-     */
 
 }
