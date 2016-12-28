@@ -19,7 +19,7 @@
 
             <div class="panel-body">
               <div class="row">
-                <form class="form-horizontal" method="post" action="{{url('/add-picture')}}">
+                <form class="form-horizontal" method="post" action="{{url('/add-picture')}}" enctype="multipart/form-data">
                   {{ csrf_field() }}
                   <div class="row form-group">
                     <div class="col-xs-4">

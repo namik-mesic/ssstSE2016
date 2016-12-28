@@ -9,6 +9,7 @@ use App\Http\Requests;
 use App\User;
 use Auth;
 use Validator;
+use File;
 
 class UserController extends Controller
 {
@@ -65,7 +66,7 @@ class UserController extends Controller
             $user = User::find($currentUser->id);
             $file = $request->file('picture');
             $folderName = $user->email;
-            $pathWithSpaces = '..\public\images\users\ ' . $folderName;
+            $pathWithSpaces = public_path('images\users\ ' . $folderName);
             $path = str_replace(' ', '', $pathWithSpaces);
             if (!File::exists($path)) {
                 File::makeDirectory($path);
@@ -74,14 +75,14 @@ class UserController extends Controller
                 $path = str_replace(' ', '', $path);
                 $user->imgPath = $path;
                 $user->save();
-                return redirect('/profil');
+                return redirect('/profile');
             } else {
                 $file->move($path, $file->getClientOriginalName());
                 $path .= '\ ' . $file->getClientOriginalName();
                 $path = str_replace(' ', '', $path);
                 $user->imgPath = $path;
                 $user->save();
-                return redirect('/profil');
+                return redirect('/profile');
             }
 
         }
