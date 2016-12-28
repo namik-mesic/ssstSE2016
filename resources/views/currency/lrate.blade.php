@@ -6,19 +6,19 @@
         <table class="table">
             @foreach($lrate as $rates)
                 <tr>
-                    <td>
+                    <td id="aha">
                         {{ $rates['0'] }}
                     </td>
-                    <td>
+                    <td id="aha">
                         {{ $rates['1'] }}</td>
-                    <td> {{ $rates['2'] }} </td>
-                    <td> {{ $rates['3'] }} </td>
-                    <td> {{ $rates['4'] }}
-                    <td>
-                    <td> {{ $rates['5'] }} </td>
-                    <td> {{ $rates['6'] }} </td>
-                    <td>  {{ $rates['7'] }} </td>
-                    <td>  {{ $rates['8'] }} </td>
+                    <td id="aha"> {{ $rates['2'] }} </td>
+                    <td id="aha"> {{ $rates['3'] }} </td>
+                    <td id="aha"> {{ $rates['4'] }}
+                    <td id="aha">
+                    <td id="aha"> {{ $rates['5'] }} </td>
+                    <td id="aha"> {{ $rates['6'] }} </td>
+                    <td id="aha">  {{ $rates['7'] }} </td>
+                    <td id="aha">  {{ $rates['8'] }} </td>
                 </tr>
 
 

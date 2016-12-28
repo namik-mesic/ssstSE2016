@@ -25,6 +25,9 @@
             width: 160px;
             border-color: black
         }
+        #aha{
+            border-color: #00001a;
+        }
         .alert {
             color: #00001a;
         }
