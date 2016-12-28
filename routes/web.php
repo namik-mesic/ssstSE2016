@@ -21,12 +21,12 @@ use App\User;
 
 
 Route::get('/home', 'HomeController@index');
-<<<<<<< HEAD
+
 Route::get('/update-profile', 'UserController@profileView');
 Route::post('/update-profile', 'UserController@profileUpdate');
 Route::get('/add-picture', 'UserController@addPictureView');
 Route::post('/add-picture', 'UserController@addPicture');
-=======
+
 
 Route::get('/destroy', 'testControl@destroy');
 
@@ -66,9 +66,3 @@ Route::get('/users/{id}', 'SearchController@show');
 
 
 
-<<<<<<< HEAD
->>>>>>> 3b70ec9b41879162059ccdba27c3f9dd38499255
-=======
-
-
->>>>>>> 88831ea580f6c826112ade09c260d5e398a38465
