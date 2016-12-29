@@ -17,10 +17,10 @@ class CreateCampaignsSent extends Migration
             $table->increments('id');
             $table->timestamps('date_sent');
             $table->integer('user_id')->unsigned();
-            $table->integer('mailling_list_id')->unsigned();
+            $table->integer('mailing_list_id')->unsigned();
             $table->integer('campaigns_sent_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('mailling_list_id')->references('id')->on('mailling_list');
+            $table->foreign('mailing_list_id')->references('id')->on('mailing_list');
             $table->foreign('campaigns_sent_id')->references('id')->on('campaigns');
 
         });

@@ -28,7 +28,9 @@
                   <td>Dummy</td>
                   <td>Dummy</td>
                   <td>Dummy</td>
-              {{ dd(mailinglist); }}
+              <?php $results = DB::select('select * from mailing_list where user_id = 1', array(1));
+                 dd($results); ?>
+
                   <td><a href="#"><i class="fa fa-pencil"></i> </a><a href="#"> <i class="fa fa-trash"></i></a></td>
                 </tr>
                 <tr>

@@ -57,9 +57,7 @@ Route::get('/help', function () {
 });
 
 Route::get('/mlists', function () {
-
-    $mailinglist = DB::select('select * mailing_list', array(1));
-    return view::make('mailing') -> with('mailing_list', $mailinglist);
+    return view('mailing');
 });
 
 Route::get('/emails', function () {

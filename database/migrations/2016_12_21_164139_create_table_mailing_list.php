@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableMaillingList extends Migration
+class CreateTableMailingList extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateTableMaillingList extends Migration
      */
     public function up()
     {
-        Schema::create('mailling_list', function (Blueprint $table) {
+        Schema::create('mailing_list', function (Blueprint $table) {
             $table->increments('id');
             $table->string('fname');
             $table->string('lname');
