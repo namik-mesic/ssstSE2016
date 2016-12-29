@@ -28,8 +28,7 @@
                   <td>Dummy</td>
                   <td>Dummy</td>
                   <td>Dummy</td>
-              <?php $results = DB::select('select * from mailing_list where user_id = 1', array(1));
-                 dd($results); ?>
+
 
                   <td><a href="#"><i class="fa fa-pencil"></i> </a><a href="#"> <i class="fa fa-trash"></i></a></td>
                 </tr>
@@ -60,7 +59,7 @@
 
           <div class="md-col-4">
           <div class="box">
-            
+
             <a href="#" class="btn btn-app"> <i class="fa fa-plus"></i></a>
 <div class="md-col-6"><form>
   <label> Add new user </label>

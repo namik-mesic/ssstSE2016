@@ -17,7 +17,7 @@ class CreateCampaignsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('type');
-            $table->string('content');
+            $table->text('content');
             $table->string('data_created');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
