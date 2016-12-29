@@ -20,8 +20,6 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->timestamp('date_of_registration');
-            $table->integer('admin_id')->unsigned();
-            $table->foreign('admin_id')->references('id')->on('admin');
             $table->rememberToken();
             $table->timestamps();
 

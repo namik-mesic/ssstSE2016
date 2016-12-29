@@ -23,13 +23,14 @@ Route::get('admin', function () {
     return view('admin2');
 });
 
-Route::get('/login', function () {
+Route::get('auth/login', function () {
     return view('login');
 });
 
-Route::get('/register', function () {
+Route::get('auth/register', function () {
     return view('register');
 });
+
 
 Route::get('/terms', function () {
     return view('ToS');
@@ -56,7 +57,9 @@ Route::get('/help', function () {
 });
 
 Route::get('/mlists', function () {
-    return view('mailing');
+
+    $mailinglist = DB::select('select * mailing_list', array(1));
+    return view::make('mailing') -> with('mailing_list', $mailinglist);
 });
 
 Route::get('/emails', function () {
@@ -64,9 +67,4 @@ Route::get('/emails', function () {
 });
 
 
-Route::post('register_action', function()
-{
-    $obj = new RegisterController() ;
-    return $obj->store();
-});
 

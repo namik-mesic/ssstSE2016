@@ -28,7 +28,7 @@
                   <td>Dummy</td>
                   <td>Dummy</td>
                   <td>Dummy</td>
-              
+              {{ dd(mailinglist); }}
                   <td><a href="#"><i class="fa fa-pencil"></i> </a><a href="#"> <i class="fa fa-trash"></i></a></td>
                 </tr>
                 <tr>
