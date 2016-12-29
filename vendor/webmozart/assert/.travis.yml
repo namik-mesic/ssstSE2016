@@ -2,10 +2,13 @@ language: php
 
 sudo: false
 
+<<<<<<< HEAD
 branches:
   only:
     - master
 
+=======
+>>>>>>> d9ee37e9850b184bde413408a8d22c3204a53aff
 cache:
   directories:
     - $HOME/.composer/cache/files

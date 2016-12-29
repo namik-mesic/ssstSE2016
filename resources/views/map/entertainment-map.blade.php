@@ -10,7 +10,7 @@
         //<![CDATA[
 
         var map;
-
+        var infowindow;
 
         <!-- Creates a map where it gets your GeoLocation and shows the nearest places to get entertainment -->
         function initMap() {
@@ -34,17 +34,17 @@
 
                     // {map:map} will display the "you are here" bubble
                     infoWindow = new google.maps.InfoWindow({content:"You are here",map:map, position: pos});
+                    infowindow = new google.maps.InfoWindow();
 
-            infowindow = new google.maps.InfoWindow();
             var service = new google.maps.places.PlacesService(map);
             service.nearbySearch({
                 location: pos,
-                radius: 1000,
+                radius: 2000,
                 type: ['museum'],
                 type: ['park'],
                 type: ['movie_theater'],
                 type: ['art_gallery']
-            }, callback);
+            }, callback,setSearchType("entertainment"));
 
 
             //service = new google.maps.places.PlacesService(map);

@@ -4,6 +4,7 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+<<<<<<< HEAD
     <orderEntry type="module-library">
       <library name="PHP Runtime" type="php">
         <CLASSES>
@@ -24,5 +25,7 @@
         </SOURCES>
       </library>
     </orderEntry>
+=======
+>>>>>>> d9ee37e9850b184bde413408a8d22c3204a53aff
   </component>
 </module>

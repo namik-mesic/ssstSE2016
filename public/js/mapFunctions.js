@@ -1,6 +1,11 @@
 /**
  * Created by Adem on 12/12/2016.
  */
+
+//global var for storing the type of search
+var type = "";
+
+
 <!-- Function that handles Geolocation Errors -->
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 
@@ -12,51 +17,10 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 
 }
 
-/*
-function getJSONData() {
+function setSearchType(searchType) {
 
-     var xhttp = new XMLHttpRequest();
-     var apiPlaces;
-
-     //Http request to get content of api/places page
-     xhttp.onreadystatechange = function() {
-     if (this.readyState == 4 && this.status == 200) {
-     // get content of /api/place (json data) as string
-        console.log(JSON.parse(this.responseText),function (key,val) {
-            apiPlaces.push(key + ":"+ val);
-        });
-        return apiPlaces;
-     }
-     };
-     xhttp.open("GET",'/api/place',true);
-     xhttp.send();
-
-
-};
-*/
-
-/*
-//jQuery variant of the function above^^
-
-function getHTMLData(url) {
-
-    var result = "";
-    $.get(url,function (data) {
-        result = data;
-        return result;
-    });
-
-}
-*/
-
-function getLatFromObject(obj) {
-    var coordinates = obj.coordinates;
-    lat = "";
-    for(var i = 0; i <coordinates.length;i++){
-        if(coordinates[i] == ",");
-            lat += coordinates[i]
-    }
-
+    //assign argument to global var type
+    type = searchType;
 }
 
 <!-- Calls the Google API for each marker needed -->
@@ -76,12 +40,15 @@ function callback(results, status) {
                 // geometry.viewport
                 //customPlaces[i].geometry.location = customPlaces[i].coordinates;
 
-                customPlaces[i].geometry = {"location":"","viewport":""};
-                customPlaces[i].geometry.location = {"lat" : customPlaces[i].lat, "lng" : customPlaces[i].lng};
+                if(customPlaces[i].type == type) {
 
+                    customPlaces[i].geometry = {"location": "", "viewport": ""};
+                    customPlaces[i].geometry.location = {"lat": customPlaces[i].lat, "lng": customPlaces[i].lng};
+                }
                 console.log(customPlaces[i]);
                 createMarker(customPlaces[i]);
             };
+            setSearchType("");
 
         });
 
@@ -96,15 +63,15 @@ function callback(results, status) {
 <!-- Creates each marker -->
 function createMarker(place) {
 
-     // this var allows you to make custom marker graphics
-     // it still needs to be adjusted to work with infowindow properly
-     var image = {
-     url: "{{URL::asset('graphics/icons/map/map-pin.png')}}",
-     size: new google.maps.Size(71, 71),
-     origin: new google.maps.Point(0, 0),
-     anchor: new google.maps.Point(17, 34),
-     scaledSize: new google.maps.Size(25, 25)
-     };
+    // this var allows you to make custom marker graphics
+    // it still needs to be adjusted to work with infowindow properly
+    var image = {
+        url: "{{URL::asset('graphics/icons/map/map-pin.png')}}",
+        size: new google.maps.Size(71, 71),
+        origin: new google.maps.Point(0, 0),
+        anchor: new google.maps.Point(17, 34),
+        scaledSize: new google.maps.Size(25, 25)
+    };
 
     var placeLoc = place.geometry.location;
 
@@ -169,6 +136,7 @@ function createMarker(place) {
     <!-- Adds a click listener to do the displayInfo() function -->
     google.maps.event.addListener(marker, 'click', function () {
 
+        // invoke displayInfo() function
         displayInfo();
 
     });

@@ -9,7 +9,7 @@
         //<![CDATA[
 
         var map;
-
+        var infowindow;
 
         <!-- Creates a map where it gets your GeoLocation and shows the nearest places for lodging-->
         function initMap() {
@@ -32,14 +32,14 @@
 
                     // {map:map} will display the "you are here" bubble
                     infoWindow = new google.maps.InfoWindow({content:"You are here",map:map, position: pos});
-
                     infowindow = new google.maps.InfoWindow();
+
             var service = new google.maps.places.PlacesService(map);
             service.nearbySearch({
                 location: pos,
-                radius: 500,
+                radius: 2000,
                 type: ['lodging']
-            }, callback);
+            }, callback,setSearchType("lodging"));
 
             // vvv doesn't work; returns undef vvv
             //service = new google.maps.places.PlacesService(map);

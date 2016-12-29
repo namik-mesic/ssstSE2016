@@ -43,7 +43,7 @@
                         type: ['meal_takeaway'],
                         type: ['meal_delivery'],
                         type: ['bakery']
-                    }, callback);
+                    }, callback,setSearchType("food"));
 
                     // this line returns undefined vvvv
                     //service = new google.maps.places.PlacesService(map);

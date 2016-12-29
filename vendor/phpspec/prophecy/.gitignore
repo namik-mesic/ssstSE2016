@@ -2,4 +2,7 @@
 *.phar
 /composer.lock
 /vendor
+<<<<<<< HEAD
 /phpunit.xml
+=======
+>>>>>>> d9ee37e9850b184bde413408a8d22c3204a53aff

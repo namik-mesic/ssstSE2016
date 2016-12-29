@@ -1,5 +1,6 @@
 
 // Fireup the plugins
+/*
 $(document).ready(function(){
 	
 	// initialise  slideshow
@@ -11,6 +12,7 @@ $(document).ready(function(){
       });
 
 });
+*/
 /**
  * Handles toggling the navigation menu for small screens.
  */

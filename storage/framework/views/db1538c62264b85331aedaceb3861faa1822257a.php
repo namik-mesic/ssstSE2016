@@ -23,6 +23,7 @@
                 </div>
 
                 <div class="form-group">
+<<<<<<< HEAD
                     <label for="lat">
                         Place Latitude
                     </label>
@@ -34,6 +35,12 @@
                         Place Longitude
                     </label>
                     <input type="number" step = "0.0000001" id="lng" placeholder="longitude" name="lng" class="form-control"><?php echo e($place->lng); ?>>
+=======
+                    <label for="name">
+                        Place Coordinates
+                    </label>
+                    <input type = "text" name="coordinates" id="coordinates" class="form-control"><?php echo e($place->coordinates); ?>>
+>>>>>>> d9ee37e9850b184bde413408a8d22c3204a53aff
                 </div>
 
                 <div class="form-group">

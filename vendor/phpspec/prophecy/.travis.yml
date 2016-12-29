@@ -1,6 +1,10 @@
 language: php
 
+<<<<<<< HEAD
 php: [5.3, 5.4, 5.5, 5.6, 7.0, 7.1]
+=======
+php: [5.3, 5.4, 5.5, 5.6, 7.0, hhvm]
+>>>>>>> d9ee37e9850b184bde413408a8d22c3204a53aff
 
 sudo: false
 
@@ -17,11 +21,14 @@ branches:
 matrix:
   fast_finish: true
   include:
+<<<<<<< HEAD
     # Use the newer stack for HHVM as HHVM does not support Precise anymore since a long time and so Precise has an outdated version
     - php: hhvm
       sudo: required
       dist: trusty
       group: edge
+=======
+>>>>>>> d9ee37e9850b184bde413408a8d22c3204a53aff
     - php: '7.0'
       env: PHPDOCUMENTOR_REFLECTION_DOCBLOCK="^2.0"
 
@@ -31,6 +38,10 @@ before_script:
     fi;
   - travis_retry composer update --no-interaction
 
+<<<<<<< HEAD
 script:
   - vendor/bin/phpspec run -fpretty -v
   - vendor/bin/phpunit
+=======
+script: vendor/bin/phpspec run -fpretty -v
+>>>>>>> d9ee37e9850b184bde413408a8d22c3204a53aff

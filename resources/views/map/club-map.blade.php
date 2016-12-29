@@ -10,9 +10,10 @@
         //<![CDATA[
 
         var map;
+        var infowindow;
 
+       <!-- Creates a map where it uses your Geolocation and shows the nearest places to club -->
 
-        <!-- Creates a map where it uses your Geolocation and shows the nearest places to club -->
         function initMap() {
 
             <!-- If clause to get location from function getCurrentPosition -->
@@ -33,17 +34,16 @@
 
                     // {map:map} will display the "you are here" bubble
                     infoWindow = new google.maps.InfoWindow({content:"You are here",map:map, position: pos});
-
-
                     infowindow = new google.maps.InfoWindow();
+
                     var service = new google.maps.places.PlacesService(map);
                     service.nearbySearch({
                         location: pos,
-                        radius: 1000,
+                        radius: 2000,
                         type: ['night_club'],
                         type: ['cafe'],
                         type: ['bar']
-                    }, callback);
+                    }, callback,setSearchType("drink"));
                     // this line returns undefined vvvv
                     //service = new google.maps.places.PlacesService(map);
                     //service.nearbySearch(request, callback);

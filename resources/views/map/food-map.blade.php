@@ -40,13 +40,13 @@
                     var service = new google.maps.places.PlacesService(map);
                     service.nearbySearch({
                         location: pos,
-                        radius: 10000,
+                        radius: 2000,
                         type: ['restaurant'],
                         type: ['food'],
                         type: ['meal_takeaway'],
                         type: ['meal_delivery'],
                         type: ['bakery']
-                    }, callback);
+                    }, callback,setSearchType("food"));
 
                     // this line returns undefined vvvv
                     //service = new google.maps.places.PlacesService(map);

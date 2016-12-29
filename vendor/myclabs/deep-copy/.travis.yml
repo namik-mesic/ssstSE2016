@@ -1,6 +1,7 @@
 language: php
 
 php:
+<<<<<<< HEAD
   - '5.5'
   - '5.6'
   - '7.0'
@@ -26,6 +27,21 @@ before_install:
 install:
   - composer update -n --prefer-dist $COMPOSER_FLAGS
   - wget https://github.com/satooshi/php-coveralls/releases/download/v1.0.0/coveralls.phar
+=======
+  - 5.4
+  - 5.5
+  - 5.6
+  - 7.0
+  - hhvm
+
+matrix:
+  allow_failures:
+    - php: hhvm
+
+install:
+  - composer install -n
+  - composer require "satooshi/php-coveralls:~1.0" --no-progress
+>>>>>>> d9ee37e9850b184bde413408a8d22c3204a53aff
 
 before_script:
   - mkdir -p build/logs
@@ -34,4 +50,8 @@ script:
   - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
 
 after_script:
+<<<<<<< HEAD
   - php coveralls.phar -v
+=======
+  - php vendor/bin/coveralls -v
+>>>>>>> d9ee37e9850b184bde413408a8d22c3204a53aff

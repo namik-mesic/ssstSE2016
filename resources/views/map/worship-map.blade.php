@@ -10,7 +10,7 @@
         //<![CDATA[
 
         var map;
-
+        var infowindow;
 
         <!-- Creates a map where it your GeoLocation and shows the nearest places of worship -->
         function initMap() {
@@ -32,8 +32,8 @@
 
                     // {map:map} will display the "you are here" bubble
                     infoWindow = new google.maps.InfoWindow({content:"You are here",map:map, position: pos});
-
                     infowindow = new google.maps.InfoWindow();
+
             var service = new google.maps.places.PlacesService(map);
             service.nearbySearch({
                 location: pos,
@@ -43,7 +43,7 @@
                 type: ['mosque'],
                 type: ['place_of_worship'],
                 type: ['synagogue']
-            }, callback);
+            }, callback,setSearchType("worship"));
 
             //service = new google.maps.places.PlacesService(map);
             //service.nearbySearch(request, callback);

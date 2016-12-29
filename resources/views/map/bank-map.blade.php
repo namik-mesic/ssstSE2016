@@ -10,6 +10,7 @@
         //<![CDATA[
 
         var map;
+        var infowindow;
 
 
         <!-- Creates a map where it gets your Geolocation and finds the closest banks and atms from there -->
@@ -32,14 +33,15 @@
 
                     // {map:map} will display the "you are here" bubble
                     infoWindow = new google.maps.InfoWindow({content:"You are here",map:map, position: pos});
+                    infowindow = new google.maps.InfoWindow();
 
             var service = new google.maps.places.PlacesService(map);
             service.nearbySearch({
                 location: pos,
-                radius: 500,
+                radius: 2000,
                 type: ['atm'],
                 type: ['bank']
-            }, callback);
+            }, callback,setSearchType("bank"));
 
             //service = new google.maps.places.PlacesService(map);
             //service.nearbySearch(request, callback);

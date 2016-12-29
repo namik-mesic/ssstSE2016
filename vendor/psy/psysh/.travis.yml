@@ -6,6 +6,7 @@ php:
   - 5.5
   - 5.6
   - 7.0
+<<<<<<< HEAD
   - 7.1
   - hhvm
 
@@ -35,10 +36,18 @@ before_install:
 
 install:
   - travis_retry composer update --no-interaction --prefer-source $COMPOSER_FLAGS
+=======
+  - hhvm
+
+install:
+  - travis_retry composer install --no-interaction --prefer-source
+  - '[ -z "$MIN_VERSIONS" ] || composer require --no-interaction --prefer-source $MIN_VERSIONS'
+>>>>>>> d9ee37e9850b184bde413408a8d22c3204a53aff
 
 script:
   - vendor/bin/phpunit
 
+<<<<<<< HEAD
 before_deploy:
   - bin/build
   - chmod +x *.phar
@@ -60,3 +69,12 @@ deploy:
     tags: true
     repo: bobthecow/psysh
     condition: ($TRAVIS_PHP_VERSION = 5.3* || $TRAVIS_PHP_VERSION = 7.0*) && -z "$COMPOSER_FLAGS"
+=======
+matrix:
+  fast_finish: true
+  include:
+    - php: 5.3
+      env: MIN_VERSIONS="symfony/console:2.3.10 symfony/var-dumper:2.7.0 nikic/php-parser:1.2.1 jakub-onderka/php-console-highlighter:0.3.0"
+  allow_failures:
+    - env: MIN_VERSIONS="symfony/console:2.3.10 symfony/var-dumper:2.7.0 nikic/php-parser:1.2.1 jakub-onderka/php-console-highlighter:0.3.0"
+>>>>>>> d9ee37e9850b184bde413408a8d22c3204a53aff
