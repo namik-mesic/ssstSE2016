@@ -8,13 +8,10 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }} SSST</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="/css/custom.css" rel="stylesheet">
 
     <!-- Scripts -->
@@ -59,10 +56,12 @@
                         </li>
 
                     </ul>
-                @endif
+            @endif
 
 
+            <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
+                    <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>
                         <li><a href="{{ url('/register') }}">Register</a></li>
@@ -77,12 +76,6 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li>
                                     <a href="{{ url('/profile') }}">Profile</a>
-                                </li>
-                                <li>
-                                    <a href="{{ url('/update-profile') }}">Update profile</a>
-                                </li>
-                                <li>
-                                    <a href="{{ url('/add-picture') }}">Add profile picture</a>
                                 </li>
                                 <li>
                                     <a href="/confirm"> Delete Account</a>
@@ -101,6 +94,7 @@
                                         {{ csrf_field() }}
                                     </form>
                                 </li>
+
                             </ul>
                         </li>
 
@@ -115,8 +109,5 @@
 
 <!-- Scripts -->
 <script src="/js/app.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
 </body>
 </html>
