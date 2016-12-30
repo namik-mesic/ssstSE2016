@@ -22,33 +22,33 @@
                 <form class="form-horizontal" method="post" action="{{url('/update-profile')}}">
                   {{ csrf_field() }}
                   <div class="row form-group">
-                    <div class="col-xs-4">
+                    <div class="col-xs-4" style="margin-left: 1cm">
                     <label>Change your user name!</label>
                   <input type="text" name="name" class="form-control" placeholder="{{$user->name}}" />
                   </div>
                   </div>
 
                   <div class="row form-group">
-                    <div class="col-xs-4">
+                    <div class="col-xs-4" style="margin-left: 1cm">
                     <label>Change your email!</label>
                   <input type="text" name="email" class="form-control" placeholder="{{$user->email}}" />
                   </div>
                   </div>
 
                   <div class="row form-group">
-                    <div class="col-xs-4">
+                    <div class="col-xs-4" style="margin-left: 1cm">
                     <label>Change your password!</label>
                   <input type="password" name="password" class="form-control" placeholder="" />
                   </div>
                   </div>
                   <div class="row form-group">
-                    <div class="col-xs-4">
+                    <div class="col-xs-4" style="margin-left: 1cm">
                     <label>Repeat password!</label>
                   <input type="password" name="REpassword" class="form-control" placeholder="" />
                   </div>
                   </div>
                   <div class="row form-group">
-                    <div class="col-xs-4">
+                    <div class="col-xs-4" style="margin-left: 1cm">
 
                   <input type="submit" name="submit" class="btn btn success" value="Submit" />
                   </div>
