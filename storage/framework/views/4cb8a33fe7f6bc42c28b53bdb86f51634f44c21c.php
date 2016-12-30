@@ -18,7 +18,7 @@
                     <label for="vicinity">
                         Place Address
                     </label>
-                    <input type = "text" name="vicinity" placeholder="Address" id="vicinity" class="form-control">
+                    <input type = "text" maxlength="100" name="vicinity" placeholder="Address" id="vicinity" class="form-control">
                 </div>
 
                 <div class="form-group">

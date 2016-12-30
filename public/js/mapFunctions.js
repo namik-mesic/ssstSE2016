@@ -45,13 +45,14 @@ function callback(results, status) {
                     customPlaces[i].geometry = {"location": "", "viewport": ""};
                     customPlaces[i].geometry.location = {"lat": customPlaces[i].lat, "lng": customPlaces[i].lng};
                 }
+
                 console.log(customPlaces[i]);
                 createMarker(customPlaces[i]);
             };
-            setSearchType("");
+
 
         });
-
+        setSearchType("");
 
         for (var i = 0; i < results.length; i++) {
 
@@ -63,21 +64,40 @@ function callback(results, status) {
 <!-- Creates each marker -->
 function createMarker(place) {
 
-    // this var allows you to make custom marker graphics
-    // it still needs to be adjusted to work with infowindow properly
-    var image = {
-        url: "{{URL::asset('graphics/icons/map/map-pin.png')}}",
-        size: new google.maps.Size(71, 71),
-        origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(17, 34),
-        scaledSize: new google.maps.Size(25, 25)
-    };
+    // var for storing the image of the pin to be used
+    var icon;
 
-    var placeLoc = place.geometry.location;
+    // switch cases for checking the searchtype to determine which color of pins to display
+    switch(type){
+        case "food":
+            icon = "http://maps.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png";
+            break;
+        case "drink":
+            icon = "http://maps.google.com/intl/en_us/mapfiles/ms/micons/red-dot.png";
+            break;
+        case "entertainment":
+            icon = "http://maps.google.com/intl/en_us/mapfiles/ms/micons/green-dot.png";
+            break;
+        case "shopping":
+            icon = "http://maps.google.com/intl/en_us/mapfiles/ms/micons/ltblue-dot.png";
+            break;
+        case "lodging":
+            icon = "http://maps.google.com/intl/en_us/mapfiles/ms/micons/yellow-dot.png";
+            break;
+        case "parking":
+            icon = "http://maps.google.com/intl/en_us/mapfiles/ms/micons/pink-dot.png";
+            break;
+        case "bank":
+            icon = "http://maps.google.com/intl/en_us/mapfiles/ms/micons/orange-dot.png";
+        case "worship":
+            icon = "http://maps.google.com/intl/en_us/mapfiles/ms/micons/purple-dot.png";
+        default:
+            icon = place.icon;
+    }
 
     var marker = new google.maps.Marker({
         map: map,
-        icon:"http://maps.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png",
+        icon: icon,
         position: place.geometry.location
 
 

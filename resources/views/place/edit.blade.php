@@ -20,7 +20,7 @@
                     <label for="vicinity">
                         Place Address
                     </label>
-                    <input type = "text" name="vicinity" id="vicinity" class="form-control">{{ $place->vicinity }}>
+                    <input type = "text" name="vicinity" maxlength="100" id="vicinity" class="form-control">{{ $place->vicinity }}>
                 </div>
 
                 <div class="form-group">

@@ -37,7 +37,7 @@
                     var service = new google.maps.places.PlacesService(map);
                     service.nearbySearch({
                         location: pos,
-                        radius: 10000,
+                        radius: 20000,
                         type: ['restaurant'],
                         type: ['food'],
                         type: ['meal_takeaway'],
