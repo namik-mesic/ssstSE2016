@@ -80,8 +80,8 @@
                                 <li>
                                     <a href="/confirm"> Delete Account</a>
                                 </li>
-                            </ul>
-                            <ul>
+
+
                                 <li>
                                     <a href="{{ url('/logout') }}"
                                        onclick="event.preventDefault();
