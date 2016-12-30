@@ -78,6 +78,12 @@
                                     <a href="{{ url('/profile') }}">Profile</a>
                                 </li>
                                 <li>
+                                    <a href="{{ url('update-profile') }}">Edit profile</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('add-picture') }}">Edit profile picture</a>
+                                </li>
+                                <li>
                                     <a href="/confirm"> Delete Account</a>
                                 </li>
 
