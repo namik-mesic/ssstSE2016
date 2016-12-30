@@ -4,6 +4,9 @@
 
 //global var for storing the type of search
 var type = "";
+var placeLoc = {};
+var latlng;
+
 
 
 <!-- Function that handles Geolocation Errors -->
@@ -41,21 +44,31 @@ function callback(results, status) {
                 //customPlaces[i].geometry.location = customPlaces[i].coordinates;
 
                 if(customPlaces[i].type == type) {
+                    // check type of place to display proper results(and not everything single object)
 
-                    customPlaces[i].geometry = {"location": "", "viewport": ""};
-                    customPlaces[i].geometry.location = {"lat": customPlaces[i].lat, "lng": customPlaces[i].lng};
+
+                        customPlaces[i].geometry = {location:"",viewport:""};
+
+                        customPlaces[i].geometry.location = {lat : 0, lng : 0};
+
+                        customPlaces[i].geometry.location.lat = customPlaces[i].lat;
+                        customPlaces[i].geometry.location.lng = customPlaces[i].lng;
+
+                        placeLoc = customPlaces[i].geometry.location;
+                        latlng = new google.maps.LatLng(placeLoc.lat, placeLoc.lng);
+
+                        createMarker(customPlaces[i]);
                 }
 
-                console.log(customPlaces[i]);
-                createMarker(customPlaces[i]);
+
+
             };
 
 
         });
-        setSearchType("");
 
         for (var i = 0; i < results.length; i++) {
-
+            console.log(results[i]);
             createMarker(results[i]);
         }
     }
@@ -66,7 +79,6 @@ function createMarker(place) {
 
     // var for storing the image of the pin to be used
     var icon;
-
     // switch cases for checking the searchtype to determine which color of pins to display
     switch(type){
         case "food":
@@ -89,16 +101,19 @@ function createMarker(place) {
             break;
         case "bank":
             icon = "http://maps.google.com/intl/en_us/mapfiles/ms/micons/orange-dot.png";
+            break;
         case "worship":
             icon = "http://maps.google.com/intl/en_us/mapfiles/ms/micons/purple-dot.png";
+            break;
         default:
             icon = place.icon;
+            break;
     }
 
     var marker = new google.maps.Marker({
         map: map,
         icon: icon,
-        position: place.geometry.location
+        position: latlng
 
 
     });
