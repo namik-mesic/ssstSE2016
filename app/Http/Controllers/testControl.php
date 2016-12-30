@@ -26,7 +26,7 @@ class testControl extends Controller
         /**
          * $loggedPassword - password entered into the form
          * $userPassword - users password from DB
-         *$isSame - result of Hash::check() method
+         * $isSame - result of Hash::check() method
          */
         $loggedPassword=$request->get('password');
         $userPassword = Auth::user()->password;
