@@ -106,7 +106,7 @@
 
         <div id="map"></div>
         <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-jpP1e6mNwMTQj_6tcR1Okyg4gSczd6w&libraries=places&callback=initMap">
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOBHDxuxfq2gyt3qkh5Llzz_YQ7rodgZc&libraries=places&callback=initMap">
             // don't touch this ^^^
             // this api call allows the places to be displayed
         </script>
