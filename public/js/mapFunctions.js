@@ -46,18 +46,19 @@ function callback(results, status) {
                 if(customPlaces[i].type == type) {
                     // check type of place to display proper results(and not everything single object)
 
-
+                        // need to add the geometry property in order to make the new
+                        // custom objects clickable
                         customPlaces[i].geometry = {location:"",viewport:""};
-
                         customPlaces[i].geometry.location = {lat : 0, lng : 0};
-
                         customPlaces[i].geometry.location.lat = customPlaces[i].lat;
                         customPlaces[i].geometry.location.lng = customPlaces[i].lng;
 
                         placeLoc = customPlaces[i].geometry.location;
+
                         latlng = new google.maps.LatLng(placeLoc.lat, placeLoc.lng);
 
                         createMarker(customPlaces[i]);
+
                 }
 
 
@@ -68,8 +69,10 @@ function callback(results, status) {
         });
 
         for (var i = 0; i < results.length; i++) {
-            console.log(results[i]);
+
+            latlng = results[i].geometry.location;
             createMarker(results[i]);
+
         }
     }
 }

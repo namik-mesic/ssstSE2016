@@ -39,7 +39,7 @@
                     var service = new google.maps.places.PlacesService(map);
                     service.nearbySearch({
                         location: pos,
-                        radius: 20000,
+                        radius: 2000,
                         type: ['night_club'],
                         type: ['cafe'],
                         type: ['bar']
