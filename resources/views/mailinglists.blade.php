@@ -4,6 +4,7 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
+
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
@@ -15,32 +16,18 @@
                 </tr>
                 </thead>
                 <tbody>
+                @foreach ($mailinglists as $mailinglist)
                 <tr>
-                  <td>John.doe@gmail.com</td>
-                  <td>John
-                  </td>
-                  <td>Doe</td>
-                  <td>27.03.1992</td>
-                  <td><a href="#"><i class="fa fa-pencil"></i> </a><a href="#"> <i class="fa fa-trash"></i></a></td>
-                </tr>
-                <tr>
-                  <td>Dummy</td>
-                  <td>Dummy</td>
-                  <td>Dummy</td>
-                  <td>Dummy</td>
 
+                  <td>{{$mailinglist -> mail}}</td>
+                  <td>{{$mailinglist -> fname}}</td>
+                  <td>{{$mailinglist -> lname }}</td>
+                  <td>{{$mailinglist -> created_at}} </td>
 
                   <td><a href="#"><i class="fa fa-pencil"></i> </a><a href="#"> <i class="fa fa-trash"></i></a></td>
                 </tr>
-                <tr>
-                  <td>Dummy</td>
-                  <td>Dummy
-                  </td>
-                  <td>Dummy</td>
-                  <td>Dummy</td>
-                 
-                  <td><a href="#"><i class="fa fa-pencil"></i> </a><a href="#"> <i class="fa fa-trash"></i></a></td>
-                </tr>
+                @endforeach
+
  
                 </tbody>
                 <tfoot>
@@ -64,6 +51,10 @@
 <div class="md-col-6">
 
   <label> Add new user </label>
+
+    @if(Session::has('success'))
+        <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('success') }}</p>
+    @endif
 
   <form method="post" action="store">
 

@@ -10,15 +10,7 @@ use App\Http\Requests;
 class MailingListController extends Controller
 {
 
-    protected $user;
-    protected $id;
-
-
-    public function index(){
-
-        return view('mailing');
-
-    }
+    protected $user ;
 
      public function __construct()
         {
@@ -27,6 +19,14 @@ class MailingListController extends Controller
 
         }
 
+    public function index(){
+
+        $mailinglists = \DB::table('mailing_lists')->where('user_id', $this->id = \Auth::id())->get();
+        return view('mailing', array(
+            'mailinglists' => $mailinglists
+        ));
+
+    }
 
 
     public function store(Request $request)
@@ -40,6 +40,8 @@ class MailingListController extends Controller
         $mailinglist -> user_id = $this->id = \Auth::id();
 
         $mailinglist -> save();
+
+        return redirect()->action('MailingListController@index')->with(\Session::flash('success', 'Succsessfully added user'));
     }
 
     public function show(){
