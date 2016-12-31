@@ -38,34 +38,33 @@ Route::get('/terms', function () {
 
 Route::get('/editor', function () {
     return view('emailcreator');
-})->middleware('auth');
+});
 
 Route::get('/camp', function () {
     return view('campaigns');
-})->middleware('auth');
+});
 
 Route::get('/profile', function () {
     return view('profilepage');
-})->middleware('auth');
+});
 
 Route::get('/settings', function () {
     return view('settings');
-})->middleware('auth');
+});
 
 
 Route::get('/help', function () {
     return view('help');
-})->middleware('auth');
+});
 
 
-Route::get('/mlists', function () {
-    return view('mailing');
-})->middleware('auth');
+Route::get('/mlists', "MailingListController@index");
+Route::post('store', "MailingListController@store");
 
 
 Route::get('/emails', function () {
     return view('emailview');
-})->middleware('auth');
+});
 
 
 

@@ -61,20 +61,35 @@
           <div class="box">
 
             <a href="#" class="btn btn-app"> <i class="fa fa-plus"></i></a>
-<div class="md-col-6"><form>
+<div class="md-col-6">
+
   <label> Add new user </label>
 
-<label>Email</label>
-  <input type="email" name="Email" placeholder="Enter here..." class="form-control">
-<label>Name</label>
-  <input type="text" name="Name" placeholder="Enter here..." class="form-control">
-  <label>Surname</label>
-  <input type="text" name="Surname" placeholder="Enter here..." class="form-control">
-</div>
+  <form method="post" action="store">
+
+        <label>Email</label>
+      <input type="email" name="mail" placeholder="Enter here..." class="form-control">
+
+        <label>Name</label>
+
+      <input type="text" name="fname" placeholder="Enter here..." class="form-control">
+
+        <label>Surname</label>
+
+      <input type="text" name="lname" placeholder="Enter here..." class="form-control">
+
+      <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+    <input type="submit" name="submit" value="store" class="btn btn-info">
+  </form>
 
 
-                <a href="#" class="btn btn-info">Add</a>
-</form></div>
+    </div>
+
+
+
+
+          </div>
           </div>
           <!-- /.box -->
      

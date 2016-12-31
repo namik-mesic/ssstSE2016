@@ -18,8 +18,9 @@ class CreateCampaignsTable extends Migration
             $table->string('name');
             $table->string('type');
             $table->text('content');
-            $table->string('data_created');
             $table->integer('user_id')->unsigned();
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
         });
     }

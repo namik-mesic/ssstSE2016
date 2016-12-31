@@ -6,11 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class MailingList extends Model
 {
-    protected $fillable = [
 
-        'fname',
-        lname',
-        'mail'
+    protected $fillable = array('fname', 'lname', 'mail', 'user_id');
 
-    ];
-}
+
+};
