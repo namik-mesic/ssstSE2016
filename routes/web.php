@@ -57,10 +57,15 @@ Route::get('/help', function () {
     return view('help');
 });
 
-
+/*
+ * By Sabahudin Kodro...
+ */
 Route::get('/mlists', "MailingListController@index");
 Route::post('store', "MailingListController@store");
 
+/*
+ * ... By Sabahudin Kodro
+ */
 
 Route::get('/emails', function () {
     return view('emailview');

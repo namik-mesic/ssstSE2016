@@ -1,5 +1,9 @@
 <?php
 
+/*
+ * By: Sabahudin Kodro
+ */
+
 namespace App\Http\Controllers;
 
 use App\MailingList;
@@ -12,6 +16,10 @@ class MailingListController extends Controller
 
     protected $user ;
 
+
+    /**
+     * Constuctor for user authentication.
+     */
      public function __construct()
         {
             $this->middleware('auth');
@@ -19,6 +27,9 @@ class MailingListController extends Controller
 
         }
 
+    /**
+    * Return view with mailing_list table info where user_id is equal to the logged in user.
+    */
     public function index(){
 
         $mailinglists = \DB::table('mailing_lists')->where('user_id', $this->id = \Auth::id())->get();
@@ -28,7 +39,11 @@ class MailingListController extends Controller
 
     }
 
-
+    /**
+     * Fill in table mailing_list from form.
+     *
+     * Return the MailingListController@index with a success message.
+    */
     public function store(Request $request)
     {
 

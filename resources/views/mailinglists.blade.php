@@ -16,17 +16,18 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach ($mailinglists as $mailinglist)
+
+                @foreach ($mailinglists as $mailinglist) <!-- By Sabahudin Kodro, Display MailingList-->
                 <tr>
 
-                  <td>{{$mailinglist -> mail}}</td>
-                  <td>{{$mailinglist -> fname}}</td>
-                  <td>{{$mailinglist -> lname }}</td>
-                  <td>{{$mailinglist -> created_at}} </td>
+                  <td>{{$mailinglist -> mail}}</td>  <!-- By Sabahudin Kodro, Display MailingList-->
+                  <td>{{$mailinglist -> fname}}</td> <!-- By Sabahudin Kodro, Display MailingList-->
+                  <td>{{$mailinglist -> lname }}</td> <!-- By Sabahudin Kodro, Display MailingList-->
+                  <td>{{$mailinglist -> created_at}} </td> <!-- By Sabahudin Kodro, Display MailingList-->
 
                   <td><a href="#"><i class="fa fa-pencil"></i> </a><a href="#"> <i class="fa fa-trash"></i></a></td>
                 </tr>
-                @endforeach
+                @endforeach <!-- By Sabahudin Kodro, Display MailingList-->
 
  
                 </tbody>
@@ -52,9 +53,9 @@
 
   <label> Add new user </label>
 
-    @if(Session::has('success'))
+    @if(Session::has('success')) <!-- By Sabahudin Kodro, Display message when user is succesfully added-->
         <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('success') }}</p>
-    @endif
+    @endif <!-- By Sabahudin Kodro, Display message when user is succesfully added-->
 
   <form method="post" action="store">
 
