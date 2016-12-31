@@ -11,6 +11,7 @@ class MailingListController extends Controller
 {
 
     protected $user;
+    protected $id;
 
 
     public function index(){
@@ -30,13 +31,13 @@ class MailingListController extends Controller
 
     public function store(Request $request)
     {
-       
+
         $mailinglist = new MailingList;
 
         $mailinglist -> fname = $request -> fname;
         $mailinglist -> lname = $request -> lname;
         $mailinglist -> mail = $request -> mail;
-        $mailinglist -> user_id = '1';
+        $mailinglist -> user_id = $this->id = \Auth::id();
 
         $mailinglist -> save();
     }
