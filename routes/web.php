@@ -58,14 +58,14 @@ Route::get('/help', function () {
 });
 
 /*
- * By Sabahudin Kodro...
+ * Sabahudin Kodro
  */
 Route::get('/mlists', "MailingListController@index");
 Route::get('/mlistsedit', "MailingListController@edit");
 Route::post('store', "MailingListController@store");
 
 /*
- * ... By Sabahudin Kodro
+ * Sabahudin Kodro
  */
 
 Route::get('/emails', function () {
