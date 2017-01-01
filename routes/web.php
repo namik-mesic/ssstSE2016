@@ -60,9 +60,9 @@ Route::get('/help', function () {
 /*
  * Sabahudin Kodro
  */
-Route::get('/mlists', "MailingListController@index");
-Route::get('/mlistsedit', "MailingListController@edit");
-Route::post('store', "MailingListController@store");
+ 
+Route::get('client/create', ['as' => 'client.create', 'uses' => 'ClientController@create']);
+Route::post('client/store', ['as' => 'client.store', 'uses', 'ClientController@store']);
 
 /*
  * Sabahudin Kodro
