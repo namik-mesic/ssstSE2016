@@ -57,8 +57,9 @@ class MailingListController extends Controller
 
         $mailinglist -> save(); //save the created record
 
-        return redirect()->action('MailingListController@index')->with(\Session::flash('success', 'Succsessfully added user'));
-    } //@Return the MailingListController@index
+        return redirect()->back()->with(\Session::flash('success', 'Succsessfully added user'));;
+        //Redirect back to the mailinglists view
+    }
 
 
     /**
@@ -83,9 +84,9 @@ class MailingListController extends Controller
      * @return response
      */
 
-    public function edit($id){
+    public function edit(){
 
-
+        return view('mailinglistsedit');
 
     }
 
