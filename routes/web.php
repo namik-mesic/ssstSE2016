@@ -62,7 +62,7 @@ Route::get('/help', function () {
  */
  
 Route::get('client/create', ['as' => 'client.create', 'uses' => 'ClientController@create']);
-Route::post('client/store', ['as' => 'client.store', 'uses', 'ClientController@store']);
+Route::post('client/store', ['as' => 'client.store', 'uses' => 'ClientController@store']);
 
 /*
  * Sabahudin Kodro
