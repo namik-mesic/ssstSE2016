@@ -10,6 +10,7 @@ use App\MailingList;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\Auth;
 
 class MailingListController extends Controller
 {
@@ -23,7 +24,7 @@ class MailingListController extends Controller
      public function __construct()
         {
             $this->middleware('auth');
-            $this->user =  \Auth::user();
+            $this->user =  Auth::user();
 
         }
 
@@ -32,7 +33,7 @@ class MailingListController extends Controller
     */
     public function index(){
 
-        $mailinglists = \DB::table('mailing_lists')->where('user_id', $this->id = \Auth::id())->get();
+        $mailinglists = \DB::table('mailing_lists')->where('user_id', \Auth::id())->get();
         return view('mailing', array(
             'mailinglists' => $mailinglists
         ));
@@ -49,17 +50,67 @@ class MailingListController extends Controller
 
         $mailinglist = new MailingList;
 
-        $mailinglist -> fname = $request -> fname;
-        $mailinglist -> lname = $request -> lname;
-        $mailinglist -> mail = $request -> mail;
-        $mailinglist -> user_id = $this->id = \Auth::id();
+        $mailinglist -> fname = $request -> fname; //@param fname
+        $mailinglist -> lname = $request -> lname; //@param lname
+        $mailinglist -> mail = $request -> mail; //@param mail
+        $mailinglist -> user_id = \Auth::id(); //@param id of current authenticated user
 
-        $mailinglist -> save();
+        $mailinglist -> save(); //save the created record
 
         return redirect()->action('MailingListController@index')->with(\Session::flash('success', 'Succsessfully added user'));
+    } //@Return the MailingListController@index
+
+
+    /**
+     *
+     *
+     *
+     * @param $id
+     *
+     * @return response
+     */
+    public function show($id){
+
+
+
     }
 
-    public function show(){
+    /**
+     * Show form for editing
+     *
+     * @param $id
+     *
+     * @return response
+     */
+
+    public function edit($id){
+
+
+
+    }
+
+    /**
+     * Update specified resource from DB
+     *
+     * @param $id
+     *
+     * @return response
+     */
+
+    public function update($id){
+
+
+
+    }
+
+    /**
+     * Remove the specified resource from DB
+     *
+     * @param  int  $id
+     * @return Response
+     */
+
+    public function destroy($id){
 
 
 
