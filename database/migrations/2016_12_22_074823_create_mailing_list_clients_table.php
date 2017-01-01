@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMailingListsClientsTable extends Migration
+class CreateMailingListClientsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateMailingListsClientsTable extends Migration
      */
     public function up()
     {
-        Schema::create('mailing_lists_clients', function (Blueprint $table) {
+        Schema::create('mailing_list_clients', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('client_id')->unsigned();
             $table->foreign('client_id')->references('id')->on('clients')-> onDelete('cascade')->onUpdate('cascade');
