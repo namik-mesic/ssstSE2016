@@ -38,7 +38,7 @@
           </ul>
         </li>
 
-
+					<li><a href="/clients"><i class="fa fa-cog"></i><span>Settings</span></a></li>
                     <li><a href="/settings"><i class="fa fa-cog"></i><span>Settings</span></a></li>
                     <li><a href="/help"><i class="fa fa-life-ring"></i><span>Help</span></a></li>
                     <li><a href="#"><i class="fa fa-sign-out"></i><span>Log Out</span></a></li>
