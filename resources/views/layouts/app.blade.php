@@ -39,10 +39,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <div class="wrapper">
     <!-- Header -->
-    @include('header')
+    @include('layouts.header')
 
     <!-- Sidebar -->
-    @include('sidebar')
+    @include('layouts.sidebar')
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -67,7 +67,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </div><!-- /.content-wrapper -->
 
     <!-- Footer -->
-    @include('footer')
+    @include('layouts.footer')
 
 </div><!-- ./wrapper -->
 
