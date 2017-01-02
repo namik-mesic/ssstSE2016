@@ -103,7 +103,11 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                            {{$user->dob }}
+                            @if ($user->isHidden)
+                                This information is private
+                            @elseif ($user->isHidden == null)
+                                {{$user->dob }}
+                            @endif
                         </td>
                     </tr>
 
