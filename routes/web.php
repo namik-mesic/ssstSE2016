@@ -63,6 +63,7 @@ Route::get('/help', function () {
 
 Route::get('clients', ['as' => 'clients', 'uses' => 'ClientController@index']);
 Route::get('client/create', ['as' => 'client.create', 'uses' => 'ClientController@create']);
+Route::get('client/edit/{id}', ['as' => 'client.edit', 'uses' => 'ClientController@edit']);
 Route::post('client/store', ['as' => 'client.store', 'uses' => 'ClientController@store']);
 
 /*

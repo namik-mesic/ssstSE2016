@@ -36,6 +36,15 @@ class ClientController extends Controller
 		));
 	}
 	
+	public function edit(Request $request, $id)
+	{
+		$client = Client::find($id);
+		
+		return view('client.edit', array(
+			'client' => $client
+		));
+	}
+	
 	public function store(Request $request)
 	{
 		$input = $request->all();
@@ -44,12 +53,16 @@ class ClientController extends Controller
 		$validator = \Validator::make($input, Client::$rules);
 		
 		if($validator->fails()){
+			if($input['id']){
+				return redirect()->route('client.edit', [$input['id']])->withErrors($validator)->withInput();
+			}
+			
 			return redirect()->route('client.create')->withErrors($validator)->withInput();
 		}
 
 		if($input['id']){
 			$client = Client::find($input['id']);
-			$action->update($input);
+			$client->update($input);
 			
 			return redirect()->route('clients');
 		}

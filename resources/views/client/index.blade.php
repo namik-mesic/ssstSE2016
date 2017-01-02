@@ -25,7 +25,7 @@
 							<td>{{$client->lname }}</td> 
 							<td>{{$client->created_at}} </td>
 							<td>
-								<a href="#"><i class="fa fa-pencil"></i></a>
+								<a href="{{route('client.edit', [$client->id])}}"><i class="fa fa-pencil"></i></a>
 								<a href="#"> <i class="fa fa-trash"></i></a>
 							</td>
 						</tr>
