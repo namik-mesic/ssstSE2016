@@ -66,6 +66,12 @@ Route::get('client/create', ['as' => 'client.create', 'uses' => 'ClientControlle
 Route::get('client/edit/{id}', ['as' => 'client.edit', 'uses' => 'ClientController@edit']);
 Route::post('client/store', ['as' => 'client.store', 'uses' => 'ClientController@store']);
 
+Route::get('mailinglists', ['as' => 'mailinglists', 'uses' => 'MailingListController@index']);
+Route::get('mailinglist/create', ['as' => 'mailinglist.create', 'uses' => 'MailingListController@create']);
+Route::post('mailinglist/store', ['as' => 'mailinglist.store', 'uses' => 'MailingListController@store']);
+Route::get('mailinglist/edit/{id}', ['as' => 'mailinglist.edit', 'uses' => 'MailingListController@edit']);
+
+
 /*
  * Sabahudin Kodro
  */

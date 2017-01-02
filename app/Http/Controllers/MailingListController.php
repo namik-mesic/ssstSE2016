@@ -6,11 +6,11 @@
 
 namespace App\Http\Controllers;
 
-use App\MailingList;
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
-use Illuminate\Support\Facades\Auth;
+
+use App\MailingList;
+use App\User;
 
 class MailingListController extends Controller
 {
@@ -24,7 +24,6 @@ class MailingListController extends Controller
      public function __construct()
         {
             $this->middleware('auth');
-            $this->user =  Auth::user();
 
         }
 
@@ -33,48 +32,50 @@ class MailingListController extends Controller
     */
     public function index(){
 
-        $mailinglists = \DB::table('mailing_lists')->where('user_id', \Auth::id())->get();
-        return view('mailing', array(
+        $user = User::find(\Auth::id());
+        $mailinglists = $user->mailinglists()->get();
+
+        return view('mailinglist.index', array(
             'mailinglists' => $mailinglists
         ));
 
     }
 
+    public function create()
+    {
+        $mailinglist = new MailingList;
+        $mailinglist->user_id = \Auth::id();
+
+        return view('mailinglist.create', array(
+            'mailinglist' => $mailinglist
+        ));
+    }
+
     /**
      * Fill in table mailing_list from form.
      *
-     * Return the MailingListController@index with a success message.
+     *
     */
     public function store(Request $request)
     {
+        $request->all();
+        $input = $request['mailinglist'];
 
-        $mailinglist = new MailingList;
 
-        $mailinglist -> fname = $request -> fname; //@param fname
-        $mailinglist -> lname = $request -> lname; //@param lname
-        $mailinglist -> mail = $request -> mail; //@param mail
-        $mailinglist -> user_id = \Auth::id(); //@param id of current authenticated user
+        if($input['id']){
+            $mailinglist = MailingList::find($input['id']);
+            $mailinglist ->update($input);
 
-        $mailinglist -> save(); //save the created record
+            return redirect()->route('mailinglists');
+        }
 
-        return redirect()->back()->with(\Session::flash('success', 'Succsessfully added user'));;
-        //Redirect back to the mailinglists view
+        $mailinglist  = new MailingList;
+        $mailinglist ->create($input);
+
+        return redirect()->route('mailinglists');
     }
 
 
-    /**
-     *
-     *
-     *
-     * @param $id
-     *
-     * @return response
-     */
-    public function show($id){
-
-
-
-    }
 
     /**
      * Show form for editing
@@ -84,9 +85,14 @@ class MailingListController extends Controller
      * @return response
      */
 
-    public function edit(){
+    public function edit($id)
+    {
+        $mailinglist = MailingList::find($id);
 
-        return view('mailinglistsedit');
+        return view('mailinglist.edit', array(
+            'mailinglist' => $mailinglist
+        ));
+
 
     }
 
@@ -98,23 +104,10 @@ class MailingListController extends Controller
      * @return response
      */
 
-    public function update($id){
 
 
 
-    }
-
-    /**
-     * Remove the specified resource from DB
-     *
-     * @param  int  $id
-     * @return Response
-     */
-
-    public function destroy($id){
 
 
-
-    }
 
 }

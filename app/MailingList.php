@@ -13,7 +13,7 @@ class MailingList extends Model
     * Make variables mass assignable
     */
 
-    protected $fillable = array('fname', 'lname', 'mail', 'user_id');
+    protected $fillable = array('name', 'user_id');
 
 
 };

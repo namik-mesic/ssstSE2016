@@ -36,7 +36,7 @@ class ClientController extends Controller
 		));
 	}
 	
-	public function edit(Request $request, $id)
+	public function edit($id)
 	{
 		$client = Client::find($id);
 		
@@ -47,7 +47,7 @@ class ClientController extends Controller
 	
 	public function store(Request $request)
 	{
-		$input = $request->all();
+		$request->all();
 		$input = $request['client'];
 		
 		$validator = \Validator::make($input, Client::$rules);
