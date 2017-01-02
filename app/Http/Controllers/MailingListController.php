@@ -61,6 +61,16 @@ class MailingListController extends Controller
         $request->all();
         $input = $request['mailinglist'];
 
+        $validator = \Validator::make($input, MailingList::$rules);
+
+        if($validator->fails()){
+            if($input['id']){
+                return redirect()->route('mailinglist.edit', [$input['id']])->withErrors($validator)->withInput();
+            }
+
+            return redirect()->route('mailinglist.create')->withErrors($validator)->withInput();
+        }
+
 
         if($input['id']){
             $mailinglist = MailingList::find($input['id']);
