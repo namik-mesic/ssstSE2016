@@ -52,9 +52,12 @@ class MailingListController extends Controller
 
 		$clients = $user->clients()->get();
 		
+		$mailinglistClients = array();
+		
         return view('mailinglist.create', array(
             'mailinglist' => $mailinglist,
-			'clients' => $clients
+			'clients' => $clients,
+			'mailinglistClients' => $mailinglistClients
         ));
     }
 
