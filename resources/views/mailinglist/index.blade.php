@@ -4,14 +4,17 @@
     <div class="box">
         <div class="box-header">
             <h3 class="box-title">Mailinglist</h3>
+			<div class="box-tools pull-right">
+				<a href="{{route('mailinglist.create')}}" class="btn btn-primary">Create new list</a>
+			</div>
         </div>
         <!-- /.box-header -->
-        <div class="box-body">
+        
+		<div class="box-body">
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                     <th>Name</th>
-
                 </tr>
                 </thead>
                 <tbody>

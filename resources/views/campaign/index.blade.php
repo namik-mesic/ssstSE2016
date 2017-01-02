@@ -11,6 +11,7 @@
                 <thead>
                 <tr>
                     <th>Name</th>
+                    <th>Created at</th>
 
                 </tr>
                 </thead>
@@ -18,12 +19,13 @@
                 @foreach ($campaigns as $campaign)
                     <tr>
                         <td>{{$campaign->name}}</td>
-                        <td>{{$campaign->content}}</td>
+                        <td>{{$campaign->created_at}}</td>
                         <td>
                             <a href="{{route('campaign.edit', $campaign->id)}}"><i class="fa fa-pencil"></i></a>
                             <a href="#"> <i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
+
                 @endforeach
                 </tbody>
                 <tfoot>

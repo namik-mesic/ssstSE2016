@@ -12,8 +12,16 @@
             <span>{{$errors->first('name')}}</span>
         @endif
     </div>
-
-
+	
+	<div class="form-group">
+		<label>Clients</label>
+		@foreach($clients as $client)
+			<div class="form-input">
+				 <input type="checkbox" name="clients[]" value="{{$client->id}}" {{(in_array($client->id, $mailinglistClients)) ? 'checked' : ''}}> {{$client->fname}} {{$client->lname}}
+			</div>
+		@endforeach
+	</div>
+	
     <div class="form-group">
         <input type="submit" value="Submit" class="btn btn-default" />
     </div>
