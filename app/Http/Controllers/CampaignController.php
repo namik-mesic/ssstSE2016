@@ -47,6 +47,19 @@ class CampaignController extends Controller
 
     }
 
+    public function edit($id){
+
+        $campaign = Campaign::find($id);
+
+        return view('campaign.edit', array(
+
+            'campaign' => $campaign
+
+        ));
+
+
+    }
+
     public function store(Request $request)
     {
 
@@ -79,6 +92,5 @@ class CampaignController extends Controller
 
     }
 
-    
 
 }

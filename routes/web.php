@@ -75,7 +75,7 @@ Route::get('mailinglist/edit/{id}', ['as' => 'mailinglist.edit', 'uses' => 'Mail
 Route::get('campaigns', ['as' => 'campaigns', 'uses' => 'CampaignController@index']);
 Route::get('campaign/create', ['as' => 'campaign.create', 'uses' => 'CampaignController@create']);
 Route::post('campaign/store', ['as' => 'campaign.store', 'uses' => 'CampaignController@store']);
-Route::post('campaign/edit/{id}', ['as' => 'campaign.edit', 'uses' => 'CampaignController@edit']);
+Route::get('campaign/edit/{id}', ['as' => 'campaign.edit', 'uses' => 'CampaignController@edit']);
 
 /*
  * Sabahudin Kodro

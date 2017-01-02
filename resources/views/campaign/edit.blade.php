@@ -3,12 +3,12 @@
 
     <div class="box">
         <div class="box-header">
-            <h3 class="box-title">Edit Mailinglist</h3>
+            <h3 class="box-title">Edit Campaign</h3>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
             <div class="md-col-12">
-                @include( 'mailinglist._form' )
+                @include( 'campaign._form' )
             </div>
         </div>
     </div>
