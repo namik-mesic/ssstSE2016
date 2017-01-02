@@ -15,5 +15,8 @@ class MailingList extends Model
 
     protected $fillable = array('name', 'user_id');
 
-
+	public function clients()
+    {
+		return $this->belongsToMany('App\Client', 'mailing_list_clients', 'mailing_list_id', 'client_id');
+    }
 };

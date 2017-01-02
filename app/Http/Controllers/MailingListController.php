@@ -11,6 +11,7 @@ use App\Http\Requests;
 
 use App\MailingList;
 use App\User;
+use App\Client;
 
 class MailingListController extends Controller
 {
@@ -30,11 +31,12 @@ class MailingListController extends Controller
     /**
     * Return view with mailing_list table info where user_id is equal to the logged in user.
     */
-    public function index(){
-
+    public function index()
+	{
         $user = User::find(\Auth::id());
-        $mailinglists = $user->mailinglists()->get();
-
+        
+		$mailinglists = $user->mailinglists()->get();
+		
         return view('mailinglist.index', array(
             'mailinglists' => $mailinglists
         ));
@@ -43,11 +45,16 @@ class MailingListController extends Controller
 
     public function create()
     {
+		$user = User::find(\Auth::id());
+		
         $mailinglist = new MailingList;
         $mailinglist->user_id = \Auth::id();
 
+		$clients = $user->clients()->get();
+		
         return view('mailinglist.create', array(
-            'mailinglist' => $mailinglist
+            'mailinglist' => $mailinglist,
+			'clients' => $clients
         ));
     }
 
@@ -59,19 +66,26 @@ class MailingListController extends Controller
     public function store(Request $request)
     {
         $request->all();
+		
         $input = $request['mailinglist'];
-
-
-        if($input['id']){
+		
+		$clients = isset($request['clients']) ? $request['clients'] : array();
+		
+        if($input['id'])
+		{
             $mailinglist = MailingList::find($input['id']);
             $mailinglist ->update($input);
-
-            return redirect()->route('mailinglists');
+			
+			$mailinglist->clients()->sync($clients);
+			
+            return redirect()->route('mailinglists', $input['id']);
         }
 
-        $mailinglist  = new MailingList;
-        $mailinglist ->create($input);
-
+        $mailinglist = new MailingList;
+        $mailinglist = $mailinglist->create($input);
+	
+		$mailinglist->clients()->sync($clients);
+		
         return redirect()->route('mailinglists');
     }
 
@@ -87,13 +101,22 @@ class MailingListController extends Controller
 
     public function edit($id)
     {
+		$user = User::find(\Auth::id());
+		
         $mailinglist = MailingList::find($id);
-
+		$clients = $user->clients()->get();
+		
+		$mailinglistClients = array();
+		
+		foreach($mailinglist->clients()->get() as $mlc){
+			$mailinglistClients [$mlc->id] = $mlc->id;
+		}
+		
         return view('mailinglist.edit', array(
-            'mailinglist' => $mailinglist
+            'mailinglist' => $mailinglist,
+			'clients' => $clients,
+			'mailinglistClients' => $mailinglistClients
         ));
-
-
     }
 
     /**
