@@ -4,6 +4,9 @@
     <div class="box">
         <div class="box-header">
             <h3 class="box-title">Campaigns</h3>
+            <div class="box-tools pull-right">
+                <a href="{{route('campaign.create')}}" class="btn btn-primary">Create new campaign</a>
+            </div>
         </div>
         <!-- /.box-header -->
         <div class="box-body">

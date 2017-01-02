@@ -3,8 +3,11 @@
 
 <div class="box">
 	<div class="box-header">
-		<h3 class="box-title">Create new client</h3>
+		<h3 class="box-title">Clients</h3>
+		<div class="box-tools pull-right">
+			<a href="{{route('client.create')}}" class="btn btn-primary">Create new client</a>
 		</div>
+	</div>
 		<!-- /.box-header -->
 		<div class="box-body">
 			<table id="example1" class="table table-bordered table-striped">
