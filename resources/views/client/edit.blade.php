@@ -8,7 +8,7 @@
 		<!-- /.box-header -->
 		<div class="box-body">
 			<div class="md-col-12">
-				@include( 'client.form' )
+				@include( 'client._form' )
 			</div>
 		</div>
 	</div>
