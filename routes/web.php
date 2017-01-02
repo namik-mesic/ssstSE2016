@@ -72,6 +72,8 @@ Route::post('mailinglist/store', ['as' => 'mailinglist.store', 'uses' => 'Mailin
 Route::get('mailinglist/edit/{id}', ['as' => 'mailinglist.edit', 'uses' => 'MailingListController@edit']);
 
 
+Route::get('campaigns', ['as' => 'campaigns', 'uses' => 'CampaignController@index']);
+
 /*
  * Sabahudin Kodro
  */

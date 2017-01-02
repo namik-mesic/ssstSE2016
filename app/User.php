@@ -36,4 +36,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\MailingList', 'user_id', 'id');
     }
+
+    public function campaigns()
+    {
+        return $this->hasMany('App\Campaign', 'user_id', 'id');
+    }
 }

@@ -32,7 +32,7 @@
           <ul class="treeview-menu">
          
              <li class="active"><a href="/camp"><i class="fa fa-rss"></i> Campaigns </a></li>
-              <li><a href="/mlists"><i class="fa fa-users"></i> Mailing List</a></li>
+              <li><a href="/mailinglists"><i class="fa fa-users"></i> Mailing List</a></li>
                <li><a href="/emails"><i class="fa fa-envelope"></i><span>Mails</span></a></li>
             <li><a href="/editor"><i class="fa fa-pencil-square-o"></i> Email Editor</a></li>
           </ul>
@@ -40,7 +40,6 @@
 
 					<li><a href="/clients"><i class="fa fa-cog"></i><span>Clients</span></a></li>
                     <li><a href="/settings"><i class="fa fa-cog"></i><span>Settings</span></a></li>
-                    <li><a href="/help"><i class="fa fa-life-ring"></i><span>Help</span></a></li>
                     <li><a href="#"><i class="fa fa-sign-out"></i><span>Log Out</span></a></li>
                     
                       

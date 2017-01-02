@@ -15,7 +15,7 @@ use App\User;
 class MailingListController extends Controller
 {
 
-    protected $user ;
+    protected $user;
 
 
     /**
