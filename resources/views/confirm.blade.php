@@ -30,14 +30,19 @@
                 <div class="alert alert-danger">
                     {{ session('message') }}
                 </div>
-        @endif
+            @endif
+            @if(session('message2'))
+                <div class="alert alert-info">
+                    {{ session('message2') }}
+                </div>
+            @endif
 
 
         <!-- Button -->
             <div class="form-group">
                 <label class="col-md-4 control-label" for="Submit"></label>
                 <div class="col-md-4">
-                    <button id="Submit" name="Submit" class="btn btn-primary"> Delete</button>
+                    <button id="Submit" name="Submit" class="btn btn-primary">Confirm</button>
                 </div>
             </div>
 

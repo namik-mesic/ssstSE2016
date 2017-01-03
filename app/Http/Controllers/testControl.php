@@ -40,7 +40,7 @@ class testControl extends Controller
             $usertodelete->delete();
 
 
-            return redirect('/');
+            return redirect('/') -> with('message2', 'Account successfully deleted!');
         }
         else {
 

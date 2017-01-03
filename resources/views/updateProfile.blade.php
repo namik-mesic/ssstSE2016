@@ -23,7 +23,7 @@
                   {{ csrf_field() }}
                   <div class="row form-group">
                     <div class="col-xs-4" style="margin-left: 1cm">
-                    <label>Change your user name!</label>
+                    <label>Change your name!</label>
                   <input type="text" name="name" class="form-control" placeholder="{{$user->name}}" />
                   </div>
                   </div>
