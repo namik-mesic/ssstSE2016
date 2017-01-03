@@ -120,46 +120,15 @@ class MailingListController extends Controller
             'clients' => $clients,
             'mailinglistClients' => $mailinglistClients
         ));
-
-
-
     }
 
+	
     public function view($id)
     {
-
-        $user = User::find(\Auth::id());
-
         $mailinglist = MailingList::find($id);
-        $clients = $user->clients()->get();
-
-        $mailinglistClients = array();
-
-        foreach($mailinglist->clients()->get() as $mlc){
-            $mailinglistClients [$mlc->id] = $mlc->id;
-        }
-
-        return view('mailinglist.view', array(
+        
+		return view('mailinglist.view', array(
             'mailinglist' => $mailinglist,
-            'clients' => $clients,
-            'mailinglistClients' => $mailinglistClients
         ));
-
-
     }
-
-    /**
-     * Update specified resource from DB
-     *
-     * @param $id
-     *
-     * @return response
-     */
-
-
-
-
-
-
-
 }
