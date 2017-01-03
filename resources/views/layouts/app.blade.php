@@ -69,7 +69,7 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-expanded="false">
-                                <img src="http://ssst.edu.ba/upload/ssstLogo_o.jpg" style="width: 30px; height: 30px" alt=""> {{ Auth::user()->name }} <span class="caret"></span>
+                                <img src="{{Auth::user()->imgPath}}" style="width: 30px; height: 30px; border-radius: 50%" alt=""> {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
 
