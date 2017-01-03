@@ -119,7 +119,11 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                            d' boss
+                            @if(Auth::user()->isAdmin == 1)
+                                Admin
+                            @else
+                                 Member
+                            @endif
                         </td>
                     </tr>
                     <tr>
@@ -130,26 +134,6 @@
                         </td>
                         <td class="text-primary">
                             <a href="mailto: {{$user -> email}} ">{{$user->email }}</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <strong>
-                                Created
-                            </strong>
-                        </td>
-                        <td class="text-primary">
-                            {{$user -> created_at}}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <strong>
-                                Modified
-                            </strong>
-                        </td>
-                        <td class="text-primary">
-                            {{$user -> updated_at}}
                         </td>
                     </tr>
                     </tbody>
