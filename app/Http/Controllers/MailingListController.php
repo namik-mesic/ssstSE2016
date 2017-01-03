@@ -81,7 +81,7 @@ class MailingListController extends Controller
 			
 			$mailinglist->clients()->sync($clients);
 			
-            return redirect()->route('mailinglists', $input['id']);
+            return redirect()->route('mailinglist.clients', $input['id']);
         }
 
         $mailinglist = new MailingList;
