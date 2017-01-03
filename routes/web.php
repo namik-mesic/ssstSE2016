@@ -19,9 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('admin', function () {
-    return view('admin2');
-});
+
 
 Route::get('auth/login', function () {
     return view('login');
@@ -31,31 +29,7 @@ Route::get('auth/register', function () {
     return view('register');
 });
 
-
-Route::get('/terms', function () {
-    return view('ToS');
-});
-
-Route::get('/editor', function () {
-    return view('emailcreator');
-});
-
-Route::get('/camp', function () {
-    return view('campaigns');
-});
-
-Route::get('/profile', function () {
-    return view('profilepage');
-});
-
-Route::get('/settings', function () {
-    return view('settings');
-});
-
-
-Route::get('/help', function () {
-    return view('help');
-});
+Route::get('dashboard','CampaignController@index');
 
 /*
  * Sabahudin Kodro
