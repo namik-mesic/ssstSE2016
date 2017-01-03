@@ -81,7 +81,7 @@ class MailingListController extends Controller
 			
 			$mailinglist->clients()->sync($clients);
 			
-            return redirect()->route('mailinglist.clients', $input['id']);
+            return redirect()->route('mailinglist.view', $input['id']);
         }
 
         $mailinglist = new MailingList;
@@ -139,7 +139,7 @@ class MailingListController extends Controller
             $mailinglistClients [$mlc->id] = $mlc->id;
         }
 
-        return view('mailinglist.clients', array(
+        return view('mailinglist.view', array(
             'mailinglist' => $mailinglist,
             'clients' => $clients,
             'mailinglistClients' => $mailinglistClients

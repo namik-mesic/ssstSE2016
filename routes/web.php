@@ -70,7 +70,7 @@ Route::get('mailinglists', ['as' => 'mailinglists', 'uses' => 'MailingListContro
 Route::get('mailinglist/create', ['as' => 'mailinglist.create', 'uses' => 'MailingListController@create']);
 Route::post('mailinglist/store', ['as' => 'mailinglist.store', 'uses' => 'MailingListController@store']);
 Route::get('mailinglist/edit/{id}', ['as' => 'mailinglist.edit', 'uses' => 'MailingListController@edit']);
-Route::get('mailinglist/clients{id}', ['as' => 'mailinglist.clients', 'uses' => 'MailingListController@view']);
+Route::get('mailinglist/view{id}', ['as' => 'mailinglist.view', 'uses' => 'MailingListController@view']);
 
 
 Route::get('campaigns', ['as' => 'campaigns', 'uses' => 'CampaignController@index']);
