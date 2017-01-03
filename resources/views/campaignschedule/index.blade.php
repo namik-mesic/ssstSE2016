@@ -3,29 +3,32 @@
 
     <div class="box">
         <div class="box-header">
-            <h3 class="box-title">Mailinglist</h3>
-			<div class="box-tools pull-right">
-				<a href="{{route('mailinglist.create')}}" class="btn btn-primary">Create new list</a>
-			</div>
+            <h3 class="box-title">Scheduled Campaigns </h3>
+            <div class="box-tools pull-right">
+                <a href="{{route('campaignchedule.create')}}" class="btn btn-primary">Create new campaign schedule</a>
+            </div>
         </div>
         <!-- /.box-header -->
-        
-		<div class="box-body">
+        <div class="box-body">
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                     <th>Name</th>
+                    <th>Created at</th>
+
                 </tr>
                 </thead>
                 <tbody>
-                @foreach ($mailinglists as $mailinglist)
+                @foreach ($campaignchedules as $campaignchedule)
                     <tr>
-                        <td><a href="{{route('mailinglist.clients', [$mailinglist->id])}}"> {{$mailinglist->name}}</a> </td>
+                        <td>{{$campaignchedule->name}}</td>
+                        <td>{{$campaignchedule->created_at}}</td>
                         <td>
-                            <a href="{{route('mailinglist.edit', [$mailinglist->id])}}"><i class="fa fa-pencil"></i></a>
+                            <a href="{{route('campaignchedule.edit', $campaign->id)}}"><i class="fa fa-pencil"></i></a>
                             <a href="#"> <i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
+
                 @endforeach
                 </tbody>
                 <tfoot>

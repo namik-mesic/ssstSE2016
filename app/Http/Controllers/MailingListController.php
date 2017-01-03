@@ -16,7 +16,7 @@ use App\Client;
 class MailingListController extends Controller
 {
 
-    protected $user ;
+    protected $user;
 
 
     /**
@@ -102,24 +102,37 @@ class MailingListController extends Controller
      * @return response
      */
 
-    public function edit($id)
+    public function edit(Request $request, $id)
     {
+        $request->path();
+
 		$user = User::find(\Auth::id());
-		
+
         $mailinglist = MailingList::find($id);
 		$clients = $user->clients()->get();
-		
+
 		$mailinglistClients = array();
-		
+
 		foreach($mailinglist->clients()->get() as $mlc){
 			$mailinglistClients [$mlc->id] = $mlc->id;
 		}
-		
-        return view('mailinglist.edit', array(
-            'mailinglist' => $mailinglist,
-			'clients' => $clients,
-			'mailinglistClients' => $mailinglistClients
-        ));
+
+		if($request->is('mailinglist/edit/*'))
+        {
+            return view('mailinglist.edit', array(
+                'mailinglist' => $mailinglist,
+                'clients' => $clients,
+                'mailinglistClients' => $mailinglistClients
+            ));
+        }
+
+        else{
+            return view('mailinglist.clients', array(
+                'mailinglist' => $mailinglist,
+                'clients' => $clients,
+                'mailinglistClients' => $mailinglistClients
+            ));
+        }
     }
 
     /**
