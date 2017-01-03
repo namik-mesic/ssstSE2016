@@ -3,12 +3,12 @@
 
     <div class="box">
         <div class="box-header">
-            <h3 class="box-title">Create new campaign</h3>
+            <h3 class="box-title">New Campaign Schedule</h3>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
             <div class="md-col-12">
-                @include( 'campaign._form' )
+                @include( 'campaignschedule._form' )
             </div>
         </div>
     </div>

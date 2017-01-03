@@ -78,6 +78,10 @@ Route::get('campaign/create', ['as' => 'campaign.create', 'uses' => 'CampaignCon
 Route::post('campaign/store', ['as' => 'campaign.store', 'uses' => 'CampaignController@store']);
 Route::get('campaign/edit/{id}', ['as' => 'campaign.edit', 'uses' => 'CampaignController@edit']);
 
+Route::get('schedules', ['as' => 'schedules', 'uses' => 'CampaignScheduleController@index']);
+Route::get('schedule/create', ['as' => 'schedule.create', 'uses' => 'CampaignScheduleController@create']);
+Route::post('schedule/store', ['as' => 'schedule.store', 'uses' => 'CampaignScheduleController@store']);
+
 /*
  * Sabahudin Kodro
  */

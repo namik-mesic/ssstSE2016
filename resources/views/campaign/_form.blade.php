@@ -11,9 +11,14 @@
         @if($errors->first('name'))
             <span>{{$errors->first('name')}}</span>
         @endif
-
+	</div>
+	<div class="form-group {{$errors->first('content')  ? 'has-error' : ''}}">
         <label>Content</label>
-        <input type="text" value="{{$campaign->content}}" name="campaign[content]" class="form-control" />
+		
+		<textarea name="campaign[content]" id="campaign-content" rows="10" cols="80" class="form-control">
+               {{$campaign->content}}
+		</textarea>
+			
         @if($errors->first('content'))
             <span>{{$errors->first('content')}}</span>
         @endif
@@ -24,3 +29,9 @@
         <input type="submit" value="Submit" class="btn btn-default" />
     </div>
 </form>
+
+<script src="{{ asset ("/bower_components/AdminLTE/plugins/ckeditor/ckeditor.js") }}" type="text/javascript"></script>
+
+<script>
+	CKEDITOR.replace('campaign-content');
+</script>

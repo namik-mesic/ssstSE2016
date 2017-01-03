@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use App\User;
+use App\CampaignSchedule;
+
 class CampaignScheduleController extends Controller
 {
 
@@ -23,6 +26,7 @@ class CampaignScheduleController extends Controller
     public function create()
     {
         $user = User::find(\Auth::id());
+		
         $campaignschedule = new CampaignSchedule;
         $campaignschedule->user_id = \Auth::id();
 
@@ -31,9 +35,8 @@ class CampaignScheduleController extends Controller
 
         return view('campaignschedule.create', array(
             'campaignschedule' => $campaignschedule,
-            'campaign' => $campaigns,
-            'mailinglist' => $mailinglists,
-
+            'campaigns' => $campaigns,
+            'mailinglists' => $mailinglists,
         ));
     }
 
