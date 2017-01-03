@@ -20,10 +20,12 @@ class ClientController extends Controller
 	{
 		$user = User::find(\Auth::id());
 		$clients = $user->clients()->get();
-		
+
 		return view('client.index', array(
 			'clients' => $clients
 		));
+
+
 	}
 	
 	public function create(Request $request)

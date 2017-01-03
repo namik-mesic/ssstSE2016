@@ -102,10 +102,8 @@ class MailingListController extends Controller
      * @return response
      */
 
-    public function edit(Request $request, $id)
+    public function edit($id)
     {
-        $request->path();
-
 		$user = User::find(\Auth::id());
 
         $mailinglist = MailingList::find($id);
@@ -117,22 +115,37 @@ class MailingListController extends Controller
 			$mailinglistClients [$mlc->id] = $mlc->id;
 		}
 
-		if($request->is('mailinglist/edit/*'))
-        {
-            return view('mailinglist.edit', array(
-                'mailinglist' => $mailinglist,
-                'clients' => $clients,
-                'mailinglistClients' => $mailinglistClients
-            ));
+        return view('mailinglist.edit', array(
+            'mailinglist' => $mailinglist,
+            'clients' => $clients,
+            'mailinglistClients' => $mailinglistClients
+        ));
+
+
+
+    }
+
+    public function view($id)
+    {
+
+        $user = User::find(\Auth::id());
+
+        $mailinglist = MailingList::find($id);
+        $clients = $user->clients()->get();
+
+        $mailinglistClients = array();
+
+        foreach($mailinglist->clients()->get() as $mlc){
+            $mailinglistClients [$mlc->id] = $mlc->id;
         }
 
-        else{
-            return view('mailinglist.clients', array(
-                'mailinglist' => $mailinglist,
-                'clients' => $clients,
-                'mailinglistClients' => $mailinglistClients
-            ));
-        }
+        return view('mailinglist.clients', array(
+            'mailinglist' => $mailinglist,
+            'clients' => $clients,
+            'mailinglistClients' => $mailinglistClients
+        ));
+
+
     }
 
     /**
