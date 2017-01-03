@@ -15,10 +15,11 @@ class CampaignScheduleController extends Controller
     public function index()
     {
         $user = User::find(\Auth::id());
-        $campaignschedules = $user->clients()->get();
+		
+        $campaignschedules = $user->campaignSchedules()->get();
 
         return view('campaignschedule.index', array(
-            'campaignschedule' => $campaignschedules
+            'campaignschedules' => $campaignschedules
         ));
     }
 
@@ -49,7 +50,7 @@ class CampaignScheduleController extends Controller
 
         $campaignschedule->create($input);
 
-        return redirect() -> route('schedule.create');
+        return redirect() -> route('schedules');
 
     }
 

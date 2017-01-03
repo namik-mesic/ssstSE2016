@@ -41,4 +41,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Campaign', 'user_id', 'id');
     }
+	
+	public function campaignSchedules()
+	{
+		return $this->hasMany('App\CampaignSchedule', 'user_id', 'id');
+	}
 }
