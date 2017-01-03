@@ -29,6 +29,7 @@ class CampaignScheduleController extends Controller
 		
         $campaignschedule = new CampaignSchedule;
         $campaignschedule->user_id = \Auth::id();
+        $campaignschedule->status = 'pending';
 
         $campaigns =  $user->campaigns()->get();
         $mailinglists = $user->mailinglists()->get();
@@ -38,6 +39,18 @@ class CampaignScheduleController extends Controller
             'campaigns' => $campaigns,
             'mailinglists' => $mailinglists,
         ));
+    }
+
+    public function store(Request $request){
+
+        $request -> all();
+        $input = $request['campaignschedule'];
+        $campaignschedule = new CampaignSchedule;
+
+        $campaignschedule->create($input);
+
+        return redirect() -> route('schedule.create');
+
     }
 
 }

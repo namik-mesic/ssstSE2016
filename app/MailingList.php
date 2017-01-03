@@ -19,4 +19,10 @@ class MailingList extends Model
     {
 		return $this->belongsToMany('App\Client', 'mailing_list_clients', 'mailing_list_id', 'client_id');
     }
+
+    public function mailingListClients()
+    {
+        return $this->hasMany('App\Client', 'user_id', 'id');
+    }
+
 };
