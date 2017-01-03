@@ -66,7 +66,7 @@ class UserController extends Controller
             $user = User::find($currentUser->id);
             $file = $request->file('picture');
             $folderName = $user->email;
-            $pathWithSpaces = public_path('images\users\ ' . $folderName);
+            $pathWithSpaces = 'images\users\ ' . $folderName;
             $path = str_replace(' ', '', $pathWithSpaces);
             if (!File::exists($path)) {
                 File::makeDirectory($path);
