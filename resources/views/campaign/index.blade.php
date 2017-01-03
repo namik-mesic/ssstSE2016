@@ -15,7 +15,7 @@
                 <tr>
                     <th>Name</th>
                     <th>Created at</th>
-
+					<th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -28,7 +28,6 @@
                             <a href="#"> <i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
-
                 @endforeach
                 </tbody>
                 <tfoot>

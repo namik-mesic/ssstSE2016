@@ -16,6 +16,7 @@
                     <th>Campaign</th>
                     <th>Mailing list</th>
 					<th>Status</th>
+					<th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -24,6 +25,11 @@
 							<td>{{$campaignschedule->campaign->name}}</td>
 							<td>{{$campaignschedule->mailingList->name}}</td>
 							<td>{{$campaignschedule->status}}</td>
+							<td>
+								@if($campaignschedule->status == 'pending')
+									<a href="{{route('schedule.send', $campaignschedule->id)}}"><i class="fa fa-pencil"></i></a>
+								@endif
+							</td>
 						</tr>
 					@endforeach
                 </tbody>

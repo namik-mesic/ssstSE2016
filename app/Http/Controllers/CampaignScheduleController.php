@@ -53,5 +53,16 @@ class CampaignScheduleController extends Controller
         return redirect() -> route('schedules');
 
     }
+	
+	public function send(Request $request, $id)
+	{
+		$campaignschedule = CampaignSchedule::find($id);
+		$campaignschedule->send();
+		
+		$campaignschedule->status = 'sent';
+		$campaignschedule->save();
+		
+		return redirect() -> route('schedules');
+	}
 
 }
