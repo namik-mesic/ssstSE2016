@@ -40,6 +40,7 @@
 @section('content')
     <div class="flex-center position-ref full-height">
         <div class="content">
+            @include('partials.flash')
             <div class="title m-b-md" style="font-family: 'Raleway', sans-serif;
                 font-weight: 100;">
                 SSST Software Engineering, group 3

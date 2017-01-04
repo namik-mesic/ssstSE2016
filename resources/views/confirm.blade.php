@@ -31,11 +31,6 @@
                     {{ session('message') }}
                 </div>
             @endif
-            @if(session('message2'))
-                <div class="alert alert-info">
-                    {{ session('message2') }}
-                </div>
-            @endif
 
 
         <!-- Button -->
