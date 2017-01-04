@@ -131,4 +131,12 @@ class MailingListController extends Controller
             'mailinglist' => $mailinglist,
         ));
     }
+
+    public function delete($id) {
+        $mailinglist = MailingList::find($id);
+        $mailinglist -> delete();
+
+        return redirect() -> route('mailinglists');
+
+    }
 }

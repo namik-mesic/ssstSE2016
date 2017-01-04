@@ -39,13 +39,14 @@ Route::get('clients', ['as' => 'clients', 'uses' => 'ClientController@index']);
 Route::get('client/create', ['as' => 'client.create', 'uses' => 'ClientController@create']);
 Route::get('client/edit/{id}', ['as' => 'client.edit', 'uses' => 'ClientController@edit']);
 Route::post('client/store', ['as' => 'client.store', 'uses' => 'ClientController@store']);
+Route::get('client/delete/{id}', ['as' => 'client.delete', 'uses' => 'ClientController@delete']);
 
 Route::get('mailinglists', ['as' => 'mailinglists', 'uses' => 'MailingListController@index']);
 Route::get('mailinglist/create', ['as' => 'mailinglist.create', 'uses' => 'MailingListController@create']);
 Route::post('mailinglist/store', ['as' => 'mailinglist.store', 'uses' => 'MailingListController@store']);
 Route::get('mailinglist/edit/{id}', ['as' => 'mailinglist.edit', 'uses' => 'MailingListController@edit']);
 Route::get('mailinglist/view/{id}', ['as' => 'mailinglist.view', 'uses' => 'MailingListController@view']);
-
+Route::get('mailinglist/delete/{id}', ['as' => 'mailinglist.delete', 'uses' => 'MailingListController@delete']);
 
 Route::get('campaigns', ['as' => 'campaigns', 'uses' => 'CampaignController@index']);
 Route::get('campaign/create', ['as' => 'campaign.create', 'uses' => 'CampaignController@create']);

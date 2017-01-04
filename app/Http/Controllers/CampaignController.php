@@ -89,7 +89,6 @@ class CampaignController extends Controller
 
         return redirect()->route('campaigns');
 
-
     }
 
     public function delete($id) {
