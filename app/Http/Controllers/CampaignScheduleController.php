@@ -65,4 +65,11 @@ class CampaignScheduleController extends Controller
 		return redirect() -> route('schedules');
 	}
 
+	public function delete($id) {
+        $campaignschedule = CampaignSchedule::find($id);
+        $campaignschedule -> delete();
+
+        return redirect() -> route('schedules');
+    }
+
 }

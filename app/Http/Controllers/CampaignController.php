@@ -92,5 +92,11 @@ class CampaignController extends Controller
 
     }
 
+    public function delete($id) {
+        $campaign = Campaign::find($id);
+        $campaign -> delete();
+
+        return redirect() -> route('campaigns');
+    }
 
 }

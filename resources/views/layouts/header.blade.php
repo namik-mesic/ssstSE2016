@@ -2,7 +2,7 @@
         <header class="main-header">
 
             <!-- Logo -->
-            <a href="index2.html" class="logo"><b>Mail</b>Bird</a>
+            <a href="/" class="logo"><b>Mail</b>Bird</a>
 
             <!-- Header Navbar -->
             <nav class="navbar navbar-static-top" role="navigation">

@@ -51,12 +51,13 @@ Route::get('campaigns', ['as' => 'campaigns', 'uses' => 'CampaignController@inde
 Route::get('campaign/create', ['as' => 'campaign.create', 'uses' => 'CampaignController@create']);
 Route::post('campaign/store', ['as' => 'campaign.store', 'uses' => 'CampaignController@store']);
 Route::get('campaign/edit/{id}', ['as' => 'campaign.edit', 'uses' => 'CampaignController@edit']);
+Route::get('campaign/delete/{id}', ['as' => 'campaign.delete', 'uses' => 'CampaignController@delete']);
 
 Route::get('schedules', ['as' => 'schedules', 'uses' => 'CampaignScheduleController@index']);
 Route::get('schedule/create', ['as' => 'schedule.create', 'uses' => 'CampaignScheduleController@create']);
 Route::post('schedule/store', ['as' => 'schedule.store', 'uses' => 'CampaignScheduleController@store']);
 Route::get('schedule/send/{id}', ['as' => 'schedule.send', 'uses' => 'CampaignScheduleController@send']);
-
+Route::get('schedule/delete/{id}', ['as' => 'schedule.delete', 'uses' => 'CampaignScheduleController@delete']);
 /*
  * Sabahudin Kodro
  */

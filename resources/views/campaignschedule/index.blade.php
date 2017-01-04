@@ -17,6 +17,7 @@
                     <th>Mailing list</th>
 					<th>Status</th>
 					<th></th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -30,6 +31,9 @@
 									<a href="{{route('schedule.send', $campaignschedule->id)}}"><i class="fa fa-pencil"></i></a>
 								@endif
 							</td>
+                            <td>
+                                <a href="{{route('schedule.delete', [$campaignschedule->id])}}"> <i class="fa fa-trash"></i></a>
+                            </td>
 						</tr>
 					@endforeach
                 </tbody>
