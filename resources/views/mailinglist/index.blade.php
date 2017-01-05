@@ -21,7 +21,7 @@
                 @foreach( $mailinglists as $index => $mailinglist )
                     <tr>
                         <td><a href="{{route('mailinglist.view', [$mailinglist->id])}}"> {{$mailinglist->name}}</a> </td>
-                        <td><i class="fa fa-user">{{$clients[$index]}}</i></td>
+                        <td><i class="fa fa-user"> {{$clients[$index]}} </i></td>
                         <td>
                             <a href="{{route('mailinglist.edit', [$mailinglist->id])}}" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
                             <a href="{{route('mailinglist.delete', [$mailinglist->id])}}" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
