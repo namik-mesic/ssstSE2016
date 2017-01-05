@@ -3,7 +3,7 @@
 
     <div class="box">
         <div class="box-header">
-            <h3 class="box-title">Create new campaign</h3>
+            <i class="fa fa-envelope"></i><h3 class="box-title">Create new Email</h3>
         </div>
         <!-- /.box-header -->
         <div class="box-body">

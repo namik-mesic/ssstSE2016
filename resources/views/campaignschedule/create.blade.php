@@ -3,7 +3,7 @@
 
     <div class="box">
         <div class="box-header">
-            <h3 class="box-title">New Campaign Schedule</h3>
+            <i class="fa fa-calendar-plus-o"></i><h3 class="box-title">New Campaign Schedule</h3>
         </div>
         <!-- /.box-header -->
         <div class="box-body">

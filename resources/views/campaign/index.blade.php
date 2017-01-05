@@ -3,10 +3,8 @@
 
     <div class="box">
         <div class="box-header">
-            <h3 class="box-title">Mails</h3>
-            <div class="box-tools pull-right">
-                <a href="{{route('campaign.create')}}" class="btn btn-primary">Create new mail</a>
-            </div>
+            <h3 class="box-title">Emails</h3>
+            
         </div>
         <!-- /.box-header -->
         <div class="box-body">
@@ -37,6 +35,10 @@
 
                 </tfoot>
             </table>
+            </br>
+            <div class="box-tools pull-right">
+                <a href="{{route('campaign.create')}}" class="btn btn-primary"><i class="fa fa-envelope fa-2x"></i></a>
+            </div>
         </div>
     </div>
     </div>

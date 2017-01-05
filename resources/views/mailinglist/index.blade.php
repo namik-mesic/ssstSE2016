@@ -4,9 +4,7 @@
     <div class="box">
         <div class="box-header">
             <h3 class="box-title">Mailing List</h3>
-			<div class="box-tools pull-right">
-				<a href="{{route('mailinglist.create')}}" class="btn btn-primary">Create new list</a>
-			</div>
+		
         </div>
         <!-- /.box-header -->
         
@@ -35,6 +33,10 @@
 
                 </tfoot>
             </table>
+            </br>
+            <div class="box-tools pull-right">
+                <a href="{{route('mailinglist.create')}}" class="btn btn-primary"><i class="fa fa-address-book fa-2x"></i></a>
+            </div>
         </div>
     </div>
     </div>
