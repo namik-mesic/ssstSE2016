@@ -28,7 +28,7 @@
 							<td>{{$campaignschedule->status}}</td>
 							<td>
 								@if($campaignschedule->status == 'pending')
-									<a href="{{route('schedule.send', $campaignschedule->id)}}"><i class="fa fa-pencil"></i></a>
+									<a href="{{route('schedule.send', $campaignschedule->id)}}"><i class="fa fa-paper-plane"></i> SEND</a>
 								@endif
 							</td>
                             <td>

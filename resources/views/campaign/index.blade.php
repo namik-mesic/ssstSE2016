@@ -16,6 +16,8 @@
                     <th>Name</th>
                     <th>Created at</th>
 					<th></th>
+                    <th></th>
+
                 </tr>
                 </thead>
                 <tbody>
@@ -24,9 +26,9 @@
                         <td>{{$campaign->name}}</td>
                         <td>{{$campaign->created_at}}</td>
                         <td>
-                            <a href="{{route('campaign.edit', $campaign->id)}}"><i class="fa fa-pencil"></i></a>
-                            <a href="{{route('campaign.delete', $campaign->id)}}"> <i class="fa fa-trash"></i></a>
+                            <a href="{{route('campaign.edit', $campaign->id)}}"><i class="fa fa-pencil"></i> EDIT </a>
                         </td>
+                        <td>  <a href="{{route('campaign.delete', $campaign->id)}}"> <i class="fa fa-trash"></i> DELETE</a></td>
                     </tr>
                 @endforeach
                 </tbody>
