@@ -8,6 +8,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use Illuminate\Support\Facades\DB;
 
 use App\MailingList;
 use App\User;
@@ -36,9 +37,14 @@ class MailingListController extends Controller
         $user = User::find(\Auth::id());
         
 		$mailinglists = $user->mailinglists()->get();
+
+        foreach($mailinglists as $mailinglist){
+            $clients[] = DB::table('mailing_list_clients')-> where('mailing_list_id', $mailinglist -> id)-> count();
+        }
 		
         return view('mailinglist.index', array(
-            'mailinglists' => $mailinglists
+            'mailinglists' => $mailinglists,
+            'clients' => $clients
         ));
 
     }
