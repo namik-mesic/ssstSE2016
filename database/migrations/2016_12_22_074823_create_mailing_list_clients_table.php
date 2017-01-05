@@ -18,7 +18,7 @@ class CreateMailingListClientsTable extends Migration
             $table->integer('client_id')->unsigned();
             $table->foreign('client_id')->references('id')->on('clients')-> onDelete('cascade')->onUpdate('cascade');
             $table->integer('mailing_list_id')->unsigned();
-            $table->foreign('mailing_listid')->references('id')->on('mailing_lists')-> onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('mailing_list_id')->references('id')->on('mailing_lists')-> onDelete('cascade')->onUpdate('cascade');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
 
