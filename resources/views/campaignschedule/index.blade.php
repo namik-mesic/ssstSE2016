@@ -13,7 +13,8 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                    <th>Mail</th>
+                    <th>Mail Name</th>
+                    <th>Subject</th>
                     <th>Mailing list</th>
 					<th>Status</th>
 					<th></th>
@@ -24,6 +25,7 @@
 					@foreach ($campaignschedules as $campaignschedule)
 						<tr>
 							<td>{{$campaignschedule->campaign->name}}</td>
+                            <td>{{$campaignschedule->campaign->subject}}</td>
 							<td>{{$campaignschedule->mailingList->name}}</td>
 							<td>{{$campaignschedule->status}}</td>
 							<td>

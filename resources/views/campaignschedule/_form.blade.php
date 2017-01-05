@@ -9,7 +9,7 @@
 
 
     <div class="form-group {{$errors->first('campaign_id')  ? 'has-error' : ''}}">
-        <label>Campaign</label>
+        <label>Email name</label>
 		<select name="campaignschedule[campaign_id]" class="form-control">
 			@foreach($campaigns as $campaign)
 				<option value="{{$campaign->id}}">{{$campaign->name}}</option>
@@ -19,6 +19,9 @@
             <span>{{$errors->first('campaign_id')}}</span>
         @endif
     </div>
+
+    
+
 
     <div class="form-group {{$errors->first('mailing_list_id')  ? 'has-error' : ''}}">
         <label>Mailing Lists</label>

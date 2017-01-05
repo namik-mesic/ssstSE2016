@@ -4,14 +4,22 @@
     <input type="hidden" value="{{$campaign->id}}" name="campaign[id]" />
     <input type="hidden" value="{{$campaign->user_id}}" name="campaign[user_id]" />
 
-
     <div class="form-group {{$errors->first('name')  ? 'has-error' : ''}}">
         <label>Name</label>
         <input type="text" value="{{$campaign->name}}" name="campaign[name]" class="form-control" />
         @if($errors->first('name'))
             <span>{{$errors->first('name')}}</span>
         @endif
-	</div>
+	    </div>
+
+     <div class="form-group {{$errors->first('subject')  ? 'has-error' : ''}}">
+        <label>Subject</label>
+        <input type="text" value="{{$campaign->subject}}" name="campaign[subject]" class="form-control" />
+        @if($errors->first('subject'))
+            <span>{{$errors->first('subject')}}</span>
+        @endif
+        </div>
+
 	<div class="form-group {{$errors->first('content')  ? 'has-error' : ''}}">
         <label>Content</label>
 		

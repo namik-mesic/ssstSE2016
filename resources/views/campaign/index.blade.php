@@ -14,6 +14,7 @@
                 <thead>
                 <tr>
                     <th>Name</th>
+                    <th>Subject</th>
                     <th>Created at</th>
 					<th></th>
                     <th></th>
@@ -24,6 +25,7 @@
                 @foreach ($campaigns as $campaign)
                     <tr>
                         <td>{{$campaign->name}}</td>
+                        <td>{{$campaign->subject}}</td>
                         <td>{{$campaign->created_at}}</td>
                         <td>
                             <a href="{{route('campaign.edit', $campaign->id)}}"><i class="fa fa-pencil"></i> EDIT </a>
