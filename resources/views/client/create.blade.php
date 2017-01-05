@@ -3,7 +3,7 @@
 
 <div class="box">
 	<div class="box-header">
-		<h3 class="box-title">Create new client</h3>
+		<h3 class="box-title"><i class="fa fa-user-plus"> Add new client </i></h3>
 		</div>
 		<!-- /.box-header -->
 		<div class="box-body">

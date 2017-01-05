@@ -17,8 +17,8 @@
                     <th>Subject</th>
                     <th>Mailing list</th>
 					<th>Status</th>
-					<th></th>
-                    <th></th>
+					<th>Send/Delete</th>
+                    
                 </tr>
                 </thead>
                 <tbody>
@@ -30,11 +30,10 @@
 							<td>{{$campaignschedule->status}}</td>
 							<td>
 								@if($campaignschedule->status == 'pending')
-									<a href="{{route('schedule.send', $campaignschedule->id)}}"><i class="fa fa-paper-plane"></i> SEND</a>
+									<a href="{{route('schedule.send', $campaignschedule->id)}}" class="btn btn-primary"><i class="fa fa-paper-plane"></i></a>
 								@endif
-							</td>
-                            <td>
-                                <a href="{{route('schedule.delete', [$campaignschedule->id])}}"> <i class="fa fa-trash"></i></a>
+							
+                                <a href="{{route('schedule.delete', [$campaignschedule->id])}}" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
                             </td>
 						</tr>
 					@endforeach

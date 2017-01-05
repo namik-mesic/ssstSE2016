@@ -13,11 +13,11 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                    <th>Name</th>
+                    <th>Email Name</th>
                     <th>Subject</th>
                     <th>Created at</th>
-					<th></th>
-                    <th></th>
+					<th>Edit/Delete</th>
+                    
 
                 </tr>
                 </thead>
@@ -28,9 +28,8 @@
                         <td>{{$campaign->subject}}</td>
                         <td>{{$campaign->created_at}}</td>
                         <td>
-                            <a href="{{route('campaign.edit', $campaign->id)}}"><i class="fa fa-pencil"></i> EDIT </a>
-                        </td>
-                        <td>  <a href="{{route('campaign.delete', $campaign->id)}}"> <i class="fa fa-trash"></i> DELETE</a></td>
+                            <a href="{{route('campaign.edit', $campaign->id)}}" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
+                            <a href="{{route('campaign.delete', $campaign->id)}}" class="btn btn-danger"> <i class="fa fa-trash"></i></a></td>
                     </tr>
                 @endforeach
                 </tbody>
