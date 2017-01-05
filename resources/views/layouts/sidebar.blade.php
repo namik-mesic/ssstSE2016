@@ -21,7 +21,7 @@
                     <li class="header">MENU</li>
                     <!-- Optionally, you can add icons to the links -->
                     <li class="active"><a href="/dashboard"><i class="fa fa-th-large"></i></i><span>Dashboard</span></a></li>
-					<li class="active"><a href="/campaigns"><i class="fa fa-rss"></i> Campaigns </a></li>
+					<li class="active"><a href="/campaigns"><i class="fa fa-rss"></i> Mails </a></li>
                     <li><a href="/schedules"><i class="fa fa-cog"></i><span>Schedules</span></a></li>
 					<li><a href="/mailinglists"><i class="fa fa-cog"></i><span>Mailing lists</span></a></li>
 					<li><a href="/clients"><i class="fa fa-cog"></i><span>Clients</span></a></li>

@@ -3,9 +3,9 @@
 
     <div class="box">
         <div class="box-header">
-            <h3 class="box-title">Campaigns</h3>
+            <h3 class="box-title">Mails</h3>
             <div class="box-tools pull-right">
-                <a href="{{route('campaign.create')}}" class="btn btn-primary">Create new campaign</a>
+                <a href="{{route('campaign.create')}}" class="btn btn-primary">Create new mail</a>
             </div>
         </div>
         <!-- /.box-header -->

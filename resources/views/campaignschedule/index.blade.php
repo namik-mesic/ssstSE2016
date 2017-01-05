@@ -13,7 +13,7 @@
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                    <th>Campaign</th>
+                    <th>Mail</th>
                     <th>Mailing list</th>
 					<th>Status</th>
 					<th></th>
