@@ -38,14 +38,33 @@ class MailingListController extends Controller
         
 		$mailinglists = $user->mailinglists()->get();
 
-        foreach($mailinglists as $mailinglist){
-            $clients[] = DB::table('mailing_list_clients')-> where('mailing_list_id', $mailinglist -> id)-> count();
+        $client_exist = false;
+
+        foreach($mailinglists as $mailinglist)
+        {
+            if ($mailinglist -> id != NULL) {
+                $clients[] = DB::table('mailing_list_clients')->where('mailing_list_id', $mailinglist->id)->count();
+                $client_exist = true;
+            }
         }
-		
-        return view('mailinglist.index', array(
-            'mailinglists' => $mailinglists,
-            'clients' => $clients
-        ));
+
+        if ($client_exist == true)
+        {
+            return view('mailinglist.index', array(
+                'mailinglists' => $mailinglists,
+                'clients' => $clients
+            ));
+        }
+
+        else if ($client_exist == false)
+        {
+            return view('mailinglist.index', array(
+                'mailinglists' => $mailinglists
+            ));
+        }
+
+
+
 
     }
 
