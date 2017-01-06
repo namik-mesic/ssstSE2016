@@ -34,7 +34,7 @@
 
 
     <div class="form-group">
-        <input type="submit" value="Submit" class="btn btn-success" />
+        <input type="submit" value="Save" class="btn btn-success" />
     </div>
 </form>
 

@@ -24,31 +24,37 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+
 </head>
+<style type="text/css">.login-page{background-image:url('/bower_components/AdminLTE/dist/img/loginback.jpeg');background-attachment: fixed;background-position: center;}</style>
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html"><b>Mail</b>Bird</a>
+    <a href="../../index2.html" style="color: white;"><b style="color: white;">Mail</b>Bird</a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
+  <h1 class="login-box-msg">Log In</h1>
     <p class="login-box-msg">Sign in to start reaching out!</p>
 
-    @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
-                <div class="panel-body">
+    
+
+      
+            
+
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                            
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+                            <div class="col-md-12">
+
+                            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                <input id="email" type="email" class="form-control" placeholder="Email" name="email" value="{{ old('email') }}" required autofocus>
+              </div>
+                              
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -59,10 +65,15 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
+                           
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
+                            <div class="col-md-12">
+
+                                      <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                <input id="password" type="password" class="form-control" placeholder="Password" name="password" required >
+              </div>
+                                
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
@@ -72,33 +83,44 @@
                             </div>
                         </div>
 
+
                         <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-success">
+                                    Log In
+                                </button>
+
+
+
+</div>
+                                </div>
+
+                        <div class="form-group">
+                            <div class="col-md-6">
                                 <div class="checkbox">
                                     <label>
                                         <input type="checkbox" name="remember"> Remember Me
                                     </label>
                                 </div>
+                               
                             </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Login
-                                </button>
-
+                             <div class="col-md-6">
                                 <a class="btn btn-link" href="{{ url('/password/reset') }}">
                                     Forgot Your Password?
                                 </a>
-                            </div>
+                                </div>
                         </div>
+
+
+                                
+
                     </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+              
+              
+                
+
+           
+
 
 
 
@@ -108,11 +130,12 @@
         Facebook</a>
       
     </div>
+
     <!-- /.social-auth-links -->
 
     <a href="#">I forgot my password</a><br>
     <a href="register.html" class="text-center">Register</a>
-    @stop
+    
 
   </div>
   <!-- /.login-box-body -->
