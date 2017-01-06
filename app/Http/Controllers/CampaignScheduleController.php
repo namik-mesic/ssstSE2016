@@ -12,15 +12,26 @@ use App\CampaignSchedule;
 class CampaignScheduleController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
+
+        $request->path();
+
         $user = User::find(\Auth::id());
 		
         $campaignschedules = $user->campaignSchedules()->get();
 
-        return view('campaignschedule.index', array(
-            'campaignschedules' => $campaignschedules
-        ));
+        if($request->is('schedules')) {
+            return view('campaignschedule.index', array(
+                'campaignschedules' => $campaignschedules
+            ));
+        }
+
+        else if($request->is('schedule/archived')) {
+            return view('campaignschedule.archived', array(
+                'campaignschedules' => $campaignschedules
+            ));
+        }
     }
 
 

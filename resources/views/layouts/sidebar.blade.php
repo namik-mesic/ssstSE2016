@@ -22,7 +22,13 @@
                     <!-- Optionally, you can add icons to the links -->
                     <li><a href="/dashboard"><i class="fa fa-th-large"></i></i><span>Dashboard</span></a></li>
                     <li><a href="/campaigns"><i class="fa fa-envelope"></i> Mails </a></li>
-                    <li><a href="/schedules"><i class="fa fa-calendar"></i><span>Schedules</span></a></li>
+                    <li class="treeview"><a href="#"><i class="fa fa-calendar"></i> <span>Schedules</span>
+                            <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i></span></a>
+                         <ul class="treeview-menu" style="display: none;">
+                            <li><a href="../schedules"><i class="fa fa-circle-o"></i>Set up schedules</a></li>
+                            <li><a href="../schedule/archived"><i class="fa fa-circle-o"></i>Archived schedules</a></li>
+                         </ul>
+                    </li>
                     <li><a href="/mailinglists"><i class="fa fa-address-book"></i><span>Mailing lists</span></a></li>
                     <li><a href="/clients"><i class="fa fa-users"></i><span>Clients</span></a></li>
                     <li><a href="/help"><i class="fa fa-life-ring"></i><span>Help</span></a></li>
