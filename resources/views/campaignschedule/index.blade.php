@@ -20,6 +20,13 @@
                 </tr>
                 </thead>
                 <tbody>
+                <input id="button" type="submit" name="button" onclick="myFunction();" value="enter"/>
+                <script>
+
+
+                </script>
+
+
 					@foreach ($campaignschedules as $campaignschedule)
 						<tr>
 							<td>{{$campaignschedule->campaign->name}}</td>
