@@ -56,7 +56,7 @@ class MailingListController extends Controller
             ));
         }
 
-        else if ($client_exist == false)
+        else 
         {
             return view('mailinglist.index', array(
                 'mailinglists' => $mailinglists
