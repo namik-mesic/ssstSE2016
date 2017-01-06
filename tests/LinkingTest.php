@@ -24,4 +24,17 @@ class LinkingTest extends TestCase
             -> seePageIs('/register');
     }
 
+    public function testFeaturesPage() {
+        $this->visit('/')
+            -> click('Features')
+            -> see('#features');
+    }
+
+    public function testContactPage()
+    {
+        $this->visit('/')
+            -> click('Contact')
+            -> see('#contact');
+    }
+
 }
