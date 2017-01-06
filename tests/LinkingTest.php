@@ -12,4 +12,16 @@ class LinkingTest extends TestCase
             -> seePageIs('/');
     }
 
+    public function testLoginPage() {
+        $this->visit('/')
+            -> click('login')
+            -> seePageIs('/login');
+    }
+
+    public function testRegistrationPage() {
+        $this->visit('/')
+            -> click('register')
+            -> seePageIs('/register');
+    }
+
 }
