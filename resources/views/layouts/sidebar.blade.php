@@ -21,7 +21,14 @@
                     <li class="header">MENU</li>
                     <!-- Optionally, you can add icons to the links -->
                     <li><a href="/dashboard"><i class="fa fa-th-large"></i></i><span>Dashboard</span></a></li>
-                    <li><a href="/campaigns"><i class="fa fa-envelope"></i> Mails </a></li>
+                   
+                       <li class="treeview"><a href="#"><i class="fa fa-envelope"></i> <span>Mails</span>
+                            <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i></span></a>
+                         <ul class="treeview-menu" style="display: none;">
+                            <li><a href="../campaigns"><i class="fa fa-comments"></i>All Mails</a></li>
+                            <li><a href="../campaign/create"><i class="fa fa-plus"></i>Create New</a></li>
+                         </ul>
+                    </li>
                     <li class="treeview"><a href="#"><i class="fa fa-calendar"></i> <span>Schedules</span>
                             <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i></span></a>
                          <ul class="treeview-menu" style="display: none;">
