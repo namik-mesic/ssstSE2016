@@ -25,8 +25,8 @@
                     <li class="treeview"><a href="#"><i class="fa fa-calendar"></i> <span>Schedules</span>
                             <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i></span></a>
                          <ul class="treeview-menu" style="display: none;">
-                            <li><a href="../schedules"><i class="fa fa-circle-o"></i>Set up schedules</a></li>
-                            <li><a href="../schedule/archived"><i class="fa fa-circle-o"></i>Archived schedules</a></li>
+                            <li><a href="../schedules"><i class="fa fa-calendar-plus-o"></i>Set up schedules</a></li>
+                            <li><a href="../schedule/archived"><i class="fa fa-calendar-check-o"></i>Archived schedules</a></li>
                          </ul>
                     </li>
                     <li><a href="/mailinglists"><i class="fa fa-address-book"></i><span>Mailing lists</span></a></li>
