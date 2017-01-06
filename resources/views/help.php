@@ -101,7 +101,7 @@
 <div class="col-md-12"> Reach us through the form</div>
    
 <div class="col-md-12 contact-form">
-<form id="contact" method="post" class="form" role="form">
+<form id="contact" method="post" class="form" role="form" >
 <div class="row">
 <div class="col-xs-4 col-md-4 form-group">
 <input class="form-control" id="name" name="name" placeholder="Name" type="text" required autofocus />
