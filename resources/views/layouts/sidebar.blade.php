@@ -38,7 +38,7 @@
                     </li>
                     <li><a href="/mailinglists"><i class="fa fa-address-book"></i><span>Mailing lists</span></a></li>
                     <li><a href="/clients"><i class="fa fa-users"></i><span>Clients</span></a></li>
-                    <li><a href="/help"><i class="fa fa-life-ring"></i><span>Help</span></a></li>
+                    <li><a name="Help" href="/help"><i class="fa fa-life-ring"></i><span>Help</span></a></li>
                     <li><a href="#"><i class="fa fa-sign-out"></i><span>Log Out</span></a></li>
                 </ul><!-- /.sidebar-menu -->
             </section>

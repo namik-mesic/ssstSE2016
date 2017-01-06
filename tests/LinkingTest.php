@@ -36,5 +36,4 @@ class LinkingTest extends TestCase
             -> click('Contact')
             -> see('#contact');
     }
-
 }
