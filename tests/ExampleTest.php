@@ -11,9 +11,24 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-    public function testVisit()
+    public function testVisitPages()
     {
         $this->visit('/map_food')
              ->see('Food');
+        $this->visit('/map_drink')
+            ->see('Drink');
+        $this->visit('/map_entertainment')
+            ->see('Entertainment');
+        $this->visit('/map_hotel')
+            ->see('Hotel');
+        $this->visit('/map_bank')
+            ->see('Bank');
+        $this->visit('/map_parking')
+            ->see('Parking');
+        $this->visit('/map_shopping')
+            ->see('Shopping');
+        $this->visit('/map_worship')
+            ->see('Worship');
+
     }
 }

@@ -76,8 +76,3 @@ Route::get('/map_shopping', function (){
     return view('map.shopping-map');
 
 });
-
-Route::get('/map_test', function (){
-
-    return view('map.test-map');
-});
