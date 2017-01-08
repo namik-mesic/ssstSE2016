@@ -1,3 +1,5 @@
+<!-- Original Concept: Tarik Mutapcic -->
+<!-- Adjusted by: Adem Hadrovic-->
 <?php
 
 use Illuminate\Foundation\Testing\WithoutMiddleware;
