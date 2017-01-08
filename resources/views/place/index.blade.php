@@ -1,3 +1,5 @@
+<!-- Original concept: Namik Mesic-->
+<!-- Tweaked by Adem Hadrovic -->
 @extends('layouts.app')
 
 

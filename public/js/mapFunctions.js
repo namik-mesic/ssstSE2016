@@ -1,3 +1,6 @@
+// Original concept: Tarik Mutapcic
+// Optimized by: Adem Hadrovic
+
 /**
  * Created by Adem on 12/12/2016.
  */
