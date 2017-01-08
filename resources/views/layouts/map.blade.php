@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<!--Map interface created by: Iva Jesenkovic. Tweaked by: Adem Hadrovic-->
 <html class="no-js">
 <head>
     <meta charset="utf-8">

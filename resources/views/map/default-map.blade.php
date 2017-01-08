@@ -1,4 +1,4 @@
-
+<!--Created by Adem Hadrovic. Tweaked by Tarik Mutapcic-->
 @extends('layouts.map')
 
 @section('head')
