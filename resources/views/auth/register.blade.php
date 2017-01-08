@@ -41,11 +41,11 @@
            
                     @if ($errors->any())
 
-                        <ul style="color:red;">
-
-                            {{ implode('', $errors->all('<li>:message</li>')) }}
-
-                        </ul>
+                       <ul style="color:red;">
+     
+                              <?php echo "<li>".implode('</li><li>', $errors->all(':message'))."</li>"; ?> 
+     
+                            </ul>
 
                     @endif
 
