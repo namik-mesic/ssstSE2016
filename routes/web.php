@@ -45,6 +45,13 @@ Route::get('client/edit/{id}', ['as' => 'client.edit', 'uses' => 'ClientControll
 Route::post('client/store', ['as' => 'client.store', 'uses' => 'ClientController@store']);
 Route::get('client/delete/{id}', ['as' => 'client.delete', 'uses' => 'ClientController@delete']);
 
+Route::get('mails', ['as' => 'mails', 'uses' => 'MailController@index']);
+Route::get('mail/create', ['as' => 'mail.create', 'uses' => 'MailController@create']);
+Route::get('mail/edit/{id}', ['as' => 'mail.edit', 'uses' => 'MailController@edit']);
+Route::post('mail/store', ['as' => 'mail.store', 'uses' => 'MailController@store']);
+Route::get('mail/delete/{id}', ['as' => 'mail.delete', 'uses' => 'MailController@delete']);
+
+
 Route::get('mailinglists', ['as' => 'mailinglists', 'uses' => 'MailingListController@index']);
 Route::get('mailinglist/create', ['as' => 'mailinglist.create', 'uses' => 'MailingListController@create']);
 Route::post('mailinglist/store', ['as' => 'mailinglist.store', 'uses' => 'MailingListController@store']);
