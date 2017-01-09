@@ -36,6 +36,8 @@
                             <li><a href="../schedule/archived"><i class="fa fa-calendar-check-o"></i>Archived schedules</a></li>
                          </ul>
                     </li>
+                        <!-- Comment   <li><a href="/campaigns">Campaigns</a></li>  -->
+                  <!--  <li><a href="/campaigns">Campaigns</a></li> -->
                     <li><a href="/mailinglists"><i class="fa fa-address-book"></i><span>Mailing lists</span></a></li>
                     <li><a href="/clients"><i class="fa fa-users"></i><span>Clients</span></a></li>
                     <li><a name="Help" href="/help"><i class="fa fa-life-ring"></i><span>Help</span></a></li>
