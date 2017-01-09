@@ -1,5 +1,5 @@
 <?php
-
+/* Inda Kreso */
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
@@ -37,3 +37,4 @@ class LinkingTest extends TestCase
             -> see('#contact');
     }
 }
+/* Inda Kreso */
