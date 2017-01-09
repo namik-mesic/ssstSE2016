@@ -20,14 +20,14 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach ($campaigns as $campaign)
+                @foreach ($mails as $mail)
                     <tr>
-                        <td>{{$campaign->name}}</td>
-                        <td>{{$campaign->subject}}</td>
-                        <td>{{$campaign->created_at}}</td>
+                        <td>{{$mail->name}}</td>
+                        <td>{{$mail->subject}}</td>
+                        <td>{{$mail->created_at}}</td>
                         <td>
-                            <a href="{{route('campaign.edit', $campaign->id)}}" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
-                            <a href="{{route('campaign.delete', $campaign->id)}}" class="btn btn-danger"> <i class="fa fa-trash"></i></a></td>
+                            <a href="{{route('mail.edit', $mail->id)}}" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
+                            <a href="{{route('mail.delete', $mail->id)}}" class="btn btn-danger"> <i class="fa fa-trash"></i></a></td>
                     </tr>
                 @endforeach
                 </tbody>
@@ -37,7 +37,7 @@
             </table>
             </br>
             <div class="box-tools pull-right">
-                <a href="{{route('campaign.create')}}" class="btn btn-primary"><i class="fa fa-envelope fa-2x"></i></a>
+                <a href="{{route('mail.create')}}" class="btn btn-primary"><i class="fa fa-envelope fa-2x"></i></a>
             </div>
         </div>
     </div>

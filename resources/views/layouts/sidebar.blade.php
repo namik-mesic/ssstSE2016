@@ -25,8 +25,8 @@
                        <li class="treeview"><a href="#"><i class="fa fa-envelope"></i> <span>Mails</span>
                             <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i></span></a>
                          <ul class="treeview-menu" style="display: none;">
-                            <li><a href="../campaigns"><i class="fa fa-comments"></i>All Mails</a></li>
-                            <li><a href="../campaign/create"><i class="fa fa-plus"></i>Create New</a></li>
+                            <li><a href="../mails"><i class="fa fa-comments"></i>All Mails</a></li>
+                            <li><a href="../mail/create"><i class="fa fa-plus"></i>Create New</a></li>
                          </ul>
                     </li>
                     <li class="treeview"><a href="#"><i class="fa fa-calendar"></i> <span>Schedules</span>

@@ -1,12 +1,12 @@
-<form action="{{route('campaign.store')}}" method="POST">
+<form action="{{route('mail.store')}}" method="POST">
     <input type="hidden" name="_token" value="{{csrf_token()}}">
 
-    <input type="hidden" value="{{$campaign->id}}" name="campaign[id]" />
-    <input type="hidden" value="{{$campaign->user_id}}" name="campaign[user_id]" />
+    <input type="hidden" value="{{$mail->id}}" name="mail[id]" />
+    <input type="hidden" value="{{$mail->user_id}}" name="mail[user_id]" />
 
     <div class="form-group {{$errors->first('name')  ? 'has-error' : ''}}">
         <label>Name</label>
-        <input type="text" value="{{$campaign->name}}" name="campaign[name]" class="form-control" />
+        <input type="text" value="{{$mail->name}}" name="mail[name]" class="form-control" />
         @if($errors->first('name'))
             <span>{{$errors->first('name')}}</span>
         @endif
@@ -14,7 +14,7 @@
 
      <div class="form-group {{$errors->first('subject')  ? 'has-error' : ''}}">
         <label>Subject</label>
-        <input type="text" value="{{$campaign->subject}}" name="campaign[subject]" class="form-control" />
+        <input type="text" value="{{$mail->subject}}" name="mail[subject]" class="form-control" />
         @if($errors->first('subject'))
             <span>{{$errors->first('subject')}}</span>
         @endif
@@ -23,8 +23,8 @@
 	<div class="form-group {{$errors->first('content')  ? 'has-error' : ''}}">
         <label>Content</label>
 		
-		<textarea name="campaign[content]" id="campaign-content" rows="10" cols="80" class="form-control">
-               {{$campaign->content}}
+		<textarea name="mail[content]" id="mail-content" rows="10" cols="80" class="form-control">
+               {{$mail->content}}
 		</textarea>
 			
         @if($errors->first('content'))
@@ -41,5 +41,5 @@
 <script src="{{ asset ("/bower_components/AdminLTE/plugins/ckeditor/ckeditor.js") }}" type="text/javascript"></script>
 
 <script>
-	CKEDITOR.replace('campaign-content');
+	CKEDITOR.replace('mail-content');
 </script>

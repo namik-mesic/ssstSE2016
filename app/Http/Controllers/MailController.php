@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 
-use App\Campaign;
+use App\Mail;
 use App\User;
 
 class MailController extends Controller
@@ -25,7 +25,7 @@ class MailController extends Controller
         $user = User::find(\Auth::id());
         $mails = $user -> mails()->get();
 
-        return view('mails.index', array(
+        return view('mail.index', array(
 
             'mails' => $mails
 
