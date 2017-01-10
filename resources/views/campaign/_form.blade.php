@@ -1,3 +1,4 @@
+/* Inda Kreso*/
 <form action="{{route('campaign.store')}}" method="POST">
     <input type="hidden" name="_token" value="{{csrf_token()}}">
 
@@ -35,3 +36,4 @@
 <script>
 	CKEDITOR.replace('campaign-content');
 </script>
+/* Inda Kreso*/

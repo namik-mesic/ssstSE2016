@@ -15,8 +15,8 @@
                     <th>Subject</th>
                     <th>Created at</th>
 					<th>Edit/Delete</th>
-                    
 
+                    /* Inda Kreso*/
                 </tr>
                 </thead>
                 <tbody>
@@ -44,4 +44,4 @@
     </div>
     <!-- /.box -->
 
-@stop
+@stop/* Inda Kreso*/

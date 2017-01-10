@@ -15,3 +15,4 @@ class Mail extends Model
     );
 
 }
+/* Inda Kreso*/

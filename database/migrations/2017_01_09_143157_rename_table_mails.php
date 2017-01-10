@@ -1,4 +1,4 @@
-<?php
+<?php /* Inda Kreso*/
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -23,7 +23,7 @@ class RenameTableMails extends Migration
      * @return void
      */
     public function down()
-    {
+    {/* Inda Kreso*/
         //
     }
 }

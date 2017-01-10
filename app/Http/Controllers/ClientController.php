@@ -74,11 +74,11 @@ class ClientController extends Controller
 		
 		return redirect()->route('clients');
 	}
-
+    /* Inda Kreso*/
 	public function delete($id) {
         $client = Client::find($id);
         $client -> delete();
 
-        return redirect() -> route('clients');
+        return redirect() -> route('clients'); /* Inda Kreso*/
     }
 }

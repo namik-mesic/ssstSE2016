@@ -9,10 +9,10 @@ class LinkingTest extends TestCase
     public function testHomePage() {
         $this->visit('/')
             -> click('Home')
-            -> seePageIs('/');
+            -> seePageIs('/');              /* Inda Kreso*/
     }
 
-    public function testLoginPage() {
+    public function testLoginPage() {           /* Inda Kreso*/
         $this->visit('/')
             -> click('login')
             -> seePageIs('/login');
@@ -20,13 +20,13 @@ class LinkingTest extends TestCase
 
     public function testRegistrationPage() {
         $this->visit('/')
-            -> click('register')
+            -> click('register')                    /* Inda Kreso*/
             -> seePageIs('/register');
     }
 
     public function testFeaturesPage() {
         $this->visit('/')
-            -> click('Features')
+            -> click('Features')                /* Inda Kreso*/
             -> see('#features');
     }
 
@@ -34,7 +34,9 @@ class LinkingTest extends TestCase
     {
         $this->visit('/')
             -> click('Contact')
-            -> see('#contact');
+            -> see('#contact');             /* Inda Kreso*/
     }
 }
+
+
 /* Inda Kreso */

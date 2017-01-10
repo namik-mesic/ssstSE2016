@@ -1,3 +1,4 @@
+/* Inda Kreso*/
 <form action="{{route('mail.store')}}" method="POST">
     <input type="hidden" name="_token" value="{{csrf_token()}}">
 
@@ -43,3 +44,4 @@
 <script>
 	CKEDITOR.replace('mail-content');
 </script>
+/* Inda Kreso*/

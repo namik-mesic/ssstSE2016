@@ -1,3 +1,4 @@
+/* Inda Kreso*/
 @extends( 'layouts.app' )
 @section( 'content' )
 
@@ -45,3 +46,4 @@
     <!-- /.box -->
 
 @stop
+/* Inda Kreso*/

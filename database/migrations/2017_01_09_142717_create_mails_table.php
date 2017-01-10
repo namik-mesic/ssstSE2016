@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-
+/* Inda Kreso*/
 class CreateMailsTable extends Migration
 {
     /**
@@ -34,3 +34,4 @@ class CreateMailsTable extends Migration
         Schema::dropIfExists('=mails');
     }
 }
+/* Inda Kreso*/

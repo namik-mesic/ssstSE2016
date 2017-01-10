@@ -179,7 +179,7 @@ class MailingListController extends Controller
         $mailinglist = MailingList::find($id);
         $mailinglist -> delete();
 
-        return redirect() -> route('mailinglists');
+        return redirect() -> route('mailinglists'); /* Inda Kreso*/
 
     }
 }

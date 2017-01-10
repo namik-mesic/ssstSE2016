@@ -9,7 +9,7 @@ class FormsTest extends TestCase
 {
     public function testLoginForm() {
         $this->visit('/login')
-            ->type('Inda', 'email')
+            ->type('Inda', 'email')             /* Inda Kreso*/
             ->type('pass','password')
             ->press('Log In')
             ->seePageIs('/login');
@@ -22,12 +22,12 @@ class FormsTest extends TestCase
             ->type('Inda', 'email')
 
             ->type('pass','password')
-            ->press('Register')
+            ->press('Register')             /* Inda Kreso*/
             ->seePageIs('/register');
     }
 
     public function testContactSupportForm() {
-        $this->visit('/register')
+        $this->visit('/register')               /* Inda Kreso*/
             ->type('Inda', 'name')
             ->type('Kreso', 'lastname')
             ->type('Inda', 'email')
@@ -39,7 +39,7 @@ class FormsTest extends TestCase
 
     public function testNewClientForm() {
         $user = factory(App\User::class)->create();
-
+        /* Inda Kreso*/                         /* Inda Kreso*/
         $this->actingAs($user)
         ->visit('/client/create')
             ->withSession(['foo' => 'bar'])
@@ -59,7 +59,7 @@ class FormsTest extends TestCase
             ->type('Inda', 'mail[name]')
             ->type('Subject', 'mail[subject]')
             ->type('content','mail[content]')
-            ->press('Submit')
+            ->press('Submit')                           /* Inda Kreso*/
             ->seePageIs('/mails');
     }
 
@@ -70,11 +70,35 @@ class FormsTest extends TestCase
             ->visit('/campaign/create')
             ->withSession(['foo' => 'bar'])
             ->type('Inda', 'campaign[name]')
-            ->type('content','campaign[content]')
+            ->type('content','campaign[content]')                   /* Inda Kreso*/
             ->press('Save')
             ->seePageIs('/campaigns');
     }
 
+    public function testNewMailingListForm() {
+        $user = factory(App\User::class)->create();
+
+        $this->actingAs($user)
+            ->visit('/mailinglist/create')
+            ->withSession(['foo' => 'bar'])
+            ->type('Inda', 'mailinglist[name]')
+            ->press('Submit')
+            ->seePageIs('/mailinglists');           /* Inda Kreso*/
+    }
+
+    /*
+    public function testNewScheduleForm() {
+        $user = factory(App\User::class)->create();
+
+        $this->actingAs($user)
+            ->visit('/schedule/create')
+            ->withSession(['foo' => 'bar'])
+            ->select(4, 'campaignschedule[campaign_id]')
+            //->select(1,'campaignschedule[mailing_list_id]')
+            ->press('Submit')
+            ->seePageIs('/mailinglists');
+    }
+    */
 
 
 
