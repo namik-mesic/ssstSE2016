@@ -102,11 +102,29 @@ class MailingListController extends Controller
         if($input['id'])
 		{
             $mailinglist = MailingList::find($input['id']);
-            $mailinglist ->update($input);
+            $mailinglist -> update($input);
 			
-			$mailinglist->clients()->sync($clients);
+			$mailinglist -> clients()->sync($clients);
 			
             return redirect()->route('mailinglist.view', $input['id']);
+        }
+
+        $validator = \Validator::make($input, MailingList::$rules);
+
+        if($validator->fails()){
+            if($input['id']){
+                return redirect()->route('mailinglist.edit', [$input['id']])->withErrors($validator)->withInput();
+            }
+
+            return redirect()->route('mailinglist.create')->withErrors($validator)->withInput();
+        }
+
+
+        if($input['id']){
+            $mail = MailingList::find($input['id']);
+            $mail ->update($input);
+
+            return redirect()->route('mailinglists');
         }
 
         $mailinglist = new MailingList;

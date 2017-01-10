@@ -25,4 +25,9 @@ class MailingList extends Model
         return $this->hasMany('App\Client', 'user_id', 'id');
     }
 
+    public static $rules = array(
+        'name' => 'required|min:2',
+        'user_id'  => 'required'
+    );
+
 };
