@@ -1,5 +1,6 @@
 <!-- Original concept: Namik Mesic-->
-<!-- Tweaked by Adem Hadrovic -->
+<!-- Adapted by Adem Hadrovic -->
+<!--Optimized and edited by Iva Jesenkovic-->
 @extends('layouts.app')
 
 @section('content')
