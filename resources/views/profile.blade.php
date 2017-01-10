@@ -139,7 +139,10 @@
                     <tr>
                         <td></td>
                         <td>
+                            @if(Auth::user() -> username == $user['username'])
                             <input type="submit" name="submit" class="btn btn success" value="Change privacy" />
+                            @else
+                            @endif
                         </td>
                     </tr>
                     </tbody>
