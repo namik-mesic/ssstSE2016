@@ -11,25 +11,25 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function () { /* Damir Cengic */
     return view('main');
 });
 
-Route::get('/help', function () {
+Route::get('/help', function () { /* Damir Cengic */
     return view('help');
 });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/home', 'HomeController@index'); /* Damir Cengic */
 
 
 
-Route::get('auth/login', function () {
+Route::get('auth/login', function () { /* Damir Cengic */
     return view('login');
 });
 
-Route::get('auth/register', function () {
+Route::get('auth/register', function () { /* Damir Cengic */
     return view('register');
 });
 

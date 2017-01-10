@@ -1,3 +1,5 @@
+<!--Damir Cengic-->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -109,7 +111,7 @@
                                 <p id="password-strength-text"></p>
 
 <style type="text/css">meter {
-  /* Reset the default appearance */
+ 
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;

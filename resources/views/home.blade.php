@@ -1,3 +1,5 @@
+<!-- Dino Kodro -->
+
 @extends('layouts.app')
 
 @section('content')
@@ -9,7 +11,7 @@
             </div>
 
             <div class="panel-body">
-                You are logged in!
+                You are now logged in!
             </div>
         </div>
     </div>

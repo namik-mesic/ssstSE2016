@@ -1,3 +1,5 @@
+ <!-- Damir Čengić -->
+
   <div class="col-md-12">
  <div class="box box-widget widget-user">
             <!-- Add the bg color to the header using any of the bg-* classes -->

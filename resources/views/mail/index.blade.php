@@ -1,3 +1,5 @@
+<!-- Dino Kodro and Damir Čengić -->
+
 @extends( 'layouts.app' )
 @section( 'content' )
 
@@ -44,4 +46,4 @@
     </div>
     <!-- /.box -->
 
-@stop/* Inda Kreso*/
+@stop

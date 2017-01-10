@@ -1,5 +1,5 @@
 
-<!-- Damir Čengić -->
+<!-- Damir Čengić  and Dino Kodro-->
 
 
 <!-- Left side column. contains the logo and sidebar -->
