@@ -139,7 +139,7 @@
                     <tr>
                         <td></td>
                         <td>
-                            <button type="button">Change privacy</button>
+                            <input type="submit" name="submit" class="btn btn success" value="Change privacy" />
                         </td>
                     </tr>
                     </tbody>

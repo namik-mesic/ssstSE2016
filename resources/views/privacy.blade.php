@@ -54,16 +54,10 @@
                                         <button type="button">Change visibility</button>
                                     </td>
                                 </tr>
-
-
                                 <tr>
+                                    <td></td>
                                     <td>
-                                        <strong>
-                                            Role
-                                        </strong>
-                                    </td>
-                                    <td class="text-primary">
-                                        <button type="button">Change visibility</button>
+                                        <input type="submit" name="submit" class="btn btn success" value="Submit" />
                                     </td>
                                 </tr>
                                 </tbody>
