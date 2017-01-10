@@ -136,6 +136,12 @@
                             <a href="mailto: {{$user -> email}} ">{{$user->email }}</a>
                         </td>
                     </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button type="button">Change privacy</button>
+                        </td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
