@@ -32,15 +32,7 @@
 						</tr>
 						@endforeach
 					</tbody>
-                <tfoot>
-					<tr>
-						<th>Email</th>
-						<th>Name</th>
-						<th>Surname</th>
-						<th>Date Added</th>
-						<th>Edit/Delete</th>
-					</tr>
-                </tfoot>
+
 
               </table>
               </br>
