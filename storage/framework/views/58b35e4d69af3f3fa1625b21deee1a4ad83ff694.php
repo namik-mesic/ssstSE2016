@@ -1,3 +1,6 @@
+<!--Created by Adem Hadrovic. Tweaked by Tarik Mutapcic-->
+
+
 <?php $__env->startSection('head'); ?>
     <!--
     <script src="http://maps.google.com/maps/api/js?sensor=false"

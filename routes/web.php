@@ -1,8 +1,7 @@
-<!-- Created by Adem Hadrovic and Tarik Mutapcic-->
-
 <?php
 
 /*
+ * Created by Adem Hadrovic and Tarik Mutapcic
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------

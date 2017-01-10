@@ -42,8 +42,19 @@
                     <label for="type">
                         Place Type
                     </label>
-                    <!-- Will change to limited selection of choices -->
-                    <input type="text" id="type" placeholder="Type" name="type" class="form-control">
+
+                    <!-- Limited choices done by Iva -->
+                    <!--<input type="text" id="type" placeholder="Type" name="type" class="form-control">-->
+                    <select id = "type" name = "type" class="form-control">
+                        <option value="food">food</option>
+                        <option value="drink">drink</option>
+                        <option value="entertainment">entertainment</option>
+                        <option value="hotel">hotel</option>
+                        <option value="bank">bank</option>
+                        <option value="parking">parking</option>
+                        <option value="shopping">shopping</option>
+                        <option value="worship">worship</option>
+                    </select>
                 </div>
 
                 <button role="button" class="btn btn-primary">

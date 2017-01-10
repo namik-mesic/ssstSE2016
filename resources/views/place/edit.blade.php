@@ -15,35 +15,45 @@
                     <label for="name">
                         Place Name
                     </label>
-                    <input type = "text" name="name" id="name" class="form-control">{{ $place->name }}>
+                    <input type = "text" name="name" id="name" class="form-control" value = "{{ $place->name }}">
                 </div>
 
                 <div class="form-group">
                     <label for="vicinity">
                         Place Address
                     </label>
-                    <input type = "text" name="vicinity" maxlength="100" id="vicinity" class="form-control">{{ $place->vicinity }}>
+                    <input type = "text" name="vicinity" maxlength="100" id="vicinity" class="form-control" value = "{{ $place->vicinity }}">
                 </div>
 
                 <div class="form-group">
                     <label for="lat">
                         Place Latitude
                     </label>
-                    <input type="number" step = "0.0000001" id="lat" placeholder="latitude" name="lat" class="form-control">{{ $place->lat }}>
+                    <input type="number" step = "0.0000001" id="lat" placeholder="latitude" name="lat" class="form-control" value = "{{ $place->lat }}">
                 </div>
 
                 <div class="form-group">
                     <label for="longitude">
                         Place Longitude
                     </label>
-                    <input type="number" step = "0.0000001" id="lng" placeholder="longitude" name="lng" class="form-control">{{ $place->lng }}>
+                    <input type="number" step = "0.0000001" id="lng" placeholder="longitude" name="lng" class="form-control" value = "{{ $place->lng }}">
                 </div>
 
                 <div class="form-group">
                     <label for="type">
                         Place Type
                     </label>
-                    <input type="text" id="type" name="type" class="form-control" value="{{ $place->type }}">
+
+                    <select id = "type" name = "type" class="form-control" placeholder="{{ $place->type }}">
+                        <option value="food">food</option>
+                        <option value="drink">drink</option>
+                        <option value="entertainment">entertainment</option>
+                        <option value="hotel">hotel</option>
+                        <option value="bank">bank</option>
+                        <option value="parking">parking</option>
+                        <option value="shopping">shopping</option>
+                        <option value="worship">worship</option>
+                    </select>
                 </div>
 
                 <button role="button" class="btn btn-primary">
