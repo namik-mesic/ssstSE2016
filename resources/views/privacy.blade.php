@@ -3,12 +3,7 @@
 
 @section('content')
 
-    /*
-    * after clicking the button
-    * isHidden variable for the clicked field
-    * is supposed to change value and will/will not
-    * be displayed at profile page
-    */
+    
 
     <div class="container">
         <div class="panel panel-default">
