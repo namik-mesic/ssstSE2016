@@ -3,6 +3,13 @@
 
 @section('content')
 
+    /*
+    * after clicking the button
+    * isHidden variable for the clicked field
+    * is supposed to change value and will/will not
+    * be displayed at profile page
+    */
+
     <div class="container">
         <div class="panel panel-default">
             @if (count($errors) > 0)
@@ -28,7 +35,7 @@
                                         </strong>
                                     </td>
                                     <td class="text-primary">
-                                        <button type="button">Change</button>
+                                        <button type="button">Change visibility</button>
                                     </td>
                                 </tr>
 
@@ -39,7 +46,7 @@
                                         </strong>
                                     </td>
                                     <td class="text-primary">
-                                        <button type="button">Change</button>
+                                        <button type="button">Change visibility</button>
                                     </td>
                                 </tr>
                                 <tr>
@@ -49,7 +56,7 @@
                                         </strong>
                                     </td>
                                     <td class="text-primary">
-                                        <button type="button">Change</button>
+                                        <button type="button">Change visibility</button>
                                     </td>
                                 </tr>
 
@@ -61,7 +68,7 @@
                                         </strong>
                                     </td>
                                     <td class="text-primary">
-                                        <button type="button">Change</button>
+                                        <button type="button">Change visibility</button>
                                     </td>
                                 </tr>
                                 </tbody>
