@@ -1,3 +1,7 @@
+
+<!-- Damir Čengić -->
+
+
 <!-- Left side column. contains the logo and sidebar -->
         <aside class="main-sidebar">
 
@@ -36,8 +40,8 @@
                             <li><a href="../schedule/archived"><i class="fa fa-calendar-check-o"></i>Archived schedules</a></li>
                          </ul>
                     </li>
-                        <!-- Inda Kreso  -->
-                    <li><a href="/campaigns"><i class="fa fa-bars"></i> Campaigns</a></li><!-- Inda Kreso  -->
+                       
+                    
                     <li><a href="/mailinglists"><i class="fa fa-address-book"></i><span>Mailing lists</span></a></li>
                     <li><a href="/clients"><i class="fa fa-users"></i><span>Clients</span></a></li>
                     <li><a name="Help" href="/help"><i class="fa fa-life-ring"></i><span>Help</span></a></li>
