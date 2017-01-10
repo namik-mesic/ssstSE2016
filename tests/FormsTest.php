@@ -50,6 +50,34 @@ class FormsTest extends TestCase
             ->seePageIs('/clients');
     }
 
+    public function testNewMailForm() {
+        $user = factory(App\User::class)->create();
+
+        $this->actingAs($user)
+            ->visit('/mail/create')
+            ->withSession(['foo' => 'bar'])
+            ->type('Inda', 'mail[name]')
+            ->type('Subject', 'mail[subject]')
+            ->type('content','mail[content]')
+            ->press('Submit')
+            ->seePageIs('/mails');
+    }
+
+    public function testNewCampaignForm() {
+        $user = factory(App\User::class)->create();
+
+        $this->actingAs($user)
+            ->visit('/campaign/create')
+            ->withSession(['foo' => 'bar'])
+            ->type('Inda', 'campaign[name]')
+            ->type('content','campaign[content]')
+            ->press('Save')
+            ->seePageIs('/campaigns');
+    }
+
+
+
+
 }
 
 
