@@ -59,6 +59,24 @@ class CampaignScheduleController extends Controller
         $input = $request['campaignschedule'];
         $campaignschedule = new CampaignSchedule;
 
+        $validator = \Validator::make($input, CampaignSchedule::$rules);
+
+        if($validator->fails()){
+            if($input['id']){
+                return redirect()->route('schedule.edit', [$input['id']])->withErrors($validator)->withInput();
+            }
+
+            return redirect()->route('schedule.create')->withErrors($validator)->withInput();
+        }
+
+
+        if($input['id']){
+            $mail = CampaignSchedule::find($input['id']);
+            $mail ->update($input);
+
+            return redirect()->route('schedules');
+        }
+
         $campaignschedule->create($input);
 
         return redirect() -> route('schedules');

@@ -14,6 +14,11 @@ class CampaignSchedule extends Model
 	{
 		return $this->belongsTo('App\Campaign');
 	}
+
+    public static $rules = array(
+        'mailing_list_id' => 'required',
+        'campaign_id'  => 'required'
+    );
 	
 	public function mailingList()
 	{
