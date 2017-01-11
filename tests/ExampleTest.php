@@ -1,7 +1,9 @@
-<!-- Original Concept: Tarik Mutapcic -->
-<!-- Adjusted by: Adem Hadrovic-->
-<?php
 
+<?php
+/**
+    Original Concept: Tarik Mutapcic
+    Adjusted by: Adem Hadrovic
+ */
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;

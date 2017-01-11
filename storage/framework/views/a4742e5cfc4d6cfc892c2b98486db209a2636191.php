@@ -1,3 +1,6 @@
+<!--Created by Adem Hadrovic-->
+
+
 <?php $__env->startSection('head'); ?>
     <!--
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-jpP1e6mNwMTQj_6tcR1Okyg4gSczd6w&libraries=places"></script>
@@ -36,7 +39,7 @@
                     var service = new google.maps.places.PlacesService(map);
                     service.nearbySearch({
                         location: pos,
-                        radius: 20000,
+                        radius: 2000,
                         type: ['night_club'],
                         type: ['cafe'],
                         type: ['bar']

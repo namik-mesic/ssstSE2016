@@ -12,21 +12,19 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-class CreatePlaceTest extends TestCase
+class DeletePlaceTest extends TestCase
 {
     use DatabaseTransactions;
 
-    function testValidCreation()
+    function testValidDeletion()
     {
-        $this->post('places', [
-            'name' => 'Begova Dzamija',
-            'vicinity' => 'Hrasnicka Cesta 3a',
-            'lat' => 43.8238573,
-            'lng' => 18.306216,
-            'type' => 'worship'
-        ]);
 
-        $this->seeInDatabase('places', [
+
+        DB::table('places')->where('name', 'Begova Dzamija')->delete();
+
+
+
+        $this->missingFromDatabase('places', [
             'name' => 'Begova Dzamija',
             'type' => 'worship'
         ]);
