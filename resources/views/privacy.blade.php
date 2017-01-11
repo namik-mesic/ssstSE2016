@@ -32,6 +32,9 @@
                                     <td class="text-primary">
                                         <li class="active"><a href="{{ action('PrivacyController@privacy') }}">Change visibility</a></li>
                                     </td>
+                                    <td>
+                                        private/public
+                                    </td>
                                 </tr>
 
                                 <tr>
@@ -43,6 +46,9 @@
                                     <td class="text-primary">
                                         <li class="active"><a href="{{ action('PrivacyController@privacy') }}">Change visibility</a></li>
                                     </td>
+                                    <td>
+                                        private/public
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>
@@ -52,6 +58,9 @@
                                     </td>
                                     <td class="text-primary">
                                         <li class="active"><a href="{{ action('PrivacyController@privacy') }}">Change visibility</a></li>
+                                    </td>
+                                    <td>
+                                        private/public
                                     </td>
                                 </tr>
 
