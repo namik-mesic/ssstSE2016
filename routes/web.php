@@ -63,6 +63,8 @@ Route::get('/users/{id}', 'SearchController@show');
 
 Route::get('/privacy', 'PrivacyController@privacy');
 
+Route::get('/privacy', 'UpdatePrivacyController@privacy');
+
 
 
 
