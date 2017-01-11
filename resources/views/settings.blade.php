@@ -1,6 +1,5 @@
- @extends ('layouts.app')
 
-
+@extends ('layouts.app')
 @section ('content')
  <!-- Damir Čengić -->
 
@@ -26,8 +25,8 @@
                 <!-- /.col -->
                 <div class="col-sm-4 border-right">
                   <div class="description-block">
-                    <h3 class="widget-user-username">{{$name}} {{$lastname}}</h3>
-              <h5 class="widget-user-desc">Golden Member</h5>
+                    <h2 class="widget-user-username">{{$name}} {{$lastname}}</h2>
+              <h4 class="widget-user-desc">SETTINGS</h4>
                   </div>
                   <!-- /.description-block -->
                 </div>

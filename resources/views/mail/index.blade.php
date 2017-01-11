@@ -18,7 +18,8 @@
                     <th>Name</th>
                     <th>Content</th>
                     <th>Created at</th>
-					<th>Edit/Delete</th>
+					<th>Edit</th>
+                    <th>Delete</th>
                     
 
                 </tr>

@@ -3,7 +3,7 @@
 
 <div class="box">
 	<div class="box-header">
-		<h3 class="box-title">Clients</h3>
+		<h3 class="box-title"> <i class="fa fa-users"> Clients </i></h3>
 
 	</div>
 		<!-- /.box-header -->

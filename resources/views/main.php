@@ -70,6 +70,10 @@
                     <li>
                         <a href="/register">register</a>
                     </li>
+
+                     <li>
+                        <a href="/help">Help</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

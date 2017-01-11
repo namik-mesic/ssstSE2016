@@ -3,7 +3,7 @@
 
     <div class="box">
         <div class="box-header">
-            <h3 class="box-title">Archived Scheduled Campaigns </h3>
+            <h3 class="box-title"><i class="fa fa-calendar-check-o"> Archived Scheduled Campaigns </i> </h3>
 
         </div>
         <!-- /.box-header -->

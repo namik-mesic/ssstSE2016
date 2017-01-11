@@ -24,10 +24,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index'); 
 
+Route::get('/dashboard', 'DashboardController@index');  // Damir Cengic
 
 Route::get('/settings', 'SettingsController@index'); // Damir Cengic
 
-
+Route::get('/help', function () { /* Damir Cengic */
+    return view('/help');
+});
 
 Route::get('auth/login', function () { /* Damir Cengic */
     return view('login');
@@ -37,7 +40,7 @@ Route::get('auth/register', function () { /* Damir Cengic */
     return view('register');
 });
 
-Route::get('dashboard','mailController@index');
+
 
 /*
  * Sabahudin Kodro

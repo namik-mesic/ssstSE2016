@@ -35,4 +35,19 @@ CKEDITOR.editorConfig = function( config ) {
 
 	// Simplify the dialog windows.
 	config.removeDialogTabs = 'image:advanced;link:advanced';
+
+	CKEDITOR.editorConfig = function( config ) {
+  config.extraPlugins = 'imageuploader';
+};
+
+	config.skin = 'moono-dark';
+	config.extraPlugins = 'panel';
+	config.extraPlugins = 'floatpanel';
+	config.extraPlugins = 'panelbutton';
+	config.extraPlugins = 'colorbutton';
+	//config.extraPlugins = 'clipboard';
+	//config.extraPlugins = 'imageuploader';
+
+
+
 };

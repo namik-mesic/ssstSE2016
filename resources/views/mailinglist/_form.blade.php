@@ -6,7 +6,7 @@
 
 
     <div class="form-group {{$errors->first('name')  ? 'has-error' : ''}}">
-        <label>Name</label>
+        <label>List Name</label>
         <input type="text" value="{{$mailinglist->name}}" name="mailinglist[name]" class="form-control" />
         @if($errors->first('name'))
             <span>{{$errors->first('name')}}</span>
@@ -14,7 +14,7 @@
     </div>
 	
 	<div class="form-group">
-		<label>Clients</label>
+		<label>Select Clients</label>
 		@foreach($clients as $client)
 			<div class="form-input">
 				 <input type="checkbox" name="clients[]" value="{{$client->id}}" {{(in_array($client->id, $mailinglistClients)) ? 'checked' : ''}}> {{$client->fname}} {{$client->lname}}
@@ -23,6 +23,6 @@
 	</div>
 	
     <div class="form-group">
-        <input type="submit" value="Submit" class="btn btn-default" />
+        <input type="submit" value="Create" class="btn btn-success" />
     </div>
 </form>
