@@ -132,7 +132,7 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                            @if(Auth::user()->isAdmin == 1)
+                            @if($user->isAdmin == 1)
                                 Admin
                             @else
                                  Member
