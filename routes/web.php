@@ -23,10 +23,12 @@ use App\User;
 Route::get('/home', 'HomeController@index');
 
 Route::get('/update-profile', 'UserController@profileView');
-Route::post('/update-profile', 'UserController@profileUpdate');
-Route::get('/add-picture', 'UserController@addPictureView');
-Route::post('/add-picture', 'UserController@addPicture');
 
+Route::post('/update-profile', 'UserController@profileUpdate');
+
+Route::get('/add-picture', 'UserController@addPictureView');
+
+Route::post('/add-picture', 'UserController@addPicture');
 
 Route::get('/destroy', 'testControl@destroy');
 
@@ -35,6 +37,7 @@ Route::post('/destroy', 'testControl@destroy');
 Route::get('/confirm', 'confirmControl@confirmationForm');
 
 Auth::routes();
+
 Route::get('profile', 'ProfileController@index');
 
 /*
