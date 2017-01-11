@@ -82,7 +82,7 @@
                 <div class="col-md-3">
                 <ul>
                 <li>One special character</li>
-                <li>8 characters minimum</li>
+                <li>6 characters minimum*</li>
                 </ul>
                 </div>
                 <div class="col-md-6">
