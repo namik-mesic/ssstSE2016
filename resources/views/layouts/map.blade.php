@@ -14,9 +14,7 @@
 
     <link rel="shortcut icon" href="{{URL::asset('graphics/icons/map/map-pin.png')}}"  type="image/x-icon" />
 
-
     <link href='http://fonts.googleapis.com/css?family=Dosis:500,600|Arvo|La+Belle+Aurore' rel='stylesheet' type='text/css'>
-
 
     <link rel="stylesheet" href="css/mapstyles.css">
 
@@ -29,10 +27,8 @@
 
     <!-- JS-->
     <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>
-    <!--<script src="js/libs/modernizr-2.6.2.min.js"></script>-->
     <script type="text/javascript"></script>
     <script type="text/javascript">
-        //<![CDATA[
         var customIcons = {
             restaurant: {
                 icon: 'http://labs.google.com/ridefinder/images/mm_20_blue.png',
@@ -50,6 +46,7 @@
                 infoWindow.open(map, marker);
             });
         }
+
         function downloadUrl(url, callback) {
             var request = window.ActiveXObject ?
                     new ActiveXObject('Microsoft.XMLHTTP') :
@@ -64,29 +61,24 @@
             request.send(null);
         }
         function doNothing() {}
-        //]]>
 
     </script>
 
-
     <!-- end JS-->
-
 
     @yield('head')
 </head>
 
 <body onload = "initMap()">
 
-
-
-<!-- header area -->
+<!-- Header area -->
 <header class="clearfix background-lightgrey">
     <div class="wrapper">
         <div id="banner">
             <div id="logo"><a href="/map"><img src= "{{URL::asset('graphics/icons/map/pin.png')}}" alt="logo" /></a></div>
         </div>
 
-        <!-- main navigation -->
+        <!-- Main navigation -->
         <nav id="topnav" role="navigation">
             <div class="menu-toggle">Menu</div>
             <ul class="srt-menu" id="menu-main-navigation">
@@ -94,33 +86,32 @@
                 <li><a href="#information">Information</a></li>
 
             </ul>
-        </nav><!-- end main navigation -->
+        </nav>
+        <!-- end main navigation -->
     </div>
-</header><!-- end header -->
+</header>
+<!-- end header -->
 
 
 <!-- hero area -->
 <section id="hero" class="background-greyish clearfix">
     <div class="wrapper">
 
-
+        <!-- this api call allows the places to be displayed -->
         <div id="map"></div>
         <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOBHDxuxfq2gyt3qkh5Llzz_YQ7rodgZc&libraries=places&callback=initMap">
-            // don't touch this ^^^
-            // this api call allows the places to be displayed
         </script>
 
         @yield("mapbody")
 
+    </div>
+    <!-- end .wrapper div -->
+</section>
+<!-- end hero area -->
 
 
-
-    </div><!-- end .wrapper div -->
-</section><!-- end hero area -->
-
-
-<!-- find section -->
+<!-- Find section -->
 <section id="find">
     <div class="wrapper centered-text clearfix">
         <div class="gridcontainer clearfix">
@@ -222,7 +213,8 @@
         </div>
 
     </div>
-</section><!-- #end content area -->
+</section>
+<!-- #end content area -->
 
 
 <!-- information section -->
@@ -241,15 +233,6 @@
                         <div class="panel-heading">
                             <ul class="nav nav-tabs">
                                 <li class="active"><a href="#tab1default" data-toggle="tab">Info</a></li>
-                                <!--
-                                <li class="dropdown">
-                                    <a href="#" data-toggle="dropdown">Drop Me <span class="caret"></span></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#tab4default" data-toggle="tab">Favourite locations</a></li>
-                                        <li><a href="#tab5default" data-toggle="tab">Saved locations</a></li>
-                                    </ul>
-                                </li>
-                                -->
                             </ul>
                         </div>
                         <div class="panel-body">
@@ -271,20 +254,16 @@
     </div>
     </br>
 
-</section><!-- #end information section -->
-
-
-
-
-
+</section>
+<!-- #end information section -->
 
 <!-- footer area -->
 <footer class="background-grey">
 
     <div id="attribution" class="wrapper clearfix" style="color:#666; font-size:11px;"><p>@Embedded Map 2017</p></div>
 
-</footer><!-- #end footer area -->
-
+</footer>
+<!-- #end footer area -->
 
 <!-- jQuery -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -350,13 +329,8 @@
     };// when page is reload, it scrolles to the top
 </script>
 
-
-
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">//scrolling to the top arrow</script>
 <script type="text/javascript" src="http://arrow.scrolltotop.com/arrow13.js">//scrolling to the top arrow</script>
-
 
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>

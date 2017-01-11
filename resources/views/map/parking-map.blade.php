@@ -19,17 +19,22 @@
                         lng: position.coords.longitude
                     };
 
-            map = new google.maps.Map(document.getElementById('map'), {
+                    <!-- Calls the API for to create the map -->
+                    map = new google.maps.Map(document.getElementById('map'), {
                 center: pos,
                 mapTypeControl: false,
                 streetViewControl: false,
                 zoom: 15
             });
 
-                    // {map:map} will display the "you are here" bubble
+                    <!-- {map:map} will display the "you are here" bubble -->
                     infoWindow = new google.maps.InfoWindow({content:"You are here",map:map, position: pos});
+
+                    <!-- create an info window for displaying location names -->
                     infowindow = new google.maps.InfoWindow();
 
+
+            <!-- The function that calls the API for a particular type of marker -->
             var service = new google.maps.places.PlacesService(map);
             service.nearbySearch({
                 location: pos,
@@ -37,22 +42,19 @@
                 type: ['parking']
             }, callback,setSearchType("parking"));
 
-            //service = new google.maps.places.PlacesService(map);
-            //service.nearbySearch(request, callback);
-
                 }, function() {
                     handleLocationError(true, infoWindow, map.getCenter());
                 });
             }
 
             else {
-                // If browser doesn't support Geolocation,
-                // set location to default (sebilj)
+
+                <!-- If browser doesn't support Geolocation, set location to default (sebilj) -->
                 var coordinates = {lat: 43.860702, lng: 18.429932};
                 handleLocationError(false, infoWindow, coordinates);
-
             }
         }
+
     </script>
     <script type="text/javascript" src ="{{URL::asset('js/mapFunctions.js')}}"></script>
 
