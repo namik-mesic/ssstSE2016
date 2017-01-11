@@ -24,7 +24,7 @@
                 </div>
                 <div class="col-md-12">
                 <div class="error-actions">
-                    <a href="/main" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></br></span>
+                    <a href="/" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></br></span>
                         Take Me Home </a><a href="/help" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-envelope"></span> Contact Support </a>
                 </div>
                 </div>
