@@ -46,7 +46,7 @@
                     <li><a href="/clients"><i class="fa fa-users"></i><span>Clients</span></a></li>
                     <li><a name="settings" href="/settings"><i class="fa fa-cog"></i><span>Settings</span></a></li>
                     <li><a name="Help" href="/help"><i class="fa fa-life-ring"></i><span>Help</span></a></li>
-                    <li><a href="#"><i class="fa fa-sign-out"></i><span>Log Out</span></a></li>
+                    <li><a href="logout"><i class="fa fa-sign-out"></i><span>Log Out</span></a></li>
                 </ul><!-- /.sidebar-menu -->
             </section>
             <!-- /.sidebar -->

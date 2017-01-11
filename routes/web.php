@@ -70,6 +70,8 @@ Route::post('schedule/store', ['as' => 'schedule.store', 'uses' => 'CampaignSche
 Route::get('schedule/send/{id}', ['as' => 'schedule.send', 'uses' => 'CampaignScheduleController@send']);
 Route::get('schedule/delete/{id}', ['as' => 'schedule.delete', 'uses' => 'CampaignScheduleController@delete']);
 
+Route::get('logout', 'LogOutController@getSignOut');
+
 /*
  * Sabahudin Kodro
  */
