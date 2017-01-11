@@ -64,6 +64,7 @@
                 </label>
             </form>
         @endif
+        <div class="img"><img src="{{asset('images/gazda.png')}}"> </div>
     </div>
 
     <img src="{{url($user->imgPath)}}" alt="" style="height: 150px; width: 150px; float: left; border-radius: 50%; margin-left: 1cm; margin-top: 0.5cm">
