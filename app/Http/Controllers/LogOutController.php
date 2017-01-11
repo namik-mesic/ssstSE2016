@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 class LogOutController extends Controller
 {
 
+    /**
+     * LogOutController constructor.
+     */
     public function __construct()
     {
         $this->middleware('auth');
