@@ -82,7 +82,11 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                            {{ $user->name }}
+                            @if ($user->isNameHidden)
+                                This information is private
+                            @elseif ($user->isNameHidden == null)
+                                {{$user->name }}
+                            @endif
                         </td>
                     </tr>
 

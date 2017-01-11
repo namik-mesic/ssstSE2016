@@ -30,7 +30,14 @@
                                         </strong>
                                     </td>
                                     <td class="text-primary">
-                                        <button type="button">Change visibility</button>
+                                        <li class="active"><a href="{{ action('UpdatePrivacyController@privacy') }}">Change visibility</a></li>
+                                    </td>
+                                    <td>
+                                        @if (Auth::user() -> isNameHidden == null)
+                                            public
+                                        @else
+                                            private
+                                        @endif
                                     </td>
                                 </tr>
 
@@ -41,7 +48,14 @@
                                         </strong>
                                     </td>
                                     <td class="text-primary">
-                                        <button type="button">Change visibility</button>
+                                        <li class="active"><a href="{{ action('UpdatePrivacyController@privacy') }}">Change visibility</a></li>
+                                    </td>
+                                    <td>
+                                        @if (Auth::user() -> isUsernameHidden == null)
+                                            public
+                                        @else
+                                            private
+                                        @endif
                                     </td>
                                 </tr>
                                 <tr>
@@ -51,15 +65,17 @@
                                         </strong>
                                     </td>
                                     <td class="text-primary">
-                                        <button type="button">Change visibility</button>
+                                        <li class="active"><a href="{{ action('UpdatePrivacyController@privacy') }}">Change visibility</a></li>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td></td>
                                     <td>
-                                        <input type="submit" name="submit" class="btn btn success" value="Submit" />
+                                        @if (Auth::user() -> isHidden == null)
+                                            public
+                                        @else
+                                            private
+                                        @endif
                                     </td>
                                 </tr>
+
                                 </tbody>
                             </table>
                         </div>
