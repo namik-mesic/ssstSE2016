@@ -21,18 +21,16 @@
                 </thead>
                 <tbody>
 					@foreach ($campaignschedules as $campaignschedule)
-						<tr>
+						<tr>@if ($campaignschedule -> status == 'pending')
 							<td>{{$campaignschedule->mail->name}}</td>
                             <td>{{$campaignschedule->mail->subject}}</td>
 							<td>{{$campaignschedule->mailingList->name}}</td>
 							<td>{{$campaignschedule->status}}</td>
 							<td>
-								@if($campaignschedule->status == 'pending')
-									<a href="{{route('schedule.send', $campaignschedule->id)}}" class="btn btn-primary"><i class="fa fa-paper-plane"></i></a>
-								@endif
-							
+                                <a href="{{route('schedule.send', $campaignschedule->id)}}" class="btn btn-primary"><i class="fa fa-paper-plane"></i></a>
                                 <a href="{{route('schedule.delete', [$campaignschedule->id])}}" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
                             </td>
+                            @endif
 						</tr>
 					@endforeach
                 </tbody>
