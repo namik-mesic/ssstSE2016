@@ -16,7 +16,7 @@ class DeleteIsHiddenUsernameField extends Migration
         /*
          * The username should not be set to private
          * so we don't need this field - Dalila*/
-        
+
         Schema::table('users', function (Blueprint $table) {
             $table->dropColumn('isUsernameHidden');
         });
