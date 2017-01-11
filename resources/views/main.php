@@ -56,7 +56,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="/#download">Home</a>
+                        <a class="page-scroll" href="/">Home</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#features">Features</a>
@@ -82,7 +82,7 @@
     </nav>
 
     <header>
-        <div class="container">
+        <div class="container" id="top1">
             <div class="row">
                 <div class="col-sm-7">
                     <div class="header-content">
