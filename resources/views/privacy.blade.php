@@ -34,30 +34,13 @@
                                     </td>
                                     <td>
                                         @if (Auth::user() -> isNameHidden == null)
-                                            public
+                                            Public
                                         @else
-                                            private
+                                            Private
                                         @endif
                                     </td>
                                 </tr>
 
-                                <tr>
-                                    <td>
-                                        <strong>
-                                            Username
-                                        </strong>
-                                    </td>
-                                    <td class="text-primary">
-                                        <li class="active"><a href="{{ action('UpdatePrivacyController@privacy') }}">Change visibility</a></li>
-                                    </td>
-                                    <td>
-                                        @if (Auth::user() -> isUsernameHidden == null)
-                                            public
-                                        @else
-                                            private
-                                        @endif
-                                    </td>
-                                </tr>
                                 <tr>
                                     <td>
                                         <strong>
@@ -69,9 +52,9 @@
                                     </td>
                                     <td>
                                         @if (Auth::user() -> isHidden == null)
-                                            public
+                                            Public
                                         @else
-                                            private
+                                            Private
                                         @endif
                                     </td>
                                 </tr>
