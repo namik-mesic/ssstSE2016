@@ -1,3 +1,4 @@
+<!-- HTML by Damir Cengic, PHP by Sabahudin Kodro-->
 <form action="{{route('mailinglist.store')}}" method="POST">
     <input type="hidden" name="_token" value="{{csrf_token()}}">
 

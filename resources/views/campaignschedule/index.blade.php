@@ -1,3 +1,4 @@
+<!-- HTML by Damir Cengic, PHP by Sabahudin Kodro-->
 @extends( 'layouts.app' )
 @section( 'content' )
 
@@ -28,7 +29,7 @@
 							<td>{{$campaignschedule->status}}</td>
 							<td>
                                 <a href="{{route('schedule.send', $campaignschedule->id)}}" class="btn btn-primary"><i class="fa fa-paper-plane"></i></a>
-                                <a href="{{route('schedule.delete', [$campaignschedule->id])}}" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
+   <!-- Delete by Inda Kreso--> <a href="{{route('schedule.delete', [$campaignschedule->id])}}" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
                             </td>
                             @endif
 						</tr>

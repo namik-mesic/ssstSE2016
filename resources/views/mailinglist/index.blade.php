@@ -1,3 +1,4 @@
+<!-- HTML by Damir Cengic, PHP by Sabahudin Kodro-->
 @extends( 'layouts.app' )
 @section( 'content' )
 
@@ -24,7 +25,7 @@
                         <td><i class="fa fa-user"> {{$clients[$index]}} </i></td>
                         <td>
                             <a href="{{route('mailinglist.edit', [$mailinglist->id])}}" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
-                            <a href="{{route('mailinglist.delete', [$mailinglist->id])}}" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
+<!-- Delete by Inda Kreso--><a href="{{route('mailinglist.delete', [$mailinglist->id])}}" class="btn btn-danger"> <i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
                 @endforeach

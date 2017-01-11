@@ -1,3 +1,4 @@
+<!-- HTML by Damir Cengic, PHP by Sabahudin Kodro-->
 @extends( 'layouts.app' )
 @section( 'content' )
 
@@ -27,7 +28,7 @@
 							<td>{{$client->created_at}} </td>
 							<td>
 								<a href="{{route('client.edit', [$client->id])}}" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
-								<a href="{{route('client.delete', [$client->id])}}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+   <!-- Delete by Inda Kreso--> <a href="{{route('client.delete', [$client->id])}}" class="btn btn-danger"><i class="fa fa-trash"></i></a>
 							</td>
 						</tr>
 						@endforeach
