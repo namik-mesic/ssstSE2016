@@ -49,4 +49,6 @@
     </div>
     <!-- /.box -->
 
+    <script>$("#schedule").addClass('active');</script>
+
 @stop

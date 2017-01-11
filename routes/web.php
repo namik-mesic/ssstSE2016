@@ -11,37 +11,28 @@
 |
 */
 
-Route::get('/', function () { /* Damir Cengic */
+Route::get('/', function () { //damir cengic
     return view('main');
 });
 
-Route::get('/help', function () { /* Damir Cengic */
-    return view('help');
-});
+
 
 
 Auth::routes();
 
-Route::get('logout', 'LogOutController@getSignOut'); // Route logout Sabahudin Kodro
+/* Damir Cengic */
+Route::get('/logout', ['as' => 'logout', 'uses' => 'LogOutController@getSignOut']);
+Route::get('/dashboard', ['as' => 'dashboard', 'uses' => 'DashboardController@index']);
+Route::get('/settings', ['as' => 'settings', 'uses' => 'SettingsController@index']); 
+Route::post('/settings/store', ['as' => 'settings.store', 'uses' => 'SettingsController@store']);// Sabahudin Kodro
 
-Route::get('/home', 'HomeController@index'); 
-
-Route::get('/dashboard', 'DashboardController@index');  // Damir Cengic
-
-Route::get('/settings', ['as' => 'settings', 'uses' => 'SettingsController@index']); // Damir Cengic
-Route::post('/settings/store', ['as' => 'settings.store', 'uses' => 'SettingsController@store']);
-
-Route::get('/help', function () { /* Damir Cengic */
-    return view('/help');
-});
-
-Route::get('auth/login', function () { /* Damir Cengic */
-    return view('login');
-});
-
-Route::get('auth/register', function () { /* Damir Cengic */
-    return view('register');
-});
+Route::get('/help', function () { 
+    return view('/help'); });
+Route::get('auth/login', function () { 
+    return view('login'); });
+Route::get('auth/register', function () { 
+    return view('register'); });
+/** Damir Cengic **/
 
 /** Sabahudin Kodro routes clients... */
 Route::get('clients', ['as' => 'clients', 'uses' => 'ClientController@index']);

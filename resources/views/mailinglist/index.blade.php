@@ -42,5 +42,6 @@
     </div>
     </div>
     <!-- /.box -->
+    <script>$("#mlist").addClass('active');</script>
 
 @stop

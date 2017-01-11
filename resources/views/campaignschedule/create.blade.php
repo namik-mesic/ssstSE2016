@@ -15,5 +15,5 @@
     </div>
     </div>
     <!-- /.box -->
-
+<script>$("#schedulecreate").addClass('active');</script>
 @stop
