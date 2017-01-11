@@ -119,4 +119,20 @@ class UserController extends Controller
         }
 
     }
+
+    public function panel()
+    {
+        $users= User::all();
+        return view('listout', compact('users'));
+    }
+
+    public function destroy()
+    {
+        $usertodelete = User::find($userid);
+        $usertodelete->delete();
+
+
+    }
+
+
 }

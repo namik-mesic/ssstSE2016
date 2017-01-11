@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/adm', 'UserController@panel');
+
 Auth::routes();
 use Illuminate\Support\Facades\Input;
 use App\User;
