@@ -130,7 +130,9 @@ class UserController extends Controller
         if(Auth::user()->isAdmin == 1){
             $users= User::all();
             return view('listout', compact('users'));
-        }else return redirect('/home')->with('notAuthorizedMessage', 'You are not authorized to access admin panel!');
+        }else{
+            return redirect('/home')->with('notAuthorizedMessage', 'You are not authorized to access the admin panel!');
+        }
 
     }
 
