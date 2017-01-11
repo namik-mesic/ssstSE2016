@@ -65,6 +65,27 @@
                                     </td>
                                 </tr>
 
+                                <tr>
+                                    <td>
+                                        <strong>
+                                            Email
+                                        </strong>
+                                    </td>
+                                    <!-- If the logged user views their own profile, they can see their email,
+                                    otherwise if isEmailHidden is null/1 info is public/private  - Dalila. -->
+
+                                    <td class="text-primary">
+                                        <li class="active"><a href="{{ action('UpdateEmailPrivacyController@toggleEmailHidden') }}">Change visibility</a></li>
+                                    </td>
+                                    <td>
+                                        @if (Auth::user() -> isEmailHidden == null)
+                                            Public
+                                        @else
+                                            Private
+                                        @endif
+                                    </td>
+                                </tr>
+
                                 </tbody>
                             </table>
                         </div>

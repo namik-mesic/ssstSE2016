@@ -78,5 +78,7 @@ Route::get('/toggle-name-hidden', 'UpdatePrivacyController@toggleNameHidden');
 
 Route::get('/toggle-dob-hidden', 'UpdateDobPrivacyController@toggleDobHidden');
 
+Route::get('/toggle-email-hidden', 'UpdateEmailPrivacyController@toggleEmailHidden');
+
 
 
