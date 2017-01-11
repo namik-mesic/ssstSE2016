@@ -6,6 +6,7 @@ use Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Support\Facades\DB;
 
 class SettingsController extends Controller
 {
@@ -19,7 +20,6 @@ class SettingsController extends Controller
 
     }
 
-
     /**
      * Function for index view settings
      *
@@ -27,19 +27,39 @@ class SettingsController extends Controller
      */
     public function index () {
 
-    $name = Auth::user()->name; 
+    $user_id = Auth::user()->id;
+    $name = Auth::user()->name;
     $lastname = Auth::user()->lastname;
     $mail = Auth::user()->email;
 
 
         return view('settings', array(
 
+            'user_id' => $user_id,
             'name' => $name,
             'lastname' => $lastname,
             'mail' => $mail,
 
         ));
     }
+
+    public function store(Request $request)
+    {
+
+        $request->all();
+        $input = $request['user'];
+
+
+        if($input['id']){
+            $user = User::find($input['id']);
+            $user ->update($input);
+
+            return redirect()->route('settings');
+        }
+
+
+    }
+
 
 }
 	

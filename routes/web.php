@@ -28,7 +28,8 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/dashboard', 'DashboardController@index');  // Damir Cengic
 
-Route::get('/settings', 'SettingsController@index'); // Damir Cengic
+Route::get('/settings', ['as' => 'settings', 'uses' => 'SettingsController@index']); // Damir Cengic
+Route::post('/settings/store', ['as' => 'settings.store', 'uses' => 'SettingsController@store']);
 
 Route::get('/help', function () { /* Damir Cengic */
     return view('/help');
