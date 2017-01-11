@@ -120,6 +120,11 @@ class UserController extends Controller
 
     }
 
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\View\View
+     * function that checks if the user is admin. If so, it shows all the users and option to edit and delete
+     * the accounts. -Edim, Nedzad
+     */
     public function panel()
     {
         if(Auth::user()->isAdmin == 1){
@@ -128,6 +133,12 @@ class UserController extends Controller
         }else return redirect('/home')->with('notAuthorizedMessage', 'You are not authorized to access admin panel!');
 
     }
+
+    /**
+     * @param $id
+     * @return \Illuminate\Http\RedirectResponse
+     * Function that deletes user choosen by admin. -Nedzad
+     */
     public function deleteUser($id){
         $user = User::find($id);
         $user -> delete();
