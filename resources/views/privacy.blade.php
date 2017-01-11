@@ -30,7 +30,7 @@
                                         </strong>
                                     </td>
                                     <td class="text-primary">
-                                        <button type="button">Change visibility</button>
+                                        <li class="active"><a href="{{ action('PrivacyController@privacy') }}">Change visibility</a></li>
                                     </td>
                                 </tr>
 
@@ -41,7 +41,7 @@
                                         </strong>
                                     </td>
                                     <td class="text-primary">
-                                        <button type="button">Change visibility</button>
+                                        <li class="active"><a href="{{ action('PrivacyController@privacy') }}">Change visibility</a></li>
                                     </td>
                                 </tr>
                                 <tr>
@@ -51,15 +51,10 @@
                                         </strong>
                                     </td>
                                     <td class="text-primary">
-                                        <button type="button">Change visibility</button>
+                                        <li class="active"><a href="{{ action('PrivacyController@privacy') }}">Change visibility</a></li>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>
-                                        <input type="submit" name="submit" class="btn btn success" value="Submit" />
-                                    </td>
-                                </tr>
+
                                 </tbody>
                             </table>
                         </div>
