@@ -30,7 +30,7 @@
                                         </strong>
                                     </td>
                                     <!-- If the logged user views their own profile, they can see their name,
-                                    otherwise if isNameHidden is null/1 info is public/private  -- Dalila. -->
+                                    otherwise if isNameHidden is null/1 info is public/private  - Dalila. -->
 
                                     <td class="text-primary">
                                         <li class="active"><a href="{{ action('UpdatePrivacyController@toggleNameHidden') }}">Change visibility</a></li>
@@ -51,7 +51,7 @@
                                         </strong>
                                     </td>
                                     <!-- If the logged user views their own profile, they can see their birth date,
-                                    otherwise if isHidden is null/1 info is public/private  -- Dalila. -->
+                                    otherwise if isHidden is null/1 info is public/private  - Dalila. -->
 
                                     <td class="text-primary">
                                         <li class="active"><a href="{{ action('UpdateDobPrivacyController@toggleDobHidden') }}">Change visibility</a></li>
