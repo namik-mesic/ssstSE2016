@@ -54,7 +54,7 @@
                         <option value="bank">bank</option>
                         <option value="parking">parking</option>
                         <option value="shopping">shopping</option>
-                        <option value="worship">worship</option>
+                        <option value="place_of_worship">worship</option>
                     </select>
                 </div>
 
