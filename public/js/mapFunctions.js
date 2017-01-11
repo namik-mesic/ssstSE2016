@@ -148,10 +148,19 @@ function createMarker(place) {
         var element;
         var tag;
 
+        //this are coordinates data. we will need them to be dispalyed
+        var lat = place.geometry.location.lat;
+        var lng = place.geometry.location.lng;
+        var location = place.geometry.location;
+
+        //take custom plces into account
+        if(location.toString() == "[object Object]"){
+            location = "(" + lat.toString() + "," + lng.toString() + ")";
+        }
+
         tag = document.getElementById("tab1default").innerHTML =
             "Place Name: " + place.name + "<br>" +
-
-            "Location: " + place.geometry.location.lat + "," + place.geometry.location.lng + "<br>" +
+            "Location: " + location + "<br>" +
             "Address: " + place.vicinity;
 
         // scroll down to info panel  upon clicking on a place icon

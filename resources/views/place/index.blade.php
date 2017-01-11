@@ -2,9 +2,6 @@
 <!-- Tweaked by Adem Hadrovic -->
 @extends('layouts.app')
 
-
-
-
 @section('content')
 
     <div class="container">
