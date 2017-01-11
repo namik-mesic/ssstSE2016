@@ -11,7 +11,7 @@
         <!-- Creates a map where it gets your GeoLocation and shows the nearest places to get food -->
         function initMap() {
 
-            <!-- "If clause" to find your location-->
+            <!-- If clause to get location from function getCurrentPosition -->
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(position) {
                     var pos = {
@@ -19,7 +19,7 @@
                         lng: position.coords.longitude
                     };
 
-                    <!-- Creates the map -->
+                    <!-- Calls the API for to create the map -->
                     map = new google.maps.Map(document.getElementById('map'), {
                         center: pos,
                         mapTypeControl: false,
@@ -27,12 +27,13 @@
                         zoom: 15
                     });
 
-                    // {map:map} will display the "you are here" bubble
+                    <!-- {map:map} will display the "you are here" bubble -->
                     infoWindow = new google.maps.InfoWindow({content:"You are here",map:map, position: pos});
 
-                    //create an info window for displaying location names
+                    <!-- create an info window for displaying location names -->
                     infowindow = new google.maps.InfoWindow();
 
+                    <!-- The function that calls the API for a particular type of marker -->
                     var service = new google.maps.places.PlacesService(map);
                     service.nearbySearch({
                         location: pos,
@@ -44,30 +45,23 @@
                         type: ['bakery']
                     }, callback,setSearchType("food"));
 
-                    // this line returns undefined vvvv
-                    //service = new google.maps.places.PlacesService(map);
-                    //service.nearbySearch(request, callback);
-
                 }, function() {
                     handleLocationError(true, infoWindow, map.getCenter());
                 });
             }
 
             else {
-                // If browser doesn't support Geolocation,
-                // set location to default (sebilj)
+
+                <!-- If browser doesn't support Geolocation,set location to default (sebilj) -->
                 var coordinates = {lat: 43.860702, lng: 18.429932};
                 handleLocationError(false, infoWindow, coordinates);
 
             }
-
         }
-
 
     </script>
 
 <script type="text/javascript" src ="{{URL::asset('js/mapFunctions.js')}}"></script>
-
 
 @endsection
 

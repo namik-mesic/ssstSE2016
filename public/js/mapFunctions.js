@@ -5,7 +5,7 @@
  * Created by Adem on 12/12/2016.
  */
 
-//global var for storing the type of search
+// Global var for storing the type of search
 var type = "";
 var placeLoc = {};
 var latlng;
@@ -23,7 +23,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 
 function setSearchType(searchType) {
 
-    //assign argument to global var type
+    // Assign argument to global var type
     type = searchType;
 }
 
@@ -31,24 +31,21 @@ function setSearchType(searchType) {
 function callback(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
 
-
         var customPlaces = [];
 
-        // this is supposed to get json data from function
-        // and create the marker in a callback
+        <!-- this is supposed to get json data from function and create the marker in a callback -->
         $.getJSON("/api/place", function(json){
             customPlaces = json;
 
             for(var i = 0; i < customPlaces.length; i++){
-                //need to fix database attributes to accommodate geometry.location and
-                // geometry.viewport
+                //need to fix database attributes to accommodate geometry.location and geometry.viewport
                 //customPlaces[i].geometry.location = customPlaces[i].coordinates;
 
                 if(customPlaces[i].type == type) {
+
                     // check type of place to display proper results(and not everything single object)
 
-                        // need to add the geometry property in order to make the new
-                        // custom objects clickable
+                        <!-- Need to add the geometry property in order to make the new custom objects clickable -->
                         customPlaces[i].geometry = {location:"",viewport:""};
                         customPlaces[i].geometry.location = {lat : 0, lng : 0};
                         customPlaces[i].geometry.location.lat = customPlaces[i].lat;
@@ -61,8 +58,6 @@ function callback(results, status) {
                         createMarker(customPlaces[i]);
 
                 }
-
-
 
             };
 
@@ -118,10 +113,8 @@ function createMarker(place) {
         map: map,
         icon: icon,
         position: latlng
-
-
+        
     });
-
 
     <!-- Get the image -->
     function getImage(src) {
@@ -130,8 +123,7 @@ function createMarker(place) {
 
     }
 
-    //this function will return all the parameters
-    //available for a place(testing purposes)
+    <!-- this function will return all the parameters available for a place(testing purposes) -->
     function getPlaceInfo(place) {
         var element;
         var res;
@@ -141,9 +133,9 @@ function createMarker(place) {
         return res;
     }
 
-
     <!-- Display the information for each marker -->
     function displayInfo() {
+
         //var pic = place.photos[0].getUrl({'maxWidth': 200, 'maxHeight': 200});
         var element;
         var tag;
@@ -158,7 +150,6 @@ function createMarker(place) {
         //temporary solution for scrolling. need to implement smooth scrolling
         window.scrollTo(0,document.body.scrollHeight);
         return tag;
-
 
     }
 

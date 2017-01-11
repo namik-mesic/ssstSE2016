@@ -11,7 +11,6 @@
         <!-- Creates a map where it gets your GeoLocation and shows the nearest places for lodging-->
         function initMap() {
 
-
             <!-- If clause to get location from function getCurrentPosition -->
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(position) {
@@ -20,6 +19,7 @@
                         lng: position.coords.longitude
                     };
 
+            <!-- Calls the API for to create the map -->
             map = new google.maps.Map(document.getElementById('map'), {
                 center: pos,
                 mapTypeControl: false,
@@ -27,10 +27,13 @@
                 zoom: 15
             });
 
-                    // {map:map} will display the "you are here" bubble
+                    <!-- {map:map} will display the "you are here" bubble -->
                     infoWindow = new google.maps.InfoWindow({content:"You are here",map:map, position: pos});
+
+                    <!-- create an info window for displaying location names -->
                     infowindow = new google.maps.InfoWindow();
 
+            <!-- The function that calls the API for a particular type of marker -->
             var service = new google.maps.places.PlacesService(map);
             service.nearbySearch({
                 location: pos,
@@ -38,27 +41,21 @@
                 type: ['lodging']
             }, callback,setSearchType("lodging"));
 
-            // vvv doesn't work; returns undef vvv
-            //service = new google.maps.places.PlacesService(map);
-            //service.nearbySearch(request, callback);
                 }, function() {
                     handleLocationError(true, infoWindow, map.getCenter());
                 });
             }
 
             else {
-                // If browser doesn't support Geolocation,
-                // set location to default (sebilj)
+
+                <!-- If browser doesn't support Geolocation, set location to default (sebilj) -->
                 var coordinates = {lat: 43.860702, lng: 18.429932};
                 handleLocationError(false, infoWindow, coordinates);
-
             }
 
         }
     </script>
     <script type="text/javascript" src ="<?php echo e(URL::asset('js/mapFunctions.js')); ?>"></script>
-
-
 
 <?php $__env->stopSection(); ?>
 

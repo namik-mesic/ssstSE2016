@@ -6,7 +6,8 @@
     <script type="text/javascript">
 
         function initMap() {
-            // Try HTML5 geolocation.
+
+            <!-- Try getting the HTML5 geolocation. -->
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(function(position) {
                     var pos = {
@@ -15,10 +16,9 @@
                         maximumAge:600000,
                         timeout:5000,
                         enableHighAccuracy: true
-
                     };
 
-
+                    <!-- Calls the API for to create the map -->
                     map = new google.maps.Map(document.getElementById('map'), {
                         center: pos,
                         mapTypeControl: false,
@@ -26,19 +26,17 @@
                         zoom: 16
                     });
 
-                    // {map:map} will display the "you are here" bubble
+                    <!-- {map:map} will display the "you are here" bubble -->
                     infoWindow = new google.maps.InfoWindow({content:"You are here",map:map, position: pos});
-                    //infoWindow.setContent("You are here");
 
                 }, function() {
                     handleLocationError(true, infoWindow, map.getCenter());
                 });
             } else {
-                // Browser doesn't support Geolocation
-                // set location to default (sebilj)
+
+                <!-- Browser doesn't support Geolocation,set location to default (sebilj) -->
                 var coordinates = {lat: 43.860702, lng: 18.429932};
                 handleLocationError(false, infoWindow, coordinates);
-
             }
 
         }
@@ -50,10 +48,6 @@
                     'Error: Your browser doesn\'t support geolocation.');
         }
 
-
     </script>
-
-
-
 
 @endsection
