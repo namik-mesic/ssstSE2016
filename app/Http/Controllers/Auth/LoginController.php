@@ -37,6 +37,13 @@ class LoginController extends Controller
     {
         $this->middleware('guest', ['except' => 'logout']);
     }
+
+    /**
+     * @param Request $request
+     * @return array
+     * This function defines what data is required for user to login in. Email and password are default by Laravel,
+     * while activated is added. It means that user cannot log in while his/her profile is activated. -Nedzad
+     */
     public function credentials(Request $request)
 
     {

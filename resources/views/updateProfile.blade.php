@@ -19,7 +19,7 @@
 
             <div class="panel-body">
               <div class="row">
-                <form class="form-horizontal" method="post" action="{{url('/update-profile')}}">
+                <form class="form-horizontal" method="post" action="{{url('/confirm2')}}">
                   {{ csrf_field() }}
                   <div class="row form-group">
                     <div class="col-xs-4" style="margin-left: 1cm">

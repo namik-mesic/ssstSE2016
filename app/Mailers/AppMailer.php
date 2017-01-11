@@ -16,7 +16,7 @@ class AppMailer
 {
     protected $mailer;
 
-    protected $from = 'nedzad.hafizovic@stu.ssst.edu.ba';
+    protected $from;
 
     protected $to;
 
@@ -31,6 +31,7 @@ class AppMailer
 
     /**
      * @param User $user
+     * Function that combines all data for sending a confirmation mail. -Nedzad
      */
     public function sendEmailConfirmationTo(User $user)
     {
@@ -40,6 +41,10 @@ class AppMailer
 
         $this -> deliver();
     }
+
+    /**
+     * Function that sends the e-mail address. -Nedzad
+     */
 
     public function deliver()
     {

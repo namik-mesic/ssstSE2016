@@ -26,6 +26,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * Function that sets user's activated field to 1 and email token field to NULL after the user confirms
+     * an email address. -Nedzad
+     */
     public function activated()
 
     {

@@ -83,11 +83,8 @@ class RegisterController extends Controller
         ]);
     }
     /**
-
-     *  Over-ridden the register method from the "RegistersUsers" trait
-
-     *  Remember to take care while upgrading laravel
-
+     *  Over-ridden the register method from the "RegistersUsers" trait.
+     *  Function that sends all of the data to database and sends the verification mail with all needed data. -Nedzad
      */
 
     public function register(Request $request)
@@ -101,10 +98,14 @@ class RegisterController extends Controller
         return redirect('login') -> with('status', 'Please confirm your email address');
     }
 
+    /**
+     * @param $token
+     * @return \Illuminate\Http\RedirectResponse
+     * When user clicks on the link in the email address, this function calls activated() function in User. When
+     * activated() method is performed, user can log in. -Nedzad
+     */
     public function verify($token)
     {
-        // The verified method has been added to the user model and chained here
-        // for better readability
         User::where('email_token',$token)->firstOrFail()->activated();
         return redirect('login') -> with('status2', 'Thank you for activation, you can log in now');
     }

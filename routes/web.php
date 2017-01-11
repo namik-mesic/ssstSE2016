@@ -24,7 +24,11 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/update-profile', 'UserController@profileView');
 
-Route::post('/update-profile', 'UserController@profileUpdate');
+Route::get('/confirm2', 'UserController@confirm2View');
+
+Route::post('/confirm2', 'UserController@profileUpdate');
+
+Route::post('/update-profile2', 'UpdateController@update');
 
 Route::get('/add-picture', 'UserController@addPictureView');
 
@@ -35,6 +39,8 @@ Route::get('/destroy', 'testControl@destroy');
 Route::post('/destroy', 'testControl@destroy');
 
 Route::get('/confirm', 'confirmControl@confirmationForm');
+
+Route::post('/confirm', 'confirmControl@confirmationForm');
 
 Auth::routes();
 

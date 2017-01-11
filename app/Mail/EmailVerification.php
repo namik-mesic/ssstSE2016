@@ -11,7 +11,7 @@ class EmailVerification extends Mailable
     use Queueable, SerializesModels;
     public $user;
     /**
-     * Create a new message instance.
+     * Create a new message instance. -Nedzad.
      *
      * @return void
      */
@@ -20,7 +20,7 @@ class EmailVerification extends Mailable
         $this->user = $user;
     }
     /**
-     * Build the message.
+     * Build the message. -Nedzad.
      *
      * @return $this
      */

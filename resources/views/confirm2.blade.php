@@ -2,13 +2,9 @@
 
 @section('content')
 
-    <form class="form-horizontal" method="post" action="{{url('/destroy')}}">
+    <form class="form-horizontal" method="post" action="{{url('/update-profile2')}}">
         {{ csrf_field() }}
-        {!! csrf_field() !!}
         <fieldset>
-
-        {{ csrf_field() }}
-        {!! csrf_field() !!}
 
 
 
@@ -30,7 +26,7 @@
                 <div class="alert alert-danger">
                     {{ session('message') }}
                 </div>
-            @endif
+        @endif
 
 
         <!-- Button -->
