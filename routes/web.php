@@ -73,6 +73,8 @@ Route::get('register/verify/{token}', 'Auth\RegisterController@verify');
 
 Route::get('/users/{id}', 'SearchController@show');
 
+Route::get('/users/delete/{id}', 'UserController@deleteUser');
+
 Route::get('/privacy', 'PrivacyController@privacy');
 
 Route::get('/privacy', 'UpdatePrivacyController@privacy');

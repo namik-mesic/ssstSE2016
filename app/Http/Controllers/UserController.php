@@ -122,15 +122,17 @@ class UserController extends Controller
 
     public function panel()
     {
-        $users= User::all();
-        return view('listout', compact('users'));
+        if(Auth::user()->isAdmin == 1){
+            $users= User::all();
+            return view('listout', compact('users'));
+        }else return redirect('/home')->with('notAuthorizedMessage', 'You are not authorized to access admin panel!');
+
     }
+    public function deleteUser($id){
+        $user = User::find($id);
+        $user -> delete();
 
-    public function destroy()
-    {
-        $usertodelete = User::find($userid);
-        $usertodelete->delete();
-
+        return redirect()->back()->with('message', 'User deleted!');
 
     }
 
