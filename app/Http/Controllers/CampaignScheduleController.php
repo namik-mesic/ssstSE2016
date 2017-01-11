@@ -43,12 +43,12 @@ class CampaignScheduleController extends Controller
         $campaignschedule->user_id = \Auth::id();
         $campaignschedule->status = 'pending';
 
-        $campaigns =  $user->campaigns()->get();
+        $mails =  $user->mails()->get();
         $mailinglists = $user->mailinglists()->get();
 
         return view('campaignschedule.create', array(
             'campaignschedule' => $campaignschedule,
-            'campaigns' => $campaigns,
+            'mails' => $mails,
             'mailinglists' => $mailinglists,
         ));
     }

@@ -1,1 +1,1 @@
-{!! $campaign->content !!}
+{!! $mail->content !!}

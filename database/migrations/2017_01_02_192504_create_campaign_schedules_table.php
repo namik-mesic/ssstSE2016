@@ -20,8 +20,8 @@ class CreateCampaignSchedulesTable extends Migration
             $table->string('status');
             $table->integer('mailing_list_id')->unsigned();
             $table->foreign('mailing_list_id')->references('id')->on('mailing_lists')-> onDelete('cascade')->onUpdate('cascade');
-            $table->integer('campaign_id')->unsigned();
-            $table->foreign('campaign_id')->references('id')->on('campaigns')-> onDelete('cascade')->onUpdate('cascade');
+            $table->integer('mail_id')->unsigned();
+            $table->foreign('mail_id')->references('id')->on('mails')-> onDelete('cascade')->onUpdate('cascade');
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
 

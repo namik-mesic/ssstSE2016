@@ -8,16 +8,16 @@ use Mail;
 
 class CampaignSchedule extends Model
 {
-    protected $fillable = array('user_id', 'status', 'mailing_list_id', 'campaign_id');
+    protected $fillable = array('user_id', 'status', 'mailing_list_id', 'mail_id');
 	
-	public function campaign()
+	public function mail()
 	{
-		return $this->belongsTo('App\Campaign');
+		return $this->belongsTo('App\Mail');
 	}
 
     public static $rules = array(
         'mailing_list_id' => 'required',
-        'campaign_id'  => 'required'
+        'mail_id'  => 'required'
     );
 	
 	public function mailingList()
@@ -33,11 +33,11 @@ class CampaignSchedule extends Model
 			$emails[] = $client->mail;
 		}
 		
-		$campaign = $this->campaign;
+		$mail = $this->mail;
 
-		Mail::send('campaignschedule.send_mail', ['campaign' => $campaign], function($message) use ($emails, $campaign)
+		Mail::send('campaignschedule.send_mail', ['mail' => $mail], function($message) use ($emails, $mail)
 		{    
-			$message->to($emails)->subject($campaign->name);    
+			$message->to($emails)->subject($mail->name);
 		});
 	}
 }

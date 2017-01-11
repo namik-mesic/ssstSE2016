@@ -1,5 +1,5 @@
 <?php
-/* Inda Kreso*/
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -7,9 +7,6 @@ use App\Http\Requests;
 
 use App\Mail;
 use App\User;
-
-
-/* Inda Kreso*/
 
 class MailController extends Controller
 {
@@ -69,7 +66,7 @@ class MailController extends Controller
         $request->all();
         $input = $request['mail'];
 
-        $validator = \Validator::make($input, Mail::$rules);
+        $validator = \Validator::make($input, mail::$rules);
 
         if($validator->fails()){
             if($input['id']){
@@ -82,24 +79,23 @@ class MailController extends Controller
 
         if($input['id']){
             $mail = Mail::find($input['id']);
-            $mail ->update($input);
+            $mail->update($input);
 
             return redirect()->route('mails');
         }
 
         $mail = new Mail;
-        $mail ->create($input);
+        $mail->create($input);
 
         return redirect()->route('mails');
 
     }
 
     public function delete($id) {
-        $mail= Mail::find($id);
-        $mail-> delete();
+        $mail = Mail::find($id);
+        $mail -> delete();
 
         return redirect() -> route('mails');
     }
 
 }
-/* Inda Kreso*/

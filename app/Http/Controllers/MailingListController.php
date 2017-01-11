@@ -56,6 +56,8 @@ class MailingListController extends Controller
             ));
         }
 
+
+
         else
         {
             return view('mailinglist.index', array(
@@ -182,4 +184,7 @@ class MailingListController extends Controller
         return redirect() -> route('mailinglists'); /* Inda Kreso*/
 
     }
+
+
+
 }

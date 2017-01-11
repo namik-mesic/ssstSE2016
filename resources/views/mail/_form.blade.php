@@ -13,13 +13,13 @@
         @endif
 	    </div>
 
-     <div class="form-group {{$errors->first('subject')  ? 'has-error' : ''}}">
+    <div class="form-group {{$errors->first('subject')  ? 'has-error' : ''}}">
         <label>Subject</label>
         <input type="text" value="{{$mail->subject}}" name="mail[subject]" class="form-control" />
         @if($errors->first('subject'))
             <span>{{$errors->first('subject')}}</span>
         @endif
-        </div>
+    </div>
 
 	<div class="form-group {{$errors->first('content')  ? 'has-error' : ''}}">
         <label>Content</label>
@@ -35,7 +35,7 @@
 
 
     <div class="form-group">
-        <input type="submit" value="Submit" class="btn btn-success" />
+        <input type="submit" value="Save" class="btn btn-success" />
     </div>
 </form>
 

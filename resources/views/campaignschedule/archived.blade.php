@@ -21,8 +21,8 @@
                 <tbody>
                 @foreach ($campaignschedules as $campaignschedule)
                     <tr> @if ($campaignschedule -> status == 'sent')
-                        <td>{{$campaignschedule->campaign->name}}</td>
-                        <td>{{$campaignschedule->campaign->subject}}</td>
+                        <td>{{$campaignschedule->mail->name}}</td>
+                        <td>{{$campaignschedule->mail->subject}}</td>
                         <td>{{$campaignschedule->mailingList->name}}</td>
                         <td>{{$campaignschedule->status}}</td>
                         @endif

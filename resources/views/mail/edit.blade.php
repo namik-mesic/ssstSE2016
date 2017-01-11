@@ -4,7 +4,7 @@
 
     <div class="box">
         <div class="box-header">
-           <i class="fa fa-pencil-square-o"> </i> <h3 class="box-title">Edit Email</h3>
+           <i class="fa fa-pencil-square-o"> </i> <h3 class="box-title">Edit Campaign</h3>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
