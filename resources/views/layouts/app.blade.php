@@ -58,13 +58,14 @@
 
         <!-- Main content -->
 		<section class="content body">
-			@section('content')
+			@yield ('content')
 			@show
         </section><!-- /.content -->
+         @include('layouts.footer')
     </div><!-- /.content-wrapper -->
 
     <!-- Footer -->
-    @include('layouts.footer')
+   
 
 </div><!-- ./wrapper -->
 

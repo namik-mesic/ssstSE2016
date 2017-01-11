@@ -21,7 +21,10 @@ Route::get('/help', function () { /* Damir Cengic */
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index'); /* Damir Cengic */
+Route::get('/home', 'HomeController@index'); 
+
+
+Route::get('/settings', 'SettingsController@index'); // Damir Cengic
 
 
 

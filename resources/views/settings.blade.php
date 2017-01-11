@@ -1,91 +1,101 @@
-<!-- Damir Čengić -->
-
-<!DOCTYPE html>
-<!--
-This is a starter template page. Use this page to start your new project from
-scratch. This page gets rid of all links and provides the needed markup only.
--->
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>MailBird | Settings</title>
-        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
-        <!-- Bootstrap 3.3.2 -->
-        <link href="{{ asset ('/bower_components/AdminLTE/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
-        <!-- Font Awesome Icons -->
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-        <!-- Ionicons -->
-        <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
-        <!-- Theme style -->
-        <link href="{{ asset('/bower_components/AdminLTE/dist/css/AdminLTE.min.css')}}" rel="stylesheet" type="text/css" />
-        <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
-              page. However, you can choose any other skin. Make sure you
-              apply the skin class to the body tag so the changes take effect.
-        -->
-        <link href="{{ asset('/bower_components/AdminLTE/dist/css/skins/skin-blue.min.css')}}" rel="stylesheet" type="text/css" />
-
-        <link rel="shortcut icon" href="{{{ asset('/bower_components/AdminLTE/dist/img/favicon.ico') }}}">
-
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
-    </head>
-<body class="skin-blue">
-<div class="wrapper">
-
-    <!-- Header -->
-    @include('header')
-
-    <!-- Sidebar -->
-    @include('sidebar')
-
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <h1>
-                {{ $page_title or "Settings" }}
-                <small>{{ $page_description or null }}</small>
-            </h1>
-            </br>
-            <!-- You can dynamically generate breadcrumbs here -->
-            <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-                <li class="active">Here</li>
-            </ol>
-        </section>
-
-        <!-- Main content -->
-        
-<section>
-        @include('settingsform')
-            <!-- Your Page Content Here -->
-            @yield('content')
-        </section><!-- /.content -->
-    </div><!-- /.content-wrapper -->
-
-    <!-- Footer -->
-    @include('footer')
-
-</div><!-- ./wrapper -->
-
-<!-- REQUIRED JS SCRIPTS -->
-
-<!-- jQuery 2.1.3 -->
+ @extends ('layouts.app')
 
 
-        <script src="{{ asset ("//code.jquery.com/jquery-2.2.4.min.js") }}"></script> <!-- switched to using CDN -->
-    <!--<script src="{{ asset ("//bower_components/AdminLTE/plugins/jQuery/jQuery-2.1.3.min.js") }}"></script>-->
-    <!-- Bootstrap 3.3.2 JS -->
-    <script src="{{ asset ("/bower_components/AdminLTE/bootstrap/js/bootstrap.min.js") }}" type="text/javascript"></script>
-    <!-- AdminLTE App -->
-    <script src="{{ asset ("/bower_components/AdminLTE/dist/js/app.min.js") }}" type="text/javascript"></script>
+@section ('content')
+ <!-- Damir Čengić -->
 
-<!-- Optionally, you can add Slimscroll and FastClick plugins.
-      Both of these plugins are recommended to enhance the
-      user experience -->
-</body>
-</html>
+  <div class="col-md-12">
+ <div class="box box-widget widget-user">
+            <!-- Add the bg color to the header using any of the bg-* classes -->
+            <div class="widget-user-header bg-aqua-active">
+              
+            </div>
+            <div class="widget-user-image">
+            <img src="{{ asset("/bower_components/AdminLTE/dist/img/user.png") }}" class="img-circle" alt="User Image" />
+             
+            </div>
+            <div class="box-footer">
+              <div class="row">
+                <div class="col-sm-4 border-right">
+                  <div class="description-block">
+                    <h5 class="description-header"></h5>
+                    <span class="description-text"></span>
+                  </div>
+                  <!-- /.description-block -->
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-4 border-right">
+                  <div class="description-block">
+                    <h3 class="widget-user-username">{{$name}} {{$lastname}}</h3>
+              <h5 class="widget-user-desc">Golden Member</h5>
+                  </div>
+                  <!-- /.description-block -->
+                </div>
+                <!-- /.col -->
+                <div class="col-sm-4">
+                  <div class="description-block">
+                    <h5 class="description-header"></h5>
+                    <span class="description-text"></span>
+                  </div>
+                  <!-- /.description-block -->
+                </div>
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
+            </div>
+          </div>
+
+
+  </div>
+
+
+  <form role="form">
+              <div class="box-body">
+              <div class="col-md-6">
+              
+                   <div class="form-group">
+                  <label for="fname">First name</label>
+                  <input type="text" class="form-control" id="fname" placeholder="{{$name}}">
+                </div>
+                   <div class="form-group">
+                  <label for="lname">Last name</label>
+                  <input type="text" class="form-control" id="lname" placeholder="{{$lastname}}">
+                </div>
+                   <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input type="email" class="form-control" id="email" placeholder="{{$name}}">
+                </div>
+                </div>
+                <div class="col-md-6">
+                <div class="form-group">
+                  <label for="currentpass">Verify password</label>
+                  <input type="password" class="form-control" id="currentpass" placeholder="Old Password">
+                </div>
+                <div class="form-group">
+                  <label for="newpass">New password</label>
+                  <input type="password" class="form-control" id="newpass" placeholder="New Password">
+                </div> </div>
+                <div class="col-md-3">
+                <ul><li>One lowercase letter</li>
+                <li>One uppercase letter</li>
+                <li>One number</li>
+                </ul> </div>
+                <div class="col-md-3">
+                <ul>
+                <li>One special character</li>
+                <li>8 characters minimum</li>
+                </ul>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                  <label for="cnewpass">Confirm new password</label>
+                  <input type="password" class="form-control" id="cnewpass" placeholder="Confirm New Password">
+                  </div>
+                </div>
+                </div>
+                <div class="col-md-12"><button class="btn btn-block btn-info btn-lg">Update</button></div>
+  </form>
+
+              </div>
+
+              @stop
