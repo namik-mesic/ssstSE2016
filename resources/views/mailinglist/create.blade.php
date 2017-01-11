@@ -3,7 +3,7 @@
 
     <div class="box">
         <div class="box-header">
-            <i class="fa fa-address-book"></i><h3 class="box-title">Create new client</h3>
+            <i class="fa fa-address-book"></i><h3 class="box-title">Create new Mailing List</h3>
         </div>
         <!-- /.box-header -->
         <div class="box-body">

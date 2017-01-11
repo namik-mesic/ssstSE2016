@@ -19,6 +19,7 @@ Route::get('/help', function () { /* Damir Cengic */
     return view('help');
 });
 
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index'); 

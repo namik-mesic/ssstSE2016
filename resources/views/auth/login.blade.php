@@ -124,16 +124,11 @@
 
 
 
-    <div class="social-auth-links text-center">
-      <p>- OR -</p>
-      <a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using
-        Facebook</a>
-      
-    </div>
+    
 
     <!-- /.social-auth-links -->
 
-    <a href="#">I forgot my password</a><br>
+    <a class="btn btn-link" href="{{ url('/password/reset') }}">I forgot my password</a><br>
     <a href="/register" class="text-center">Register</a>
     
 
