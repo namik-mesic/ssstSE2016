@@ -15,6 +15,10 @@ class UpdateDobPrivacyController extends Controller
 
     public function toggleDobHidden()
     {
+        /*
+         * after the button is clicked,
+         * isHidden changes value
+         * and birthday info becomes public/private - Dalila*/
 
         /** @var User $user */
         $user = \Auth::user();

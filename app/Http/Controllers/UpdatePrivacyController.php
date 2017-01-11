@@ -15,6 +15,10 @@ class UpdatePrivacyController extends Controller
 
     public function toggleNameHidden()
     {
+        /*
+         * after the button is clicked,
+         * isNameHidden changes value
+         * and info becomes public/private - Dalila*/
 
         /** @var User $user */
         $user = \Auth::user();
