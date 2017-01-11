@@ -2,9 +2,6 @@
 <!-- Tweaked by Adem Hadrovic -->
 
 
-
-
-
 <?php $__env->startSection('content'); ?>
 
     <div class="container">
