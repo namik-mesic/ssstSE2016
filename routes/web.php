@@ -22,6 +22,8 @@ Route::get('/help', function () { /* Damir Cengic */
 
 Auth::routes();
 
+Route::get('logout', 'LogOutController@getSignOut'); // Route logout Sabahudin Kodro
+
 Route::get('/home', 'HomeController@index'); 
 
 Route::get('/dashboard', 'DashboardController@index');  // Damir Cengic
@@ -40,50 +42,42 @@ Route::get('auth/register', function () { /* Damir Cengic */
     return view('register');
 });
 
-
-
-
-/** Sabahudin Kodro... */
+/** Sabahudin Kodro routes clients... */
 Route::get('clients', ['as' => 'clients', 'uses' => 'ClientController@index']);
 Route::get('client/create', ['as' => 'client.create', 'uses' => 'ClientController@create']);
 Route::get('client/edit/{id}', ['as' => 'client.edit', 'uses' => 'ClientController@edit']);
 Route::post('client/store', ['as' => 'client.store', 'uses' => 'ClientController@store']);
-/**... Sabahudin Kodro */
+/**... routes clients Sabahudin Kodro */
 
 Route::get('client/delete/{id}', ['as' => 'client.delete', 'uses' => 'ClientController@delete']); /* Inda Kreso*/
 
-/** Sabahudin Kodro... */
+/** Sabahudin Kodro routes mailinglists... */
 Route::get('mailinglists', ['as' => 'mailinglists', 'uses' => 'MailingListController@index']);
 Route::get('mailinglist/create', ['as' => 'mailinglist.create', 'uses' => 'MailingListController@create']);
 Route::post('mailinglist/store', ['as' => 'mailinglist.store', 'uses' => 'MailingListController@store']);
 Route::get('mailinglist/edit/{id}', ['as' => 'mailinglist.edit', 'uses' => 'MailingListController@edit']);
 Route::get('mailinglist/view/{id}', ['as' => 'mailinglist.view', 'uses' => 'MailingListController@view']);
-/**... Sabahudin Kodro */
+/**... routes mailinglists Sabahudin Kodro */
 Route::get('mailinglist/delete/{id}', ['as' => 'mailinglist.delete', 'uses' => 'MailingListController@delete']); /* Inda Kreso*/
 
-/** Sabahudin Kodro... */
+/** Sabahudin Kodro routes mails... */
 Route::get('mails', ['as' => 'mails', 'uses' => 'MailController@index']);
 Route::get('mail/create', ['as' => 'mail.create', 'uses' => 'MailController@create']);
 Route::post('mail/store', ['as' => 'mail.store', 'uses' => 'MailController@store']);
 Route::get('mail/edit/{id}', ['as' => 'mail.edit', 'uses' => 'MailController@edit']);
-/**... Sabahudin Kodro */
-
+/**...routes mails Sabahudin Kodro */
 Route::get('mail/delete/{id}', ['as' => 'mail.delete', 'uses' => 'MailController@delete']); /* Inda Kreso*/
 
 
-/** Sabahudin Kodro... */
+/** Sabahudin Kodro routes schedules... */
 Route::get('schedules', ['as' => 'schedules', 'uses' => 'CampaignScheduleController@index']);
 Route::get('schedule/archived', ['as' => 'schedule.archived', 'uses' => 'CampaignScheduleController@index']);
 Route::get('schedule/create', ['as' => 'schedule.create', 'uses' => 'CampaignScheduleController@create']);
 Route::post('schedule/store', ['as' => 'schedule.store', 'uses' => 'CampaignScheduleController@store']);
 Route::get('schedule/send/{id}', ['as' => 'schedule.send', 'uses' => 'CampaignScheduleController@send']);
-/**... Sabahudin Kodro */
+/**...routes schedules Sabahudin Kodro */
 
 Route::get('schedule/delete/{id}', ['as' => 'schedule.delete', 'uses' => 'CampaignScheduleController@delete']); /* Inda Kreso*/
-
-
-Route::get('logout', 'LogOutController@getSignOut'); //Sabahudin Kodro
-
 
 Route::get('/emails', function () {
     return view('emailview');

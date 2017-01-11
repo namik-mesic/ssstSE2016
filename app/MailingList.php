@@ -18,7 +18,7 @@ class MailingList extends Model
     protected $fillable = array('name', 'user_id');
 
     /**
-     * Clients realtion to mailing list
+     * Clients relation to mailing list
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
