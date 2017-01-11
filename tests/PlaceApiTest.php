@@ -15,10 +15,10 @@ class PlaceApiTest extends TestCase
      *
      * @return void
      */
-    public function testVisitPages()
+    public function testPlaceApi()
     {
         $this->visit('/api/place')
-            ->see('PlaceApi');
+            ->see("<body><p>[{\"id\"");
 
     }
 }

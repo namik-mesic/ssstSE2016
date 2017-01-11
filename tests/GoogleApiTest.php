@@ -15,10 +15,10 @@ class GoogleApiTest extends TestCase
      *
      * @return void
      */
-    public function testVisitPages()
+    public function testGoogleApi()
     {
-        $this->visit('')
-            ->see('PlaceApi');
+        $this->visit('https://maps.googleapis.com/')
+            ->assertResponseOk();
 
     }
 }
