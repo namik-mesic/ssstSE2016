@@ -145,13 +145,21 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                            <a href="mailto: {{$user -> email}} ">{{$user->email }}</a>
+                            @if(Auth::user() -> username != $user['username'])
+                                @if ($user->isEmailHidden)
+                                    This information is private
+                                @elseif ($user->isEmailHidden == null)
+                                    <a href="mailto: {{$user -> email}} ">{{$user->email }}</a>
+                                @endif
+                            @else
+                                {{$user->email }}
+                            @endif
                         </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>
-                            <!-- if the currently logged user is on their page, they can change privacy settings-->
+                            <!--only if the currently logged user is on their page, they can change privacy settings-->
                             @if(Auth::user() -> username == $user['username'])
                                 <a href="{{ action('PrivacyController@privacy') }}">Change privacy</a>
                             @else
