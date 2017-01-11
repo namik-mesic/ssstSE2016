@@ -118,7 +118,10 @@
             <a href="/help" class="small-box-footer"><i style="color: white;" class="fa fa-life-ring fa-2x"></i>
              
             </a>
-          </div></div></div></div>
+          </div>
+          </div>
+          </div>
+          </div>
         
 
         @stop

@@ -1,4 +1,4 @@
-<!-- HTML by Damir Cengic, PHP by Sabahudin Kodro-->
+<!--  by Damir Cengic -->
 @extends( 'layouts.app' )
 @section( 'content' )
 

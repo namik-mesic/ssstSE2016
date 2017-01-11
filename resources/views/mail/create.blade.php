@@ -1,4 +1,4 @@
-<!-- HTML by Damir Cengic-->
+<!-- Damir Cengic-->
 @extends( 'layouts.app' )
 @section( 'content' )
 
