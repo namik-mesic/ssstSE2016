@@ -17,8 +17,8 @@ class PlaceApiTest extends TestCase
      */
     public function testPlaceApi()
     {
-        $this->visit('/api/place')
-            ->see("<body><p>[{\"id\"");
+        $this->visit('/api/place')->seeJSON();
+
 
     }
 }
