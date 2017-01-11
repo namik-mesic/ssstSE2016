@@ -162,7 +162,7 @@
                         <td>
                             <!--only if the currently logged user is on their page, they can change privacy settings-->
                             @if(Auth::user() -> username == $user['username'])
-                                <a href="{{ action('PrivacyController@privacy') }}">Change privacy</a>
+                                <a href="{{ action('PrivacyController@privacy') }}">Privacy settings</a>
                             @else
                             @endif
                         </td>

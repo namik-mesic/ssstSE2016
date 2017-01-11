@@ -33,7 +33,7 @@
                                     otherwise if isNameHidden is null/1 info is public/private  - Dalila. -->
 
                                     <td class="text-primary">
-                                        <li class="active"><a href="{{ action('UpdatePrivacyController@toggleNameHidden') }}">Change visibility</a></li>
+                                        <a href="{{ action('UpdatePrivacyController@toggleNameHidden') }}">Change visibility</a>
                                     </td>
                                     <td>
                                         @if (Auth::user() -> isNameHidden == null)
@@ -54,7 +54,7 @@
                                     otherwise if isHidden is null/1 info is public/private  - Dalila. -->
 
                                     <td class="text-primary">
-                                        <li class="active"><a href="{{ action('UpdateDobPrivacyController@toggleDobHidden') }}">Change visibility</a></li>
+                                        <a href="{{ action('UpdateDobPrivacyController@toggleDobHidden') }}">Change visibility</a>
                                     </td>
                                     <td>
                                         @if (Auth::user() -> isHidden == null)
@@ -75,7 +75,7 @@
                                     otherwise if isEmailHidden is null/1 info is public/private  - Dalila. -->
 
                                     <td class="text-primary">
-                                        <li class="active"><a href="{{ action('UpdateEmailPrivacyController@toggleEmailHidden') }}">Change visibility</a></li>
+                                        <a href="{{ action('UpdateEmailPrivacyController@toggleEmailHidden') }}">Change visibility</a>
                                     </td>
                                     <td>
                                         @if (Auth::user() -> isEmailHidden == null)
