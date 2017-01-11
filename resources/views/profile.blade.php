@@ -140,7 +140,7 @@
                         <td></td>
                         <td>
                             @if(Auth::user() -> username == $user['username'])
-                            <input type="submit" name="submit" class="btn btn success" value="Change privacy" />
+                                <li class="active"><a href="{{ action('PrivacyController@privacy') }}">Change privacy</a></li>
                             @else
                             @endif
                         </td>

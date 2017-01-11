@@ -61,9 +61,8 @@ Route::get('register/verify/{token}', 'Auth\RegisterController@verify');
 
 Route::get('/users/{id}', 'SearchController@show');
 
-Route::get('/privacy', function(){
-    return view('privacy');
-});
+Route::get('/privacy', 'PrivacyController@privacy');
+
 
 
 
