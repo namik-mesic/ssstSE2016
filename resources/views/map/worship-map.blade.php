@@ -7,7 +7,6 @@
     -->
 
     <script type="text/javascript">
-        //<![CDATA[
 
         var map;
         var infowindow;

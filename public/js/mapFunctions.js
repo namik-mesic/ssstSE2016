@@ -10,8 +10,6 @@ var type = "";
 var placeLoc = {};
 var latlng;
 
-
-
 <!-- Function that handles Geolocation Errors -->
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 
