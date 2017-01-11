@@ -30,7 +30,7 @@
                 {{ csrf_field() }}
 
                 <label class="clrpick">
-                    <input class="color" type="button" id="color"/>
+                    <input class="color"  type="button" id="color" style="color: white; background: white; width: 80px;"/>
 
                     <!--
                     <button class="color" type="button" id="color">
