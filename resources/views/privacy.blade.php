@@ -30,7 +30,7 @@
                                         </strong>
                                     </td>
                                     <td class="text-primary">
-                                        <li class="active"><a href="{{ action('UpdatePrivacyController@privacy') }}">Change visibility</a></li>
+                                        <li class="active"><a href="{{ action('UpdatePrivacyController@toggleNameHidden') }}">Change visibility</a></li>
                                     </td>
                                     <td>
                                         @if (Auth::user() -> isNameHidden == null)

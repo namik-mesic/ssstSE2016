@@ -74,6 +74,8 @@ Route::get('/privacy', 'PrivacyController@privacy');
 
 Route::get('/privacy', 'UpdatePrivacyController@privacy');
 
+Route::get('/toggle-name-hidden', 'UpdatePrivacyController@toggleNameHidden');
+
 
 
 
