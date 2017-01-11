@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * By Sabahudin Kodro
+ */
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -25,8 +29,6 @@ class ClientController extends Controller
      * return index view of clients
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     *
-     *
      */
 	public function index()
 	{

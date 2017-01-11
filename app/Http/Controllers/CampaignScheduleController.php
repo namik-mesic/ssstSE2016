@@ -16,82 +16,103 @@ use App\CampaignSchedule;
 class CampaignScheduleController extends Controller
 {
 
-    /**Return index view for Campaigns
+    /**
+     *Return index view for Campaigns
+     *
      * @param Request $request
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index(Request $request)
     {
 
-        $request->path(); // request url
+        $request->path();
 
-        $user = User::find(\Auth::id()); //find logged in user ID
+        $user = User::find(\Auth::id());
 		
-        $campaignschedules = $user->campaignSchedules()->get(); //get campaignschedule based on user_id
+        $campaignschedules = $user->campaignSchedules()->get();
 
-        if($request->is('schedules')) { //if path equal to 'schedules' return valid view
+        if($request->is('schedules')) {
             return view('campaignschedule.index', array(
                 'campaignschedules' => $campaignschedules
             ));
         }
 
-        else if($request->is('schedule/archived')) { //if path equal to 'schedule/archived' return valid view
+        else if($request->is('schedule/archived')) {
             return view('campaignschedule.archived', array(
                 'campaignschedules' => $campaignschedules
             ));
         }
     }
 
-
-    public function create() //function for creation
+    /**
+     * Create Campaign schedules
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function create()
     {
-        $user = User::find(\Auth::id()); //find logged in user ID
+        $user = User::find(\Auth::id());
 		
-        $campaignschedule = new CampaignSchedule; //create new CampaignSchedule object
-        $campaignschedule->user_id = \Auth::id(); // input the current logged in user_id to the CampaignSchedule object
-        $campaignschedule->status = 'pending'; //set default status to pending
+        $campaignschedule = new CampaignSchedule;
+        $campaignschedule->user_id = \Auth::id();
+        $campaignschedule->status = 'pending';
 
-        $mails =  $user->mails()->get(); //get all mails based on the logged in user
-        $mailinglists = $user->mailinglists()->get(); //get all mailinglists based on the logged in user
+        $mails =  $user->mails()->get();
+        $mailinglists = $user->mailinglists()->get();
 
-        return view('campaignschedule.create', array( //return correct view
+        return view('campaignschedule.create', array(
             'campaignschedule' => $campaignschedule,
-            'mails' => $mails,                        //pass parameters to view
+            'mails' => $mails,
             'mailinglists' => $mailinglists,
         ));
     }
 
-    public function store(Request $request){ //request input from view
+    /**
+     * Store function for create and edit Campaign Schedule
+     *
+     * @param Request $request
+     * @return $this|\Illuminate\Http\RedirectResponse
+     */
 
-        $request -> all(); //request all from view
-        $input = $request['campaignschedule']; //save input to variable
-        $campaignschedule = new CampaignSchedule; //create new CampaignSchedule object
+    public function store(Request $request){
 
-        $validator = \Validator::make($input, CampaignSchedule::$rules); //create validatir based on rules
+        $request -> all();
+        $input = $request['campaignschedule'];
+        $campaignschedule = new CampaignSchedule;
 
-        if($validator->fails()){ //do the validations
+        $validator = \Validator::make($input, CampaignSchedule::$rules);
+
+        if($validator->fails()){
             if($input['id']){
                 return redirect()->route('schedule.edit', [$input['id']])->withErrors($validator)->withInput();
-            } //if validations fails redirect to correct view
+            }
 
             return redirect()->route('schedule.create')->withErrors($validator)->withInput();
-        } //if validations is correct redirect to correct view
-
-
-        if($input['id']){ //check if the view contains the id
-            $mail = CampaignSchedule::find($input['id']);
-            $mail ->update($input); //update view if input contains id
-
-            return redirect()->route('schedules'); //redirect to correct view
         }
 
-        $campaignschedule->create($input); //if the view does not contain id, we create a new campaignschedule
 
-        return redirect() -> route('schedules'); //redirect to correct view
+        if($input['id']){
+            $mail = CampaignSchedule::find($input['id']);
+            $mail ->update($input);
+
+            return redirect()->route('schedules');
+        }
+
+        $campaignschedule->create($input);
+
+        return redirect() -> route('schedules');
 
     }
-	
-	public function send(Request $request, $id) //function for sending mail
+
+    /**
+     * Function for sending scheduled campaigns for mail
+     *
+     * @param Request $request
+     * @param $id
+     * @return \Illuminate\Http\RedirectResponse
+     */
+
+	public function send(Request $request, $id)
 	{
 		$campaignschedule = CampaignSchedule::find($id);
 		$campaignschedule->send();
@@ -99,7 +120,7 @@ class CampaignScheduleController extends Controller
 		$campaignschedule->status = 'sent';
 		$campaignschedule->save();
 		
-		return redirect() -> route('schedules'); //redirect to correct view
+		return redirect() -> route('schedules');
 	}
 
     /** Inda Kreso */

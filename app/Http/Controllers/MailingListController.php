@@ -30,8 +30,10 @@ class MailingListController extends Controller
         }
 
     /**
-    * Return view with mailing_list table info where user_id is equal to the logged in user.
-    */
+     * Return index view for mailinglists
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index()
 	{
         $user = User::find(\Auth::id());
@@ -70,6 +72,12 @@ class MailingListController extends Controller
 
     }
 
+
+    /**
+     * Create function for Mailing lists
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function create()
     {
 		$user = User::find(\Auth::id());
@@ -89,10 +97,11 @@ class MailingListController extends Controller
     }
 
     /**
-     * Fill in table mailing_list from form.
+     *Store function for edit and create
      *
-     *
-    */
+     * @param Request $request
+     * @return $this|\Illuminate\Http\RedirectResponse
+     */
     public function store(Request $request)
     {
         $request->all();
@@ -167,7 +176,12 @@ class MailingListController extends Controller
         ));
     }
 
-	
+    /**
+     * View for mailinglist clients
+     *
+     * @param $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function view($id)
     {
         $mailinglist = MailingList::find($id);
@@ -177,6 +191,7 @@ class MailingListController extends Controller
         ));
     }
 
+    /** Inda Kreso */
     public function delete($id) {
         $mailinglist = MailingList::find($id);
         $mailinglist -> delete();
@@ -184,6 +199,7 @@ class MailingListController extends Controller
         return redirect() -> route('mailinglists'); /* Inda Kreso*/
 
     }
+    /** Inda kreso */
 
 
 

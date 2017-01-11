@@ -9,14 +9,22 @@ use App\User;
 
 class SettingsController extends Controller
 {
-    //
 
+    /**
+     * SettingsController constructor.
+     */
      public function __construct()
     {
         $this->middleware('auth');
 
     }
 
+
+    /**
+     * Function for index view settings
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function index () {
 
     $name = Auth::user()->name; 

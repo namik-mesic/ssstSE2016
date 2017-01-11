@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * By Sabahudin Kodro
+ */
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -11,13 +15,26 @@ use App\User;
 class MailController extends Controller
 {
 
+    /**
+     * @var $user
+     */
     protected $user;
 
+
+    /**
+     * MailController constructor.
+     */
     public function __construct()
     {
         $this->middleware('auth');
 
     }
+
+    /**
+     * Return index view for mails
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
 
     public function index()
     {
@@ -33,6 +50,12 @@ class MailController extends Controller
 
     }
 
+
+    /**
+     * Create new mail object
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function create()
     {
 
@@ -47,6 +70,13 @@ class MailController extends Controller
 
     }
 
+
+    /**
+     * Edit for mails
+     *
+     * @param $id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function edit($id){
 
         $mail = Mail::find($id);
@@ -59,6 +89,13 @@ class MailController extends Controller
 
 
     }
+
+    /**
+     * Store function for create and edit mails
+     *
+     * @param Request $request
+     * @return $this|\Illuminate\Http\RedirectResponse
+     */
 
     public function store(Request $request)
     {
@@ -93,11 +130,12 @@ class MailController extends Controller
 
     }
 
+    /** Inda kreso */
     public function delete($id) {
         $mail = Mail::find($id);
         $mail -> delete();
 
         return redirect() -> route('mails');
     }
-
+    /** Inda Kreso */
 }

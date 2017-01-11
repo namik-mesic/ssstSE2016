@@ -9,15 +9,20 @@ use App\User;
 
 class DashboardController extends Controller
 {
-    
-        /**
-     * Create a new controller instance.
-     *
+
+    /**
+     * DashboardController constructor.
      */
     public function __construct()
     {
         $this->middleware('auth');
     }
+
+    /**
+     * Return view dashboard
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
 
 public function index () {
 
