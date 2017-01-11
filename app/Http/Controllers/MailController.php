@@ -66,6 +66,8 @@ class MailController extends Controller
         $request->all();
         $input = $request['mail'];
 
+
+
         $validator = \Validator::make($input, mail::$rules);
 
         if($validator->fails()){
