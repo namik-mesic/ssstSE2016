@@ -22,11 +22,9 @@ class DeletePlaceTest extends TestCase
 
         DB::table('places')->where('name', 'Begova Dzamija')->delete();
 
-
-
         $this->missingFromDatabase('places', [
             'name' => 'Begova Dzamija',
-            'type' => 'worship'
+            'type' => 'place_of_worship'
         ]);
 
 

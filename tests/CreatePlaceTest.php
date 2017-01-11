@@ -23,12 +23,12 @@ class CreatePlaceTest extends TestCase
             'vicinity' => 'Hrasnicka Cesta 3a',
             'lat' => 43.8238573,
             'lng' => 18.306216,
-            'type' => 'worship'
+            'type' => 'place_of_worship'
         ]);
 
         $this->seeInDatabase('places', [
             'name' => 'Begova Dzamija',
-            'type' => 'worship'
+            'type' => 'place_of_worship'
         ]);
 
 

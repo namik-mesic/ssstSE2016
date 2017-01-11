@@ -45,7 +45,7 @@
                         Place Type
                     </label>
 
-                    <select id = "type" name = "type" class="form-control" placeholder="{{ $place->type }}">
+                    <select id = "type" name = "type" class="form-control" value ="{{ $place->type }}">
                         <option value="food">food</option>
                         <option value="drink">drink</option>
                         <option value="entertainment">entertainment</option>
@@ -53,7 +53,7 @@
                         <option value="bank">bank</option>
                         <option value="parking">parking</option>
                         <option value="shopping">shopping</option>
-                        <option value="worship">worship</option>
+                        <option value="place_of_worship">worship</option>
                     </select>
                 </div>
 

@@ -2,12 +2,8 @@
 
 
 <?php $__env->startSection('head'); ?>
-    <!--
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-jpP1e6mNwMTQj_6tcR1Okyg4gSczd6w&libraries=places"></script>
-    -->
 
     <script type="text/javascript">
-        //<![CDATA[
 
         var map;
         var infowindow;

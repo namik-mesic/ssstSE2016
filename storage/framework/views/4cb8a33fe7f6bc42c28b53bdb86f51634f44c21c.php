@@ -1,5 +1,6 @@
 <!-- Original concept: Namik Mesic-->
-<!-- Tweaked by Adem Hadrovic -->
+<!-- Adapted by Adem Hadrovic -->
+<!--Optimized and edited by Iva Jesenkovic-->
 
 
 <?php $__env->startSection('content'); ?>

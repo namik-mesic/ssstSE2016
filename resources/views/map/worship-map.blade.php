@@ -42,7 +42,7 @@
                 type: ['mosque'],
                 type: ['place_of_worship'],
                 type: ['synagogue']
-            }, callback,setSearchType("worship"));
+            }, callback,setSearchType("place_of_worship"));
 
             //service = new google.maps.places.PlacesService(map);
             //service.nearbySearch(request, callback);
