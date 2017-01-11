@@ -23,16 +23,15 @@ class UpdatePlaceTest extends TestCase
             ->where(function ($query){
 
                 $query->where('name','=','Begova Dzamija')
-                        ->where('type','=','worship');
+                        ->where('type','=','place_of_worship');
 
             })
             ->update(array('name' => 'Sarajevo School of Science and Technology'),
-                array('vicinity' => ' Hrasnička cesta 3a, Ilidža 71210 '),
-                array('type'=>'banking'));
+                array('vicinity' => ' Hrasnička cesta 3a, Ilidža 71210 '));
 
         $this->seeInDatabase('places', [
             'name' => 'Sarajevo School of Science and Technology',
-            'type' => 'worship'
+            'type' => 'place_of_worship'
         ]);
 
 

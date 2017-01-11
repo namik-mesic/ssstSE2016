@@ -106,7 +106,7 @@ function createMarker(place) {
         case "bank":
             icon = "http://maps.google.com/intl/en_us/mapfiles/ms/micons/orange-dot.png";
             break;
-        case "worship":
+        case "place_of_worship":
             icon = "http://maps.google.com/intl/en_us/mapfiles/ms/micons/purple-dot.png";
             break;
         default:
