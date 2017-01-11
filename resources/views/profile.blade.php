@@ -136,6 +136,15 @@
                             <a href="mailto: {{$user -> email}} ">{{$user->email }}</a>
                         </td>
                     </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            @if(Auth::user() -> username == $user['username'])
+                                <li class="active"><a href="{{ action('PrivacyController@privacy') }}">Change privacy</a></li>
+                            @else
+                            @endif
+                        </td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
