@@ -144,7 +144,7 @@
                         <td></td>
                         <td>
                             @if(Auth::user() -> username == $user['username'])
-                                <li class="active"><a href="{{ action('PrivacyController@privacy') }}">Change privacy</a></li>
+                                <a href="{{ action('PrivacyController@privacy') }}">Change privacy</a>
                             @else
                             @endif
                         </td>
