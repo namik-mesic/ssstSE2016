@@ -82,10 +82,14 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                            @if ($user->isNameHidden)
-                                This information is private
-                            @elseif ($user->isNameHidden == null)
-                                {{$user->name }}
+                            @if(Auth::user() -> username != $user['username'])
+                                @if ($user->isNameHidden)
+                                    This information is private
+                                @elseif ($user->isNameHidden == null)
+                                    {{$user->name }}
+                                @endif
+                            @else
+                                    {{$user->name }}
                             @endif
                         </td>
                     </tr>
@@ -107,9 +111,13 @@
                             </strong>
                         </td>
                         <td class="text-primary">
-                            @if ($user->isHidden)
-                                This information is private
-                            @elseif ($user->isHidden == null)
+                            @if(Auth::user() -> username != $user['username'])
+                                @if ($user->isHidden)
+                                    This information is private
+                                @elseif ($user->isHidden == null)
+                                    {{$user->dob }}
+                                @endif
+                            @else
                                 {{$user->dob }}
                             @endif
                         </td>
@@ -143,8 +151,9 @@
                     <tr>
                         <td></td>
                         <td>
+                            <!-- if the currently logged user is on their page, they can change privacy settings-->
                             @if(Auth::user() -> username == $user['username'])
-                                <li class="active"><a href="{{ action('PrivacyController@privacy') }}">Change privacy</a></li>
+                                <a href="{{ action('PrivacyController@privacy') }}">Change privacy</a>
                             @else
                             @endif
                         </td>

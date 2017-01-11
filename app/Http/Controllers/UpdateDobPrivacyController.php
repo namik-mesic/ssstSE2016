@@ -6,28 +6,28 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
-class UpdatePrivacyController extends Controller
+class UpdateDobPrivacyController extends Controller
 {
     public function privacy()
     {
         return view('privacy');
     }
 
-    public function toggleNameHidden()
+    public function toggleDobHidden()
     {
         /*
          * after the button is clicked,
-         * isNameHidden changes value
-         * and info becomes public/private - Dalila*/
+         * isHidden changes value
+         * and birthday info becomes public/private - Dalila*/
 
         /** @var User $user */
         $user = \Auth::user();
 
-        if ($user->isNameHidden == null)
-            $user->isNameHidden = 1;
+        if ($user->isHidden == null)
+            $user->isHidden = 1;
 
         else
-            $user->isNameHidden = null;
+            $user->isHidden = null;
 
         $user->save();
 
