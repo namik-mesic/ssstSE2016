@@ -4,16 +4,15 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
-class ExampleTest extends TestCase
+class FormTest extends TestCase
 {
     /**
-     * A basic functional test example.
+     *  Testing feature 1. Following multiple currencies at the same time.
      *
      * @return void
      */
-    public function testBasicExample()
+    public function testExample()
     {
-        $this->visit('/')
-             ->see('Laravel');
+        $this->assertTrue(true);
     }
 }
