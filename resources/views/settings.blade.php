@@ -58,17 +58,17 @@
 
               <div class="form-group">
                   <label for="fname">First name</label>
-                  <input type="text" class="form-control" name ="user[name]" placeholder="{{$name}}">
+                  <input type="text" class="form-control" name ="user[name]" value="{{$name}}">
               </div>
 
               <div class="form-group">
                   <label for="lname">Last name</label>
-                  <input type="text" class="form-control" name="user[lastname]" placeholder="{{$lastname}}">
+                  <input type="text" class="form-control" name="user[lastname]" value="{{$lastname}}">
               </div>
 
               <div class="form-group">
                   <label for="email">Email address</label>
-                  <input type="email" class="form-control" name="user[mail]" placeholder="{{$mail}}">
+                  <input type="email" class="form-control" name="user[mail]" value="{{$mail}}">
               </div>
 
               </div>
