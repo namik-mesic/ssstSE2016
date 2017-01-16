@@ -22,7 +22,7 @@
 <link rel="shortcut icon" href="{{{ asset('/bower_components/AdminLTE/dist/img/favicon.ico') }}}">
 
 </head>
-<style type="text/css">.login-page{background-image:url('/bower_components/AdminLTE/dist/img/loginback.jpeg');background-attachment: fixed;background-position: center;}</style>
+<style type="text/css">.login-page{background-image:url('/bower_components/AdminLTE/dist/img/loginback.jpeg');background-attachment: fixed;background-position: center;} .login-box-body {background: rgba(255, 255, 255, 0.9);}</style>
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
