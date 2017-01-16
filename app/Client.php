@@ -26,7 +26,7 @@ class Client extends Model
 	public static $rules = array(
         'fname' => 'required|min:2',
         'lname'  => 'required|min:2',
-        'mail'  => 'required|email',
+        'mail' => 'required|email|max:255|unique:clients'
     );
 	
 	
