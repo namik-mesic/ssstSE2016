@@ -18,7 +18,8 @@
 class confirmControl extends Controller
 {
     /**
-     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * This method returns the view where users must eneter a password in order to delete an account. -Nedzad
      */
     public function confirmationForm(){
 

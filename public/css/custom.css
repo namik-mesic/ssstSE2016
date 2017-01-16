@@ -2,6 +2,13 @@
     height: 150px;
 }
 
+.img{
+    height:150;
+    width:150;
+    position: center;
+    margin: auto;
+}
+
 
 .center{
     float: none;
@@ -18,5 +25,16 @@
 }
 
 .sidebar {
+    float: right;
+}
+
+.search{
+    float: left;
+    padding-top: 7px;
+    line-height: 22px;
+
+}
+
+.clrpick{
     float: right;
 }

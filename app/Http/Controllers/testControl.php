@@ -26,7 +26,9 @@ class testControl extends Controller
         /**
          * $loggedPassword - password entered into the form
          * $userPassword - users password from DB
-         *$isSame - result of Hash::check() method
+         * $isSame - result of Hash::check() method
+         * method that deletes an account if entered password matches. It also return an error message if password
+         * doesn't match. -Nedzad
          */
         $loggedPassword=$request->get('password');
         $userPassword = Auth::user()->password;
@@ -38,7 +40,7 @@ class testControl extends Controller
             $usertodelete->delete();
 
 
-            return redirect('/');
+            return redirect('/') -> with('message2', 'Account successfully deleted!');
         }
         else {
 

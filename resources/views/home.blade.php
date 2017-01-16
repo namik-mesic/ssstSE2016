@@ -9,8 +9,13 @@
             </div>
 
             <div class="panel-body">
-                You are logged in!
+                Welcome {{Auth::user() -> name}}, You are logged in!
             </div>
+            @if (session('notAuthorizedMessage'))
+                <div class="alert alert-danger">
+                    {{ session('notAuthorizedMessage') }}
+                </div>
+            @endif
         </div>
     </div>
 

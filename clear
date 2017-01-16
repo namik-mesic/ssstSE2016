@@ -1,0 +1,78 @@
+[33m19dba8f[m HEAD@{0}: pull: Fast-forward
+[33m88831ea[m HEAD@{1}: checkout: moving from grupa2 to grupa3
+[33m98addcf[m HEAD@{2}: pull: Fast-forward
+[33m8057878[m HEAD@{3}: checkout: moving from grupa3 to grupa2
+[33m88831ea[m HEAD@{4}: reset: moving to HEAD
+[33m88831ea[m HEAD@{5}: checkout: moving from grupa3 to grupa3
+[33m88831ea[m HEAD@{6}: checkout: moving from grupa1 to grupa3
+[33mfe9be89[m HEAD@{7}: checkout: moving from grupa4 to grupa1
+[33mace6cef[m HEAD@{8}: checkout: moving from master to grupa4
+[33m4919c5a[m HEAD@{9}: checkout: moving from grupa3 to master
+[33m88831ea[m HEAD@{10}: reset: moving to grupa3@{20 minutes ago}
+[33m19dba8f[m HEAD@{11}: pull: Fast-forward
+[33m4919c5a[m HEAD@{12}: reset: moving to master@{20 minutes ago}
+[33m19dba8f[m HEAD@{13}: reset: moving to HEAD
+[33m19dba8f[m HEAD@{14}: reset: moving to HEAD
+[33m19dba8f[m HEAD@{15}: pull: Fast-forward
+[33m88831ea[m HEAD@{16}: commit: Prevent users that are not logged to see anything related to logged users
+[33mda5be61[m HEAD@{17}: pull: Fast-forward
+[33ma7056aa[m HEAD@{18}: commit: Updated flash messages during registration
+[33m754068e[m HEAD@{19}: pull: Fast-forward
+[33m4807ac7[m HEAD@{20}: commit: Added trigger that deletes inactive users, but still doesn't work
+[33mc07c039[m HEAD@{21}: commit: Mail verification, final part. Now system sends an email message with a token to the user. User can log in only after he confirms an email address.
+[33mb1de3c8[m HEAD@{22}: commit: Majority of email activation feature. Activation token made. User cannot log in if not activated. User gets activated if adequate route is hit.
+[33m96bf13f[m HEAD@{23}: pull: Fast-forward
+[33mcabec6c[m HEAD@{24}: pull: Fast-forward
+[33m6b096be[m HEAD@{25}: pull: Merge made by the 'recursive' strategy.
+[33mcf911d8[m HEAD@{26}: pull: Merge made by the 'recursive' strategy.
+[33m1ac8d95[m HEAD@{27}: commit: added possibility to watch other user's profile'
+[33m60449ff[m HEAD@{28}: commit: deleted mail activation files
+[33mba026e9[m HEAD@{29}: checkout: moving from grupa3 to grupa3
+[33mba026e9[m HEAD@{30}: commit: Email verification part #1
+[33mda96f96[m HEAD@{31}: checkout: moving from grupa3 to grupa3
+[33mda96f96[m HEAD@{32}: checkout: moving from grupa3 to grupa3
+[33mda96f96[m HEAD@{33}: checkout: moving from grupa3 to grupa3
+[33mda96f96[m HEAD@{34}: pull: Fast-forward
+[33mdc954f2[m HEAD@{35}: checkout: moving from grupa3 to grupa3
+[33mdc954f2[m HEAD@{36}: pull: Fast-forward
+[33me5371db[m HEAD@{37}: commit: This is just to show Dino how to commit
+[33mfbb4852[m HEAD@{38}: checkout: moving from grupa3 to grupa3
+[33mfbb4852[m HEAD@{39}: commit: Validated dob when registering, so that only users that are old enough can sign up.
+[33mdffbee2[m HEAD@{40}: commit: Droped some columns
+[33m6d049fa[m HEAD@{41}: pull: Merge made by the 'recursive' strategy.
+[33ma2eb217[m HEAD@{42}: reset: moving to HEAD
+[33ma2eb217[m HEAD@{43}: commit: Notthing
+[33m238838a[m HEAD@{44}: pull: Fast-forward
+[33m24a393a[m HEAD@{45}: commit: Added color choice to registration form
+[33m56d37ad[m HEAD@{46}: pull: Fast-forward
+[33me6cb68f[m HEAD@{47}: commit: Added just some comments
+[33m8a13f0a[m HEAD@{48}: pull: Merge made by the 'recursive' strategy.
+[33m1a67ce0[m HEAD@{49}: commit: Skip
+[33m16f47c8[m HEAD@{50}: checkout: moving from grupa3 to grupa3
+[33m16f47c8[m HEAD@{51}: commit: Added an option to send an e-mail message directly when clicked on address
+[33m05dc982[m HEAD@{52}: commit: Added message when search query doesn't match anything from DB
+[33m909a994[m HEAD@{53}: commit: Added DoB when registering and retrieving it from DB on profile page.
+[33md62c33e[m HEAD@{54}: commit: Changed the order of options in dropdown user's menu.
+[33m13646c5[m HEAD@{55}: pull: Merge made by the 'recursive' strategy.
+[33med42a87[m HEAD@{56}: commit: Migration 'add_username_values_on_table_users'. Also adding username field during registration and retrieving in profile page
+[33mf9e31e5[m HEAD@{57}: commit: Removed 'Laravel' from logo
+[33m4d993e0[m HEAD@{58}: checkout: moving from grupa3 to grupa3
+[33m4d993e0[m HEAD@{59}: commit: Edited users list after searching
+[33md021b37[m HEAD@{60}: commit: Implemented completed search bar
+[33m9cd5e13[m HEAD@{61}: commit: Added search bar on profile page
+[33me326df0[m HEAD@{62}: checkout: moving from grupa3 to grupa3
+[33me326df0[m HEAD@{63}: commit: Added name of logged user on home page
+[33m1c4be34[m HEAD@{64}: commit: Username retrieved from DB
+[33me6127d4[m HEAD@{65}: checkout: moving from grupa3 to grupa3
+[33me6127d4[m HEAD@{66}: commit: Retriving and displaying data of logged user
+[33m2c33edb[m HEAD@{67}: pull: Fast-forward
+[33m6556f4f[m HEAD@{68}: reset: moving to HEAD
+[33m6556f4f[m HEAD@{69}: checkout: moving from grupa3 to grupa3
+[33m6556f4f[m HEAD@{70}: commit: Account delete option
+[33m441d987[m HEAD@{71}: commit: Added delete account functionality
+[33m4919c5a[m HEAD@{72}: checkout: moving from grupa3 to grupa3
+[33m4919c5a[m HEAD@{73}: checkout: moving from grupa3 to grupa3
+[33m4919c5a[m HEAD@{74}: checkout: moving from grupa3 to grupa3
+[33m4919c5a[m HEAD@{75}: checkout: moving from master to grupa3
+[33m4919c5a[m HEAD@{76}: checkout: moving from master to master
+[33m4919c5a[m HEAD@{77}: clone: from https://github.com/namik-mesic/ssstSE2016.git
