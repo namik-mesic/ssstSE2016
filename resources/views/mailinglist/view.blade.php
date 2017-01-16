@@ -23,7 +23,7 @@
                 @foreach ($mailinglist->clients as $client)
                     <tr>
                         <td>{{$client->fname}} {{$client->lname}}</td>
-                        <td>{{$client->fname}} {{$client->lname}}</td>
+                        <td>{{$client->mail}}</td>
                     </tr>
                 @endforeach
                 </tbody>

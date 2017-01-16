@@ -49,13 +49,19 @@ class SettingsController extends Controller
         $request->all();
         $input = $request['user'];
 
+        $validator = \Validator::make($input, User::$rules);
 
-        if($input['id']){
-            $user = User::find($input['id']);
-            $user ->update($input);
+        if($validator->fails()){
 
-            return redirect()->route('settings');
+            return redirect()->route('settings', [$input['id']])->withErrors($validator)->withInput();
+
         }
+
+
+        $user = User::find($input['id']);
+        $user ->update($input);
+
+        return redirect()->route('settings');
 
 
     }

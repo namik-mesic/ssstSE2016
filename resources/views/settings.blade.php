@@ -56,10 +56,14 @@
               <div class="box-body">
               <div class="col-md-6">
 
-              <div class="form-group">
-                  <label for="fname">First name</label>
-                  <input type="text" class="form-control" name ="user[name]" value="{{$name}}">
-              </div>
+
+                  <div class="form-group {{$errors->first('name')  ? 'has-error' : ''}}">
+                      <label>First name</label>
+                      <input type="text" value="{{$name}}" name="user[name]" class="form-control" />
+                      @if($errors->first('name'))
+                          <span>{{$errors->first('name')}}</span>
+                      @endif
+                  </div>
 
               <div class="form-group">
                   <label for="lname">Last name</label>

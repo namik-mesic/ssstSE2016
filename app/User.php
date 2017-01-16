@@ -26,7 +26,7 @@ class User extends Authenticatable
         'name' => 'required|min:2',
         'lastname'  => 'required|min:2',
         'email'  => 'required|min:2',
-        'password'  => 'required|min:2',
+
     );
 
     /**
